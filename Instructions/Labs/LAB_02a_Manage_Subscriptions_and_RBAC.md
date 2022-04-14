@@ -2,8 +2,13 @@
 lab:
   title: 02a - サブスクリプションと RBAC を管理する
   module: Module 02 - Governance and Compliance
+ms.openlocfilehash: 9501fbf86ceb7c999d88bbb88891e93b43d79f70
+ms.sourcegitcommit: 0391f396671646ca11a8c55c9ecff19107f1d0d3
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "141707685"
 ---
-
 # <a name="lab-02a---manage-subscriptions-and-rbac"></a>ラボ 02a - サブスクリプションと RBAC を管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
@@ -178,7 +183,8 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 1. [Cloud Shell] ペインで、次の手順を実行してカスタム ロール定義の割り当てを削除します (`[object_ID]` プレースホルダーを、このタスクの前半でコピーした **az104-02-aaduser1** の Azure Active Directory ユーザー アカウントの **object ID** 属性の値で置き換えます)。
 
    ```powershell
-   $scope = (Get-AzRoleAssignment -RoleDefinitionName 'Support Request Contributor (Custom)').Scope
+   
+   $scope = (Get-AzRoleDefinition -Name 'Support Request Contributor (Custom)').AssignableScopes[0]
 
    Remove-AzRoleAssignment -ObjectId '[object_ID]' -RoleDefinitionName 'Support Request Contributor (Custom)' -Scope $scope
    ```
