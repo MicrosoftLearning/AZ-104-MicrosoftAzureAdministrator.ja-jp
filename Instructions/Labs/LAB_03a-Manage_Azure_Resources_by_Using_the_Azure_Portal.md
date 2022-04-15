@@ -2,8 +2,13 @@
 lab:
   title: 03a - Azure portal を使用して Azure リソースを管理する
   module: Module 03 - Azure Administration
+ms.openlocfilehash: 838c9099b9e5ddaa164b37e85f4917ccb2f05c7b
+ms.sourcegitcommit: b57f1f083a220cdf0e2f5a6815f4c992a33455c1
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "141660549"
 ---
-
 # <a name="lab-03a---manage-azure-resources-by-using-the-azure-portal"></a>ラボ 03a - Azure portal を使用して Azure リソースを管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
@@ -37,7 +42,7 @@ lab:
 
 1. Azure portal で、「**ディスク**」と検索してそれを選択し、 **[+ 作成]** をクリックして、次の設定を指定します。
 
-    |設定|[値]|
+    |設定|値|
     |---|---|
     |サブスクリプション| リソース グループを作成した Azure サブスクリプションの名前 |
     |リソース グループ| 新しいリソース グループ **az104-03a-rg1** の名前 |
@@ -76,7 +81,7 @@ lab:
 
 1. Azure portal で、「**ディスク**」と検索してそれを選択し、 **[+ 作成]** をクリックして、次の設定を指定します。
 
-    |設定|[値]|
+    |設定|値|
     |---|---|
     |サブスクリプション| このラボで使用するサブスクリプションの名前 |
     |リソース グループ| **「新しいリソースグループの作成」** をクリックして、**az104-03a-rg3** という名前を付けます |
@@ -89,7 +94,7 @@ lab:
 
 1. **[確認と作成]** をクリックしてから、**[作成]** をクリックします。
 
-1. **[リソースに移動]** をクリックします。 
+1. **[リソースに移動]** をクリックします。
 
 1. [ディスク] の [概要] ページで、リソース グループの名前 **[az104-03a-rg3]** をクリックします。
 
