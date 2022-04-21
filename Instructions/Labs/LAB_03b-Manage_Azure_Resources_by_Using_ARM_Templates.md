@@ -2,8 +2,13 @@
 lab:
   title: 03b - ARM テンプレートを使用して Azure リソースを管理する
   module: Module 03 - Azure Administration
+ms.openlocfilehash: 602da542fdf20f6b1be637e792ec47daaa0de04b
+ms.sourcegitcommit: 8282cbcee5f7cd46bdc73d781c460d6a078049bb
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "143611553"
 ---
-
 # <a name="lab-03b---manage-azure-resources-by-using-arm-templates"></a>ラボ 03b - ARM テンプレートを使用して Azure リソースを管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
@@ -32,7 +37,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 このタスクでは、Azure Resource Manager テンプレートを使用して Azure ディスク リソースを作成します。
 
-1. Azure portal (```https://portal.azure.com```) にサインインします。
+1. [**Azure Portal**](http://portal.azure.com) にサインインします。
 
 1. Azure portal で、「**リソース グループ**」を検索して選択します。 
 
@@ -101,7 +106,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 1. 「**カスタム デプロイ**」ブレードに戻って、次の設定を指定します。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- |--- |
     | サブスクリプション | *このラボで使用している Azure サブスクリプションの名前* |
     | リソース グループ | **新しい** リソース グループ **az104-03b-rg1** の名前 |

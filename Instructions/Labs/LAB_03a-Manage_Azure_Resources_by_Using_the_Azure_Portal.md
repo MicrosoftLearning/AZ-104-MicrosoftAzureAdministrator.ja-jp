@@ -2,12 +2,12 @@
 lab:
   title: 03a - Azure portal を使用して Azure リソースを管理する
   module: Module 03 - Azure Administration
-ms.openlocfilehash: 838c9099b9e5ddaa164b37e85f4917ccb2f05c7b
-ms.sourcegitcommit: b57f1f083a220cdf0e2f5a6815f4c992a33455c1
+ms.openlocfilehash: 38ca9fa2ec16f786824e7ba5b27bb194f31f7d7b
+ms.sourcegitcommit: 8282cbcee5f7cd46bdc73d781c460d6a078049bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "141660549"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "143611541"
 ---
 # <a name="lab-03a---manage-azure-resources-by-using-the-azure-portal"></a>ラボ 03a - Azure portal を使用して Azure リソースを管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
@@ -38,7 +38,7 @@ ms.locfileid: "141660549"
 
 このタスクでは、Azure portal を使用してリソース グループを作成し、そのリソース グループにディスクを作成します。
 
-1. Azure portal (```https://portal.azure.com```) にサインインします。
+1. [**Azure Portal**](http://portal.azure.com) にサインインします。
 
 1. Azure portal で、「**ディスク**」と検索してそれを選択し、 **[+ 作成]** をクリックして、次の設定を指定します。
 
