@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'ラボ 09a - Web Apps を実装する'
+    title: '09a - Web Apps を実装する'
     module: 'モジュール 09 - サーバーレス コンピューティング'
 ---
 
