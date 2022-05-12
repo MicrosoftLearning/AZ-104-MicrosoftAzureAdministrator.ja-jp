@@ -17,7 +17,7 @@ Azure リソースのパフォーマンスと構成に関する分析情報を�
 
 + タスク 1: ラボ環境をプロビジョニングする
 + タスク 2: Microsoft.Insights および Microsoft.AlertsManagement リソース プロバイダーを登録する
-+ タスク 3: Azure Log Analytics ワークスペースと Azure 自動化ベースのソリューションを作成して構成する
++ タスク 3: Azure Log Analytics ワークスペースと Azure Automationベースのソリューションを作成して構成する
 + タスク 4: Azure 仮想マシンの既定の監視設定をレビューする
 + タスク 5: Azure 仮想マシンの診断設定を構成する
 + タスク 6: Azure Monitor の機能をレビューする
@@ -79,9 +79,9 @@ Azure リソースのパフォーマンスと構成に関する分析情報を�
 
 1. 「Cloud Shell」ウィンドウを最小化します (ただし、閉じないでください)。
 
-#### タスク 3: Azure Log Analytics ワークスペースと Azure 自動化ベースのソリューションを作成して構成する
+#### タスク 3: Azure Log Analytics ワークスペースと Azure Automationベースのソリューションを作成して構成する
 
-このタスクでは、Azure Log Analytics ワークスペースと Azure 自動化ベースのソリューションを作成して構成します。
+このタスクでは、Azure Log Analytics ワークスペースと Azure Automationベースのソリューションを作成して構成します。
 
 1. Azure portal で、「**Log Analytics ワークスペース**」 を検索して選択し、「**Log Analytics ワークスペース**」 ブレードで 「**+ 作成**」 を選択します。
 
@@ -329,7 +329,7 @@ Azure リソースのパフォーマンスと構成に関する分析情報を�
 このラボでは次の内容を学習しました。
 
 + ラボ環境をプロビジョニングしました
-+ Azure Log Analytics ワークスペースと Azure 自動化ベースのソリューションを作成して構成しました
++ Azure Log Analytics ワークスペースと Azure Automationベースのソリューションを作成して構成しました
 + Azure 仮想マシンの既定の監視設定をレビューしました
 + Azure 仮想マシンの診断設定を構成しました
 + Azure Monitor の機能をレビューしました
