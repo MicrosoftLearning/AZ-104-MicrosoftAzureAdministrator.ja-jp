@@ -2,12 +2,12 @@
 lab:
   title: 05 - サイト間接続を実装する
   module: Module 05 - Intersite Connectivity
-ms.openlocfilehash: 6a150d4350a109e955e8b80e18c283c251f74128
-ms.sourcegitcommit: 7ffdffa241b0489dd1c012a36f8ba42393dd9c94
+ms.openlocfilehash: 6254f1b47aacdb2b0e01f090ca182feacba5e076
+ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "142091968"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "144937837"
 ---
 # <a name="lab-05---implement-intersite-connectivity"></a>ラボ 05 - サイト間の接続性を実装する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
@@ -51,16 +51,24 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
 1. Cloud Shell ペインから、以下を実行して、ラボ環境をホストするリソース グループを作成します。 最初の 2 つの仮想ネットワークと 1 組の仮想マシンが [Azure_region_1] にデプロイされます。 3 番目の仮想ネットワークと 3 番目の仮想マシンは、同じリソース グループではあるものの、別の [Azure_region_2] にデプロイされます。 (角かっこを含む [Azure_region_1] および [Azure_region_2] プレースホルダーを、これらの Azure 仮想マシンをデプロイする予定の 2 つの異なる Azure リージョンの名前に置き換えます。 たとえば、$location 1 = 'eastus' です。 Get-AzLocation を使用して、すべての場所を一覧表示できます)。
 
    ```powershell
-   $location1 = '[Azure_region_1]'
+   $location1 = 'eastus'
 
-   $location2 = '[Azure_region_2]'
+   $location2 = 'westus'
 
    $rgName = 'az104-05-rg1'
 
    New-AzResourceGroup -Name $rgName -Location $location1
    ```
 
-   >**注**:Azure リージョンを識別するには、Cloud Shell の PowerShell セッションから **(Get-AzLocation).Location** を実行します。
+   >**注**:上記で使ったリージョンは、このラボを最後に公式にレビューしたときにテスト済みであり、機能することがわかっています。 別のリージョンを使いたい場合、または機能しなくなった場合は、Standard D2Sv3 仮想マシンをデプロイできる 2 つの異なるリージョンを決める必要があります。
+   >
+   >Azure リージョンを識別するには、Cloud Shell の PowerShell セッションから **(Get-AzLocation).Location** を実行します。
+   >
+   >使う 2 つのリージョンを決めたら、それぞれのリージョンに対して Cloud Shell で次のコマンドを実行し、Standard D2Sv3 仮想マシンをデプロイできることを確認します。
+   >
+   >```az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name" ```
+   >
+   >コマンドから結果が返されない場合は、別のリージョンを選ぶ必要があります。 2 つの適切なリージョンを決めたら、前述のコード ブロック内のリージョンを調整することができます。
 
 1. 「Cloud Shell」 ウィンドウで、次のコマンドを実行して 3 つのバーチャル ネットワークを作成し、アップロードしたテンプレートとパラメーター ファイルを使用して仮想マシンをデプロイします。
 

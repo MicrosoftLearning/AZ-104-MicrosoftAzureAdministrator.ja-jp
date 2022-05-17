@@ -2,12 +2,12 @@
 lab:
   title: 06 - トラフィック管理を実装する
   module: Module 06 - Network Traffic Management
-ms.openlocfilehash: 6e082988d8b86ab4548171c24d6af6e7b004d06e
-ms.sourcegitcommit: 0d47b9c4ded01643654314d8e615045c4e8692bb
+ms.openlocfilehash: a88449e01cf33631baefb1b6ce99ce82028bbc20
+ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "141588489"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "144937807"
 ---
 # <a name="lab-06---implement-traffic-management"></a>ラボ 06 - トラフィック管理を実装する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
@@ -84,6 +84,13 @@ ms.locfileid: "141588489"
 
     >**注**: デプロイが完了するまで待ってから、次の手順に進んでください。 これには 5 分ほどかかります。
 
+    >**注**:VM サイズが利用できないというエラーが発生した場合、インストラクターにサポートを依頼し、次の手順を試してください。
+    > 1. CloudShell で `{}` ボタンをクリックし、左側のバーから **az104-06-vms-loop-parameters.json** を選択して、`vmSize` パラメーターの値をメモしておきます。
+    > 1. "az104-04-rg1" リソース グループがデプロイされている場所を確認します。 CloudShell で `az group show -n az104-04-rg1 --query location` を実行して、それを取得することができます。
+    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。
+    > 1. `vmSize` パラメーターの値を、先ほど実行したコマンドによって返された値のいずれかに置き換えます。 値が返されない場合は、必要に応じて別のリージョンを選んでデプロイする必要があります。 また、"Standard_B1s" のような別のファミリ名を選ぶこともできます。
+    > 1. 次に、`New-AzResourceGroupDeployment` コマンドを再度実行して、テンプレートを再デプロイします。 上方向ボタンを数回押して、最後に実行されたコマンドを上に持ってくることができます。
+
 1. Cloud Shell ウィンドウから、以下を実行して、前の手順でデプロイされた Azure VM に Network Watcher 拡張機能をインストールします。
 
    ```powershell
@@ -104,6 +111,8 @@ ms.locfileid: "141588489"
    ```
 
     >**注**: デプロイが完了するまで待ってから、次の手順に進んでください。 これには 5 分ほどかかります。
+
+
 
 1. [Cloud Shell] ペインを閉じます。
 
@@ -317,7 +326,8 @@ ms.locfileid: "141588489"
     | 設定 | 値 |
     | --- | --- |
     | ルート名 | **az104-06-route-vnet2-to-vnet3** |
-    | アドレス プレフィックス | **10.63.0.0/20** |
+    | アドレス プレフィックス ソース | **[IP アドレス]** |
+    | ソース IP アドレス/CIDR 範囲 | **10.63.0.0/20** |
     | ネクストホップの種類 | **仮想アプライアンス** |
     | 次ホップ アドレス | **10.60.0.4** |
 
@@ -359,7 +369,8 @@ ms.locfileid: "141588489"
     | 設定 | 値 |
     | --- | --- |
     | ルート名 | **az104-06-route-vnet3-to-vnet2** |
-    | アドレス プレフィックス | **10.62.0.0/20** |
+    | アドレス プレフィックス ソース | **[IP アドレス]** |
+    | ソース IP アドレス/CIDR 範囲 | **10.62.0.0/20** |    
     | ネクストホップの種類 | **仮想アプライアンス** |
     | 次ホップ アドレス | **10.60.0.4** |
 
@@ -553,6 +564,7 @@ ms.locfileid: "141588489"
     | 設定 | 値 |
     | --- | --- |
     | 規則の名前 | **az104-06-appgw5-rl1** |
+    | Priority | "**10**" |
     | リスナー名 | **az104-06-appgw5-rl1l1** |
     | フロントエンド IP | **Public** |
     | Protocol | **HTTP** |
@@ -567,7 +579,7 @@ ms.locfileid: "141588489"
     | 変換後の型 | **バックエンド プール** |
     | バックエンド ターゲット | **az104-06-appgw5-be1** |
 
-1. **「HTTP 設定」** テキスト ボックスの横にある **「新規追加」** をクリックし、 **「HTTP 設定の追加」** ブレードで次の設定を指定します (その他の設定は既定値のままにします)。
+1. **[Backend settings]\(バックエンド設定\)** テキスト ボックスの下にある **[新規追加]** をクリックし、 **[Add Backend setting]\(バックエンド設定の追加\)** ブレードで次の設定を指定します (その他の項目は既定値のままにします)。
 
     | 設定 | 値 |
     | --- | --- |

@@ -2,12 +2,12 @@
 lab:
   title: 04 - 仮想ネットワークを実装する
   module: Module 04 - Virtual Networking
-ms.openlocfilehash: ec7ee419dbce3194b01ee958f9356f48e4d1a054
-ms.sourcegitcommit: 2eea188057ba31af18c9569e14e76e9edfcf4bcd
+ms.openlocfilehash: 383f88f2dddb48d498efb3d868330e4bba15c92b
+ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144334702"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "144937829"
 ---
 # <a name="lab-04---implement-virtual-networking"></a>ラボ 04 - 仮想ネットワークを実装する
 
@@ -118,10 +118,10 @@ Azure バーチャル ネットワークの機能について学習します。 
 
     >**注**:次のタスクに進む前に、デプロイが完了するまで待機します。 これには 2 分ほどかかります。
 
-    >**注**:リージョンでそのサイズの VM を使用できないことを示すエラーが発生した場合は、次の手順に従います。
+    >**注**:VM サイズが利用できないというエラーが発生した場合、インストラクターにサポートを依頼し、次の手順を試してください。
     > 1. CloudShell で `{}` ボタンをクリックし、左側のバーから **az104-04-vms-loop-parameters.json** を選択して、`vmSize` パラメーターの値をメモしておきます。
     > 1. "az104-04-rg1" リソース グループがデプロイされている場所を確認します。 CloudShell で `az group show -n az104-04-rg1 --query location` を実行して、それを取得することができます。
-    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。
+    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。 SKU が一覧表示されない (つまり、結果がない) 場合、そのリージョンに D2S 仮想マシンをデプロイすることはできません。 D2S 仮想マシンをデプロイできるリージョンを探す必要があります。 適切な場所を選んだら、AZ104-04-rg1 リソース グループを削除して、ラボを再起動します。
     > 1. `vmSize` パラメーターの値を、先ほど実行したコマンドによって返された値のいずれかに置き換えます。
     > 1. 次に、`New-AzResourceGroupDeployment` コマンドを再度実行して、テンプレートを再デプロイします。 上方向ボタンを数回押して、最後に実行されたコマンドを上に持ってくることができます。
 

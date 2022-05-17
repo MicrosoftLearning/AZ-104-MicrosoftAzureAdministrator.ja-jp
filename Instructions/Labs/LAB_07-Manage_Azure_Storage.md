@@ -2,12 +2,12 @@
 lab:
   title: 07 - Azure Storage を管理する
   module: Module 07 - Azure Storage
-ms.openlocfilehash: 3a848e898f1bb92cb93623760086dcea634a2208
-ms.sourcegitcommit: c360d3abaa6e09814f051b2568340e80d0d0e953
+ms.openlocfilehash: 9703d6543f6b3cf7791352a4ee0ba84cda3b5934
+ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "138356603"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "144937828"
 ---
 # <a name="lab-07---manage-azure-storage"></a>ラボ 7 - Azure Storageを管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
@@ -82,6 +82,13 @@ ms.locfileid: "138356603"
    ```
 
     >**注**:デプロイが完了するのを待たずに、次のタスクに進みます。
+
+    >**注**:VM サイズが利用できないというエラーが発生した場合、インストラクターにサポートを依頼し、次の手順を試してください。
+    > 1. CloudShell で `{}` ボタンをクリックし、左側のバーから **az104-07-vm-parameters.json** を選択して、`vmSize` パラメーターの値をメモしておきます。
+    > 1. "az104-04-rg1" リソース グループがデプロイされている場所を確認します。 CloudShell で `az group show -n az104-04-rg1 --query location` を実行して、それを取得することができます。
+    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。
+    > 1. `vmSize` パラメーターの値を、先ほど実行したコマンドによって返された値のいずれかに置き換えます。
+    > 1. 次に、`New-AzResourceGroupDeployment` コマンドを再度実行して、テンプレートを再デプロイします。 上方向ボタンを数回押して、最後に実行されたコマンドを上に持ってくることができます。
 
 1. [Cloud Shell] ペインを閉じます。
 
@@ -272,13 +279,15 @@ ms.locfileid: "138356603"
 
 1. Azure portal で、このラボの最初のタスクで作成したストレージ アカウントのブレードに戻り、 **「セキュリティ + ネットワーク」** セクションで、 **「ネットワーク」** をクリックしてから、 **「ファイアウォールとバーチャル ネットワーク」** をクリックします。
 
-1. **「選択したネットワーク」** オプションをクリックして、このオプションを有効にしたら使用できる構成設定を確認します。
+1. **[Enabled from selected virtual networks and IP addresses]\(選択した仮想ネットワークと IP アドレスから有効\)** オプションをクリックし、このオプションが有効になったときに使用可能になる構成設定を確認します。
 
     > **注**:これらを設定すると、仮想ネットワークの指定サブネット上の Azure 仮想マシンと、ストレージ アカウントとの直接接続をサービス エンドポイントを使用して構成できます。
 
 1. **「クライアント IP アドレスの追加」** チェック ボックスをクリックして、変更を保存します。
 
 1. InPrivate モードを使用して別のブラウザー ウィンドウを開き、前のタスクで生成した BLOB SAS URL に移動します。
+
+    > **注**:タスク 4 の SAS URL をメモしていない場合は、同じ構成で新しい SAS URL を生成する必要があります。 新しい BLOB SAS URL を生成するガイドとして、タスク 4 の手順 4 から 6 を使います。 
 
 1. **「MIT ライセンス (MIT)」** ページの内容が表示されます。
 
