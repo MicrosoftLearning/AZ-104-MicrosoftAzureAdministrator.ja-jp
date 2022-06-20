@@ -1,21 +1,29 @@
-# Contributing to Microsoft Learning Repositories
+---
+ms.openlocfilehash: 682bdc671872e2d175b1b453971a4df0771496e7
+ms.sourcegitcommit: 8a0ced6338608682366fb357c69321ba1aee4ab8
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "145883858"
+---
+# <a name="contributing-to-microsoft-learning-repositories"></a>Microsoft Learning リポジトリへの貢献
 
-MCT contributions are a key part of keeping the lab and demo content current as the Azure platform changes. We want to make it as easy as possible for you to contribute changes to the lab files. Here are a few guidelines to keep in mind as you contribute changes.
+MCT の貢献は、Azure プラットフォームの変更に合わせてラボおよびデモ コンテンツを最新の状態に保つための重要な要素です。 ラボファイルの変更をできる限り簡単にしたいと考えています。 変更を投稿する場合は、次のガイドラインに留意してください。
 
-## GitHub Use & Purpose
+## <a name="github-use--purpose"></a>GitHub の使用と目的
 
-Microsoft Learning is using GitHub to publish the lab steps and lab scripts for courses that cover cloud services like Azure. Using GitHub allows the course’s authors and MCTs to keep the lab content current with Azure platform changes. Using GitHub allows the MCTs to provide feedback and suggestions for lab changes, and then the course authors can update lab steps and scripts quickly and relatively easily.
+Microsoft Learn では、GitHub を使用して、Azure などのクラウド サービスをカバーするコースのラボ ステップとラボ スクリプトを公開しています。 GitHubを使用すると、コースの作成者と MCT が Azure プラットフォームの変更に合わせてラボ コンテンツを最新の状態に保つことができます。 GitHub を使用すると、MCT はラボの変更に関するフィードバックや提案を提供でき、コースの作成者はラボの手順とスクリプトをすばやく比較的簡単に更新できます。
 
-> When you prepare to teach these courses, you should ensure that you are using the latest lab steps and scripts by downloading the appropriate files from GitHub. GitHub should not be used to discuss technical content in the course, or how to prep. It should only be used to address changes in the labs.
+> これらのコースを教える準備をするときは、GitHub から適切なファイルをダウンロードして、最新のラボ手順とスクリプトを使用していることを確認する必要があります。 GitHub を使用して、コースの技術的な内容や準備方法を議論することはできません。 ラボの変更に対処するためにのみ使用してください。
 
-It is strongly recommended that MCTs and Partners access these materials and in turn, provide them separately to students.  Pointing students directly to GitHub to access Lab steps as part of an ongoing class will require them to access yet another UI as part of the course, contributing to a confusing experience for the student. An explanation to the student regarding why they are receiving separate Lab instructions can highlight the nature of an always-changing cloud-based interface and platform. Microsoft Learning support for accessing files on GitHub and support for navigation of the GitHub site is limited to MCTs teaching this course only.
+MCT とパートナーが、これらの資料にアクセスし、学生に個別に提供することを強く推奨します。  進行中のクラスの一部としてラボ ステップにアクセスできるように、学生に直接 GitHub を指示するには、学生がコースの一部として別の UI にもアクセスする必要がありますが、これは混乱の原因となります。 個別のラボの手順を受け取る理由を学生に説明すると、クラウドベースのインターフェイスとプラットフォームが常に変化しているという性質を強調できます。 GitHub 上のファイルにアクセスするための Microsoft Learning サポートと GitHub サイトのナビゲーションのサポートは、このコースを教える MCT のみに限定されています。
 
-> As an alternative to pointing students directly to the GitHub repository, you can point students to the GitHub Pages website to view the lab instructions. The URL for the GitHub Pages website can be found at the top of the repository.
+> 受講者を GitHub リポジトリに直接ポイントする代わりに、受講者に GitHub Pages Web サイトをポイントして演習の手順を表示することもできます。 GitHub ページ Web サイトの URL は、リポジトリの上部にあります。
 
-To address general comments about the course and demos, or how to prepare for a course delivery, please use the existing MCT forums.
+コースとデモに関する一般的なコメント、またはコース配信の準備方法については、既存の MCT フォーラムを使用してください。
 
-## Additional Resources
+## <a name="additional-resources"></a>その他のリソース
 
-A user guide has been provided for MCTs who are new to GitHub. It provides steps for connecting to GitHub, downloading and printing course materials, updating the scripts that students use in labs, and explaining how you can help ensure that this course’s content remains current.
+GitHub を初めて使用する MCT 向けのユーザー ガイドが提供されています。 GitHub への接続、コース教材のダウンロードと印刷、受講者が演習で使用するスクリプトの更新、およびこのコースのコンテンツを最新の状態に保つ方法について説明する手順について説明します。
 
 <https://microsoftlearning.github.io/MCT-User-Guide/>

@@ -2,39 +2,39 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "vmSize": {
-        "type": "string",
-        "defaultValue": "Standard_D2s_v3",
-        "metadata": {
-          "description": "Virtual machine size"
+        "vmSize": {
+            "type": "string",
+            "defaultValue": "Standard_D2s_v3",
+            "metadata": {
+                "description": "仮想マシンのサイズ"
+            }
+        },
+        "adminUsername": {
+            "type": "string",
+            "metadata": {
+                "description": "管理者ユーザー名"
+            }
+        },
+        "adminPassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "管理者パスワード"
+            }
         }
-      },
-      "adminUsername": {
-        "type": "string",
-        "metadata": {
-          "description": "Admin username"
-        }
-      },
-      "adminPassword": {
-        "type": "securestring",
-        "metadata": {
-          "description": "Admin password"
-        }
-      }
     },
-  "variables": {
-    "vmName": "az104-07-vm0",
-    "nicName": "az104-07-nic0",
-    "virtualNetworkName": "az104-07-vnet0",
-    "publicIPAddressName": "az104-07-pip0",
-    "nsgName": "az104-07-nsg0",
-    "vnetIpPrefix": "10.70.0.0/22", 
-    "subnetIpPrefix": "10.70.0.0/24", 
-    "subnetName": "subnet0",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-    "computeApiVersion": "2018-06-01",
-    "networkApiVersion": "2018-08-01"
-  },
+    "variables": {
+        "vmName": "az104-07-vm0",
+        "nicName": "az104-07-nic0",
+        "virtualNetworkName": "az104-07-vnet0",
+        "publicIPAddressName": "az104-07-pip0",
+        "nsgName": "az104-07-nsg0",
+        "vnetIpPrefix": "10.70.0.0/22",
+        "subnetIpPrefix": "10.70.0.0/24",
+        "subnetName": "subnet0",
+        "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+        "computeApiVersion": "2018-06-01",
+        "networkApiVersion": "2018-08-01"
+    },
     "resources": [
         {
             "name": "[variables('vmName')]",
