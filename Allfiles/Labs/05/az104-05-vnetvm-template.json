@@ -2,50 +2,50 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "vmSize": {
-        "type": "string",
-        "defaultValue": "Standard_D2s_v3",
-        "metadata": {
-          "description": "Virtual machine size"
+        "vmSize": {
+            "type": "string",
+            "defaultValue": "Standard_D2s_v3",
+            "metadata": {
+                "description": "仮想マシンのサイズ"
+            }
+        },
+        "nameSuffix": {
+            "type": "string",
+            "allowedValues": [
+                "0",
+                "1",
+                "2"
+            ],
+            "metadata": {
+                "description": "サフィックスの名前付け"
+            }
+        },
+        "adminUsername": {
+            "type": "string",
+            "metadata": {
+                "description": "管理者ユーザー名"
+            }
+        },
+        "adminPassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "管理者パスワード"
+            }
         }
-      },
-      "nameSuffix": {
-        "type": "string",
-        "allowedValues": [
-          "0",
-          "1",
-          "2"
-        ],
-        "metadata": {
-          "description": "Naming suffix"
-        }
-      },
-      "adminUsername": {
-        "type": "string",
-        "metadata": {
-          "description": "Admin username"
-        }
-      },
-      "adminPassword": {
-        "type": "securestring",
-        "metadata": {
-          "description": "Admin password"
-        }
-      }
     },
-  "variables": {
-    "vmName": "[concat('az104-05-vm',parameters('nameSuffix'))]",
-    "nicName": "[concat('az104-05-nic',parameters('nameSuffix'))]",
-    "virtualNetworkName": "[concat('az104-05-vnet',parameters('nameSuffix'))]",
-    "publicIPAddressName": "[concat('az104-05-pip',parameters('nameSuffix'))]",
-    "nsgName": "[concat('az104-05-nsg',parameters('nameSuffix'))]",
-    "vnetIpPrefix": "[concat('10.5',parameters('nameSuffix'),'.0.0/22')]", 
-    "subnetIpPrefix": "[concat('10.5',parameters('nameSuffix'),'.0.0/24')]", 
-    "subnetName": "subnet0",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-    "computeApiVersion": "2018-06-01",
-    "networkApiVersion": "2018-08-01"
-  },
+    "variables": {
+        "vmName": "[concat('az104-05-vm',parameters('nameSuffix'))]",
+        "nicName": "[concat('az104-05-nic',parameters('nameSuffix'))]",
+        "virtualNetworkName": "[concat('az104-05-vnet',parameters('nameSuffix'))]",
+        "publicIPAddressName": "[concat('az104-05-pip',parameters('nameSuffix'))]",
+        "nsgName": "[concat('az104-05-nsg',parameters('nameSuffix'))]",
+        "vnetIpPrefix": "[concat('10.5',parameters('nameSuffix'),'.0.0/22')]",
+        "subnetIpPrefix": "[concat('10.5',parameters('nameSuffix'),'.0.0/24')]",
+        "subnetName": "subnet0",
+        "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+        "computeApiVersion": "2018-06-01",
+        "networkApiVersion": "2018-08-01"
+    },
     "resources": [
         {
             "name": "[variables('vmName')]",

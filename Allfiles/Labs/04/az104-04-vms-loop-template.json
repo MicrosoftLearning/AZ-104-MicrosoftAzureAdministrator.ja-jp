@@ -6,40 +6,40 @@
             "type": "string",
             "defaultValue": "Standard_D2s_v3",
             "metadata": {
-                "description": "VM size"
+                "description": "VM サイズ"
             }
         },
         "vmName": {
             "type": "string",
             "defaultValue": "az104-04-vm",
             "metadata": {
-                "description": "VM name Prefix"
+                "description": "VM 名プレフィックス"
             }
         },
         "vmCount": {
             "type": "int",
             "defaultValue": 2,
             "metadata": {
-                "description": "Number of VMs"
+                "description": "[Number of VMs](VM の数)"
             }
         },
         "adminUsername": {
             "type": "string",
             "metadata": {
-                "description": "Admin username"
+                "description": "管理者ユーザー名"
             }
         },
         "adminPassword": {
             "type": "securestring",
             "metadata": {
-                "description": "Admin password"
+                "description": "管理者パスワード"
             }
         },
         "virtualNetworkName": {
             "type": "string",
             "defaultValue": "az104-04-vnet1",
             "metadata": {
-                "description": "Virtual network name"
+                "description": "仮想ネットワーク名"
             }
         }
     },
@@ -132,7 +132,7 @@
         },
         {
             "name": "[concat(variables('nic'),copyIndex())]",
-            "copy":{
+            "copy": {
                 "name": "nicCopy",
                 "count": "[parameters('vmCount')]"
             },
@@ -151,7 +151,7 @@
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), concat(variables('subnetName'),copyIndex()))]"
                             },
-                            "privateIPAllocationMethod":"Dynamic"
+                            "privateIPAllocationMethod": "Dynamic"
                         }
                     }
                 ]

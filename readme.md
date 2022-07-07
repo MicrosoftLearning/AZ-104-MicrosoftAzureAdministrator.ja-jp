@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3a6d97b55de3c7521ccc4df57f952992a47848bf
-ms.sourcegitcommit: 7bee317d45512510f9d6eb9b05c4ee6ef6c4ada0
+ms.openlocfilehash: a106aae9e7c3de7b5154ce5e889ee057a1b9dff3
+ms.sourcegitcommit: 69083589fed0a226499b3067222e444d3fe0bac8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "141160165"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "146458134"
 ---
 # <a name="az-104-microsoft-azure-administrator"></a>AZ-104: Microsoft Azure Administrator
 
@@ -44,7 +44,7 @@ ms.locfileid: "141160165"
 
 ## <a name="what-about-changes-to-the-student-handbook"></a>受講者ハンドブックの変更については?
 
-- このリポジトリは、コースのラボでの問題点のみを対象としています。 コースの内容に関するコメントは、MCT Courseware Forum に投稿してください。 
+- このリポジトリは、コースのラボでの問題点のみを対象としています。 [コース コンテンツ](https://docs.microsoft.com/learn/certifications/courses/az-104t00)に関するフィードバックや修正を提出できます。 各コンテンツ ページの下部にある "_問題の報告_" リンクを使用してください。
 
 ## <a name="notes"></a>Notes
 

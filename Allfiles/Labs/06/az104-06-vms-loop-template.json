@@ -6,33 +6,33 @@
             "type": "string",
             "defaultValue": "Standard_D2s_v3",
             "metadata": {
-                "description": "VM size"
+                "description": "VM サイズ"
             }
         },
         "vmName": {
             "type": "string",
             "defaultValue": "az104-06-vm",
             "metadata": {
-                "description": "VM name Prefix"
+                "description": "VM 名プレフィックス"
             }
         },
         "vmCount": {
             "type": "int",
             "defaultValue": 4,
             "metadata": {
-                "description": "Number of VMs"
+                "description": "[Number of VMs](VM の数)"
             }
         },
         "adminUsername": {
             "type": "string",
             "metadata": {
-                "description": "Admin username"
+                "description": "管理者ユーザー名"
             }
         },
         "adminPassword": {
             "type": "securestring",
             "metadata": {
-                "description": "Admin password"
+                "description": "管理者パスワード"
             }
         }
     },
@@ -41,7 +41,7 @@
         "nic": "az104-06-nic",
         "virtualNetworkNames": "[createArray('az104-06-vnet01','az104-06-vnet01','az104-06-vnet2','az104-06-vnet3')]",
         "virtualNetworkNamestbc": "[createArray('az104-06-vnet01','az104-06-vnet2','az104-06-vnet3')]",
-        "VNetPrefixes":"[createArray('10.60','10.62','10.63')]",
+        "VNetPrefixes": "[createArray('10.60','10.62','10.63')]",
         "nsgNames": "[createArray('az104-06-nsg01','az104-06-nsg01','az104-06-nsg2','az104-06-nsg3')]",
         "nsgNamestbc": "[createArray('az104-06-nsg01','az104-06-nsg2','az104-06-nsg3')]",
         "subnetName": "subnet",
@@ -118,7 +118,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-              }
+                }
             }
         },
         {
@@ -145,10 +145,10 @@
                         }
                     }
                 ]
-                  
             }
         },
-        {   "type": "Microsoft.Network/virtualNetworks/subnets",
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
             "apiVersion": "[variables('networkApiVersion')]",
             "location": "[resourceGroup().location]",
             "comments": "Virtual Network Subnet for VNet01",
@@ -162,7 +162,7 @@
         },
         {
             "name": "[concat(variables('nic'),copyIndex())]",
-            "copy":{
+            "copy": {
                 "name": "nicCopy",
                 "count": "[parameters('vmCount')]"
             },
