@@ -2,49 +2,49 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "vmSize": {
-            "type": "string",
-            "defaultValue": "Standard_D2s_v3",
-            "metadata": {
-                "description": "仮想マシンのサイズ"
-            }
-        },
-        "location1": {
-            "type": "string",
-            "metadata": {
-                "description": "最初の Azure リージョン"
-            }
-        },
-        "location2": {
-            "type": "string",
-            "metadata": {
-                "description": "2 つ目の Azure リージョン"
-            }
-        },
-        "adminUsername": {
-            "type": "string",
-            "metadata": {
-                "description": "管理者ユーザー名"
-            }
-        },
-        "adminPassword": {
-            "type": "securestring",
-            "metadata": {
-                "description": "管理者パスワード"
-            }
+      "vmSize": {
+        "type": "string",
+        "defaultValue": "Standard_D2s_v3",
+        "metadata": {
+          "description": "Virtual machine size"
         }
+      },
+      "location1": {
+          "type": "string",
+          "metadata": {
+              "description": "First Azure Region" 
+          }
+      },
+      "location2": {
+          "type": "string",
+          "metadata": {
+              "description": "Second Azure Region" 
+          }
+      },
+      "adminUsername": {
+        "type": "string",
+        "metadata": {
+          "description": "Admin username"
+        }
+      },
+      "adminPassword": {
+        "type": "securestring",
+        "metadata": {
+          "description": "Admin password"
+        }
+      }
     },
-    "variables": {
-        "locationNames": "[createArray(parameters('location1'),parameters('location1'),parameters('location2'))]",
-        "vmName": "az104-05-vm",
-        "nicName": "az104-05-nic",
-        "subnetName": "subnet0",
-        "VnetName": "az104-05-vnet",
-        "pipName": "az104-05-pip",
-        "nsgName": "az104-05-nsg",
-        "computeApiVersion": "2018-06-01",
-        "networkApiVersion": "2018-08-01"
-    },
+  "variables": {
+    "locationNames": "[createArray(parameters('location1'),parameters('location1'),parameters('location2'))]",       
+    "vmName": "az104-05-vm",
+    "nicName": "az104-05-nic",
+    "subnetName": "subnet0",
+    "VnetName": "az104-05-vnet",
+    "pipName": "az104-05-pip",
+    "nsgName": "az104-05-nsg",
+    "computeApiVersion": "2018-06-01",
+    "networkApiVersion": "2018-08-01"
+  },
     "resources": [
         {
             "name": "[concat(variables('vmName'),copyIndex())]",

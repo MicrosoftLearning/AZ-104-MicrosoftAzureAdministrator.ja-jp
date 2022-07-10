@@ -1,45 +1,36 @@
-### YamlMime:Yaml
-ms.openlocfilehash: c68e947d5bf295b6461f6b647da34a9d334bd9b3
-ms.sourcegitcommit: 8a0ced6338608682366fb357c69321ba1aee4ab8
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "145883871"
-name: $(Date:yyyyMMdd)$(Rev:.rr)
+name: '$(Date:yyyyMMdd)$(Rev:.rr)'
 jobs:
-- job: build_markdown_content
-  displayName: Build Markdown Content
-  workspace:
-    clean: all
-  pool:
-    vmImage: Ubuntu 16.04
-  container:
-    image: microsoftlearning/markdown-build:latest
-  steps:
-  - task: Bash@3
-    displayName: Build Content
-    inputs:
-      targetType: inline
-      script: >
-        cp /{attribution.md,template.docx,package.json,package.js} .
-
-        npm install
-
-        node package.js --version $(Build.BuildNumber)
-  - task: GitHubRelease@0
-    displayName: Create GitHub Release
-    inputs:
-      gitHubConnection: github-microsoftlearning-organization
-      repositoryName: $(Build.Repository.Name)
-      tagSource: manual
-      tag: v$(Build.BuildNumber)
-      title: バージョン $(Build.BuildNumber)
-      releaseNotesSource: input
-      releaseNotes: '# Version $(Build.BuildNumber) Release'
-      assets: $(Build.SourcesDirectory)/out/*.zip
-      assetUploadMode: replace
-  - task: PublishBuildArtifacts@1
-    displayName: Publish Output Files
-    inputs:
-      pathtoPublish: $(Build.SourcesDirectory)/out/
-      artifactName: Lab Files
+  - job: build_markdown_content
+    displayName: 'Build Markdown Content'
+    workspace:
+      clean: all
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    container:
+      image: 'microsoftlearning/markdown-build:latest'
+    steps:
+      - task: Bash@3
+        displayName: 'Build Content'
+        inputs:
+          targetType: inline
+          script: |
+            cp /{attribution.md,template.docx,package.json,package.js} .
+            npm install
+            node package.js --version $(Build.BuildNumber)
+      - task: GitHubRelease@0
+        displayName: 'Create GitHub Release'
+        inputs:
+          gitHubConnection: 'github-microsoftlearning-organization'
+          repositoryName: '$(Build.Repository.Name)'
+          tagSource: manual
+          tag: 'v$(Build.BuildNumber)'
+          title: 'Version $(Build.BuildNumber)'
+          releaseNotesSource: input
+          releaseNotes: '# Version $(Build.BuildNumber) Release'
+          assets: '$(Build.SourcesDirectory)/out/*.zip'
+          assetUploadMode: replace
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Output Files'
+        inputs:
+          pathtoPublish: '$(Build.SourcesDirectory)/out/'
+          artifactName: 'Lab Files'
