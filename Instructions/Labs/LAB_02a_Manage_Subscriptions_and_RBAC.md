@@ -2,17 +2,17 @@
 lab:
   title: 02a - サブスクリプションと RBAC を管理する
   module: Module 02 - Governance and Compliance
-ms.openlocfilehash: 9501fbf86ceb7c999d88bbb88891e93b43d79f70
-ms.sourcegitcommit: 0391f396671646ca11a8c55c9ecff19107f1d0d3
+ms.openlocfilehash: 8318d90573a04b60e4b1cfd79ed2daa621e8401f
+ms.sourcegitcommit: 8282cbcee5f7cd46bdc73d781c460d6a078049bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "141707685"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "143611547"
 ---
 # <a name="lab-02a---manage-subscriptions-and-rbac"></a>ラボ 02a - サブスクリプションと RBAC を管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
-## <a name="lab-requirements"></a>ラボの要件:
+## <a name="lab-requirements"></a>ラボの要件
 
 このラボでは、Azure Active Directory (Azure AD) ユーザーを作成し、カスタムの Azure ロール ベースのアクセス制御 (RBAC) ロールを作成し、これらのロールを Azure AD ユーザーに割り当てるためのアクセス許可が必要です。 すべてのラボ ホスティング業者がこの機能を提供できるわけではありません。 このラボの可用性については、インストラクターに問い合わせてください。
 
@@ -51,7 +51,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 このタスクでは、管理グループを作成および構成します。 
 
-1. Azure portal (```https://portal.azure.com```) にサインインします。
+1. [**Azure Portal**](http://portal.azure.com) にサインインします。
 
 1. **「管理グループ」** を検索して、選択し、 **「管理グループ」** ブレードに移動します。
 
@@ -63,7 +63,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     
     1.  Azure Active Directory テナントの **「プロパティ」** ブレードの、 **「Azure リソースのアクセス管理」** セクションで **「はい」** を選択し、さらに **「保存」** を選択します。
     
-    1.  **「管理グループ」** ブレードに戻り、 **「更新​​」** をクリックします。
+    1.  **「管理グループ」** ブレードに戻り、 **「更新」** をクリックします。
 
 1. **「管理グループ」** ブレードで、 **「+ 作成」** をクリックします。
 

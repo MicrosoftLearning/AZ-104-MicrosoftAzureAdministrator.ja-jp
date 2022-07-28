@@ -1,45 +1,50 @@
 ---
 lab:
-    title: '03d - Azure CLI を使用して Azure リソースを管理する'
-    module: 'モジュール 03 -Azure 管理'
+  title: 03d - Azure CLI を使用して Azure リソースを管理する
+  module: Module 03 - Azure Administration
+ms.openlocfilehash: e673423e49d49629c72f1b28a234d82eb776190f
+ms.sourcegitcommit: c360d3abaa6e09814f051b2568340e80d0d0e953
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "138356579"
 ---
+# <a name="lab-03d---manage-azure-resources-by-using-azure-cli"></a>ラボ 03d - Azure CLI を使用して Azure リソースを管理する
+# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
-# ラボ 03d - Azure CLI を使用して Azure リソースを管理する
-# 学生用ラボ マニュアル
+## <a name="lab-scenario"></a>ラボのシナリオ
 
-## ラボ シナリオ
+プロビジョニング リソースに関連する基本的な Azure 管理機能を確認し、Azure portal、Azure Resouce Manager テンプレート、および Azure PowerShell を使用して、リソース グループに基づいてリソースを整理しました。次は、Azure CLI を使用して同等のタスクを実行します。 Azure CLI のインストールを回避するには、Azure Cloud Shell で使用できる Bash 環境を活用します。
 
-プロビジョニング リソースに関連する基本的な Azure 管理機能を確認し、Azure portal、Azure Resouce Manager テンプレート、および Azure PowerShell を使用して、リソース グループに基づいてリソースを整理しました。次は、Azure CLI を使用して同等のタスクを実行します。Azure CLI のインストールを回避するには、Azure Cloud Shell で使用できる Bash 環境を活用します。
+## <a name="objectives"></a>目標
 
-## 目標
+このラボでは、次のことを行います。
 
-このラボでは次の内容を学習します。
++ タスク 1:Azure Cloud Shell で Bash セッションを開始する
++ タスク 2:Azure CLI を使用して、リソース グループと Azure マネージド ディスクを作成する
++ タスク 3:Azure CLI を使用してマネージド ディスクを構成する
 
-+ タスク 1: Azure Cloud Shell で Bash セッションを開始する
-+ タスク 2: Azure CLI を使用して、リソース グループと Azure マネージド ディスクを作成する
-+ タスク 3: Azure CLI を使用してマネージド ディスクを構成する
+## <a name="estimated-timing-20-minutes"></a>推定時間:20 分
 
-## 予想時間: 20 分
+## <a name="instructions"></a>Instructions
 
-## 指示
+### <a name="exercise-1"></a>演習 1
 
-### 演習 1
-
-#### タスク 1: Azure Cloud Shell で Bash セッションを開始する
+#### <a name="task-1-start-a-bash-session-in-azure-cloud-shell"></a>タスク 1:Azure Cloud Shell で Bash セッションを開始する
 
 このタスクでは、Cloud Shell で Bash セッションを開きます。 
 
 1. ポータルから、Azure portal の右上にあるアイコンをクリックして、**Azure Cloud Shell** を開きます。
 
-1. **Bash** または **PowerShell** のいずれかを選択するためのプロンプトが表示されたら、**「Bash」** を選択します。 
+1. **Bash** または **PowerShell** の選択を求めるメッセージが表示されたら、**[Bash]** を選択します。 
 
-    > **注**: **Cloud Shell** の初回起動時に「**ストレージがマウントされていません**」というメッセージが表示された場合は、このラボで使用しているサブスクリプションを選択し、**「ストレージの作成」** を選択します。 
+    >**注**:**Cloud Shell** の初回起動時に **「ストレージがマウントされていません」** というメッセージが表示された場合は、このラボで使用しているサブスクリプションを選択し、 **「ストレージの作成」** を選択します。 
 
-1. メッセージが表示されたら、**「ストレージの作成」** をクリックし、「Azure Cloud Shell」 ウィンドウが表示されるまで待ちます。 
+1. メッセージが表示されたら、 **「ストレージの作成」** をクリックし、「Azure Cloud Shell」 ウィンドウが表示されるまで待ちます。 
 
-1. 「Cloud Shell」 ウィンドウの左上隅にあるドロップダウン メニューに、**「Bash」** が表示されていることを確認します。
+1. [Cloud Shell] ウィンドウの左上隅にあるドロップダウン メニューに、 **[Bash]** が表示されていることを確認します。
 
-#### タスク 2: Azure CLI を使用して、リソース グループと Azure マネージド ディスクを作成する
+#### <a name="task-2-create-a-resource-group-and-an-azure-managed-disk-by-using-azure-cli"></a>タスク 2:Azure CLI を使用して、リソース グループと Azure マネージド ディスクを作成する
 
 このタスクでは、Cloud Shell 内で Azure CLI セッションを使用して、リソース グループと Azure マネージド ディスクを作成します。
 
@@ -57,7 +62,7 @@ lab:
    ```sh
    az group show --name $RGNAME
    ```
-1. このモジュールの前のラボで作成したものと同じ特性を持つ新しいマネージド ディスクを作成するには、「Cloud Shell」 内の 「Bash」 セッションから次のコードを実行します。
+1. このモジュールの前のラボで作成したものと同じ特性を持つ新しいマネージド ディスクを作成するには、[Cloud Shell] 内の [Bash] セッションから次のコードを実行します。
 
    ```sh
    DISKNAME='az104-03d-disk1'
@@ -68,7 +73,7 @@ lab:
    --sku 'Standard_LRS' \
    --size-gb 32
    ```
-    > **注**: 複数行の構文を使用する場合は、各行の末尾に後続スペースが入っていないバックスラッシュ (`\`) で終わり、各行の先頭に行間スペースが入らないようにしてください。
+    >**注**:複数行の構文を使用する場合は、各行の末尾に後続スペースが入っていないバックスラッシュ (`\`) で終わり、各行の先頭に行間スペースが入らないようにしてください。
 
 1. 新しく作成されたディスクのプロパティを取得するには、次のコマンドを実行します。
 
@@ -76,7 +81,7 @@ lab:
    az disk show --resource-group $RGNAME --name $DISKNAME
    ```
 
-#### タスク 3: Azure CLI を使用してマネージド ディスクを構成する
+#### <a name="task-3-configure-the-managed-disk-by-using-azure-cli"></a>タスク 3:Azure CLI を使用してマネージド ディスクを構成する
 
 このタスクでは、Cloud Shell 内で Azure CLI セッションを使用して、Azure マネージド ディスクの構成を管理します。 
 
@@ -104,11 +109,13 @@ lab:
    az disk show --resource-group $RGNAME --name $DISKNAME --query sku
    ```
 
-#### リソースをクリーン アップする
+#### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-   > **注**: 新しく作成した Azure リソースのうち、使用しないリソースは必ず削除してください。使用しないリソースを削除しないと、予期しないコストが発生する場合があります。
+ > **注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
-1. Azure portal で、**「Cloud Shell」** ウィンドウ内で **Bash** シェル セッションを開きます。
+ > **注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
+
+1. Azure portal で、**Cloud Shell** ウィンドウ内で **Bash** シェル セッションを開きます。
 
 1. 次のコマンドを実行して、このモジュールのラボ全体で作成したすべてのリソース グループのリストを表示します。
 
@@ -116,17 +123,17 @@ lab:
    az group list --query "[?starts_with(name,'az104-03')].name" --output tsv
    ```
 
-1. 次のコマンドを実行して、このモジュールのラボ全体で作成したすべてのリソース グループのリストを削除します。
+1. 次のコマンドを実行して、このモジュールのラボ全体を通して作成したすべてのリソース グループを削除します。
 
    ```sh
    az group list --query "[?starts_with(name,'az104-03')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
 
-    > **注**: コマンドは非同期に実行されるので (--nowait パラメーターで決定される)、同じ Bash セッション内ですぐに別の Azure CLI コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
+    >**注**:コマンドは非同期に実行されるので (--nowait パラメーターで決定される)、同じ Bash セッション内ですぐに別の Azure CLI コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### レビュー
+#### <a name="review"></a>確認
 
-このラボでは次の内容を学習しました。
+このラボでは、次のことを行いました。
 
 - Azure Cloud Shell で Bash セッションを開始しました
 - Azure CLI を使用してリソース グループと Azure マネージド ディスクを作成しました

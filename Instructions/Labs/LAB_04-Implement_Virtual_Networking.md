@@ -1,10 +1,15 @@
 ---
 lab:
-    title: '04 - 仮想ネットワークを実装する'
-    module: 'モジュール 04 – バーチャル ネットワーク'
+title: 04 - 仮想ネットワークを実装する
+module: Module 04 - Virtual Networking
+ms.openlocfilehash: 383f88f2dddb48d498efb3d868330e4bba15c92b
+ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "144937829"
 ---
-
-# ラボ 04 - 仮想ネットワークを実装する
+# <a name="lab-04---implement-virtual-networking"></a>ラボ 04 - 仮想ネットワークを実装する
 
 # 受講生用ラボ マニュアル
 
@@ -111,12 +116,12 @@ Azure 仮想ネットワークの機能について学習します。まず、Az
 
     >**注**: 次のタスクに進む前に、デプロイが完了するまで待機します。これにはおよそ 2 分かかります。
 
-    >**注**: 「リージョン内の VM サイズが利用できません」というメッセージが表示されたら、次の手順に従います。
-    > 1. CloudShell で `{}` ボタンをクリックして、左側のバーから **az104-04-vms-loop-parameters.json** を選択して、`vmSize` パラメーターの値をメモします。
-    > 1. 'az104-04-rg1' リソース グループがデプロイされた場所をクリックします。CloudShell で、`az group show -n az104-04-rg1 --query location` を実行して、それを取得します。
-    > 1. CloudShell で、`az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。
-    > 1. `vmSize` パラメーターの値を実行したコマンドが返す値のいずれかに置き換えます。
-    > 1. `New-AzResourceGroupDeployment` コマンドをもう一度実行して、テンプレートを再デプロイします。上ボタンを数回押して、最後に実行したコマンドを表示することができます。
+    >**注**:VM サイズが利用できないというエラーが発生した場合、インストラクターにサポートを依頼し、次の手順を試してください。
+    > 1. CloudShell で `{}` ボタンをクリックし、左側のバーから **az104-04-vms-loop-parameters.json** を選択して、`vmSize` パラメーターの値をメモしておきます。
+    > 1. "az104-04-rg1" リソース グループがデプロイされている場所を確認します。 CloudShell で `az group show -n az104-04-rg1 --query location` を実行して、それを取得することができます。
+    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。 SKU が一覧表示されない (つまり、結果がない) 場合、そのリージョンに D2S 仮想マシンをデプロイすることはできません。 D2S 仮想マシンをデプロイできるリージョンを探す必要があります。 適切な場所を選んだら、AZ104-04-rg1 リソース グループを削除して、ラボを再起動します。
+    > 1. `vmSize` パラメーターの値を、先ほど実行したコマンドによって返された値のいずれかに置き換えます。
+    > 1. 次に、`New-AzResourceGroupDeployment` コマンドを再度実行して、テンプレートを再デプロイします。 上方向ボタンを数回押して、最後に実行されたコマンドを上に持ってくることができます。
 
 1. 「Cloud Shell」 ペインを閉じます。
 
@@ -293,7 +298,7 @@ Azure 仮想ネットワークの機能について学習します。まず、Az
 
 このタスクでは、Azure パブリック DNS ゾーンを使用して外部 DNS 名前解決を構成します。
 
-1. **SEA-DEV** ラボ システムの Web ブラウザーで新しいタブを開き、<https://www.godaddy.com/domains/domain-name-search> に移動します。
+1. Web ブラウザーで新しいタブを開き、<https://www.godaddy.com/domains/domain-name-search> に移動します。
 
 1. ドメイン名検索を使用して、使用されていないドメイン名を識別します。
 

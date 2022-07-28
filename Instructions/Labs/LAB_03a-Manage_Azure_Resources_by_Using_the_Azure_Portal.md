@@ -2,12 +2,12 @@
 lab:
   title: 03a - Azure portal を使用して Azure リソースを管理する
   module: Module 03 - Azure Administration
-ms.openlocfilehash: 38ca9fa2ec16f786824e7ba5b27bb194f31f7d7b
-ms.sourcegitcommit: 8282cbcee5f7cd46bdc73d781c460d6a078049bb
+ms.openlocfilehash: 020f28742779dab36777e2ae7b8bddb43ebb46be
+ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "143611541"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "144937813"
 ---
 # <a name="lab-03a---manage-azure-resources-by-using-the-azure-portal"></a>ラボ 03a - Azure portal を使用して Azure リソースを管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
@@ -47,7 +47,7 @@ ms.locfileid: "143611541"
     |サブスクリプション| リソース グループを作成した Azure サブスクリプションの名前 |
     |リソース グループ| 新しいリソース グループ **az104-03a-rg1** の名前 |
     |ディスク名| **az104-03a-disk1** |
-    |リージョン| リソース グループを作成した Azure リージョンの名前 |
+    |リージョン| **(米国) 米国東部** |
     |可用性ゾーン| **なし** |
     |変換元の型| **なし** |
 
