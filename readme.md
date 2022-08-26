@@ -1,32 +1,24 @@
----
-ms.openlocfilehash: a106aae9e7c3de7b5154ce5e889ee057a1b9dff3
-ms.sourcegitcommit: 69083589fed0a226499b3067222e444d3fe0bac8
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "146458134"
----
 # <a name="az-104-microsoft-azure-administrator"></a>AZ-104: Microsoft Azure Administrator
 
 ## <a name="welcome"></a>ようこそ
 
-このリポジトリは、Microsoft コースを教える講師向けです。 クラスに参加している場合は、講師に支援を依頼してください。 
+This repository is for instructors teaching Microsoft courses. If you are in class, please ask your instructor for assistance. 
 
 - **[ラボへのリンク (HTML 形式)](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)**
-- **あなたは MCT ですか?** - [MCT 向けの GitHub ユーザー ガイド](https://microsoftlearning.github.io/MCT-User-Guide/)をご覧ください
+- <bpt id="p1">**</bpt>Are you a MCT?<ept id="p1">**</ept> - Have a look at our <bpt id="p1">[</bpt>GitHub User Guide for MCTs<ept id="p1">](https://microsoftlearning.github.io/MCT-User-Guide/)</ept>
 
 ## <a name="security-issue---february-2022"></a>セキュリティの問題 - 2022 年 2 月
 
-一部の Azure トレーニング ラボでは、特定のユーザー名とパスワードを使用するように受講者に指示しています。 悪意のあるアクターは、絶えず仮想マシンをスキャンし、これらの資格情報を使用してログインを試みます。
-いったんログインされると、そのマシンが暗号化マイニングや他のクラスルーム以外のアクティビティに使用される可能性があります。
+Some Azure training labs instruct the student to use a specific user name and password. Bad actors constantly scan virtual machines and try to log in using those credentials.
+Once they login the machines can be used for crypto-mining or other non-classroom activities.
 
-**修復**: 自分で選択したパスワードを使用するように受講生に指示する必要があります。 ラボの手順で、受講生にこのパスワードを使用させないようにしてください。 
+このリポジトリは、Microsoft コースを教える講師向けです。 
 
 ## <a name="what-are-we-doing"></a>説明
 
-- このコースをサポートするには、コースで使用される Azure サービスを最新の状態に保つために、コース コンテンツを頻繁に更新する必要があります。  ラボの手順とラボ ファイルは GitHub で公開しています。これにより、コースの作成者と MCT 間でのオープンな作業が可能となり、Azure プラットフォームの変更に合わせてコンテンツを最新の状態に保つことができます。
+- クラスに参加している場合は、講師に支援を依頼してください。
 
-- これにより、今まで経験したことがないようなコラボレーション感がラボに生まれると期待しています。Azure が変更され、ライブ配信中にあなたがそれを最初に見つけた場合は、ラボ ソースで機能強化を行ってください。  仲間の MCT を支援しましょう。
+- We hope that this brings a sense of collaboration to the labs like we've never had before - when Azure changes and you find it first during a live delivery, go ahead and make an enhancement right in the lab source.  Help your fellow MCTs.
 
 ## <a name="how-should-i-use-these-files-relative-to-the-released-moc-files"></a>リリースされた MOC のファイルに対してこれらのファイルを使用する方法
 
@@ -40,14 +32,14 @@ ms.locfileid: "146458134"
 
 - すべての MCT は、GitHub repro のコードまたはコンテンツに pull request を送信できます。Microsoft とコース作成者は、必要に応じてコンテンツとラボ コードの変更をトリアージして追加します。
 
-- バグ、変更、改善、アイデアを送信できます。  新しい Azure 機能を先に見つけたら、  新しいデモを提出しましょう。
+- You can submit bugs, changes, improvement and ideas.  Find a new Azure feature before we have?  Submit a new demo!
 
 ## <a name="what-about-changes-to-the-student-handbook"></a>受講者ハンドブックの変更については?
 
-- このリポジトリは、コースのラボでの問題点のみを対象としています。 [コース コンテンツ](https://docs.microsoft.com/learn/certifications/courses/az-104t00)に関するフィードバックや修正を提出できます。 各コンテンツ ページの下部にある "_問題の報告_" リンクを使用してください。
+- **あなたは MCT ですか?**
 
 ## <a name="notes"></a>Notes
 
 ### <a name="classroom-materials"></a>コース資料
 
-MCT とパートナーが、これらの資料にアクセスし、学生に個別に提供することを強く推奨します。  進行中のクラスの一部としてラボ ステップにアクセスできるように、学生に直接 GitHub を指示するには、学生がコースの一部として別の UI にもアクセスする必要がありますが、これは混乱の原因となります。 個別のラボの手順を受け取る理由を学生に説明すると、クラウドベースのインターフェイスとプラットフォームが常に変化しているという性質を強調できます。 GitHub 上のファイルにアクセスするための Microsoft Learning サポートと GitHub サイトのナビゲーションのサポートは、このコースを教える MCT のみに限定されています。
+- [MCT 向けの GitHub ユーザー ガイド](https://microsoftlearning.github.io/MCT-User-Guide/)をご覧ください
