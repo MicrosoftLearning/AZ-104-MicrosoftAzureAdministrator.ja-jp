@@ -2,20 +2,15 @@
 lab:
   title: 04 - 仮想ネットワークを実装する
   module: Module 04 - Virtual Networking
-ms.openlocfilehash: 383f88f2dddb48d498efb3d868330e4bba15c92b
-ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "144937829"
 ---
+
 # <a name="lab-04---implement-virtual-networking"></a>ラボ 04 - 仮想ネットワークを実装する
 
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-Azure バーチャル ネットワークの機能について学習します。 まず、Azure でいくつかの Azure 仮想マシンをホストするバーチャル ネットワークを作成するプランを立てます。 ネットワーク ベースのセグメンテーションを実装するため、バーチャル ネットワークの異なるサブネットにデプロイします。 また、プライベート IP アドレスとパブリック IP アドレスが時間の経過とともに変更されないようにする必要もあります。 Contoso のセキュリティ要件に準拠するには、インターネットからアクセスできる Azure 仮想マシンのパブリック エンドポイントを保護する必要があります。 最後に、バーチャル ネットワーク内とインターネットからの両方で、Azure 仮想マシンの DNS 名前解決を実装する必要があります。
+You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from Internet.
 
 ## <a name="objectives"></a>目標
 
@@ -48,10 +43,10 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. バーチャル ネットワークを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用する Azure サブスクリプションの名前 |
-    | リソース グループ | **新しい** リソース グループ **az104-04-rg1** の名前 |
+    | リソース グループ | **新しい**リソース グループ **az104-04-rg1** の名前 |
     | 名前 | **az104-04-vnet1** |
     | リージョン | このラボで使用するサブスクリプションで使用できる Azure リージョンの名前 |
 
@@ -68,9 +63,9 @@ Azure バーチャル ネットワークの機能について学習します。 
     | サブネット名 | **subnet0** |
     | サブネットのアドレス範囲 | **10.40.0.0/24** |
 
-1. 既定値をそのまま使用し、**[確認および作成]** をクリックします。 検証を実行し、もう一度 **[作成]** をクリックして、デプロイを送信します。
+1. Accept the defaults and click <bpt id="p1">**</bpt>Review and Create<ept id="p1">**</ept>. Let validation occur, and hit <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> again to submit your deployment.
 
-    >**注:**  バーチャル ネットワークがプロビジョニングされるのを待ちます。 これに要する時間は 1 分未満です。
+    ><bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> Wait for the virtual network to be provisioned. This should take less than a minute.
 
 1. **[リソースに移動]** をクリックします
 
@@ -78,7 +73,7 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. サブネットを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **subnet1** |
     | アドレス範囲 (CIDR ブロック) | **10.40.1.0/24** |
@@ -101,7 +96,7 @@ Azure バーチャル ネットワークの機能について学習します。 
 
     >**注**:各ファイルを別々にアップロードする必要がある場合があります。
 
-1. パラメーター ファイルを編集し、パスワードを変更します。 シェルでのファイルの編集に関してヘルプが必要な場合は、インストラクターに相談してください。 ベスト プラクティスとして、パスワードなどのシークレットは、キー コンテナーに安全に保存する必要があります。 
+1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
 1. [Cloud Shell] ペインで、次のコマンドを実行し、テンプレート ファイルとパラメーター ファイルを使用して、2 つの仮想マシンをデプロイします。
 
@@ -114,16 +109,16 @@ Azure バーチャル ネットワークの機能について学習します。 
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
 
-    >**注**:ARM テンプレートをデプロイするこの方法では、Azure PowerShell を使用します。 同等の Azure CLI コマンド **az deployment create** を実行して、同じタスクを実行することもできます (詳細については、「[Resource Manager テンプレートおよび Azure CLI を使用するリソースのデプロイ](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli)」を参照してください)。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command <bpt id="p1">**</bpt>az deployment create<ept id="p1">**</ept> (for more information, refer to <bpt id="p2">[</bpt>Deploy resources with Resource Manager templates and Azure CLI<ept id="p2">](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli)</ept>.
 
-    >**注**:次のタスクに進む前に、デプロイが完了するまで待機します。 これには 2 分ほどかかります。
+    >Azure バーチャル ネットワークの機能について学習します。
 
     >**注**:VM サイズが利用できないというエラーが発生した場合、インストラクターにサポートを依頼し、次の手順を試してください。
     > 1. CloudShell で `{}` ボタンをクリックし、左側のバーから **az104-04-vms-loop-parameters.json** を選択して、`vmSize` パラメーターの値をメモしておきます。
-    > 1. "az104-04-rg1" リソース グループがデプロイされている場所を確認します。 CloudShell で `az group show -n az104-04-rg1 --query location` を実行して、それを取得することができます。
-    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。 SKU が一覧表示されない (つまり、結果がない) 場合、そのリージョンに D2S 仮想マシンをデプロイすることはできません。 D2S 仮想マシンをデプロイできるリージョンを探す必要があります。 適切な場所を選んだら、AZ104-04-rg1 リソース グループを削除して、ラボを再起動します。
+    > 1. まず、Azure でいくつかの Azure 仮想マシンをホストするバーチャル ネットワークを作成するプランを立てます。
+    > 1. ネットワーク ベースのセグメンテーションを実装するため、バーチャル ネットワークの異なるサブネットにデプロイします。
     > 1. `vmSize` パラメーターの値を、先ほど実行したコマンドによって返された値のいずれかに置き換えます。
-    > 1. 次に、`New-AzResourceGroupDeployment` コマンドを再度実行して、テンプレートを再デプロイします。 上方向ボタンを数回押して、最後に実行されたコマンドを上に持ってくることができます。
+    > 1. また、プライベート IP アドレスとパブリック IP アドレスが時間の経過とともに変更されないようにする必要もあります。
 
 1. [Cloud Shell] ペインを閉じます。
 
@@ -147,14 +142,14 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. **[ipconfig1]** ブレードの **[パブリック IP アドレス設定]** セクションで、**[関連付け]** を選択し、**[+ 新規作成]** をクリックし、次の設定を指定して **[OK]** をクリックします。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-pip0** |
     | SKU | **Standard** |
 
 1. **[ipconfig1]** ブレードで **[割り当て]** を **[静的]** に設定し、**[IP アドレス]** の既定値を **10.40.0.4** のままにします。
 
-1. **[ipconfig1]** ブレードに戻り、変更を保存します。 次の手順に進む前に、必ず保存操作が完了するのを待ってください。
+1. Contoso のセキュリティ要件に準拠するには、インターネットからアクセスできる Azure 仮想マシンのパブリック エンドポイントを保護する必要があります。
 
 1. **[az104-04-vnet1]** ブレードに戻ります
 
@@ -166,7 +161,7 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. **[ipconfig1]** ブレードの **[パブリック IP アドレス設定]** セクションで、**[関連付け]** を選択し、**[+ 新規作成]** をクリックし、次の設定を指定して **[OK]** をクリックします。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-pip1** |
     | SKU | **Standard** |
@@ -191,26 +186,26 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. 接続の試行が失敗することに注意してください。
 
-    >**注**:これは想定されたことです。既定では、Standard SKU のパブリック IP アドレスが割り当てられたネットワーク インターフェイスは、ネットワーク セキュリティ グループで保護されている必要があるためです。 リモート デスクトップ接続を許可するには、インターネットからの受信 RDP トラフィックを明示的に許可するネットワーク セキュリティ グループを作成し、両方の仮想マシンのネットワーク インターフェイスに割り当てます。
+    >最後に、バーチャル ネットワーク内とインターネットからの両方で、Azure 仮想マシンの DNS 名前解決を実装する必要があります。
 
 1. 仮想マシン **az104-04-vm0** と **az104-04-vm1** を停止します。
 
-    >**注**:これはラボの便宜のために行われます。 ネットワーク セキュリティ グループがネットワーク インターフェイスに接続されているときに仮想マシンが実行中の場合は、その接続が有効になるまでに 30 分以上かかることがあります。 ネットワーク セキュリティ グループが作成されて接続されると、仮想マシンは再起動され、接続が直ちに有効になります。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
 
 1. Azure portal で「**ネットワーク セキュリティ グループ**」を検索して選択し、**[ネットワーク セキュリティ グループ]** ブレードで **[+ 作成]** をクリックします。
 
 1. ネットワーク セキュリティ グループを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
     | 名前 | **az104-04-nsg01** |
     | リージョン | このラボで他のすべてのリソースをデプロイする Azure リージョンの名前 |
 
-1. **[確認と作成]** をクリックします。 検証を実行し、**[作成]** をクリックしてデプロイを送信します。
+1. Click <bpt id="p1">**</bpt>Review and Create<ept id="p1">**</ept>. Let validation occur, and hit <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to submit your deployment.
 
-    >**注**: デプロイが完了するまで待ちます。 これには 2 分ほどかかります。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. This should take about 2 minutes.
 
 1. [デプロイ] ブレードで **[リソースに移動]** をクリックして、**az104-04-nsg01** ネットワーク セキュリティ グループのブレードを開きます。
 
@@ -242,13 +237,13 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. **[az104-04-vm0]** ブレードで **[接続]**、**[RDP]** の順にクリックし、**[RDP で接続する]** ブレードで、パブリック IP アドレスを使用して **[RDP ファイルのダウンロード]** をクリックし、プロンプトに従ってリモート デスクトップ セッションを開始します。
 
-    >**注**:この手順では、Windows コンピューターからリモート デスクトップ経由で接続することを指します。 Mac では、Mac App Store からリモート デスクトップ クライアントを使用でき、Linux コンピューターでは、オープンソースの RDP クライアント ソフトウェアを使用できます。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
     >**注**:ターゲット仮想マシンに接続する際は、警告メッセージを無視できます。
 
 1. プロンプトが表示されたら、パラメーター ファイルのユーザーとパスワードを使用してサインインします。
 
-    >**注**:リモート デスクトップ セッションを開いたままにします。 これは、次のタスクで必要になります。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Leave the Remote Desktop session open. You will need it in the next task.
 
 #### <a name="task-5-configure-azure-dns-for-internal-name-resolution"></a>タスク 5:内部の名前解決に Azure DNS を構成する
 
@@ -258,15 +253,15 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. プライベート DNS ゾーンを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
     | 名前 | **contoso.org** |
 
-1. **[確認と作成]** をクリックします。 検証を実行し、もう一度 **[作成]** をクリックして、デプロイを送信します。
+1. Click <bpt id="p1">**</bpt>Review and Create<ept id="p1">**</ept>. Let validation occur, and hit <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> again to submit your deployment.
 
-    >**注**: プライベート DNS ゾーンが作成されるまで待ちます。 これには 2 分ほどかかります。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
 1. **[リソースに移動]** をクリックして **contoso.org** DNS プライベート ゾーンのブレードを開きます。
 
@@ -283,11 +278,11 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. **[OK]** をクリックします。
 
-    >**注:** 仮想ネットワーク リンクが作成されるまで待ちます。 これにかかる時間は 1 分未満です。
+    ><bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. **contoso.org** プライベート DNS ゾーンのブレードのサイドバーで、**[概要]** をクリックします
 
-1. **az104-04-vm0** および **az104-04-vm1** の DNS レコードが、レコード セットのリストに **自動登録** として表示されることを確認 します。
+1. **az104-04-vm0** および **az104-04-vm1** の DNS レコードが、レコード セットのリストに**自動登録**として表示されることを確認 します。
 
     >**注:** レコード セットが一覧に表示されない場合は、必要に応じて数分待ってからページを更新してください。
 
@@ -314,15 +309,15 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. 次の設定で DNS ゾーンを作成します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
     | 名前 | このタスクの先ほど確認した DNS ドメイン名 |
 
-1. **[確認と作成]** をクリックします。 検証を実行し、もう一度 **[作成]** をクリックして、デプロイを送信します。
+1. Click <bpt id="p1">**</bpt>Review and Create<ept id="p1">**</ept>. Let validation occur, and hit <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> again to submit your deployment.
 
-    >**注**: DNS ゾーンが作成されるまで待ちます。 これには 2 分ほどかかります。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the DNS zone to be created. This should take about 2 minutes.
 
 1. **[リソースに移動]** をクリックして、新しく作成した DNS ゾーンのブレードを開きます。
 
@@ -330,7 +325,7 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. 次の設定でレコード セットを追加します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-vm0** |
     | Type | **A** |
@@ -345,7 +340,7 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 1. 次の設定でレコード セットを追加します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-vm1** |
     | Type | **A** |
@@ -378,9 +373,9 @@ Azure バーチャル ネットワークの機能について学習します。 
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
- > **注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
+ > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
- > **注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
+ > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
