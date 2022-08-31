@@ -2,13 +2,8 @@
 lab:
   title: 03b - ARM テンプレートを使用して Azure リソースを管理する
   module: Module 03 - Azure Administration
-ms.openlocfilehash: 602da542fdf20f6b1be637e792ec47daaa0de04b
-ms.sourcegitcommit: 8282cbcee5f7cd46bdc73d781c460d6a078049bb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "143611553"
 ---
+
 # <a name="lab-03b---manage-azure-resources-by-using-arm-templates"></a>ラボ 03b - ARM テンプレートを使用して Azure リソースを管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
@@ -39,37 +34,37 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 1. [**Azure Portal**](http://portal.azure.com) にサインインします。
 
-1. Azure portal で、「**リソース グループ**」を検索して選択します。 
+1. Azure portal で、**[リソース グループ]** を検索して選択します。 
 
 1. リソース グループのリストで、**az104-03a-rg1** をクリックします。
 
-1. **az104-03a-rg1** リソース グループ ブレードの **「設定」** セクションで、 **「デプロイ」** をクリックします。
+1. **az104-03a-rg1** リソース グループ ブレードの **[設定]** セクションで、**[デプロイ]** をクリックします。
 
 1. **az104-03a-rg1 - デプロイ** ブレードで、デプロイの一覧の最初のエントリをクリックします。
 
 1. **[Microsoft.ManagedDisk-* XXXXXXXXX* \| 概要]* * ブレードで、 **[テンプレート]** をクリックします。
 
-    >**注**:テンプレートのコンテンツを確認し、ローカル コンピューターに **ダウンロード** して、**ライブラリに追加する** か、もう一度 **デプロイ** するオプションがあることに注意してください。
+    >**注**:テンプレートのコンテンツを確認し、ローカル コンピューターに**ダウンロード**して、**ライブラリに追加する**か、もう一度**デプロイ**するオプションがあることに注意してください。
 
-1. **「ダウンロード」** をクリックし、テンプレートとパラメーター ファイルを含む圧縮ファイルをラボ コンピューターの **Downloads** フォルダーに保存します。
+1. **[ダウンロード]** をクリックし、テンプレートとパラメーター ファイルを含む圧縮ファイルをラボ コンピューターの **Downloads** フォルダーに保存します。
 
 1. **[Microsoft.ManagedDisk-* XXXXXXXXX* \| テンプレート]* * ブレードで、 **[入力]** をクリックします。
 
-1. **場所** パラメーターの値をメモします。 これは、次のタスクで必要になります。
+1. Note the value of the <bpt id="p1">**</bpt>location<ept id="p1">**</ept> parameter. You will need it in the next task.
 
 1. ダウンロードしたファイルの内容をラボ コンピューターの **Downloads** フォルダーに抽出します。
 
     >**注**:これらのファイルは、 **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** および **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json** でも入手可能です。
     
-1. すべての **ファイル エクスプローラー** ウィンドウを閉じます。
+1. すべての**ファイル エクスプローラー**ウィンドウを閉じます。
 
 #### <a name="task-2-create-an-azure-managed-disk-by-using-an-arm-template"></a>タスク 2:ARM テンプレートを使用して、Azure マネージド ディスクを作成する
 
 1. Azure portal で、**[カスタム テンプレートのデプロイ]** を見つけて選びます。
 
-1. **「カスタム デプロイ」** ブレードで、 **「エディターで独自のテンプレートを作成」** をクリックします。
+1. **[カスタム デプロイ]** ブレードで、**[エディターで独自のテンプレートを作成]** をクリックします。
 
-1. 「**テンプレートの編集**」ブレードで、「**ファイルの読み込み**」をクリックし、前の手順でダウンロードした **template.json** ファイルをアップロードします。
+1. **[テンプレートの編集]** ブレードで、**[ファイルの読み込み]** をクリックし、前の手順でダウンロードした **template.json** ファイルをアップロードします。
 
 1. エディター ウィンドウで、次の行を削除します。
 
@@ -96,20 +91,20 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
    "osType": "[parameters('osType')]",
    ```
 
-    >**注**:これらのパラメーターは、現在のデプロイには適用されないので削除されます。 特に、sourceResourceId、sourceUri、osType および hyperVGeneration パラメーターは、既存の VHD ファイルから Azure ディスクを作成するために適用できます。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
 
 1. 変更を **[保存]** します。
 
-1. **「カスタム デプロイ」** ブレードに戻って、 **「パラメーターの編集」** をクリックします。 
+1. **[カスタム デプロイ]** ブレードに戻って、**[パラメーターの編集]** をクリックします。 
 
-1. 「**テンプレートの編集**」ブレードで、「**ファイルの読み込み**」をクリックし、前の手順でダウンロードした **parameters.json** ファイルをアップロードして、変更を **保存** します。
+1. **[テンプレートの編集]** ブレードで、**[ファイルの読み込み]** をクリックし、前の手順でダウンロードした **parameters.json** ファイルをアップロードして、変更を**保存**します。
 
-1. 「**カスタム デプロイ**」ブレードに戻って、次の設定を指定します。
+1. **[カスタム デプロイ]** ブレードに戻って、次の設定を指定します。
 
     | 設定 | 値 |
     | --- |--- |
     | サブスクリプション | *このラボで使用している Azure サブスクリプションの名前* |
-    | リソース グループ | **新しい** リソース グループ **az104-03b-rg1** の名前 |
+    | リソース グループ | **新しい**リソース グループ **az104-03b-rg1** の名前 |
     | リージョン | この課題で使用しているサブスクリプションで使用できる Azure リージョンの名前 |
     | ディスク名 | **az104-03b-disk1** |
     | 場所 | 前のタスクでメモした場所パラメーターの値 |
@@ -125,17 +120,17 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 #### <a name="task-3-review-the-arm-template-based-deployment-of-the-managed-disk"></a>タスク 3:マネージド ディスクの ARM テンプレートベースのデプロイを確認する
 
-1. Azure portal で、「**リソース グループ**」を検索して選択します。 
+1. Azure portal で、**[リソース グループ]** を検索して選択します。 
 
 1. リソース グループのリストで、**az104-03b-rg1** をクリックします。
 
-1. **az104-03b-rg1** リソース グループ ブレードの **「設定」** セクションで、 **「デプロイ」** をクリックします。
+1. **az104-03b-rg1** リソース グループ ブレードの **[設定]** セクションで、**[デプロイ]** をクリックします。
 
-1. **「az104-03b-rg1 - デプロイ」** ブレードから、デプロイのリストの最初のエントリをクリックし、 **「入力」** ブレードと **「テンプレート」** ブレードの内容を確認します。
+1. **[az104-03b-rg1 - デプロイ]** ブレードから、デプロイのリストの最初のエントリをクリックし、**[入力]** ブレードと **[テンプレート]** ブレードの内容を確認します。
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-   >**注**:このラボでデプロイしたリソースは削除しないでください。 このモジュールの次のラボで、それらを参照します。
+   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
 
 #### <a name="review"></a>確認
 

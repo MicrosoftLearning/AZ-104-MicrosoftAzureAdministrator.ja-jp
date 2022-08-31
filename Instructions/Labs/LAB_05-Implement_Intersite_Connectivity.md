@@ -2,19 +2,14 @@
 lab:
   title: 05 - サイト間接続を実装する
   module: Module 05 - Intersite Connectivity
-ms.openlocfilehash: 6254f1b47aacdb2b0e01f090ca182feacba5e076
-ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "144937837"
 ---
+
 # <a name="lab-05---implement-intersite-connectivity"></a>ラボ 05 - サイト間の接続性を実装する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-Contoso では、ボストン、ニューヨーク、シアトルの各オフィスを、メッシュ ワイドエリア ネットワーク リンクを介して接続しており、各オフィスの間に完全な接続性を備えています。 Contoso のオンプレミス ネットワークのトポロジを反映したラボ環境を実装して、その機能を検証します。
+Contoso has its datacenters in Boston, New York, and Seattle offices connected via a mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of the Contoso's on-premises networks and verify its functionality.
 
 ## <a name="objectives"></a>目標
 
@@ -42,13 +37,13 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
 
 1. **Bash** または **PowerShell** の選択を求めるメッセージが表示されたら、 **[PowerShell]** を選択します。
 
-    >**注**:**Cloud Shell** の初回起動時に **「ストレージがマウントされていません」** というメッセージが表示された場合は、このラボで使用しているサブスクリプションを選択し、 **「ストレージの作成」** を選択します。
+    >**注**: **Cloud Shell** の初回起動時に "**ストレージがマウントされていません**" というメッセージが表示された場合は、このラボで使用しているサブスクリプションを選択し、**[ストレージの作成]** を選択します。
 
 1. [Cloud Shell] ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンをクリックし、ドロップダウン メニューで **[アップロード]** をクリックして、ファイル **\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-template.json** と **\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-parameters.json** を Cloud Shell のホーム ディレクトリにアップロードします。
 
-1. アップロードしたばかりの **パラメーター** ファイルを編集し、パスワードを変更します。 シェルでのファイルの編集に関してヘルプが必要な場合は、インストラクターに相談してください。 ベスト プラクティスとして、パスワードなどのシークレットは、キー コンテナーに安全に保存する必要があります。 
+1. Edit the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
-1. Cloud Shell ペインから、以下を実行して、ラボ環境をホストするリソース グループを作成します。 最初の 2 つの仮想ネットワークと 1 組の仮想マシンが [Azure_region_1] にデプロイされます。 3 番目の仮想ネットワークと 3 番目の仮想マシンは、同じリソース グループではあるものの、別の [Azure_region_2] にデプロイされます。 (角かっこを含む [Azure_region_1] および [Azure_region_2] プレースホルダーを、これらの Azure 仮想マシンをデプロイする予定の 2 つの異なる Azure リージョンの名前に置き換えます。 たとえば、$location 1 = 'eastus' です。 Get-AzLocation を使用して、すべての場所を一覧表示できます)。
+1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in [Azure_region_1]. The third virtual network and the third virtual machine will be deployed in the same resource group but another [Azure_region_2]. (replace the [Azure_region_1] and [Azure_region_2] placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines. An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.):
 
    ```powershell
    $location1 = 'eastus'
@@ -60,7 +55,7 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
    New-AzResourceGroup -Name $rgName -Location $location1
    ```
 
-   >**注**:上記で使ったリージョンは、このラボを最後に公式にレビューしたときにテスト済みであり、機能することがわかっています。 別のリージョンを使いたい場合、または機能しなくなった場合は、Standard D2Sv3 仮想マシンをデプロイできる 2 つの異なるリージョンを決める必要があります。
+   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The regions used above were tested and known to work when this lab was last officially reviewed. If you would prefer to use different locations, or they no longer work, you will need to identify two different regions that Standard D2Sv3 virtual machines can be deployed into.
    >
    >Azure リージョンを識別するには、Cloud Shell の PowerShell セッションから **(Get-AzLocation).Location** を実行します。
    >
@@ -68,9 +63,9 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
    >
    >```az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name" ```
    >
-   >コマンドから結果が返されない場合は、別のリージョンを選ぶ必要があります。 2 つの適切なリージョンを決めたら、前述のコード ブロック内のリージョンを調整することができます。
+   >If the command returns no results, then you need to choose another region. Once you have identified two suitable regions, you can adjust the regions in the code block above.
 
-1. 「Cloud Shell」 ウィンドウで、次のコマンドを実行して 3 つのバーチャル ネットワークを作成し、アップロードしたテンプレートとパラメーター ファイルを使用して仮想マシンをデプロイします。
+1. [Cloud Shell] ウィンドウで、次のコマンドを実行して 3 つのバーチャル ネットワークを作成し、アップロードしたテンプレートとパラメーター ファイルを使用して仮想マシンをデプロイします。
 
    ```powershell
    New-AzResourceGroupDeployment `
@@ -81,7 +76,7 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
       -location2 $location2
    ```
 
-    >**注**: デプロイが完了するまで待ってから、次の手順に進んでください。 これには 2 分ほどかかります。
+    >Contoso では、ボストン、ニューヨーク、シアトルの各オフィスを、メッシュ ワイドエリア ネットワーク リンクを介して接続しており、各オフィスの間に完全な接続性を備えています。
 
 1. [Cloud Shell] ペインを閉じます。
 
@@ -95,11 +90,11 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
 
     >**注**:3 つのバーチャル ネットワークのデプロイに使用したテンプレートに、3 つのバーチャル ネットワークの IP アドレス範囲が重複しないようにします。
 
-1. バーチャル ネットワークのリストで、 **「az104-05-vnet0」** をクリックします。
+1. バーチャル ネットワークのリストで、**[az104-05-vnet0]** をクリックします。
 
-1. **「az104-05-vnet0** バーチャル ネットワーク」 ブレードの **「設定」** セクションで **「ピアリング」** をクリックしてから、 **「+ 追加」** をクリックします。
+1. **[az104-05-vnet0** バーチャル ネットワーク] ブレードの **[設定]** セクションで **[ピアリング]** をクリックしてから、**[+ 追加]** をクリックします。
 
-1. 次の設定でピアリングを追加し (他のユーザーには既定値を残します)、 **「追加」** をクリックします。
+1. 次の設定でピアリングを追加し (他のユーザーには既定値を残します)、**[追加]** をクリックします。
 
     | 設定 | 値|
     | --- | --- |
@@ -132,9 +127,9 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
    Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet0' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet0.Id
    ``` 
 
-1. **「az104-05-vnet0** バーチャル ネットワーク」 ブレードの **「設定」** セクションで **「ピアリング」** をクリックしてから、 **「+ 追加」** をクリックします。
+1. **[az104-05-vnet0** バーチャル ネットワーク] ブレードの **[設定]** セクションで **[ピアリング]** をクリックしてから、**[+ 追加]** をクリックします。
 
-1. 次の設定でピアリングを追加し (他のユーザーには既定値を残します)、 **「追加」** をクリックします。
+1. 次の設定でピアリングを追加し (他のユーザーには既定値を残します)、**[追加]** をクリックします。
 
     | 設定 | 値|
     | --- | --- |
@@ -167,11 +162,11 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
    Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet0' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet0.Id
    ``` 
 
-1. **「バーチャル ネットワーク」** ブレードに戻り、バーチャル ネットワークの一覧で **「az104-05-vnet1」** をクリックします。
+1. **[バーチャル ネットワーク]** ブレードに戻り、バーチャル ネットワークの一覧で **[az104-05-vnet1]** をクリックします。
 
 1. **az104-05-vnet1** 仮想ネットワーク ブレードの **[設定]** セクションで、 **[ピアリング]** をクリックしてから、 **[+ 追加]** をクリックします。
 
-1. 次の設定でピアリングを追加し (他のユーザーには既定値を残します)、 **「追加」** をクリックします。
+1. 次の設定でピアリングを追加し (他のユーザーには既定値を残します)、**[追加]** をクリックします。
 
     | 設定 | 値|
     | --- | --- |
@@ -210,17 +205,17 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
 
 1. Azure portal で、**[仮想マシン]** を検索して選択します。
 
-1. 仮想マシンのリストで、 **「az104-05-vm0」** をクリックします。
+1. 仮想マシンのリストで、**[az104-05-vm0]** をクリックします。
 
 1. **az104-05-vm0** ブレードで、 **[接続]** をクリックし、ドロップダウン メニューで **[RDP]** をクリックし、 **[RDP を使用して接続する]** ブレードで **[RDP ファイルのダウンロード]** をクリックし、プロンプトに従ってリモート デスクトップ セッションを開始します。
 
-    >**注**:この手順では、Windows コンピューターからリモート デスクトップ経由で接続することを指します。 Mac では、Mac App Store からリモート デスクトップ クライアントを使用でき、Linux コンピューターでは、オープンソースの RDP クライアント ソフトウェアを使用できます。
+    >Contoso のオンプレミス ネットワークのトポロジを反映したラボ環境を実装して、その機能を検証します。
 
     >**注**:ターゲット仮想マシンに接続する際は、警告メッセージを無視できます。
 
 1. メッセージが表示されたら、 **[学生]** のユーザー名とパラメーター ファイルのパスワードを使用してサインインします。 
 
-1. **az104-05-vm0** へのリモート デスクトップ セッション内で、 **「スタート」** ボタンを右クリックし、右クリック メニューで **「Windows PowerShell (管理者)」** をクリックします。
+1. **az104-05-vm0** へのリモート デスクトップ セッション内で、**[スタート]** ボタンを右クリックし、右クリック メニューで **[Windows PowerShell (管理者)]** をクリックします。
 
 1. Windows PowerShell コンソール ウィンドウで、次のコマンドを実行して、TCP ポート 3389 での **az104-05-vm1** (プライベート IP アドレスが **10.51.0.4**) への接続性をテストします。
 
@@ -238,13 +233,13 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-1. ラボ コンピューターの Azure portal に戻り、 **「仮想マシン」** ブレードに戻ります。
+1. ラボ コンピューターの Azure portal に戻り、**[仮想マシン]** ブレードに戻ります。
 
 1. 仮想マシンの一覧で、**az104-05-vm1** をクリックします。
 
 1. **az104-05-vm1** ブレードで、 **[接続]** をクリックし、ドロップダウン メニューで **[RDP]** をクリックし、 **[RDP を使用して接続する]** ブレードで **[RDP ファイルのダウンロード]** をクリックし、プロンプトに従ってリモート デスクトップ セッションを開始します。
 
-    >**注**:この手順では、Windows コンピューターからリモート デスクトップ経由で接続することを指します。 Mac では、Mac App Store からリモート デスクトップ クライアントを使用でき、Linux コンピューターでは、オープンソースの RDP クライアント ソフトウェアを使用できます。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
     >**注**:ターゲット仮想マシンに接続する際は、警告メッセージを無視できます。
 
@@ -264,9 +259,9 @@ Contoso では、ボストン、ニューヨーク、シアトルの各オフィ
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
->**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
+><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
->**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
+><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 

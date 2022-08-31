@@ -2,19 +2,14 @@
 lab:
   title: 03a - Azure portal を使用して Azure リソースを管理する
   module: Module 03 - Azure Administration
-ms.openlocfilehash: 020f28742779dab36777e2ae7b8bddb43ebb46be
-ms.sourcegitcommit: be14e4ff5bc638e8aee13ec4b8be29525d404028
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "144937813"
 ---
+
 # <a name="lab-03a---manage-azure-resources-by-using-the-azure-portal"></a>ラボ 03a - Azure portal を使用して Azure リソースを管理する
 # <a name="student-lab-manual"></a>受講生用ラボ マニュアル
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-リソース グループ間のリソースの移動などを含む、リソース グループに基づいてリソースをプロビジョニングしました。次に、それらを編成に関連する基本的な Azure 管理機能を学習します。 また、ディスク リソースが誤って削除されないように保護するオプションを検討しながら、パフォーマンス特性とサイズを変更することもできます。
+You need to explore the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups, including moving resources between resource groups. You also want to explore options for protecting disk resources from being accidentally deleted, while still allowing for modifying their performance characteristics and size.
 
 ## <a name="objectives"></a>目標
 
@@ -40,7 +35,7 @@ ms.locfileid: "144937813"
 
 1. [**Azure Portal**](http://portal.azure.com) にサインインします。
 
-1. Azure portal で、「**ディスク**」と検索してそれを選択し、 **[+ 作成]** をクリックして、次の設定を指定します。
+1. Azure portal で、「**ディスク**」と検索してそれを選択し、**[+ 作成]** をクリックして、次の設定を指定します。
 
     |設定|値|
     |---|---|
@@ -57,34 +52,34 @@ ms.locfileid: "144937813"
 
 1. **[確認と作成]** をクリックしてから、**[作成]** をクリックします。
 
-    >**注**:ディスクが作成されるまで待ちます。 これに要する時間は 1 分未満です。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait until the disk is created. This should take less than a minute.
 
 #### <a name="task-2-move-resources-between-resource-groups"></a>タスク 2:リソース グループ間でリソースを移動する 
 
 このタスクでは、前のタスクで作成したディスク リソースを新しいリソース グループに移動します。 
 
-1. **リソース グループ** を検索して選択します。 
+1. **リソース グループ**を検索して選択します。 
 
-1. **「リソース グループ」** ブレードで、前のタスクで作成した **az104-03a-rg1** リソース グループを表すエントリをクリックします。
+1. **[リソース グループ]** ブレードで、前のタスクで作成した **az104-03a-rg1** リソース グループを表すエントリをクリックします。
 
-1. リソース グループの **「概要」** ブレードで、リソース グループのリソース リストから、新しく作成されたディスクを表すエントリを選択し、ツールバーの **「移動」** をクリックし、ドロップダウン リストで、 **「別のリソース グループに移動」** を選択します。
+1. リソース グループの **[概要]** ブレードで、リソース グループのリソース リストから、新しく作成されたディスクを表すエントリを選択し、ツールバーの **[移動]** をクリックし、ドロップダウン リストで、**[別のリソース グループに移動]** を選択します。
 
     >**注**:この方法により、複数のリソースを同時に移動できます。 
 
-1. 「**リソース グループ**」テキスト ボックスの下にある「**新規作成**」をクリックし、テキスト ボックスに「**az104-03a-rg2**」と入力します。 「確認」タブで、 **「移動したリソースに関連付けられているツールとスクリプトは、新しいリソース ID を使用するように更新するまで機能しないことを理解している」** というチェックボックスを選択し、 **「移動」** をクリックします。
+1. Below the <bpt id="p1">**</bpt>Resource group<ept id="p1">**</ept> text box, click <bpt id="p2">**</bpt>Create new<ept id="p2">**</ept> then type <bpt id="p3">**</bpt>az104-03a-rg2<ept id="p3">**</ept> in the text box. On the Review tab, select the checkbox <bpt id="p1">**</bpt>I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs<ept id="p1">**</ept>, and click <bpt id="p2">**</bpt>Move<ept id="p2">**</ept>.
 
-    >**注**:移動が完了するのを待たず、代わりに次のタスクに進みます。 移動には約 10 分かかります。 ソースまたはターゲットのリソース グループのアクティビティ ログ エントリを監視することで、操作が完了したことを確認できます。 次のタスクを完了したら、この手順を再び確認してください。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
 
 #### <a name="task-3-implement-resource-locks"></a>タスク 3:リソース ロックの実装
 
 このタスクでは、ディスク リソースを含む Azure リソース グループにリソース ロックを適用します。
 
-1. Azure portal で、「**ディスク**」と検索してそれを選択し、 **[+ 作成]** をクリックして、次の設定を指定します。
+1. Azure portal で、「**ディスク**」と検索してそれを選択し、**[+ 作成]** をクリックして、次の設定を指定します。
 
     |設定|値|
     |---|---|
     |サブスクリプション| このラボで使用するサブスクリプションの名前 |
-    |リソース グループ| **「新しいリソースグループの作成」** をクリックして、**az104-03a-rg3** という名前を付けます |
+    |リソース グループ| **[新しいリソースグループの作成]** をクリックして、**az104-03a-rg3** という名前を付けます |
     |ディスク名| **az104-03a-disk2** |
     |リージョン| このラボで他のリソース グループを作成した Azure リージョンの名前 |
     |可用性ゾーン| **なし** |
@@ -98,7 +93,7 @@ ms.locfileid: "144937813"
 
 1. [ディスク] の [概要] ページで、リソース グループの名前 **[az104-03a-rg3]** をクリックします。
 
-1. **「az104-03a-rg3** リソース グループ」 ブレードで、 **「ロック」** をクリックしてから、 **「+ 追加」** をクリックして、次の設定を指定します。
+1. **[az104-03a-rg3** リソース グループ] ブレードで、**[ロック]** をクリックしてから、**[+ 追加]** をクリックして、次の設定を指定します。
 
     |設定|値|
     |---|---|
@@ -107,9 +102,9 @@ ms.locfileid: "144937813"
     
 1. **[OK]**    
 
-1. **az104-03a-rg3** リソース グループ ブレードの、リソース グループ リソースのリストで **「概要」** をクリックし、このタスクで前に作成したディスクを表すエントリを選択し、ツールバーの **「削除」** をクリックします。 
+1. **az104-03a-rg3** リソース グループ ブレードの、リソース グループ リソースのリストで **[概要]** をクリックし、このタスクで前に作成したディスクを表すエントリを選択し、ツールバーの **[削除]** をクリックします。 
 
-1. **「選択したリソースをすべて削除しますか?」** というメッセージが表示されたら、 **「削除の確認」** テキスト ボックスに「**yes**」と入力し、 **「削除」** をクリックします。
+1. **[選択したリソースをすべて削除しますか?]** というメッセージが表示されたら、**[削除の確認]** テキスト ボックスに「**yes**」と入力し、**[削除]** をクリックします。
 
 1. 失敗した削除操作を通知するエラー メッセージが表示されます。 
 
@@ -117,15 +112,15 @@ ms.locfileid: "144937813"
 
 1. **az104-03a-rg3** リソース グループのリソースのリストに戻り、**az104-03a-disk2** リソースを表すエントリをクリックします。 
 
-1. **az104-03a-disk2** ブレードの「**設定**」セクションで「**サイズ + パフォーマンス**」をクリックし、ディスクのタイプとサイズを **Premium SSD** と **64 GiB** にそれぞれ設定し、「**サイズ変更**」をクリックして、変更を適用します。 変更が成功したことを確認します。
+1. On the <bpt id="p1">**</bpt>az104-03a-disk2<ept id="p1">**</ept> blade, in the <bpt id="p2">**</bpt>Settings<ept id="p2">**</ept> section, click <bpt id="p3">**</bpt>Size + performance<ept id="p3">**</ept>, set the disk type and size to <bpt id="p4">**</bpt>Premium SSD<ept id="p4">**</ept> and <bpt id="p5">**</bpt>64 GiB<ept id="p5">**</ept>, respectively, and click <bpt id="p6">**</bpt>Resize<ept id="p6">**</ept> to apply the change. Verify that the change was successful.
 
     >**注**:リソース グループ レベルのロックは削除操作にのみ適用されるため、これは予想されることです。 
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-   >**注**:このラボでデプロイしたリソースは削除しないでください。 このモジュールの次のラボで、これらを使用します。 このラボで作成したリソース ロックのみを削除します。
+   >リソース グループ間のリソースの移動などを含む、リソース グループに基づいてリソースをプロビジョニングしました。次に、それらを編成に関連する基本的な Azure 管理機能を学習します。
 
-1. **az104-03a-rg3** リソース グループ ブレードに移動し、 **「ロック」** ブレードを表示し、 **「削除」** ロック エントリの右側にある **「削除」** リンクをクリックして **az104-03a-delete-lock** のロックを削除します。
+1. **az104-03a-rg3** リソース グループ ブレードに移動し、**[ロック]** ブレードを表示し **[削除]** ロック エントリの右側にある **[削除]** リンクをクリックして **az104-03a-delete-lock** のロックを削除します。
 
 #### <a name="review"></a>確認
 
