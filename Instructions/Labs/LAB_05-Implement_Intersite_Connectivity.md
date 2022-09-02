@@ -1,7 +1,7 @@
 ---
 lab:
   title: 05 - サイト間接続を実装する
-  module: Module 05 - Intersite Connectivity
+  module: Administer Intersite Connectivity
 ---
 
 # <a name="lab-05---implement-intersite-connectivity"></a>ラボ 05 - サイト間の接続性を実装する

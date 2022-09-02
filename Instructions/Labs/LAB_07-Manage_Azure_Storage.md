@@ -1,7 +1,7 @@
 ---
 lab:
   title: 07 - Azure Storage を管理する
-  module: Module 07 - Azure Storage
+  module: Administer Azure Storage
 ---
 
 # <a name="lab-07---manage-azure-storage"></a>ラボ 7 - Azure Storageを管理する

@@ -1,7 +1,7 @@
 ---
 lab:
   title: 06 - トラフィック管理を実装する
-  module: Module 06 - Network Traffic Management
+  module: Administer Network Traffic Management
 ---
 
 # <a name="lab-06---implement-traffic-management"></a>ラボ 06 - トラフィック管理を実装する

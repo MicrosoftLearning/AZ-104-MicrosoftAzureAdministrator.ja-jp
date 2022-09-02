@@ -1,7 +1,7 @@
 ---
 lab:
   title: 01 - Azure Active Directory ID を管理する
-  module: Module 01 - Identity
+  module: Administer Identity
 ---
 
 # <a name="lab-01---manage-azure-active-directory-identities"></a>ラボ 01 - Azure Active Directory ID を管理する

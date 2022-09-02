@@ -1,7 +1,7 @@
 ---
 lab:
   title: 04 - 仮想ネットワークを実装する
-  module: Module 04 - Virtual Networking
+  module: Administer Virtual Networking
 ---
 
 # <a name="lab-04---implement-virtual-networking"></a>ラボ 04 - 仮想ネットワークを実装する
