@@ -368,7 +368,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
     | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Azure Spot インスタンス | **No** |
     | サイズ | **Standard D2s_v3** |
-    | ユーザー名 | **学生** |
+    | ユーザー名 | **Student** |
     | パスワード | **セキュリティで保護されたパスワードを指定する**  |
     | Windows Server ライセンスを既にお持ちの場合 | **Unchecked** |
 
