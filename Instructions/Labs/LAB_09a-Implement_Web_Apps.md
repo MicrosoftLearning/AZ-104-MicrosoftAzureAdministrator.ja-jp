@@ -1,7 +1,7 @@
 ---
 lab:
   title: 09a - Web Apps の実装
-  module: Module 09 - Serverless Computing
+  module: Administer Serverless Computing
 ---
 
 # <a name="lab-09a---implement-web-apps"></a>ラボ 09a - Web Apps を実装する
