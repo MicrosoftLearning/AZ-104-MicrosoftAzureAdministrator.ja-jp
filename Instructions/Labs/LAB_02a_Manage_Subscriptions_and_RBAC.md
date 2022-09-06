@@ -1,7 +1,7 @@
 ---
 lab:
   title: 02a - サブスクリプションと RBAC を管理する
-  module: Module 02 - Governance and Compliance
+  module: Administer Governance and Compliance
 ---
 
 # <a name="lab-02a---manage-subscriptions-and-rbac"></a>ラボ 02a - サブスクリプションと RBAC を管理する
