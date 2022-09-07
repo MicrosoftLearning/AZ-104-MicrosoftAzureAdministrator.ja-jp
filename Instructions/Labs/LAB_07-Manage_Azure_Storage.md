@@ -11,6 +11,8 @@ lab:
 
 You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While majority of these files are not accessed frequently, there are some exceptions. You would like to minimize cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011)** 。
+
 ## <a name="objectives"></a>目標
 
 このラボでは、次のことを行います。
@@ -51,8 +53,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. [Cloud Shell] ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します ('[Azure_region]' プレースホルダーを Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。
 
-    >**注**:Azure リージョンの名前を一覧表示するには、`(Get-AzLocation).Location` を実行します。
-    >**メモ**:以下の各コマンドを個別に入力してください。
+    >**注**:Azure リージョンの名前を一覧表示するには、`(Get-AzLocation).Location` を実行します。**メモ**:以下の各コマンドを個別に入力してください。
 
     ```powershell
     $location = '[Azure_region]'
@@ -95,7 +96,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. 「**ストレージ アカウントの作成**」ブレードの「**基本**」タブで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **新しい** リソース グループ **az104-07-rg1** の名前 |
@@ -132,7 +133,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. **[+ コンテナー]** をクリックして、次の設定を使用してコンテナーを作成します。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-07-container**  |
     | パブリック アクセス レベル | **プライベート (匿名アクセスなし)** |
@@ -222,7 +223,7 @@ You need to evaluate the use of Azure storage for storing files residing current
     | アクセスの割り当て先 | **ユーザー、グループ、またはサービス プリンシパル** |
     | メンバー | ユーザー アカウントの名前 |
 
-1. **[Review + Assign]\(確認と割り当て\)** 、 **[Review + assign]\(確認と割り当て\)** の順にクリックし、**az104-07-container** コンテナーの **[概要]** ブレードに戻り、認証方法を (Azure AD ユーザー アカウントに切り替える) に変更できることを確認します。
+1. **[Review + Assign](確認と割り当て)** 、 **[Review + assign](確認と割り当て)** の順にクリックし、**az104-07-container** コンテナーの **[概要]** ブレードに戻り、認証方法を (Azure AD ユーザー アカウントに切り替える) に変更できることを確認します。
 
     > **注**:この変更が有効になるまで、最大 5 分かかる場合があります。
 
@@ -236,7 +237,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. **[+ ファイル共有]** をクリックし、次の設定でファイル共有を作成します。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-07-share** |
 
@@ -274,7 +275,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. Azure portal で、このラボの最初のタスクで作成したストレージ アカウントのブレードに戻り、**[セキュリティ + ネットワーク]** セクションで、**[ネットワーク]** をクリックしてから、**[ファイアウォールと仮想ネットワーク]** をクリックします。
 
-1. **[Enabled from selected virtual networks and IP addresses]\(選択した仮想ネットワークと IP アドレスから有効\)** オプションをクリックし、このオプションが有効になったときに使用可能になる構成設定を確認します。
+1. **[Enabled from selected virtual networks and IP addresses](選択した仮想ネットワークと IP アドレスから有効)** オプションをクリックし、このオプションが有効になったときに使用可能になる構成設定を確認します。
 
     > **注**:これらを設定すると、仮想ネットワークの指定サブネット上の Azure 仮想マシンと、ストレージ アカウントとの直接接続をサービス エンドポイントを使用して構成できます。
 

@@ -12,6 +12,8 @@ lab:
 
 In order to allow Contoso users to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** 。
+
 ## <a name="objectives"></a>目標
 
 このラボでは、次のことを行います。
@@ -205,7 +207,7 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
 
    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The <bpt id="p2">**</bpt>Initial domain name<ept id="p2">**</ept> should not be a legitimate name that potentially matches your organization or another. The green check mark in the <bpt id="p1">**</bpt>Initial domain name<ept id="p1">**</ept> text box will indicate that the domain name you typed in is valid and unique.
 
-1. **[Review + create]\(レビュー + 作成\)** をクリックし、 **[作成]** をクリックします。
+1. **[Review + create](レビュー + 作成)** をクリックし、 **[作成]** をクリックします。
 
 1. Azure portal のツールバーにある **[ここをクリックして新しいテナントに移動する:Contoso Lab]** リンク、または **[ディレクトリとサブスクリプション]** ボタン ([Cloud Shell] ボタンの右側) を使用して、新しく作成した Azure AD テナントのブレードを表示します。
 
@@ -236,7 +238,7 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
 
 1. 次の設定で新しいゲスト ユーザーを招待します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-01b-aaduser1** |
     | 電子メール アドレス | このタスクで前にコピーしたユーザー プリンシパル名 |

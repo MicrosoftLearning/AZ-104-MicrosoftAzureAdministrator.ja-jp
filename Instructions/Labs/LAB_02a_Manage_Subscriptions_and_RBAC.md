@@ -20,7 +20,9 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 - granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
 
     - サポート要求チケットの作成
-    - リソース グループの表示 
+    - リソース グループの表示
+
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** 。
 
 ## <a name="objectives"></a>目標
 

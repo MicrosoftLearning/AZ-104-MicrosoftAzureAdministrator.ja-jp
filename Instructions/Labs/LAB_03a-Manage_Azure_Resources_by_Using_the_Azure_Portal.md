@@ -1,7 +1,7 @@
 ---
 lab:
   title: 03a - Azure portal を使用して Azure リソースを管理する
-  module: Module 03 - Azure Administration
+  module: Administer Azure Resources
 ---
 
 # <a name="lab-03a---manage-azure-resources-by-using-the-azure-portal"></a>ラボ 03a - Azure portal を使用して Azure リソースを管理する
@@ -10,6 +10,8 @@ lab:
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
 You need to explore the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups, including moving resources between resource groups. You also want to explore options for protecting disk resources from being accidentally deleted, while still allowing for modifying their performance characteristics and size.
+
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%204)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -37,7 +39,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 1. Azure portal で、「**ディスク**」と検索してそれを選択し、**[+ 作成]** をクリックして、次の設定を指定します。
 
-    |設定|値|
+    |設定|[値]|
     |---|---|
     |サブスクリプション| リソース グループを作成した Azure サブスクリプションの名前 |
     |リソース グループ| 新しいリソース グループ **az104-03a-rg1** の名前 |
@@ -76,7 +78,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 1. Azure portal で、「**ディスク**」と検索してそれを選択し、**[+ 作成]** をクリックして、次の設定を指定します。
 
-    |設定|値|
+    |設定|[値]|
     |---|---|
     |サブスクリプション| このラボで使用するサブスクリプションの名前 |
     |リソース グループ| **[新しいリソースグループの作成]** をクリックして、**az104-03a-rg3** という名前を付けます |

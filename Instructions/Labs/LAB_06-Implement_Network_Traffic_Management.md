@@ -11,6 +11,8 @@ lab:
 
 You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso considers implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)** 。
+
 ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This lab, by default, requires total of 8 vCPUs available in the Standard_Dsv3 series in the region you choose for deployment, since it involves deployment of four Azure VMs of Standard_D2s_v3 SKU. If your students are using trial accounts, with the limit of 4 vCPUs, you can use a VM size that requires only one vCPU (such as Standard_B1s).
 
 ## <a name="objectives"></a>目標
@@ -181,7 +183,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | **許可 (既定)** |
     | 仮想ネットワーク ゲートウェイ | **なし (既定値)** |
 
-    >**注**:このラボでは、デフォルトで、Standard_D2s_v3 SKU の Azure VM のデプロイが 4 つ含まれるため、デプロイ用に選択したリージョンの Standard_Dsv3 シリーズで使用可能な vCPU が合計 8 個必要です。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
     >**注**: このラボで後ほど実装するスポーク仮想ネットワーク間のルーティングを容易にするために、 **[トラフィック転送を許可する]** を有効にする必要があります。
 
@@ -197,7 +199,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -210,13 +212,13 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     > **注**:**10.62.0.4** は、プライベート IP アドレス **az104-06-vm2** を表します。
 
-1. 受講生が試用版アカウントを使用しており、vCPU が 4 つに制限されている場合は、1 つの vCPU のみを必要とする VM サイズ (Standard_B1s など) を使用できます。
+1. **注**:このラボでは、デフォルトで、Standard_D2s_v3 SKU の Azure VM のデプロイが 4 つ含まれるため、デプロイ用に選択したリージョンの Standard_Dsv3 シリーズで使用可能な vCPU が合計 8 個必要です。
 
     > **注**:ハブバーチャル ネットワークは最初のスポークバーチャル ネットワークと直接ピアリングされるため、これは予期されます。
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -229,13 +231,13 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     > **注**:**10.63.0.4** は、プライベート IP アドレス **az104-06-vm3** を表します。
 
-1. Click <bpt id="p1">**</bpt>Check<ept id="p1">**</ept> and wait until results of the connectivity check are returned. Verify that the status is <bpt id="p1">**</bpt>Reachable<ept id="p1">**</ept>. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. 受講生が試用版アカウントを使用しており、vCPU が 4 つに制限されている場合は、1 つの vCPU のみを必要とする VM サイズ (Standard_B1s など) を使用できます。
 
     > **注**:ハブバーチャル ネットワークは 2 番目のスポークバーチャル ネットワークと直接ピアリングされるため、これは予期されます。
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -300,7 +302,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. 次の設定でルート テーブルを作成します (その他は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -343,7 +345,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. 次の設定でルート テーブルを作成します (その他は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -386,7 +388,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -405,95 +407,81 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 #### <a name="task-5-implement-azure-load-balancer"></a>タスク 5:Azure Load Balancer を実装する
 
-このタスクでは、ハブバーチャル ネットワーク内の 2 つの Azure 仮想マシンの前に Azure Load Balancer を実装します。
+このタスクでは、ハブ仮想ネットワーク内の 2 つの Azure 仮想マシンの前に Azure ロード バランサーを実装します。
 
-1. Azure portal で「**ロード バランサー**」を検索して選択し、**[ロード バランサー]** ウィンドウで **[+ 作成]** をクリックします。
+1. Azure portal で「**ロード バランサー**」を検索して選択し、 **[ロード バランサー]** ブレードで **[+ 作成]** をクリックします。
 
 1. 次の設定でロード バランサーを作成し (その他の設定は既定値のままにします)、 **[次へ: フロントエンド IP 構成]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
     | 名前 | **az104-06-lb4** |
-    | リージョン| このラボでその他のすべてのリソースをデプロイした Azure リージョンの名前 |
-    | SKU | **Standard** |
+    | リージョン | このラボでその他のすべてのリソースをデプロイした Azure リージョンの名前 |
+    | SKU  | **Standard** |
     | Type | **Public** |
+    | 階層 | **Regional** |
     
-1. **[フロントエンド IP 構成]** タブで、 **[フロントエンド IP 構成の追加]** をクリックし、次の設定を使用してから **[追加]** をクリックします。   
+1. On the <bpt id="p1">**</bpt>Frontend IP configuration<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add a frontend IP configuration<ept id="p2">**</ept> and use the following settings before clicking <bpt id="p3">**</bpt>OK<ept id="p3">**</ept> and then <bpt id="p4">**</bpt>Add<ept id="p4">**</ept>. When completed click <bpt id="p1">**</bpt>Next: Backend pools<ept id="p1">**</ept>. 
      
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | 任意の一意の名前 |
+    | IP バージョン | IPv4 |
+    | IP の種類 | IP アドレス |
     | パブリック IP アドレス | **新規作成** |
-    | パブリック IP アドレス名 | **az104-06-pip4** |
+    | 名前 | **az104-06-pip4** |
+    | 可用性ゾーン | **ゾーンなし** | 
 
-1. Click <bpt id="p1">**</bpt>Review and Create<ept id="p1">**</ept>. Let validation occur, and hit <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to submit your deployment.
+1. On the <bpt id="p1">**</bpt>Backend pools<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add a backend pool<ept id="p2">**</ept> with the following settings (leave others with their default values). Click <bpt id="p1">**</bpt>+ Add<ept id="p1">**</ept> (twice) and then click  <bpt id="p2">**</bpt>Next:Inbound rules<ept id="p2">**</ept>. 
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
-
-1. デプロイ ウィンドウで **[リソースに移動]** をクリックします。
-
-1. **[az104-06-lb4]** ロード バランサー ウィンドウの **[設定]** セクションで **[バックエンド プール]** をクリックしてから、**[+ 追加]** をクリックします。
-
-1. 次の設定でバックエンド プールを追加します (その他は既定値のままにします)。
-
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-06-lb4-be1** |
     | 仮想ネットワーク | **az104-06-vnet01** |
+    | バックエンド プールの構成 | **NIC** | 
     | IP バージョン | **IPv4** |
-    | 仮想マシン | **az104-06-vm0** |
-    | 仮想マシンの IP アドレス | **ipconfig1 (10.60.0.4)** |
-    | 仮想マシン | **az104-06-vm1** |
-    | 仮想マシンの IP アドレス | **ipconfig1 (10.60.1.4)** |
+    | **[追加]** をクリックして仮想マシンを追加します |  |
+    | az104-06-vm0 | **チェックボックスをオンにします** |
+    | az104-06-vm1 | **チェックボックスをオンにします** |
 
-1. **[追加]** をクリックします。
 
-1. バックエンド プールが作成されるのを待ち、**[設定]** セクションで、**[正常性プローブ]** をクリックして、**[+ 追加]** をクリックします。
+1. On the <bpt id="p1">**</bpt>Inbound rules<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add a load balancing rule<ept id="p2">**</ept>. Add a load balancing rule with the following settings (leave others with their default values). When completed click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept>.
 
-1. 次の設定で正常性プローブを追加する:
-
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
+    | 名前 | **az104-06-lb4-lbrule1** |
+    | IP バージョン | **IPv4** |
+    | フロントエンド IP アドレス | **az104-06-pip4** |
+    | バックエンド プール | **az104-06-lb4-be1** |    
+    | Protocol | **TCP** |
+    | Port | **80** |
+    | バックエンド ポート | **80** |
+    | 正常性プローブ | **新規作成** |
     | 名前 | **az104-06-lb4-hp1** |
     | Protocol | **TCP** |
     | Port | **80** |
     | Interval | **5** |
     | 異常のしきい値 | **2** |
-
-1. **[追加]** をクリックします。
-
-1. 正常性プローブが作成されるのを待ち、**[設定]** セクションで **[負荷分散規則]** をクリックして、**[+ 追加]** をクリックします。
-
-1. 次の設定で負荷分散規則を追加します (その他は既定値のままにします)。
-
-    | 設定 | 値 |
-    | --- | --- |
-    | 名前 | **az104-06-lb4-lbrule1** |
-    | IP バージョン | **IPv4** |
-    | フロントエンド IP アドレス | **ドロップダウンから [LoadBalancerFrontEnd] を選択する**
-    | Protocol | **TCP** |
-    | Port | **80** |
-    | バックエンド ポート | **80** |
-    | バックエンド プール | **az104-06-lb4-be1** |
-    | 正常性プローブ | **az104-06-lb4-hp1** |
+    | 正常性プローブの作成ウィンドウを閉じます | **[OK]** | 
     | セッション永続化 | **なし** |
     | アイドル タイムアウト (分) | **4** |
     | TCP リセット | **Disabled** |
-    | フローティング IP (ダイレクト サーバー リターン) | **Disabled** |
+    | フローティング IP | **無効** |
+    | アウトバウンド送信元ネットワーク アドレス変換 (SNAT) | **推奨** |
 
-1. **[追加]** をクリックします。
+1. As you have time, review the other tabs, then click <bpt id="p1">**</bpt>Review and create<ept id="p1">**</ept>. Ensure there are no validation errors, then click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. 
 
-1. 負荷分散規則が作成されるのを待ってから、 **[設定]** セクションで **[フロントエンド IP 構成]** をクリックし、 **[パブリック IP アドレス]** の値をメモします。
+1. ロード バランサーがデプロイされるまで待ってから、 **[リソースに移動]** をクリックします。  
 
-1. 別のブラウザーのウィンドウを起動し、前の手順で識別した IP アドレスに移動します。
+1. Select <bpt id="p1">**</bpt>Frontend IP configuration<ept id="p1">**</ept> from the Load Balancer resource page. Copy the IP address.
 
-1. ブラウザー ウィンドウに、"**Hello World from az104-06-vm0**" または "**Hello World from az104-06-vm1**" というメッセージが表示されることを確認します。
+1. Open another browser tab and navigate to the IP address. Verify that the browser window displays the message <bpt id="p1">**</bpt>Hello World from az104-06-vm0<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Hello World from az104-06-vm1<ept id="p2">**</ept>.
 
-1. 別のブラウザー ウィンドウを開きますが、今回は InPrivate モードを使用して、ターゲット VM が (メッセージで示されているように) 変更するかどうかを確認します。
+1. Refresh the window to verify the message changes to the other virtual machine. This demonstrates the load balancer rotating through the virtual machines.
 
-    > **注**:ブラウザー ウィンドウを更新するか、InPrivate モードを使用して再度開く必要があります。
+    > **注**: 複数回更新するか、InPrivate モードで新しいブラウザー ウィンドウを開く必要がある場合があります。
 
 #### <a name="task-6-implement-azure-application-gateway"></a>タスク 6:Azure Application Gateway を実装する
 
@@ -507,7 +495,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. 次の設定でサブネットを追加します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **subnet-appgw** |
     | サブネットのアドレス範囲 | **10.60.3.224/27** |
@@ -518,9 +506,9 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. Azure portal で「**アプリケーション ゲートウェイ**」を検索して選択し、**[アプリケーション ゲートウェイ]** ウィンドウで **[+ 作成]** をクリックします。
 
-1. **[アプリケーション ゲートウェイの作成]** ウィンドウの **[基本]** タブで、次の設定を指定します (その他は既定値のままにします)。
+1. **[基本]** タブで、次の設定を指定します (他の設定は既定値のままにしておきます)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -528,33 +516,33 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     | リージョン | このラボでその他のすべてのリソースをデプロイした Azure リージョンの名前 |
     | レベル | **標準 V2** |
     | 自動スケーリングを有効にする | **いいえ** |
+    | インスタンス数 | **2** |
+    | 可用性ゾーン | **なし** |
     | HTTP2 | **Disabled** |
     | 仮想ネットワーク | **az104-06-vnet01** |
-    | Subnet | **subnet-appgw** |
+    | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
-1. **[次へ: フロントエンド >]** をクリックし、 **[アプリケーション ゲートウェイの作成]** ブレードの **[フロントエンド]** タブで、 **[新規追加]** をクリックして次の設定を指定します (その他の設定は既定値のままにします)。
+1. Click <bpt id="p1">**</bpt>Next: Frontends &gt;<ept id="p1">**</ept> and specify the following settings (leave others with their default values). When complete, click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>. 
 
     | 設定 | 値 |
     | --- | --- |
     | フロントエンド IP アドレス タイプ | **Public** |
-    | パブリック IP アドレス| 新しいパブリック IP アドレス **az104-06-pip5** の名前 |
+    | パブリック IP アドレス| **[新規追加]** | 
+    | 名前 | **az104-06-pip5** |
+    | 可用性ゾーン | **なし** |
 
-1. **[次へ: バックエンド >]** をクリックし、 **[アプリケーション ゲートウェイの作成]** ブレードの **[バックエンド]** タブで、 **[+ バックエンド プールの追加]** をクリックし、 **[バックエンド プールの追加]** ブレードで、次の設定を指定します (その他は既定値のままにします)。
+1. このタスクでは、同じ Azure リージョンに 4 つの仮想マシンをデプロイします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-06-appgw5-be1** |
-    | [Add backend pool without targets]\(ターゲットを持たないバックエンド プールを追加する\) | **いいえ** |
-    | 変換後の型 | **IP アドレスまたは FQDN** |
-    | Target | **10.62.0.4** |
-    | 変換後の型 | **IP アドレスまたは FQDN** |
-    | Target | **10.63.0.4** |
+    | [Add backend pool without targets](ターゲットを持たないバックエンド プールを追加する) | **いいえ** |
+    | IP アドレスまたは FQDN | **10.62.0.4** | 
+    | IP アドレスまたは FQDN | **10.63.0.4** |
 
     > **注**:ターゲットは、スポークバーチャル ネットワーク **az104-06-vm2** および **az104-06-vm3** 内の仮想マシンのプライベート IP アドレスを表します。
 
-1. **[追加]** をクリックし、 **[次へ: 構成 >]** をクリックし、 **[アプリケーション ゲートウェイの作成]** ブレードの **[構成]** タブで、 **[+ ルーティング規則の追加]** をクリックします。
-
-1. **[ルーティング規則の追加]** ウィンドウの **[リスナー]** タブで、次の設定を指定します。
+1. 最初の 2 つはハブバーチャル ネットワークに存在し、残りはそれぞれ別個のスポークバーチャル ネットワークに存在します。
 
     | 設定 | 値 |
     | --- | --- |
@@ -567,25 +555,18 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     | リスナーの種類 | **Basic** |
     | エラー ページの URL | **いいえ** |
 
-1. **[ルーティング規則の追加]** ウィンドウの **[バックエンド ターゲット]** タブに切り替え、次の設定を指定します (その他の設定は既定値のままにします)。
+1. Switch to the <bpt id="p1">**</bpt>Backend targets<ept id="p1">**</ept> tab and specify the following settings (leave others with their default values). When completed click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> (twice).  
 
     | 設定 | 値 |
     | --- | --- |
     | 変換後の型 | **バックエンド プール** |
     | バックエンド ターゲット | **az104-06-appgw5-be1** |
-
-1. **[Backend settings]\(バックエンド設定\)** テキスト ボックスの下にある **[新規追加]** をクリックし、 **[Add Backend setting]\(バックエンド設定の追加\)** ブレードで次の設定を指定します (その他の項目は既定値のままにします)。
-
-    | 設定 | 値 |
-    | --- | --- |
-    | HTTP 設定名 | **az104-06-appgw5-http1** |
+    | バックエンド設定 | **[新規追加]** |
+    | バックエンド設定名 | **az104-06-appgw5-http1** |
     | バックエンド プロトコル | **HTTP** |
     | バックエンド ポート | **80** |
-    | Cookie ベースのアフィニティ | **Disable** |
-    | 接続のドレイン | **Disable** |
-    | 要求タイムアウト (秒) | **20** |
-
-1. **[HTTP 設定の追加]** ウィンドウで **[追加]** をクリックし、**[ルーティング規則の追加]** ウィンドウに戻って **[追加]** をクリックします。
+    | 追加設定 | **既定値のままにします** |
+    | ホスト名 | **既定値のままにします** |
 
 1. **[次へ: タグ >]** をクリックし、 **[次へ: 確認と作成 >]** 、 **[作成]** の順にクリックします。
 
@@ -593,15 +574,15 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. Azure portal で「**アプリケーション ゲートウェイ**」を検索して選択し、**[アプリケーション ゲートウェイ]** ウィンドウで **az104-06-appgw5** をクリックします。
 
-1. **[az104-06-appgw5]** アプリケーション ゲートウェイ ウィンドウで、**[フロントエンド パブリック IP アドレス]** の値を記録しておきます。
+1. **az104-06-appgw5** アプリケーション ゲートウェイ ブレードで、 **[フロントエンド パブリック IP アドレス]** の値をコピーします。
 
 1. 別のブラウザーのウィンドウを起動し、前の手順で識別した IP アドレスに移動します。
 
 1. ブラウザー ウィンドウに、**Hello World from az104-06-vm2** または **Hello World from az104-06-vm3** というメッセージが表示されることを確認します。
 
-1. 今度は InPrivate モードを使用して別のブラウザー ウィンドウを開き、Web ページに表示されるメッセージに基づいて、ターゲット VM が変更されたかどうかを確認します。
+1. ウィンドウを更新して、メッセージが他の仮想マシンに変更されることを確認します。 
 
-    > **注**:ブラウザー ウィンドウを更新するか、InPrivate モードを使用して再度開く必要があります。
+    > **注**: 複数回更新するか、InPrivate モードで新しいブラウザー ウィンドウを開く必要がある場合があります。
 
     > **注**:複数のバーチャル ネットワーク上の仮想マシンを対象とすることは一般的な構成ではありませんが、Application Gateway が複数のバーチャル ネットワーク上の仮想マシンや、他の Azureリージョンのエンドポイント、さらには Azure の外部のエンドポイントを対象とできる点を示すことを目的としています。同じバーチャル ネットワーク内の仮想マシン間で負荷分散を行う Azure Load Balancer とは異なります。
 
@@ -634,6 +615,6 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 + ラボ環境をプロビジョニングしました
 + ハブとスポーク ネットワーク トポロジを構成しました
 + バーチャル ネットワーク ピアリングの推移性をテストしました
-+ タスク 4: ハブ アンド スポーク トポロジでルーティングを構成する
-+ タスク 5:Azure Load Balancer を実装する
-+ タスク 6:Azure Application Gateway を実装する
++ ハブとスポークのトポロジのルーティングを構成しました
++ Azure ロード バランサーを実装しました
++ Azure アプリケーション ゲートウェイを実装しました

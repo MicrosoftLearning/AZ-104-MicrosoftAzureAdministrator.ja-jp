@@ -6,6 +6,7 @@ This repository is for instructors teaching Microsoft courses. If you are in cla
 
 - **[ラボへのリンク (HTML 形式)](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)**
 - <bpt id="p1">**</bpt>Are you a MCT?<ept id="p1">**</ept> - Have a look at our <bpt id="p1">[</bpt>GitHub User Guide for MCTs<ept id="p1">](https://microsoftlearning.github.io/MCT-User-Guide/)</ept>
+- 対話型ガイド形式でこのコースをプレビューするには、こちらをクリックしてください: **[AZ-104 試験ガイド - Microsoft Azure Administrator](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator)**
 
 ## <a name="security-issue---february-2022"></a>セキュリティの問題 - 2022 年 2 月
 
