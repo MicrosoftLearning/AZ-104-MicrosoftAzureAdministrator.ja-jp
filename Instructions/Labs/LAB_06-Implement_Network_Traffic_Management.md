@@ -11,7 +11,7 @@ lab:
 
 You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso considers implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)** 。
+<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This lab, by default, requires total of 8 vCPUs available in the Standard_Dsv3 series in the region you choose for deployment, since it involves deployment of four Azure VMs of Standard_D2s_v3 SKU. If your students are using trial accounts, with the limit of 4 vCPUs, you can use a VM size that requires only one vCPU (such as Standard_B1s).
 
@@ -79,14 +79,14 @@ In this task, you will deploy four virtual machines into the same Azure region. 
       -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
    ```
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
+    >ハブおよびスポーク ネットワーク トポロジの Azure 仮想マシンを対象としたネットワーク トラフィックの管理テストを担当していましたが、Contoso は Azure 環境での実装を検討しています (前のラボでテストしたメッシュ トポロジを作成する代わりに)。
 
     >**注**:VM サイズが利用できないというエラーが発生した場合、インストラクターにサポートを依頼し、次の手順を試してください。
     > 1. CloudShell で `{}` ボタンをクリックし、左側のバーから **az104-06-vms-loop-parameters.json** を選択して、`vmSize` パラメーターの値をメモしておきます。
-    > 1. ハブおよびスポーク ネットワーク トポロジの Azure 仮想マシンを対象としたネットワーク トラフィックの管理テストを担当していましたが、Contoso は Azure 環境での実装を検討しています (前のラボでテストしたメッシュ トポロジを作成する代わりに)。
-    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。
     > 1. このテストでは、ハブを経由してトラフィックを強制的に流すユーザー定義ルートに依存してスポーク間の接続を実装する必要があり、また、レイヤ 4 およびレイヤ 7 ロード バランサーを使用して仮想マシン間でのトラフィック分散を行う必要があります。
+    > 1. CloudShell で `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` を実行します。
     > 1. この目的のために、Azure Load Balancer (レイヤー 4) と Azure Application Gateway (レイヤー 7) を使用する予定です。
+    > 1. Now redeploy your templates by running the <ph id="ph1">`New-AzResourceGroupDeployment`</ph> command again. You can press the up button a few times which would bring the last executed command.
 
 1. Cloud Shell ウィンドウから、以下を実行して、前の手順でデプロイされた Azure VM に Network Watcher 拡張機能をインストールします。
 
@@ -107,7 +107,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    }
    ```
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
+    >                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)** が用意されています。
 
 
 
@@ -183,7 +183,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | **許可 (既定)** |
     | 仮想ネットワーク ゲートウェイ | **なし (既定値)** |
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
+    >対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
     >**注**: このラボで後ほど実装するスポーク仮想ネットワーク間のルーティングを容易にするために、 **[トラフィック転送を許可する]** を有効にする必要があります。
 
@@ -199,7 +199,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -212,13 +212,13 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     > **注**:**10.62.0.4** は、プライベート IP アドレス **az104-06-vm2** を表します。
 
-1. **注**:このラボでは、デフォルトで、Standard_D2s_v3 SKU の Azure VM のデプロイが 4 つ含まれるため、デプロイ用に選択したリージョンの Standard_Dsv3 シリーズで使用可能な vCPU が合計 8 個必要です。
+1. Click <bpt id="p1">**</bpt>Check<ept id="p1">**</ept> and wait until results of the connectivity check are returned. Verify that the status is <bpt id="p1">**</bpt>Reachable<ept id="p1">**</ept>. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **注**:ハブバーチャル ネットワークは最初のスポークバーチャル ネットワークと直接ピアリングされるため、これは予期されます。
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -231,13 +231,13 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     > **注**:**10.63.0.4** は、プライベート IP アドレス **az104-06-vm3** を表します。
 
-1. 受講生が試用版アカウントを使用しており、vCPU が 4 つに制限されている場合は、1 つの vCPU のみを必要とする VM サイズ (Standard_B1s など) を使用できます。
+1. **注**:このラボでは、デフォルトで、Standard_D2s_v3 SKU の Azure VM のデプロイが 4 つ含まれるため、デプロイ用に選択したリージョンの Standard_Dsv3 シリーズで使用可能な vCPU が合計 8 個必要です。
 
     > **注**:ハブバーチャル ネットワークは 2 番目のスポークバーチャル ネットワークと直接ピアリングされるため、これは予期されます。
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -248,7 +248,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     | Protocol | **TCP** |
     | 宛先ポート | **3389** |
 
-1. Click <bpt id="p1">**</bpt>Check<ept id="p1">**</ept> and wait until results of the connectivity check are returned. Note that the status is <bpt id="p1">**</bpt>Unreachable<ept id="p1">**</ept>.
+1. 受講生が試用版アカウントを使用しており、vCPU が 4 つに制限されている場合は、1 つの vCPU のみを必要とする VM サイズ (Standard_B1s など) を使用できます。
 
     > **注**:これは、2 つのスポークバーチャル ネットワークが互いにピアリングされないので、予想されます (バーチャル ネットワーク ピアリングは推移的ではありません)。
 
@@ -302,7 +302,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. 次の設定でルート テーブルを作成します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -345,7 +345,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. 次の設定でルート テーブルを作成します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -388,7 +388,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. **[Network Watcher - 接続のトラブルシューティング]** ウィンドウで、次の設定でチェックを開始します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -413,7 +413,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. 次の設定でロード バランサーを作成し (その他の設定は既定値のままにします)、 **[次へ: フロントエンド IP 構成]** をクリックします。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -425,7 +425,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     
 1. On the <bpt id="p1">**</bpt>Frontend IP configuration<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add a frontend IP configuration<ept id="p2">**</ept> and use the following settings before clicking <bpt id="p3">**</bpt>OK<ept id="p3">**</ept> and then <bpt id="p4">**</bpt>Add<ept id="p4">**</ept>. When completed click <bpt id="p1">**</bpt>Next: Backend pools<ept id="p1">**</ept>. 
      
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | 任意の一意の名前 |
     | IP バージョン | IPv4 |
@@ -436,7 +436,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. On the <bpt id="p1">**</bpt>Backend pools<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add a backend pool<ept id="p2">**</ept> with the following settings (leave others with their default values). Click <bpt id="p1">**</bpt>+ Add<ept id="p1">**</ept> (twice) and then click  <bpt id="p2">**</bpt>Next:Inbound rules<ept id="p2">**</ept>. 
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-06-lb4-be1** |
     | 仮想ネットワーク | **az104-06-vnet01** |
@@ -449,7 +449,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. On the <bpt id="p1">**</bpt>Inbound rules<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add a load balancing rule<ept id="p2">**</ept>. Add a load balancing rule with the following settings (leave others with their default values). When completed click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept>.
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-06-lb4-lbrule1** |
     | IP バージョン | **IPv4** |
@@ -495,7 +495,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. 次の設定でサブネットを追加します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **subnet-appgw** |
     | サブネットのアドレス範囲 | **10.60.3.224/27** |
@@ -508,7 +508,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. **[基本]** タブで、次の設定を指定します (他の設定は既定値のままにしておきます)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-06-rg1** |
@@ -531,9 +531,9 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     | 名前 | **az104-06-pip5** |
     | 可用性ゾーン | **なし** |
 
-1. このタスクでは、同じ Azure リージョンに 4 つの仮想マシンをデプロイします。
+1. Click <bpt id="p1">**</bpt>Next: Backends &gt;<ept id="p1">**</ept> and then <bpt id="p2">**</bpt>Add a backend pool<ept id="p2">**</ept>. Specify the following settings (leave others with their default values). When completed click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept>.
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-06-appgw5-be1** |
     | [Add backend pool without targets](ターゲットを持たないバックエンド プールを追加する) | **いいえ** |
@@ -542,7 +542,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     > **注**:ターゲットは、スポークバーチャル ネットワーク **az104-06-vm2** および **az104-06-vm3** 内の仮想マシンのプライベート IP アドレスを表します。
 
-1. 最初の 2 つはハブバーチャル ネットワークに存在し、残りはそれぞれ別個のスポークバーチャル ネットワークに存在します。
+1. このタスクでは、同じ Azure リージョンに 4 つの仮想マシンをデプロイします。
 
     | 設定 | 値 |
     | --- | --- |
@@ -555,7 +555,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     | リスナーの種類 | **Basic** |
     | エラー ページの URL | **いいえ** |
 
-1. Switch to the <bpt id="p1">**</bpt>Backend targets<ept id="p1">**</ept> tab and specify the following settings (leave others with their default values). When completed click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> (twice).  
+1. 最初の 2 つはハブバーチャル ネットワークに存在し、残りはそれぞれ別個のスポークバーチャル ネットワークに存在します。  
 
     | 設定 | 値 |
     | --- | --- |

@@ -22,7 +22,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     - サポート要求チケットの作成
     - リソース グループの表示
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** 。
+<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 ## <a name="objectives"></a>目標
 
@@ -139,17 +139,17 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     | 自分でパスワードを作成する | enabled |
     | 初期パスワード | **セキュリティで保護されたパスワードを指定する** |
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: <bpt id="p2">**</bpt>Copy to clipboard<ept id="p2">**</ept> the full <bpt id="p3">**</bpt>User name<ept id="p3">**</ept>. You will need it later in this lab.
+    >このラボでは、Azure Active Directory (Azure AD) ユーザーを作成し、カスタムの Azure ロール ベースのアクセス制御 (RBAC) ロールを作成し、これらのロールを Azure AD ユーザーに割り当てるためのアクセス許可が必要です。
 
 1. Azure portal で、**az104-02-mg1** 管理グループに戻り、その**詳細**を表示します。
 
-1. このラボでは、Azure Active Directory (Azure AD) ユーザーを作成し、カスタムの Azure ロール ベースのアクセス制御 (RBAC) ロールを作成し、これらのロールを Azure AD ユーザーに割り当てるためのアクセス許可が必要です。 
+1. すべてのラボ ホスティング業者がこの機能を提供できるわけではありません。 
 
     >**注**: カスタム役割が表示されない場合、作成後にカスタム役割が表示されるまでに最大 10 分かかることがあります。
 
-1. すべてのラボ ホスティング業者がこの機能を提供できるわけではありません。
-
 1. このラボの可用性については、インストラクターに問い合わせてください。
+
+1. Open an <bpt id="p1">**</bpt>InPrivate<ept id="p1">**</ept> browser window and sign in to the <bpt id="p2">[</bpt>Azure portal<ept id="p2">](https://portal.azure.com)</ept> using the newly created user account. When prompted to update the password, change the password for the user.
 
     >**注**:ユーザー名を入力するのではなく、クリップボードの内容を貼り付けることができます。
 
@@ -171,7 +171,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
 
-   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going.
+   >管理グループ内のすべてのサブスクリプションに対するサポート要求を、指定された Azure Active Directory ユーザーに提出するアクセス許可を付与する。
 
 1. Azure portal で **[Azure Active Directory]** を検索して選択し、[Azure Active Directory] ブレードで、**[ユーザー]** をクリックします。
 
@@ -207,7 +207,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 1. **[更新]** を選択して、サブスクリプションが **[テナント ルート管理グループ]** に正常に移動したことを確認します。
 
 1. **[管理グループ]** ブレードに戻り、 **[az104-02-mg1]** 管理グループの右側にある**省略記号**アイコンをクリックし、 **[削除]** をクリックします。
-  >管理グループ内のすべてのサブスクリプションに対するサポート要求を、指定された Azure Active Directory ユーザーに提出するアクセス許可を付与する。
+  >そのユーザーのアクセス許可は、次の場合に限定する必要があります。
 
 #### <a name="review"></a>確認
 

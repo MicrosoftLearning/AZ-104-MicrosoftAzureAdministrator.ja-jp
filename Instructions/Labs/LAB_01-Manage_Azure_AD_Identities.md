@@ -12,7 +12,7 @@ lab:
 
 In order to allow Contoso users to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** 。
+<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 ## <a name="objectives"></a>目標
 
@@ -114,7 +114,7 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
 
 1. ブラウザー ウィンドウを更新して、アクティブ化が成功したことを確認します。 
 
- ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: It can take up to 10 minutes for the licenses to activate. Continue refreshing the page until it appears. Do not proceed until the licenses have been activated.
+ >Contoso のユーザーが Azure AD を使用して認証できるようにするには、ユーザーおよびグループ アカウントのプロビジョニングを行う必要があります。
 
 1. **[ライセンス - すべての製品]** ブレードで、**[Azure Active Directory Premium P2]** エントリを選択し、Azure AD Premium P2 のすべてのライセンス オプションをユーザー アカウントと新しく作成した 2 つのユーザー アカウントに割り当てます。
 
@@ -141,7 +141,7 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
     | 演算子 | **[等しい]** |
     | 値 | **クラウド管理者** |
 
-1. Contoso のユーザーが Azure AD を使用して認証できるようにするには、ユーザーおよびグループ アカウントのプロビジョニングを行う必要があります。 
+1. グループのメンバーシップは、ユーザーの役職に基づいて自動的に更新されます。 
 
 1. Azure AD テナントの **[グループ - すべてのグループ]** ブレードに戻り、**[+ 新しいグループ]** ボタンをクリックし、次の設定で新しいグループを作成します。
 
@@ -162,7 +162,7 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
     | 演算子 | **[等しい]** |
     | 値 | **システム管理者** |
 
-1. グループのメンバーシップは、ユーザーの役職に基づいて自動的に更新されます。 
+1. テスト ユーザー アカウントを使用してテスト Azure AD テナントを作成し、Contoso Azure サブスクリプションのリソースに対する制限付きアクセス許可をそのアカウントに付与する必要もあります。 
 
 1. Azure AD テナントの **[グループ - すべてのグループ]** ブレードに戻り、**[+ 新しいグループ]** ボタンをクリックし、次の設定で新しいグループを作成します。
 
@@ -177,11 +177,11 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
 
 1. **[メンバーの追加]** ブレードで、**[IT クラウド管理者]** グループと **[IT システム管理者]** グループを見つけて選択し、**[新しいグループ]** ブレードに戻って **[作成]** をクリックします。
 
-1. テスト ユーザー アカウントを使用してテスト Azure AD テナントを作成し、Contoso Azure サブスクリプションのリソースに対する制限付きアクセス許可をそのアカウントに付与する必要もあります。
+1. Back on the <bpt id="p1">**</bpt>Groups - All groups<ept id="p1">**</ept> blade, click the entry representing the <bpt id="p2">**</bpt>IT Cloud Administrators<ept id="p2">**</ept> group and, on then display its <bpt id="p3">**</bpt>Members<ept id="p3">**</ept> blade. Verify that the <bpt id="p1">**</bpt>az104-01a-aaduser1<ept id="p1">**</ept> appears in the list of group members.
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its <bpt id="p1">**</bpt>Dynamic membership rules<ept id="p1">**</ept> blade, <bpt id="p2">**</bpt>Edit<ept id="p2">**</ept> the rule listed in the <bpt id="p3">**</bpt>Rule syntax<ept id="p3">**</ept> textbox by adding a whitespace at the end, and <bpt id="p4">**</bpt>Save<ept id="p4">**</ept> the change.
+    >                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** が用意されています。
 
-1. Navigate back to the <bpt id="p1">**</bpt>Groups - All groups<ept id="p1">**</ept> blade, click the entry representing the <bpt id="p2">**</bpt>IT System Administrators<ept id="p2">**</ept> group and, on then display its <bpt id="p3">**</bpt>Members<ept id="p3">**</ept> blade. Verify that the <bpt id="p1">**</bpt>az104-01a-aaduser2<ept id="p1">**</ept> appears in the list of group members.
+1. 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 #### <a name="task-3-create-an-azure-active-directory-ad-tenant-optional---lab-environment-issue"></a>タスク 3:Azure Active Directory (AD) テナントを作成する (オプション - ラボ環境の問題)
 
@@ -238,7 +238,7 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
 
 1. 次の設定で新しいゲスト ユーザーを招待します (他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-01b-aaduser1** |
     | 電子メール アドレス | このタスクで前にコピーしたユーザー プリンシパル名 |

@@ -17,7 +17,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 - 非準拠リソースを修復する
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** 。
+<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ## <a name="objectives"></a>目標
 
@@ -67,7 +67,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. 次の設定でタグを作成し、変更を適用します。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **ロール** |
     | [値] | **インフラストラクチャ** |
@@ -88,7 +88,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. 省略記号ボタンをクリックして次の値を選択し、**[スコープ]** を指定します。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 前のタスクで識別した Cloud Shell アカウントを含むリソース グループの名前 |
@@ -97,7 +97,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. 次の設定を指定して、割り当ての **基本**プロパティを構成します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 割り当て名 | **Infra 値を持つ Role タグが必要**|
     | 説明 | **Cloud Shell リソース グループ内のすべてのリソースに Infra 値を持つ Role タグが必要**|
@@ -150,7 +150,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. **[ポリシーの割り当て]** をクリックし、省略記号ボタンをクリックして次の値を選択し、**[スコープ]** を指定します。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 最初のタスクで特定した Cloud Shell アカウントを含むリソース グループの名前 |
@@ -159,7 +159,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. 次の設定を指定して、その割り当ての残りの **[基本]** プロパティを構成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 割り当て名 | **Role タグとその Infra 値がなければ、Cloud Shell リソース グループから継承する**|
     | 説明 | **Role タグとその Infra 値がなければ、Cloud Shell リソース グループから継承する**|
@@ -212,9 +212,9 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. ポータルで、「**ストレージ アカウント**」と検索して選択します。
 
-1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select <bpt id="p1">**</bpt>Tags<ept id="p1">**</ept> and click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> (Trash can to the right) to the <bpt id="p3">**</bpt>Role:Infra<ept id="p3">**</ept> tag and press <bpt id="p4">**</bpt>Apply<ept id="p4">**</ept>. 
+1.                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** が用意されています。 
 
-1. Click <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> and click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> on the top of the storage account blade. When prompted for the confirmation, in the <bpt id="p1">**</bpt>Delete storage account<ept id="p1">**</ept> blade, type the name of the storage account to confirm and click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>. 
+1. 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 #### <a name="review"></a>確認
 

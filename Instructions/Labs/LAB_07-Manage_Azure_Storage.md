@@ -11,7 +11,7 @@ lab:
 
 You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While majority of these files are not accessed frequently, there are some exceptions. You would like to minimize cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011)** 。
+<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ## <a name="objectives"></a>目標
 
@@ -96,7 +96,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. 「**ストレージ アカウントの作成**」ブレードの「**基本**」タブで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **新しい** リソース グループ **az104-07-rg1** の名前 |
@@ -111,7 +111,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. **[ストレージ アカウントの作成]** ブレードの **[データ保護]** タブで、利用可能なオプションを確認し、既定値を受け入れて、**[レビュー + 作成]** をクリックし、検証プロセスが完了するのを待ってから、**[作成]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the Storage account to be created. This should take about 2 minutes.
+    >現在オンプレミスのデータ ストアに存在するファイルを格納するために、Azure Storage の使用を検討する必要があります。
 
 1. [デプロイ] ブレードで、**[リソースに移動]** をクリックして、[Azure ストレージ アカウント] ブレードを表示します。
 
@@ -133,7 +133,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. **[+ コンテナー]** をクリックして、次の設定を使用してコンテナーを作成します。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-07-container**  |
     | パブリック アクセス レベル | **プライベート (匿名アクセスなし)** |
@@ -162,7 +162,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. **[ライセンス/LICENSE]** ブレードで、使用可能なオプションを確認します。
 
-    > 現在オンプレミスのデータ ストアに存在するファイルを格納するために、Azure Storage の使用を検討する必要があります。
+    > これらのファイルの大部分は頻繁にアクセスされませんが、いくつかの例外があります。
 
 #### <a name="task-4-manage-authentication-and-authorization-for-azure-storage"></a>タスク 4:Azure Storage の認証と許可を管理する
 
@@ -197,17 +197,17 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. InPrivate モードを使用して別のブラウザー ウィンドウを開いて、前の手順でコピーした URL に移動します。
 
-    > これらのファイルの大部分は頻繁にアクセスされませんが、いくつかの例外があります。
+    > アクセス頻度の低いファイルを低価格のストレージ層に配置することで、ストレージのコストを最小限に抑えたいと考えるかもしれません。
 
     > **注**:新しく生成された SAS トークンに基づいてアクセスが承認されるため、これは正常な動作です。
 
-    > アクセス頻度の低いファイルを低価格のストレージ層に配置することで、ストレージのコストを最小限に抑えたいと考えるかもしれません。
+    > ネットワーク アクセス、認証、認可、レプリケーションなど、Azure Storage が提供するさまざまな保護メカニズムについても検討する予定です。
 
 1. InPrivate モードのブラウザー ウィンドウを閉じ、Azure Storage コンテナーの **[ライセンス/LICENSE]** ブレードが表示されているブラウザー ウィンドウに戻り、そこから **[az104-07- コンテナー]** ブレードに戻ります。
 
 1. **[認証方法]** ラベルの横にある **[Azure AD ユーザー アカウントに切り替える]** リンクをクリックします。
 
-    > ネットワーク アクセス、認証、認可、レプリケーションなど、Azure Storage が提供するさまざまな保護メカニズムについても検討する予定です。  
+    > 最後に、Azure Files サービスがオンプレミスのファイル共有をホストするのにどの程度適しているかを判断する必要があります。  
 
     > **注**:この時点では、認証方法を変更する権限がありません。
 
@@ -237,13 +237,13 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. **[+ ファイル共有]** をクリックし、次の設定でファイル共有を作成します。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-07-share** |
 
 1. 新しく作成したファイル共有をクリックし、**[接続]** をクリックします。
 
-1. 最後に、Azure Files サービスがオンプレミスのファイル共有をホストするのにどの程度適しているかを判断する必要があります。
+1. On the <bpt id="p1">**</bpt>Connect<ept id="p1">**</ept> blade, ensure that the <bpt id="p2">**</bpt>Windows<ept id="p2">**</ept> tab is selected. Below you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click <bpt id="p1">**</bpt>Copy to clipboard<ept id="p1">**</ept>.
 
 1. Azure portal で、「**仮想マシン**」を検索して選択し、仮想マシンのリストで **[az104-07-vm0]** をクリックします。
 
@@ -283,7 +283,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 1. InPrivate モードを使用して別のブラウザー ウィンドウを開き、前のタスクで生成した BLOB SAS URL に移動します。
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: If you did not record the SAS URL from task 4, you should generate a new one with the same configuration. Use Task 4 steps 4-6 as a guide for generating a new blob SAS URL. 
+    >                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011)** が用意されています。 
 
 1. **[MIT ライセンス (MIT)]** ページの内容が表示されます。
 
@@ -302,7 +302,7 @@ You need to evaluate the use of Azure storage for storing files residing current
    ```
 1. ダウンロードの試行が失敗したことを確認します。
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: You should receive the message stating <bpt id="p2">**</bpt>AuthorizationFailure: This request is not authorized to perform this operation<ept id="p2">**</ept>. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
+    > 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 1. [Cloud Shell] ペインを閉じます。
 

@@ -11,7 +11,7 @@ lab:
 
 You need to evaluate Azure functionality that would provide insight into performance and configuration of Azure resources, focusing in particular on Azure virtual machines. To accomplish this, you intend to examine the capabilities of Azure Monitor, including Log Analytics.
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)** 。
+<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ## <a name="objectives"></a>目標
 
@@ -115,7 +115,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
     >**注**:[ワークスペース マッピングのドキュメント](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)に基づいて Azure リージョンを指定していることを確認します。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. The deployment might take about 3 minutes.
+    >Azure リソースのパフォーマンスと構成に関する分析情報を提供する Azure の機能を、特に 仮想マシンに焦点を当てて評価します。
 
 1. **[リソースに移動]** をクリックします。
 
@@ -123,13 +123,13 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[インベントリ]** ウィンドウの **[Log Analytics ワークスペース]** ドロップダウン リストで、このタスクで前に作成した Log Analytics ワークスペースを選択し、**[有効]** をクリックします。
 
-    >Azure リソースのパフォーマンスと構成に関する分析情報を提供する Azure の機能を、特に 仮想マシンに焦点を当てて評価します。
+    >これを実現するために、Log Analytics を含む、Azure Monitor の機能を調べる予定です。
 
     >**注**: これにより、**変更の追跡**ソリューションも自動的にインストールされます。
 
 1. [Automation アカウント] ブレードの **[更新管理]** セクションで、**[更新管理]** をクリックし、**[有効]** をクリックします。
 
-    >これを実現するために、Log Analytics を含む、Azure Monitor の機能を調べる予定です。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the installation to complete. This might take about 5 minutes.
 
 #### <a name="task-4-review-default-monitoring-settings-of-azure-virtual-machines"></a>タスク 4:Azure 仮想マシンの既定の監視設定をレビューする
 
@@ -141,7 +141,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[az104-11-vm0 \| 指標]** ブレードの既定のグラフでは、使用可能な**指標名前空間**は**仮想マシン ホスト**のみです。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This is expected, since no guest-level diagnostic settings have been configured yet. You do have, however, the option of enabling guest memory metrics directly from the <bpt id="p1">**</bpt>Metrics Namespace<ept id="p1">**</ept> drop down-list. You will enable it later in this exercise.
+    >                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)** が用意されています。
 
 1. **[メトリック]** ドロップダウン リストで、使用可能なメトリックの一覧を確認します。
 
@@ -157,7 +157,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[az104-11-vm0 \| 診断設定]** ブレードの **[概要]** タブで、 **[ゲスト レベルの監視を有効にする]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the operation to take effect. This might take about 3 minutes.
+    >対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 1. **[az104-11-vm0 \| 診断設定]** ブレードの **[パフォーマンス カウンター]** タブに切り替え、使用可能なカウンターを確認します。
 
