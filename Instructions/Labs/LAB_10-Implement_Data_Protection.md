@@ -11,7 +11,7 @@ lab:
 
 You have been tasked with evaluating the use of Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and on-premises computers. In addition, you want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
 
-<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -94,7 +94,7 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
 1. **[確認および作成]** をクリックし、検証が成功したことを確認して、**[作成]** をクリックします。
 
-    >Azure 仮想マシンとオンプレミス コンピューターでホストされているファイルのバックアップと復元に Azure Recovery Services の使用を検討します。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. The deployment should take less than 1 minute.
 
 1. デプロイが完了したら、**[リソースに移動]** をクリックします。
 
@@ -102,7 +102,7 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
 1. **[az104-10-rsv1 - プロパティ]** ウィンドウで、**[バックアップ構成]** ラベルの下の **[更新]** リンクをクリックします。
 
-1. また、Recovery Services コンテナーに格納されているデータを、不慮または悪意のあるデータ損失から保護する方法を確認したいと思っています。
+1. Azure 仮想マシンとオンプレミス コンピューターでホストされているファイルのバックアップと復元に Azure Recovery Services の使用を検討します。
 
     >**注**:この設定は、既存のバックアップ アイテムがない場合にのみ構成できます。
 
@@ -145,7 +145,7 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
 1. **[仮想マシンの選択]** ウィンドウで、**az-104-10-vm0** を選択し、**[OK]** をクリックして、**[バックアップ]** ウィンドウで、**[バックアップを有効にする]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the backup to be enabled. This should take about 2 minutes.
+    >また、Recovery Services コンテナーに格納されているデータを、不慮または悪意のあるデータ損失から保護する方法を確認したいと思っています。
 
 1. **az104-10-rsv1** の [Recovery Services コンテナー] ブレードに戻り、 **[保護されたアイテム]** セクションで **[バックアップ アイテム]** をクリックしてから、 **[Azure 仮想マシン]** エントリをクリックします。
 
@@ -163,7 +163,7 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
 1. **az104-10-vm1** ブレードで、 **[接続]** をクリックし、ドロップダウン メニューで **[RDP]** をクリックし、 **[RDP を使用して接続する]** ブレードで **[RDP ファイルのダウンロード]** をクリックし、プロンプトに従ってリモート デスクトップ セッションを開始します。
 
-    >                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)** が用意されています。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
     >**注**:ターゲット仮想マシンに接続する際は、警告メッセージを無視できます。
 
@@ -194,7 +194,7 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
     >**注**: **Microsoft Azure Recovery Services Agent セットアップ ウィザード**の **[Microsoft Update のオプトイン]** ページで、**[Microsoft Update を使用しない]** インストール オプションを選択します。
 
-1. 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+1. On the <bpt id="p1">**</bpt>Installation<ept id="p1">**</ept> page of the <bpt id="p2">**</bpt>Microsoft Azure Recovery Services Agent Setup Wizard<ept id="p2">**</ept>, click <bpt id="p3">**</bpt>Proceed to Registration<ept id="p3">**</ept>. This will start <bpt id="p1">**</bpt>Register Server Wizard<ept id="p1">**</ept>.
 
 1. Azure portal を表示している Web ブラザー ウィンドウに切り替え、**[インフラストラクチャの準備]** ウィンドウで、**[最新の Recovery Server Agent を既にダウンロードしたか、使用している]** チェックボックスをオンにして、**[ダウンロード]** をクリックします。
 

@@ -11,7 +11,7 @@ lab:
 
 You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, hosted currently in the company's on-premises data centers. The web sites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web apps deployment slots.
 
-<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -44,7 +44,7 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 1. **[Web アプリの作成]** ブレードの **[基本]** タブで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | ---|
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 新しいリソース グループ **az104-09a-rg1** の名前 |
@@ -73,7 +73,7 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 1. **「+スロットの追加」** をクリックし、次の設定で新しいスロットを追加します。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | ---|
     | 名前 | **staging** |
     | 設定の複製先 | **設定を複製しない**|
@@ -165,7 +165,7 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 1. Web アプリの運用スロット ブレードで **「概要」** をクリックしてから **「URL」** リンクをクリックして、新しいブラウザー タブに Web サイトのホーム ページを表示します。
 
-1. 自社のオンプレミスのデータ センターで現在ホストされている Contoso の Web サイトをホストするための Azure Web アプリの使用を評価する必要があります。
+1. Verify the default web page has been replaced with the <bpt id="p1">**</bpt>Hello World!<ept id="p1">**</ept> page.
 
 #### <a name="task-6-configure-and-test-autoscaling-of-the-azure-web-app"></a>タスク 6:Azure Web アプリの自動スケールを構成およびテストする
 
@@ -241,9 +241,9 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
->この Web サイトは、PHP ランタイム スタックを使用して Windows サーバー上で実行されています。
+>自社のオンプレミスのデータ センターで現在ホストされている Contoso の Web サイトをホストするための Azure Web アプリの使用を評価する必要があります。
 
->また、Azure Web アプリのデプロイ スロットを活用して DevOps プラクティスを実装する方法を決定する必要もあります。 
+>この Web サイトは、PHP ランタイム スタックを使用して Windows サーバー上で実行されています。 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 

@@ -12,7 +12,7 @@ lab:
 
 You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from Internet.
 
-<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -45,7 +45,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. バーチャル ネットワークを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用する Azure サブスクリプションの名前 |
     | リソース グループ | **新しい**リソース グループ **az104-04-rg1** の名前 |
@@ -75,7 +75,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. サブネットを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **subnet1** |
     | アドレス範囲 (CIDR ブロック) | **10.40.1.0/24** |
@@ -111,16 +111,16 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
 
-    >Azure バーチャル ネットワークの機能について学習します。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command <bpt id="p1">**</bpt>az deployment create<ept id="p1">**</ept> (for more information, refer to <bpt id="p2">[</bpt>Deploy resources with Resource Manager templates and Azure CLI<ept id="p2">](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli)</ept>.
 
-    >まず、Azure でいくつかの Azure 仮想マシンをホストするバーチャル ネットワークを作成するプランを立てます。
+    >Azure バーチャル ネットワークの機能について学習します。
 
     >**注**:VM サイズが利用できないというエラーが発生した場合、インストラクターにサポートを依頼し、次の手順を試してください。
     > 1. CloudShell で `{}` ボタンをクリックし、左側のバーから **az104-04-vms-loop-parameters.json** を選択して、`vmSize` パラメーターの値をメモしておきます。
+    > 1. まず、Azure でいくつかの Azure 仮想マシンをホストするバーチャル ネットワークを作成するプランを立てます。
     > 1. ネットワーク ベースのセグメンテーションを実装するため、バーチャル ネットワークの異なるサブネットにデプロイします。
-    > 1. また、プライベート IP アドレスとパブリック IP アドレスが時間の経過とともに変更されないようにする必要もあります。
     > 1. `vmSize` パラメーターの値を、先ほど実行したコマンドによって返された値のいずれかに置き換えます。
-    > 1. Contoso のセキュリティ要件に準拠するには、インターネットからアクセスできる Azure 仮想マシンのパブリック エンドポイントを保護する必要があります。
+    > 1. また、プライベート IP アドレスとパブリック IP アドレスが時間の経過とともに変更されないようにする必要もあります。
 
 1. [Cloud Shell] ペインを閉じます。
 
@@ -144,14 +144,14 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. **[ipconfig1]** ブレードの **[パブリック IP アドレス設定]** セクションで、**[関連付け]** を選択し、**[+ 新規作成]** をクリックし、次の設定を指定して **[OK]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-04-pip0** |
     | SKU | **Standard** |
 
 1. **[ipconfig1]** ブレードで **[割り当て]** を **[静的]** に設定し、**[IP アドレス]** の既定値を **10.40.0.4** のままにします。
 
-1. 最後に、バーチャル ネットワーク内とインターネットからの両方で、Azure 仮想マシンの DNS 名前解決を実装する必要があります。
+1. Contoso のセキュリティ要件に準拠するには、インターネットからアクセスできる Azure 仮想マシンのパブリック エンドポイントを保護する必要があります。
 
 1. **[az104-04-vnet1]** ブレードに戻ります
 
@@ -163,7 +163,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. **[ipconfig1]** ブレードの **[パブリック IP アドレス設定]** セクションで、**[関連付け]** を選択し、**[+ 新規作成]** をクリックし、次の設定を指定して **[OK]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-04-pip1** |
     | SKU | **Standard** |
@@ -188,24 +188,24 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. 接続の試行が失敗することに注意してください。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from Internet and assign it to network interfaces of both virtual machines.
+    >最後に、バーチャル ネットワーク内とインターネットからの両方で、Azure 仮想マシンの DNS 名前解決を実装する必要があります。
 
 1. 仮想マシン **az104-04-vm0** と **az104-04-vm1** を停止します。
 
-    >                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)** が用意されています。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
 
 1. Azure portal で「**ネットワーク セキュリティ グループ**」を検索して選択し、**[ネットワーク セキュリティ グループ]** ブレードで **[+ 作成]** をクリックします。
 
 1. ネットワーク セキュリティ グループを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
     | 名前 | **az104-04-nsg01** |
     | リージョン | このラボで他のすべてのリソースをデプロイする Azure リージョンの名前 |
 
-1. 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+1. Click <bpt id="p1">**</bpt>Review and Create<ept id="p1">**</ept>. Let validation occur, and hit <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to submit your deployment.
 
     ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. This should take about 2 minutes.
 
@@ -255,7 +255,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. プライベート DNS ゾーンを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
@@ -311,7 +311,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. 次の設定で DNS ゾーンを作成します (その他は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
@@ -327,7 +327,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. 次の設定でレコード セットを追加します (その他は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-04-vm0** |
     | Type | **A** |
@@ -342,7 +342,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. 次の設定でレコード セットを追加します (その他は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-04-vm1** |
     | Type | **A** |

@@ -11,7 +11,7 @@ lab:
 
 Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for deployment of Docker images.
 
-<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -40,7 +40,7 @@ Contoso wants to find a new platform for its virtualized workloads. You identifi
 
 1. **[コンテナー インスタンスの作成]** ブレードの **[基本]** タブで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | ---- | ---- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 新しいリソース グループ **az104-09b-rg1** の名前 |
@@ -81,9 +81,9 @@ Contoso wants to find a new platform for its virtualized workloads. You identifi
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
->Contoso は、仮想化されたワークロード用の新しいプラットフォームを見つけることを目的としています。
+><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
->この目的を達成するために使用できるコンテナー イメージの数を特定しました。 
+>Contoso は、仮想化されたワークロード用の新しいプラットフォームを見つけることを目的としています。 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 

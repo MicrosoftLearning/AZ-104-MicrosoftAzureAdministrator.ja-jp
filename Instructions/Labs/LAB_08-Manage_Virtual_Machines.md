@@ -11,7 +11,7 @@ lab:
 
 You were tasked with identifying different options for deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets. You also want to explore the ability to automatically configure virtual machines and virtual machine scale sets by using the Azure Virtual Machine Custom Script extension.
 
-<bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> An <bpt id="p2">**</bpt><bpt id="p3">[</bpt>interactive lab simulation<ept id="p3">](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2012)</ept><ept id="p2">**</ept> is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2012)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -46,7 +46,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想マシンの作成]** ブレードの **[基本]** タブで、以下の設定を指定します (他の設定は既定値のまま)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用する Azure サブスクリプションの名前 |
     | リソース グループ | 新しいリソース グループの名前 (**az104-08-rg01**) |
@@ -73,7 +73,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想ネットワークの作成]** ブレードで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-08-rg01-vnet** |
     | アドレス範囲 | **10.80.0.0/20** |
@@ -141,7 +141,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[新しいコンテナー]** ブレードで、次の設定を指定し (他は既定値のままにします) **[作成]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **scripts** |
     | パブリック アクセス レベル | **非公開 (匿名アクセスなし)** |
@@ -176,7 +176,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[テンプレートの編集]** ブレードで、テンプレートの内容が表示されているセクションの **20** 行目 (`"resources": [` 行のすぐ下) に次のコードを挿入します。
 
-   >Azure 仮想マシンをデプロイおよび構成するためのさまざまなオプションを特定する作業を担当していました。
+   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
 
    ```json
         {
@@ -204,7 +204,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[保存]** をクリックし、**[カスタム テンプレート]** ブレードの **[レビューと作成]** をクリックし、**[レビューと作成]** ブレードで **[作成]** をクリックします
 
-    >まず、Azure 仮想マシンを使用する場合に実装できるコンピューティングとストレージの復元性とスケーラビリティのオプションを決定する必要があります。
+    >Azure 仮想マシンをデプロイおよび構成するためのさまざまなオプションを特定する作業を担当していました。
 
 1. カスタム スクリプト拡張ベースの構成が正常に実行されたことを確認するには、**[az104-08-vm1]** ブレードに戻り、**[操作]** セクションの **[コマンドの実行]** をクリックし、コマンドの一覧で **[RunPowerShellScript]** をクリックします。
 
@@ -274,7 +274,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[カスタム デプロイ]** ブレードで、**[テンプレートの編集]** をクリックします。
 
-    >次に、Azure 仮想マシン スケール セットを使用する場合に利用可能なコンピューティングとストレージの復元性とスケーラビリティ オプションを調査する必要があります。
+    >まず、Azure 仮想マシンを使用する場合に実装できるコンピューティングとストレージの復元性とスケーラビリティのオプションを決定する必要があります。
 
 1. **[テンプレートの編集]** ブレードで、テンプレートの内容が表示されているセクションの **30** 行目 (`"vmSize": "Standard_D2s_v3"`) を次の行に置き換えます。
 
@@ -306,14 +306,14 @@ You were tasked with identifying different options for deploying and configuring
                     ]
    ```
 
-    >また、Azure 仮想マシンのカスタム スクリプト拡張機能を使用して、仮想マシンと仮想マシン スケール セットを自動的に構成する機能についても説明します。
+    >次に、Azure 仮想マシン スケール セットを使用する場合に利用可能なコンピューティングとストレージの復元性とスケーラビリティ オプションを調査する必要があります。
 
     >**注**:テンプレートのこのセクションでは、Azure portal を介して最初の仮想マシンのストレージ構成と同様に、2 つのマネージド ディスクを作成し、**az104-08-vm1** に接続します。
 
 
 1. **[保存]** をクリックし、**[カスタム デプロイ]** ブレードに戻って **[確認と作成]** をクリックし、**[確認と作成]** ブレードで **[作成]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the template deployment to complete. You can monitor its progress from the <bpt id="p1">**</bpt>Disks<ept id="p1">**</ept> blade of the <bpt id="p2">**</bpt>az104-08-vm1<ept id="p2">**</ept> virtual machine. This should take no more than 3 minutes.
+    >また、Azure 仮想マシンのカスタム スクリプト拡張機能を使用して、仮想マシンと仮想マシン スケール セットを自動的に構成する機能についても説明します。
 
 1. **[az104-08-vm1]** ブレードに戻り、**[操作]** セクションの **[コマンドの実行]** をクリックし、コマンドのリストで **[RunPowerShellScript]** をクリックします。
 
@@ -355,7 +355,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想マシン スケール セットの作成]** ブレードの **[基本]** タブで、次の設定を指定し (他の設定は既定値のままにします)、**[次へ: ディスク >]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 新しいリソース グループの名前 (**az104-08-rg02**) |
@@ -375,7 +375,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想マシン スケール セットの作成]** ブレードの **[ネットワーク]** タブで、**[仮想ネットワーク]** テキスト ボックスの下にある **[仮想ネットワークの作成]** リンクをクリックし、次の設定で新しい仮想ネットワークを作成します (他は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-08-rg02-vnet** |
     | アドレス範囲 | **10.82.0.0/20** |
@@ -390,7 +390,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[ネットワーク セキュリティ グループの作成]** ブレードで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az10408vmss0-nsg** |
 
@@ -449,7 +449,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想マシン スケール セットの作成]** ブレードの **[レビューと作成]** タブで、検証が成功したことを確認し、**[作成]** をクリックします。
 
-    >                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2012)** が用意されています。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
 
 #### <a name="task-6-configure-azure-virtual-machine-scale-sets-by-using-virtual-machine-extensions"></a>タスク 6:仮想マシン拡張機能を使用して、Azure 仮想マシン スケール セットを構成する
 
@@ -461,7 +461,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[新しいコンテナー]** ブレードで、次の設定を指定し (他は既定値のままにします) **[作成]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **scripts** |
     | パブリック アクセス レベル | **非公開 (匿名アクセスなし)** |
@@ -582,7 +582,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. 変更を保存して、**[az10408vmss0]** ブレードの **[設定]** セクションで **[インスタンス]** をクリックし、仮想マシン スケール セットの 2 のインスタンスの横にあるチェックボックスをオンにし、**[アップグレード]** をクリックして、確認を求められたら、**[はい]** を選択します。
 
-    >対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The disk attached in the previous step is a raw disk. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
 
 1. **[az10408vmss0]** ブレードの **[設定]** セクションで、**[拡張機能]** をクリックし、**[CustomScriptExtension]** をクリックし、**[アンインストール]** をクリックします。
 
