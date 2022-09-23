@@ -12,8 +12,6 @@ lab:
 
 You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from Internet.
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)** 。
-
 ## <a name="objectives"></a>目標
 
 このラボでは、次のことを行います。
@@ -45,7 +43,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. バーチャル ネットワークを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用する Azure サブスクリプションの名前 |
     | リソース グループ | **新しい**リソース グループ **az104-04-rg1** の名前 |
@@ -75,7 +73,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. サブネットを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **subnet1** |
     | アドレス範囲 (CIDR ブロック) | **10.40.1.0/24** |
@@ -144,7 +142,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. **[ipconfig1]** ブレードの **[パブリック IP アドレス設定]** セクションで、**[関連付け]** を選択し、**[+ 新規作成]** をクリックし、次の設定を指定して **[OK]** をクリックします。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-pip0** |
     | SKU | **Standard** |
@@ -163,7 +161,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. **[ipconfig1]** ブレードの **[パブリック IP アドレス設定]** セクションで、**[関連付け]** を選択し、**[+ 新規作成]** をクリックし、次の設定を指定して **[OK]** をクリックします。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-pip1** |
     | SKU | **Standard** |
@@ -198,7 +196,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. ネットワーク セキュリティ グループを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
@@ -255,7 +253,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. プライベート DNS ゾーンを次の設定で作成します (その他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
@@ -311,7 +309,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. 次の設定で DNS ゾーンを作成します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | **az104-04-rg1** |
@@ -327,7 +325,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. 次の設定でレコード セットを追加します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-vm0** |
     | Type | **A** |
@@ -342,7 +340,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 1. 次の設定でレコード セットを追加します (その他は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- | --- |
     | 名前 | **az104-04-vm1** |
     | Type | **A** |
