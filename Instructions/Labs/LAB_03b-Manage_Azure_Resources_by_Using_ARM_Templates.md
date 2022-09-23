@@ -1,7 +1,7 @@
 ---
 lab:
   title: 03b - ARM テンプレートを使用して Azure リソースを管理する
-  module: Module 03 - Azure Administration
+  module: Administer Azure Resources
 ---
 
 # <a name="lab-03b---manage-azure-resources-by-using-arm-templates"></a>ラボ 03b - ARM テンプレートを使用して Azure リソースを管理する
@@ -9,6 +9,8 @@ lab:
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 Azure portal を使用して、リソースのプロビジョニングとリソース グループに基づく構成に関連する基本的な Azure 管理機能を確認しました。次は、Azure Resource Manager テンプレートを使用して同等のタスクを実行します。
+
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -72,12 +74,6 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
    "sourceResourceId": {
        "type": "String"
    },
-   "sourceUri": {
-       "type": "String"
-   },
-   "osType": {
-       "type": "String"
-   },
    ```
 
    ```json
@@ -85,10 +81,6 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
        "defaultValue": "V1",
        "type": "String"
    },      
-   ```
-
-   ```json
-   "osType": "[parameters('osType')]",
    ```
 
     ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
@@ -101,7 +93,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 1. **[カスタム デプロイ]** ブレードに戻って、次の設定を指定します。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- |--- |
     | サブスクリプション | *このラボで使用している Azure サブスクリプションの名前* |
     | リソース グループ | **新しい**リソース グループ **az104-03b-rg1** の名前 |
@@ -120,7 +112,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 #### <a name="task-3-review-the-arm-template-based-deployment-of-the-managed-disk"></a>タスク 3:マネージド ディスクの ARM テンプレートベースのデプロイを確認する
 
-1. Azure portal で、**[リソース グループ]** を検索して選択します。 
+1. Azure portal で、「**リソース グループ**」を検索して選択します。 
 
 1. リソース グループのリストで、**az104-03b-rg1** をクリックします。
 

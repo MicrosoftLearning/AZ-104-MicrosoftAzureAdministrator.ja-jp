@@ -1,7 +1,7 @@
 ---
 lab:
   title: 08 - 仮想マシンを管理する
-  module: Module 08 - Virtual Machines
+  module: Administer Virtual Machines
 ---
 
 # <a name="lab-08---manage-virtual-machines"></a>ラボ 08 - 仮想マシンを管理する
@@ -10,6 +10,8 @@ lab:
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
 You were tasked with identifying different options for deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets. You also want to explore the ability to automatically configure virtual machines and virtual machine scale sets by using the Azure Virtual Machine Custom Script extension.
+
+対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2012)** 。
 
 ## <a name="objectives"></a>目標
 
@@ -44,7 +46,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想マシンの作成]** ブレードの **[基本]** タブで、以下の設定を指定します (他の設定は既定値のまま)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用する Azure サブスクリプションの名前 |
     | リソース グループ | 新しいリソース グループの名前 (**az104-08-rg01**) |
@@ -71,7 +73,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想ネットワークの作成]** ブレードで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-08-rg01-vnet** |
     | アドレス範囲 | **10.80.0.0/20** |
@@ -139,7 +141,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[新しいコンテナー]** ブレードで、次の設定を指定し (他は既定値のままにします) **[作成]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **scripts** |
     | パブリック アクセス レベル | **非公開 (匿名アクセスなし)** |
@@ -353,7 +355,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想マシン スケール セットの作成]** ブレードの **[基本]** タブで、次の設定を指定し (他の設定は既定値のままにします)、**[次へ: ディスク >]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 新しいリソース グループの名前 (**az104-08-rg02**) |
@@ -373,7 +375,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[仮想マシン スケール セットの作成]** ブレードの **[ネットワーク]** タブで、**[仮想ネットワーク]** テキスト ボックスの下にある **[仮想ネットワークの作成]** リンクをクリックし、次の設定で新しい仮想ネットワークを作成します (他は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az104-08-rg02-vnet** |
     | アドレス範囲 | **10.82.0.0/20** |
@@ -388,7 +390,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[ネットワーク セキュリティ グループの作成]** ブレードで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **az10408vmss0-nsg** |
 
@@ -459,7 +461,7 @@ You were tasked with identifying different options for deploying and configuring
 
 1. **[新しいコンテナー]** ブレードで、次の設定を指定し (他は既定値のままにします) **[作成]** をクリックします。
 
-    | 設定 | 値 |
+    | 設定 | [値] |
     | --- | --- |
     | 名前 | **scripts** |
     | パブリック アクセス レベル | **非公開 (匿名アクセスなし)** |
