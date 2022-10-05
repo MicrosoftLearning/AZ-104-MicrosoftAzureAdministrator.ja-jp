@@ -9,7 +9,9 @@ lab:
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, hosted currently in the company's on-premises data centers. The web sites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web apps deployment slots.
+自社のオンプレミスのデータ センターで現在ホストされている Contoso の Web サイトをホストするための Azure Web アプリの使用を評価する必要があります。 この Web サイトは、PHP ランタイム スタックを使用して Windows サーバー上で実行されています。 また、Azure Web アプリのデプロイ スロットを活用して DevOps プラクティスを実装する方法を決定する必要もあります。
+
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -53,9 +55,9 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
     | リージョン | Azure Web アプリをプロビジョニングできる Azure リージョンの名前 |
     | App Service プラン | 既定の構成を受け入れる |
 
-1. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>. On the <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create Web App<ept id="p2">**</ept> blade, ensure that the validation passed and click <bpt id="p3">**</bpt>Create<ept id="p3">**</ept>.
+1. **[Review + create](レビュー + 作成)** をクリックします。 **[Web アプリの作成]** ブレードの **[確認および作成]** タブで、検証が成功したことを確認し、**[作成]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait until the web app is created before you proceed to the next task. This should take about a minute.
+    >**注**:Web アプリの作成が完了したら、次のタスクに進みます。 これにはおよそ 1 分かかります。
 
 1. デプロイ ブレードで **[リソースに移動]** をクリックします。
 
@@ -149,7 +151,7 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 1. ステージング スロットのブレードで **「概要」** 、 **「URL」** リンクの順にクリックして、新しいブラウザー タブで既定の Web ページを表示します。
 
-1. Verify that the browser page displays the <bpt id="p1">**</bpt>Hello World!<ept id="p1">**</ept> message and close the new tab.
+1. ブラウザー ページに「**Hello World!**」というメッセージが表示されていることを確認し、 新しいタブを閉じます。
 
 #### <a name="task-5-swap-the-staging-slots"></a>タスク 5:ステージング スロットをスワップする
 
@@ -163,7 +165,7 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 1. Web アプリの運用スロット ブレードで **「概要」** をクリックしてから **「URL」** リンクをクリックして、新しいブラウザー タブに Web サイトのホーム ページを表示します。
 
-1. Verify the default web page has been replaced with the <bpt id="p1">**</bpt>Hello World!<ept id="p1">**</ept> page.
+1. 既定の Web ページが「**Hello World!**」というページに置き換えられていることを確認します。 のページを参照してください。
 
 #### <a name="task-6-configure-and-test-autoscaling-of-the-azure-web-app"></a>タスク 6:Azure Web アプリの自動スケールを構成およびテストする
 
@@ -239,9 +241,9 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
->自社のオンプレミスのデータ センターで現在ホストされている Contoso の Web サイトをホストするための Azure Web アプリの使用を評価する必要があります。
+>**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
->この Web サイトは、PHP ランタイム スタックを使用して Windows サーバー上で実行されています。 
+>**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 

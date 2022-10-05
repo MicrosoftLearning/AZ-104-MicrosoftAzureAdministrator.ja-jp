@@ -10,7 +10,7 @@ lab:
 ## <a name="lab-scenario"></a>ラボのシナリオ
 Azure portal を使用して、リソースのプロビジョニングとリソース グループに基づく構成に関連する基本的な Azure 管理機能を確認しました。次は、Azure Resource Manager テンプレートを使用して同等のタスクを実行します。
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** 。
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -32,8 +32,6 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 #### <a name="task-1-review-an-arm-template-for-deployment-of-an-azure-managed-disk"></a>タスク 1:Azure マネージド ディスクのデプロイのために ARM テンプレートを確認する
 
-このタスクでは、Azure Resource Manager テンプレートを使用して Azure ディスク リソースを作成します。
-
 1. [**Azure Portal**](http://portal.azure.com) にサインインします。
 
 1. Azure portal で、**[リソース グループ]** を検索して選択します。 
@@ -52,7 +50,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 1. **[Microsoft.ManagedDisk-* XXXXXXXXX* \| テンプレート]* * ブレードで、 **[入力]** をクリックします。
 
-1. Note the value of the <bpt id="p1">**</bpt>location<ept id="p1">**</ept> parameter. You will need it in the next task.
+1. **場所**パラメーターの値をメモします。 これは、次のタスクで必要になります。
 
 1. ダウンロードしたファイルの内容をラボ コンピューターの **Downloads** フォルダーに抽出します。
 
@@ -83,7 +81,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
    },      
    ```
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
+    >**注**:これらのパラメーターは、現在のデプロイには適用されないので削除されます。 特に、sourceResourceId、sourceUri、osType および hyperVGeneration パラメーターは、既存の VHD ファイルから Azure ディスクを作成するために適用できます。
 
 1. 変更を **[保存]** します。
 
@@ -93,7 +91,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 1. **[カスタム デプロイ]** ブレードに戻って、次の設定を指定します。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | --- |--- |
     | サブスクリプション | *このラボで使用している Azure サブスクリプションの名前* |
     | リソース グループ | **新しい**リソース グループ **az104-03b-rg1** の名前 |
@@ -122,7 +120,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
+   >**注**:このラボでデプロイしたリソースは削除しないでください。 このモジュールの次のラボで、それらを参照します。
 
 #### <a name="review"></a>確認
 

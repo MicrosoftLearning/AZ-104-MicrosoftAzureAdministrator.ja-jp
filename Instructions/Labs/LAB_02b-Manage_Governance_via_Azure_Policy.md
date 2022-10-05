@@ -15,7 +15,9 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 - 適切にタグ付けされたインフラストラクチャ リソースのみを、インフラストラクチャ リソース グループに追加できるようにする
 
-- 非準拠リソースを修復する 
+- 非準拠リソースを修復する
+
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -70,7 +72,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     | 名前 | **ロール** |
     | [値] | **インフラストラクチャ** |
 
-1. Navigate back to the storage account blade. Review the <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> information and note that the new tag was not automatically assigned to the storage account. 
+1. ストレージ アカウント ブレードに戻ります。 **[概要]** 情報を確認します。また、新しいタグがストレージ アカウントに自動的に割り当てられていないことに注意してください。 
 
 #### <a name="task-2-enforce-tagging-via-an-azure-policy"></a>タスク 2:Azure Policy を使用してタグ付けを強制する
 
@@ -78,7 +80,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. Azure portal で、「**ポリシー**」と検索して選択します。 
 
-1. In the <bpt id="p1">**</bpt>Authoring<ept id="p1">**</ept> section, click <bpt id="p2">**</bpt>Definitions<ept id="p2">**</ept>. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the <bpt id="p1">**</bpt>Tags<ept id="p1">**</ept> entry (and de-selecting all other entries) in the <bpt id="p2">**</bpt>Category<ept id="p2">**</ept> drop-down list. 
+1. **[作成]** セクションで、**[定義]** をクリックします。 使用できる組み込みポリシー定義のリストを確認してください。 タグの使用に関連するすべての組み込みポリシーを一覧表示するには、**[カテゴリ]** ドロップダウン リストで **[Tags]** エントリを選択します (他のエントリはすべて選択解除します)。 
 
 1. **[リソースでタグとその値が必要]** という組み込みポリシーを表すエントリをクリックし、その定義を確認します。
 
@@ -91,7 +93,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 前のタスクで識別した Cloud Shell アカウントを含むリソース グループの名前 |
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
+    >**注**:スコープによって、ポリシーの割り当てが有効なリソースまたはリソース グループが決まります。 管理グループ、サブスクリプション、またはリソース グループのレベルでポリシーを割り当てることができます。 また、個々のサブスクリプション、リソース グループ、リソースなどの除外を指定することもできます (割り当てスコープに基づきます)。 
 
 1. 次の設定を指定して、割り当ての **基本**プロパティを構成します (その他は既定値のままにします)。
 
@@ -101,7 +103,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     | 説明 | **Cloud Shell リソース グループ内のすべてのリソースに Infra 値を持つ Role タグが必要**|
     | ポリシーの適用 | Enabled |
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The <bpt id="p2">**</bpt>Assignment name<ept id="p2">**</ept> is automatically populated with the policy name you selected, but you can change it. You can also add an optional <bpt id="p1">**</bpt>Description<ept id="p1">**</ept>. <bpt id="p1">**</bpt>Assigned by<ept id="p1">**</ept> is automatically populated based on the user name creating the assignment. 
+    >**注**: **[割り当て名]** には選択したポリシー名が自動的に入力されますが、この名前は変更できます。 必要に応じて、**説明**を追加することもできます。 **[割り当て担当者]** は、割り当てを作成するユーザー名に基づいて自動的に入力されます。 
 
 1. **[次へ]** をクリックして、**[パラメーター]** に次の値を設定します。
 
@@ -130,11 +132,11 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     | --- | --- |
     | ストレージ アカウント名 | 英字で始まる、グローバルに一意な、3 個から 24 個の小文字と数字の任意の組み合わせ |
 
-1. Once you create the deployment, you should see the <bpt id="p1">**</bpt>Deployment failed<ept id="p1">**</ept> message in the <bpt id="p2">**</bpt>Notifications<ept id="p2">**</ept> list of the portal. From the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> list, navigate to the deployment overview and click the <bpt id="p2">**</bpt>Deployment failed. Click here for details<ept id="p2">**</ept> message to identify the reason for the failure. 
+1. デプロイが作成されると、ポータルの **[通知]** リストに **"デプロイできませんでした"** というメッセージが表示されるはずです。 **[通知]** リストからデプロイ概要に移動し、"**Deployment failed.Click here for details (デプロイに失敗しました。詳細については、ここをクリックしてください)** " のメッセージをクリックして、失敗の理由を特定します。 
 
     >**注**:エラー メッセージが、ポリシーによってリソースのデプロイが許可されなかったことを示しているかどうか確認します。 
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: By clicking the <bpt id="p2">**</bpt>Raw Error<ept id="p2">**</ept> tab, you can find more details about the error, including the name of the role definition <bpt id="p3">**</bpt>Require Role tag with Infra value<ept id="p3">**</ept>. The deployment failed because the storage account you attempted to create did not have a tag named <bpt id="p1">**</bpt>Role<ept id="p1">**</ept> with its value set to <bpt id="p2">**</bpt>Infra<ept id="p2">**</ept>.
+    >**注**: **[未処理エラー]** タブをクリックすると、**"インフラ値を持つロール タグを必要とする"** というロール定義名を含む、エラーの詳細を確認できます。 デプロイに失敗した原因は、作成しようとしたストレージ アカウントに、**Infra** に値を設定した **Role** という名前のタグがなかったためです。
 
 #### <a name="task-3-apply-tagging-via-an-azure-policy"></a>タスク 3:Azure Policy を使用してタグ付けを適用する
 
@@ -174,7 +176,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     | 設定 | [値] |
     | --- | --- |
     | 修復タスクを作成する | enabled |
-    | 修復するポリシー | **存在しない場合は、サブスクリプションからタグを継承する** |
+    | 修復するポリシー | **存在しない場合は、リソース グループからタグを継承する** |
 
     >**注**: このポリシー定義には **[変更]** の効果が含まれます。
 
@@ -200,9 +202,9 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 #### <a name="task-4-clean-up-resources"></a>タスク 4: リソースをクリーンアップする
 
-   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although keep in mind that Azure policies do not incur extra cost.
+   >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 未使用のリソースを削除することで、予期しない費用の発生を防げます。なお、Azure ポリシーに追加の費用はかかりません。
    
-   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
+   >**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
 
 1. ポータルで、「**ポリシー**」と検索して選択します。
 
@@ -210,9 +212,9 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. ポータルで、「**ストレージ アカウント**」と検索して選択します。
 
-1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select <bpt id="p1">**</bpt>Tags<ept id="p1">**</ept> and click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> (Trash can to the right) to the <bpt id="p3">**</bpt>Role:Infra<ept id="p3">**</ept> tag and press <bpt id="p4">**</bpt>Apply<ept id="p4">**</ept>. 
+1. ストレージ アカウントの一覧で、このラボの最後のタスクで作成したストレージ アカウントに対応するリソース グループを選択します。 **[タグ]** を選択し、**[Role:Infra]** タグに対して**削除** (右側のごみ箱) をクリックして、**[適用]** を押します。 
 
-1. Click <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> and click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept> on the top of the storage account blade. When prompted for the confirmation, in the <bpt id="p1">**</bpt>Delete storage account<ept id="p1">**</ept> blade, type the name of the storage account to confirm and click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>. 
+1. **[概要]** をクリックし、[ストレージ アカウント] ブレードの上部にある **[削除]** をクリックします。 確認を求めるメッセージが表示されたら、**[ストレージ アカウントの削除]** ブレードで、確認するストレージ アカウントの名前を入力し、**[削除]** をクリックします。 
 
 #### <a name="review"></a>確認
 

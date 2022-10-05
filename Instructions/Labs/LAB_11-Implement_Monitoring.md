@@ -9,9 +9,9 @@ lab:
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-You need to evaluate Azure functionality that would provide insight into performance and configuration of Azure resources, focusing in particular on Azure virtual machines. To accomplish this, you intend to examine the capabilities of Azure Monitor, including Log Analytics.
+Azure リソースのパフォーマンスと構成に関する分析情報を提供する Azure の機能を、特に 仮想マシンに焦点を当てて評価します。 これを実現するために、Log Analytics を含む、Azure Monitor の機能を調べる予定です。
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)** 。
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -45,7 +45,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. Cloud Shell ウィンドウのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンをクリックし、ドロップダウン メニューで **[アップロード]** を選択して、ファイル **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** および **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** を Cloud Shell ホーム ディレクトリにアップロードします。
 
-1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+1. アップロードしたばかりのパラメーター ファイルを編集し、パスワードを変更します。 シェルでのファイルの編集に関してヘルプが必要な場合は、インストラクターに相談してください。 ベスト プラクティスとして、パスワードなどのシークレットは、キー コンテナーに安全に保存する必要があります。 
 
 1. Cloud Shell ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します (`[Azure_region]` プレースホルダーを、Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。
 
@@ -69,7 +69,7 @@ You need to evaluate Azure functionality that would provide insight into perform
       -AsJob
    ```
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
+    >**注**: デプロイが完了するのを待たず、代わりに次のタスクに進んでください。 デプロイには約 3 分かかります。
 
 #### <a name="task-2-register-the-microsoftinsights-and-microsoftalertsmanagement-resource-providers"></a>タスク 2:Microsoft.Insights および Microsoft.AlertsManagement リソース プロバイダーを登録します。
 
@@ -100,7 +100,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
     >**注**: 前のタスクで仮想マシンをデプロイしたリージョンを必ず指定してください。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. The deployment should take about 1 minute.
+    >**注**: デプロイが完了するまで待ちます。 デプロイには約 1 分かかります。
 
 1. Azure portal で **[Automation アカウント]** を検索して選択し、**[Automation アカウント]** ブレードで **[作成]** をクリックします。
 
@@ -115,7 +115,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
     >**注**:[ワークスペース マッピングのドキュメント](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)に基づいて Azure リージョンを指定していることを確認します。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. The deployment might take about 3 minutes.
+    >**注**: デプロイが完了するまで待ちます。 デプロイには約 3 分かかります。
 
 1. **[リソースに移動]** をクリックします。
 
@@ -123,13 +123,13 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[インベントリ]** ウィンドウの **[Log Analytics ワークスペース]** ドロップダウン リストで、このタスクで前に作成した Log Analytics ワークスペースを選択し、**[有効]** をクリックします。
 
-    >Azure リソースのパフォーマンスと構成に関する分析情報を提供する Azure の機能を、特に 仮想マシンに焦点を当てて評価します。
+    >**注**: 対応する Log Analytics ソリューションのインストールが完了するまで待ちます。 これには 3 分ほどかかる場合があります。
 
     >**注**: これにより、**変更の追跡**ソリューションも自動的にインストールされます。
 
 1. [Automation アカウント] ブレードの **[更新管理]** セクションで、**[更新管理]** をクリックし、**[有効]** をクリックします。
 
-    >これを実現するために、Log Analytics を含む、Azure Monitor の機能を調べる予定です。
+    >**注**: インストールが完了するまで待ちます。 これには 5 分ほどかかる場合があります。
 
 #### <a name="task-4-review-default-monitoring-settings-of-azure-virtual-machines"></a>タスク 4:Azure 仮想マシンの既定の監視設定をレビューする
 
@@ -141,7 +141,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[az104-11-vm0 \| 指標]** ブレードの既定のグラフでは、使用可能な**指標名前空間**は**仮想マシン ホスト**のみです。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This is expected, since no guest-level diagnostic settings have been configured yet. You do have, however, the option of enabling guest memory metrics directly from the <bpt id="p1">**</bpt>Metrics Namespace<ept id="p1">**</ept> drop down-list. You will enable it later in this exercise.
+    >**注**:ゲスト レベルの診断設定がまだ構成されていないので、これは正常な動作です。 ただし、**[メトリクス名前空間]** ドロップダウン リストから直接ゲスト メモリ メトリックを有効にするオプションがあります。 この演習の後半でこれを有効にします。
 
 1. **[メトリック]** ドロップダウン リストで、使用可能なメトリックの一覧を確認します。
 
@@ -157,27 +157,27 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[az104-11-vm0 \| 診断設定]** ブレードの **[概要]** タブで、 **[ゲスト レベルの監視を有効にする]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the operation to take effect. This might take about 3 minutes.
+    >**注**: 操作が有効になるのを待ちます。 これには 3 分ほどかかる場合があります。
 
 1. **[az104-11-vm0 \| 診断設定]** ブレードの **[パフォーマンス カウンター]** タブに切り替え、使用可能なカウンターを確認します。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: By default, CPU, memory, disk, and network counters are enabled. You can switch to the <bpt id="p1">**</bpt>Custom<ept id="p1">**</ept> view for more detailed listing.
+    >**注**: 既定では、CPU、メモリ、ディスク、ネットワークのカウンターが有効になっています。 **[カスタム]** ビューに切り替えると、より詳細な一覧を確認できます。
 
 1. **[az104-11-vm0 \| 診断設定]** ブレードの **[ログ]** タブに切り替え、使用可能なイベント ログの収集オプションを確認します。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: By default, log collection includes critical, error, and warning entries from the Application Log and System log, as well as Audit failure entries from the Security log. Here as well you can switch to the <bpt id="p1">**</bpt>Custom<ept id="p1">**</ept> view for more detailed configuration settings.
+    >**注**: 既定では、ログの収集には、アプリケーション ログとシステム ログからの重大、エラー、および警告のエントリに加え、セキュリティ ログからの監査失敗のエントリが含まれています。 ここでも、詳細な構成設定を行うために**カスタム**ビューに切り替えることができます。
 
 1. **[az104-11-vm0]** ブレードの **[監視]** セクションで、 **[Log Analytics エージェント]** をクリックしてから **[有効化]** をクリックします。
 
 1. **[az104-11-vm0 - ログ]** ブレードで、以前このタブで作成した Log Analytics ワークスペースが **[Log Analytics ワークスペースの選択]** ドロップダウン リストで選択されていることを確認して、**[有効]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Do not wait for the operation to complete but instead proceed to the next step. The operation might take about 5 minutes.
+    >**注**:デプロイが完了するのを待たず、代わりに次の手順に進みます。 操作には約 5 分間かかります。
 
 1. **[az104-11-vm0 \| ログ]** ブレードの **[監視]** セクションで、 **[メトリック]** をクリックします。
 
 1. **[az104-11-vm0 \| 指標]** ブレードの既定のグラフでは、この時点で **[メトリックスの名前空間]** ドロップダウン リストに、 **[仮想マシン ホスト]** エントリに加えて**ゲスト (クラシック)** エントリも含まれていることに注意してください。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This is expected, since you enabled guest-level diagnostic settings. You also have the option to <bpt id="p1">**</bpt>Enable new guest memory metrics<ept id="p1">**</ept>.
+    >**注**:これは、ゲスト レベルの診断設定を有効にしているためです。 また、 **[新しいゲスト メモリ メトリックを有効にします]** のオプションもあります。
 
 1. **[メトリック名前空間]** ドロップダウン リストで、**[ゲスト (クラシック)]** エントリを選択します。
 
@@ -199,7 +199,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[モニター \| メトリック]** ブレードの **[az104-11-vm0 の平均 CPU 使用率]** ウィンドウで、 **[新しいアラート ルール]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Creating an alert rule from Metrics is not supported for metrics from the Guest (classic) metric namespace. This can be accomplished by using Azure Resource Manager templates, as described in the document <bpt id="p1">[</bpt>Send Guest OS metrics to the Azure Monitor metric store using a Resource Manager template for a Windows virtual machine<ept id="p1">](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm)</ept>
+    >**注**: ゲスト (クラシック) メトリック名前空間のメトリックでは、メトリックからの警告ルールの作成はサポートされていません。 これは、 [Windows 仮想マシンのリソース マネージャー テンプレートを使用して Azure Monitor メトリック ストアにゲスト OS メトリックを送信するドキュメントで説明されているように、Azure Resource Manager テンプレートを使用して実現できます。](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm)
 
 1. **[アラート ルールの作成]** ブレードの **[条件]** セクションで、既存の条件エントリをクリックします。
 
@@ -225,7 +225,7 @@ You need to evaluate Azure functionality that would provide insight into perform
     | アクション グループ名 | **az104-11-ag1** |
     | Display name | **az104-11-ag1** |
 
-1. On the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create an action group<ept id="p2">**</ept> blade, in the <bpt id="p3">**</bpt>Notification type<ept id="p3">**</ept> drop-down list, select <bpt id="p4">**</bpt>Email/SMS message/Push/Voice<ept id="p4">**</ept>. In the <bpt id="p1">**</bpt>Name<ept id="p1">**</ept> text box, type <bpt id="p2">**</bpt>admin email<ept id="p2">**</ept>. Click the <bpt id="p1">**</bpt>Edit details<ept id="p1">**</ept> (pencil) icon.
+1. **[アクション グループの作成]** ブレードの **[通知]** タブにある **[通知の種類]** ボックスの一覧で **[電子メール/SMS メッセージ/プッシュ/音声]** を選択します。 **名前** テキスト ボックスに**管理者の電子メール**を入力します。 **[詳細の編集]** アイコン (鉛筆) をクリックします。
 
 1. **[電子メール/SMS/プッシュ/音声]** ブレードで、 **[電子メール]** チェックボックスをオンにし、 **[電子メール]** テキストボックスに自分のメール アドレスを入力し、他のユーザーに既定値を残して **[OK]** をクリックし、 **[アクション グループの作成]** ブレードの **[通知]** タブに戻って **[次へ:操作 >]** を選択します。
 
@@ -250,7 +250,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 1. **[az104-11-vm0]** ブレードで **[接続]** をクリックし、ドロップダウン メニューで **[RDP]** をクリックし、**[RDP で接続する]** ブレードで **[RDP ファイルのダウンロード]** をクリックして、プロンプトに従ってリモート デスクトップ セッションを開始します。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+    >**注**:この手順では、Windows コンピューターからリモート デスクトップ経由で接続することを指します。 Mac では、Mac App Store からリモート デスクトップ クライアントを使用でき、Linux コンピューターでは、オープンソースの RDP クライアント ソフトウェアを使用できます。
 
     >**注**:ターゲット仮想マシンに接続する際は、警告メッセージを無視できます。
 
@@ -296,7 +296,7 @@ You need to evaluate Azure functionality that would provide insight into perform
    | render timechart
    ```
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The query should not have any errors (indicated by red blocks on the right scroll bar). If the query will not paste without errors directly from the instructions, paste the query code into a text editor such as Notepad, and then copy and paste it into the query window from there.
+    > **注**:このクエリにはエラー (右スクロール バーの赤いブロックで示されます) がないはずです。 この手順から直接貼り付けてクエリのエラーが生じる場合は、クエリ コードをメモ帳などのテキスト エディターに貼り付けて、そこからコピーしてクエリ ウィンドウに貼り付けます。
 
 
 1. ツールバーの **[クエリ]** をクリックし、 **[クエリ]** ペインで、 **[VM 可用性の追跡]** というタイトルを見つけ、ダブルクリックしてクエリ ウィンドウに入力し、タイトルの **[実行]** コマンド ボタンをクリックして、結果を確認します。
@@ -313,9 +313,9 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+>**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
-><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
+>**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 

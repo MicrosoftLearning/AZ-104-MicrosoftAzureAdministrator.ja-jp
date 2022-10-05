@@ -9,7 +9,9 @@ lab:
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for deployment of Docker images.
+Contoso は、仮想化されたワークロード用の新しいプラットフォームを見つけることを目的としています。 この目的を達成するために使用できるコンテナー イメージの数を特定しました。 コンテナー管理を最小限に抑えるため、Docker イメージのデプロイに Azure Container Instances の使用を評価する予定です。
+
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -53,13 +55,13 @@ Contoso wants to find a new platform for its virtualized workloads. You identifi
     | --- | --- |
     | DNS 名ラベル | 有効な、グローバルに一意の DNS ホスト名 |
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a <bpt id="p1">**</bpt>DNS name label not available<ept id="p1">**</ept> error message, specify a different value.
+    >**注**:コンテナーは、dns-name-label.region.azurecontainer.io でパブリックからアクセスできるようになります。 **[DNS 名ラベルは使用できません]** というエラー メッセージを受け取った場合は、別の DNS 名ラベルを指定します。
 
 1. **[次へ: 詳細 >]** をクリックし、 **[コンテナー インスタンスの作成]** ブレードの **[詳細]** タブで、何も変更せずに設定を確認し、 **[レビューと作成]** をクリックし、検証が成功したことを確認して、 **[作成]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. This should take about 3 minutes.
+    >**注**: デプロイが完了するまで待ちます。 これには 3 分ほどかかります。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: While you wait, you may be interested in viewing the <bpt id="p2">[</bpt>code behind the sample application<ept id="p2">](https://github.com/Azure-Samples/aci-helloworld)</ept>. To view it, browse the <ph id="ph1">\\</ph>app folder.
+    >**注**:待っているあいだに、この[サンプル アプリケーションに隠れたコード](https://github.com/Azure-Samples/aci-helloworld)を見ることに興味を持つかもしれません。 それを参照するには、\\app フォルダーを開きます。
 
 #### <a name="task-2-review-the-functionality-of-the-azure-container-instance"></a>タスク 2:Azure Container Instances の機能を確認する
 
@@ -79,9 +81,9 @@ Contoso wants to find a new platform for its virtualized workloads. You identifi
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+>**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
->Contoso は、仮想化されたワークロード用の新しいプラットフォームを見つけることを目的としています。 
+>**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 

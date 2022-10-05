@@ -9,9 +9,9 @@ lab:
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-Contoso has a number of multi-tier applications that are not suitable to run by using Azure Container Instances. In order to determine whether they can be run as containerized workloads, you want to evaluate using Kubernetes as the container orchestrator. To further minimize management overhead, you want to test Azure Kubernetes Service, including its simplified deployment experience and scaling capabilities.
+Contoso には、Azure Container Instances を使用して実行するのに適していない多層アプリケーションが多数あります。 コンテナー化されたワークロードとして実行できるかどうかを判断するには、Kubernetes をコンテナー オーケストレーターとして使用して評価します。 管理オーバーヘッドをさらに最小限に抑えるには、簡単なデプロイ エクスペリエンスやスケーリング機能などを含めた Azure Kubernetes Service をテストします。
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2015)** 。
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2015)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -62,7 +62,7 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 1. **[Kubernetes クラスターの作成]** ブレードの **[基本]** タブで、次の設定を指定します (他の設定は既定値のままにします)。
 
-    | 設定 | [値] |
+    | 設定 | 値 |
     | ---- | ---- |
     | サブスクリプション | このラボで使用している Azure サブスクリプションの名前 |
     | リソース グループ | 新しいリソース グループ **az104-09c-rg1** の名前 |
@@ -82,12 +82,12 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
     | ---- | ---- |
     | 仮想ノードを有効にする | **無効** (既定) |
 
-1. **[次へ: アクセス >]** をクリックし、 **[Kubernetes クラスターの作成]** ブレードの **[アクセス]** タブで、次の設定を指定します (その他の設定は既定値のままにします)。
+1. **[次へ: アクセス >]** をクリックし、 **[Kubernetes クラスターの作成]** ブレードの **[アクセス]** タブの設定は既定値のままにします。
 
     | 設定 | 値 |
     | ---- | ---- |
-    | 認証方法 | **システム割り当てマネージド ID** (既定値 - 変更なし) | 
-    | ロール ベースのアクセス制御 (RBAC) | **有効** |
+    | リソース ID | **システム割り当てマネージド ID** |
+    | 認証方法 | **Kubernetes RBAC を使用したローカル アカウント** |
 
 1. **[次へ: ネットワーク >]** をクリックし、 **[Kubernetes クラスターの作成]** ブレードの **[ネットワーク]** タブで、次の設定を指定します (その他の設定は既定値のままにします)。
 
@@ -98,9 +98,9 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 1. **[次へ: 統合 >]** をクリックし、 **[Kubernetes クラスターの作成]** ブレードの **[統合]** タブで、 **[コンテナーの監視]** を **[無効]** に設定し、 **[確認および作成]** をクリックし、検証が成功したことを確認して、 **[作成]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab.
+    >**注**:運用シナリオでは、監視を有効にします。 この場合、監視はラボでカバーされていないので無効になります。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait for the deployment to complete. This should take about 10 minutes.
+    >**注**: デプロイが完了するまで待ちます。 これにはおよそ 10 分かかります。
 
 #### <a name="task-3-deploy-pods-into-the-azure-kubernetes-service-cluster"></a>タスク 3:Azure Kubernetes Service クラスターにポッドをデプロイする
 
@@ -166,9 +166,9 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
     kubectl get service
     ```
 
-1. Re-run the command until the value in the <bpt id="p1">**</bpt>EXTERNAL-IP<ept id="p1">**</ept> column for the <bpt id="p2">**</bpt>nginx-deployment<ept id="p2">**</ept> entry changes from <bpt id="p3">**</bpt><ph id="ph1">\&lt;pending\&gt;</ph><ept id="p3">**</ept> to a public IP address. Note the public IP address in the <bpt id="p1">**</bpt>EXTERNAL-IP<ept id="p1">**</ept> column for <bpt id="p2">**</bpt>nginx-deployment<ept id="p2">**</ept>.
+1. **nginx-deployment** エントリの **EXTERNAL-IP** 列の値が **\<pending\>** からパブリック IP アドレスに変わるまで、コマンドを再実行します。 **nginx-deployment** の **EXTERNAL-IP** 列のパブリック IP アドレスをメモします。
 
-1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the <bpt id="p1">**</bpt>Welcome to nginx!<ept id="p1">**</ept> message.
+1. ブラウザーの画面を開き、前の手順で特定した IP アドレスに移動します。 ブラウザーのページに "**nginx へようこそ!** " のメッセージが表示されていることを確認します。 メッセージで応答します。
 
 #### <a name="task-4-scale-containerized-workloads-in-the-azure-kubernetes-service-cluster"></a>タスク 4:Azure Kubernetes Service クラスターでコンテナー化されたワークロードをスケーリングする
 
@@ -198,7 +198,7 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
     az aks scale --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --node-count 2
     ```
 
-    > Contoso には、Azure Container Instances を使用して実行するのに適していない多層アプリケーションが多数あります。
+    > **注**:追加ノードのプロビジョニングが完了するまで待ちます。 これには 3 分ほどかかる場合があります。 失敗した場合は、`az aks scale` コマンドを再実行します。
 
 1. **Cloud Shell** ウィンドウから次の操作を実行して、クラスターのスケーリング結果を確認します。
 
@@ -240,9 +240,9 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
->コンテナー化されたワークロードとして実行できるかどうかを判断するには、Kubernetes をコンテナー オーケストレーターとして使用して評価します。
+>**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
->管理オーバーヘッドをさらに最小限に抑えるには、簡単なデプロイ エクスペリエンスやスケーリング機能などを含めた Azure Kubernetes Service をテストします。 
+>**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
 
 1. Azure portal で、**Cloud Shell** ウィンドウ内で **Bash** シェル セッションを開きます。
 
