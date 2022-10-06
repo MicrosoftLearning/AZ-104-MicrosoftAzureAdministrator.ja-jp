@@ -23,6 +23,10 @@ lab:
 
 ## <a name="estimated-timing-20-minutes"></a>推定時間:20 分
 
+## <a name="architecture-diagram"></a>アーキテクチャの図
+
+![image](../media/lab03d.png)
+
 ## <a name="instructions"></a>Instructions
 
 ### <a name="exercise-1"></a>演習 1
