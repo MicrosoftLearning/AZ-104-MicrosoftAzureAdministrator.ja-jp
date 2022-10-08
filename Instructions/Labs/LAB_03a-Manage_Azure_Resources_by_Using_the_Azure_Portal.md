@@ -9,9 +9,9 @@ lab:
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-You need to explore the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups, including moving resources between resource groups. You also want to explore options for protecting disk resources from being accidentally deleted, while still allowing for modifying their performance characteristics and size.
+リソース グループ間のリソースの移動などを含む、リソース グループに基づいてリソースをプロビジョニングしました。次に、それらを編成に関連する基本的な Azure 管理機能を学習します。 また、ディスク リソースが誤って削除されないように保護するオプションを検討しながら、パフォーマンス特性とサイズを変更することもできます。
 
-対話型ガイド形式でこのラボをプレビューするには、 **[ここをクリックしてください](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%204)** 。
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%204)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -39,7 +39,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 1. Azure portal で、「**ディスク**」と検索してそれを選択し、**[+ 作成]** をクリックして、次の設定を指定します。
 
-    |設定|[値]|
+    |設定|値|
     |---|---|
     |サブスクリプション| リソース グループを作成した Azure サブスクリプションの名前 |
     |リソース グループ| 新しいリソース グループ **az104-03a-rg1** の名前 |
@@ -54,7 +54,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 1. **[確認と作成]** をクリックしてから、**[作成]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Wait until the disk is created. This should take less than a minute.
+    >**注**:ディスクが作成されるまで待ちます。 これに要する時間は 1 分未満です。
 
 #### <a name="task-2-move-resources-between-resource-groups"></a>タスク 2:リソース グループ間でリソースを移動する 
 
@@ -68,9 +68,9 @@ You need to explore the basic Azure administration capabilities associated with 
 
     >**注**:この方法により、複数のリソースを同時に移動できます。 
 
-1. Below the <bpt id="p1">**</bpt>Resource group<ept id="p1">**</ept> text box, click <bpt id="p2">**</bpt>Create new<ept id="p2">**</ept> then type <bpt id="p3">**</bpt>az104-03a-rg2<ept id="p3">**</ept> in the text box. On the Review tab, select the checkbox <bpt id="p1">**</bpt>I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs<ept id="p1">**</ept>, and click <bpt id="p2">**</bpt>Move<ept id="p2">**</ept>.
+1. **[リソース グループ]** テキスト ボックスの下にある **[新規作成]** をクリックし、テキスト ボックスに「**az104-03a-rg2**」と入力します。 [確認] タブで、**[移動したリソースに関連付けられているツールとスクリプトは、新しいリソース ID を使用するように更新するまで機能しないことを理解している]** というチェックボックスを選択し、**[移動]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
+    >**注**:移動が完了するのを待たず、代わりに次のタスクに進みます。 移動には約 10 分かかります。 ソースまたはターゲットのリソース グループのアクティビティ ログ エントリを監視することで、操作が完了したことを確認できます。 次のタスクを完了したら、この手順を再び確認してください。
 
 #### <a name="task-3-implement-resource-locks"></a>タスク 3:リソース ロックの実装
 
@@ -78,7 +78,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 1. Azure portal で、「**ディスク**」と検索してそれを選択し、**[+ 作成]** をクリックして、次の設定を指定します。
 
-    |設定|[値]|
+    |設定|値|
     |---|---|
     |サブスクリプション| このラボで使用するサブスクリプションの名前 |
     |リソース グループ| **[新しいリソースグループの作成]** をクリックして、**az104-03a-rg3** という名前を付けます |
@@ -114,13 +114,13 @@ You need to explore the basic Azure administration capabilities associated with 
 
 1. **az104-03a-rg3** リソース グループのリソースのリストに戻り、**az104-03a-disk2** リソースを表すエントリをクリックします。 
 
-1. On the <bpt id="p1">**</bpt>az104-03a-disk2<ept id="p1">**</ept> blade, in the <bpt id="p2">**</bpt>Settings<ept id="p2">**</ept> section, click <bpt id="p3">**</bpt>Size + performance<ept id="p3">**</ept>, set the disk type and size to <bpt id="p4">**</bpt>Premium SSD<ept id="p4">**</ept> and <bpt id="p5">**</bpt>64 GiB<ept id="p5">**</ept>, respectively, and click <bpt id="p6">**</bpt>Resize<ept id="p6">**</ept> to apply the change. Verify that the change was successful.
+1. **az104-03a-disk2** ブレードの **[設定]** セクションで **[サイズ + パフォーマンス]** をクリックし、ディスクのタイプとサイズを **Premium SSD** と **64 GiB** にそれぞれ設定し、**[サイズ変更]** をクリックして、変更を適用します。 変更が成功したことを確認します。
 
     >**注**:リソース グループ レベルのロックは削除操作にのみ適用されるため、これは予想されることです。 
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-   >リソース グループ間のリソースの移動などを含む、リソース グループに基づいてリソースをプロビジョニングしました。次に、それらを編成に関連する基本的な Azure 管理機能を学習します。
+   >**注**:このラボでデプロイしたリソースは削除しないでください。 このモジュールの次のラボで、これらを使用します。 このラボで作成したリソース ロックのみを削除します。
 
 1. **az104-03a-rg3** リソース グループ ブレードに移動し、**[ロック]** ブレードを表示し **[削除]** ロック エントリの右側にある **[削除]** リンクをクリックして **az104-03a-delete-lock** のロックを削除します。
 

@@ -9,7 +9,9 @@ lab:
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
-Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal and Azure Resource Manager templates, you need to carry out the equivalent task by using Azure PowerShell. To avoid installing Azure PowerShell modules, you will leverage PowerShell environment available in Azure Cloud Shell.
+既にリソースのプロビジョニング、リソース グループに基づく構成に関連する Azure の基本的な管理機能を、Azure portal と Azure Resource Manager テンプレートを使用して確認しました。次は Azure PowerShell を使って同等のタスクを実行します。 Azure PowerShell モジュールのインストールを避けるため、Azure Cloud Shell で使用できる PowerShell 環境を活用します。
+
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## <a name="objectives"></a>目標
 
@@ -27,7 +29,7 @@ Now that you explored the basic Azure administration capabilities associated wit
 
 ## <a name="instructions"></a>Instructions
 
-> <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use <bpt id="p1">**</bpt>Reset password<ept id="p1">**</ept> in the Portal to update the password. 
+> **注**:作成する仮想マシンまたはユーザー アカウントに対して、必ず独自のセキュリティで保護されたパスワードを作成してください。 ユーザーの代わりに仮想マシンが作成された場合は、ポータルの **[パスワードのリセット]** を使用して、パスワードを更新してください。 
 
 ### <a name="exercise-1"></a>演習 1
 
@@ -122,7 +124,7 @@ Now that you explored the basic Azure administration capabilities associated wit
 
 #### <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
+   >**注**:このラボでデプロイしたリソースは削除しないでください。 このモジュールの次のラボで、それらを参照します。
 
 #### <a name="review"></a>確認
 

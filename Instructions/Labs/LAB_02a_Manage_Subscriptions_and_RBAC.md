@@ -9,7 +9,7 @@ lab:
 
 ## <a name="lab-requirements"></a>ラボの要件
 
-This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
+このラボでは、Azure Active Directory (Azure AD) ユーザーを作成し、カスタムの Azure ロール ベースのアクセス制御 (RBAC) ロールを作成し、これらのロールを Azure AD ユーザーに割り当てるためのアクセス許可が必要です。 すべてのラボ ホスティング業者がこの機能を提供できるわけではありません。 このラボの可用性については、インストラクターに問い合わせてください。
 
 ## <a name="lab-scenario"></a>ラボのシナリオ
 
@@ -17,10 +17,12 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 - Contoso のすべての Azure サブスクリプションを含む管理グループを作成する
 
-- granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
+- 管理グループ内のすべてのサブスクリプションに対するサポート要求を、指定された Azure Active Directory ユーザーに提出するアクセス許可を付与する。 そのユーザーのアクセス許可は、次の場合に限定する必要があります。 
 
     - サポート要求チケットの作成
-    - リソース グループの表示 
+    - リソース グループの表示
+
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 ## <a name="objectives"></a>目標
 
@@ -50,7 +52,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. 「**管理グループ**」を検索して選択し、**[管理グループ]** ブレードに移動します。
 
-1. Review the messages at the top of the <bpt id="p1">**</bpt>Management groups<ept id="p1">**</ept> blade. If you are seeing the message stating <bpt id="p1">**</bpt>You are registered as a directory admin but do not have the necessary permissions to access the root management group<ept id="p1">**</ept>, perfom the following sequence of steps:
+1. **[管理グループ]** ブレード上部のメッセージを確認します。 **"Directory 管理者として登録されていますが、ルート管理グループへのアクセスに必要な権限がありません"** というメッセージが表示された場合、以下の処理を行ってください。
 
     1. Azure portal で、 **[Azure Active Directory]** を検索して選択します。
     
@@ -77,7 +79,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. **[az104-02-mg1 \| サブスクリプション]** ブレードで、 **[+ 追加]** をクリックし、 **[サブスクリプションの追加]** ブレードの **[サブスクリプション]** ドロップダウンリストから、このラボで使用するサブスクリプションを選択して、 **[保存]** をクリックします。
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: On the <bpt id="p2">**</bpt>az104-02-mg1 <ph id="ph1">\|</ph> Subscriptions<ept id="p2">**</ept> blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+    >**注**: **[az104-02-mg1 \| サブスクリプション]** ブレードで、Azure サブスクリプションの ID をクリップボードにコピーします。 これは、次のタスクで必要になります。
 
 #### <a name="task-2-create-custom-rbac-roles"></a>タスク 2:カスタム RBAC ロールを作成する
 
@@ -137,17 +139,17 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
     | 自分でパスワードを作成する | enabled |
     | 初期パスワード | **セキュリティで保護されたパスワードを指定する** |
 
-    ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: <bpt id="p2">**</bpt>Copy to clipboard<ept id="p2">**</ept> the full <bpt id="p3">**</bpt>User name<ept id="p3">**</ept>. You will need it later in this lab.
+    >**注**:**クリップボードに**完全な**ユーザー名**をコピーします。 このラボで後ほど必要になります。
 
 1. Azure portal で、**az104-02-mg1** 管理グループに戻り、その**詳細**を表示します。
 
-1. このラボでは、Azure Active Directory (Azure AD) ユーザーを作成し、カスタムの Azure ロール ベースのアクセス制御 (RBAC) ロールを作成し、これらのロールを Azure AD ユーザーに割り当てるためのアクセス許可が必要です。 
+1. **[Access Control (IAM)]** に移動して、 **[追加]** をクリックし、 **[ロールの割り当ての追加]** を選択します。 **[ロール]** タブで、 **[サポート要求共同作成者 (カスタム)]** を検索します。 
 
     >**注**: カスタム役割が表示されない場合、作成後にカスタム役割が表示されるまでに最大 10 分かかることがあります。
 
-1. すべてのラボ ホスティング業者がこの機能を提供できるわけではありません。
+1. **[ロール]** を選択して **[次へ]** をクリックします。 **[メンバー]** タブで、 **[メンバーの選択]** をクリックし、ご自分のユーザー アカウント az104-***********************.**********.onmicrosoft.com を**選択**します。 **[次へ]** をクリックし、 **[確認して割り当てる]** をクリックします。
 
-1. このラボの可用性については、インストラクターに問い合わせてください。
+1. **[InPrivate]** ブラウザー ウィンドウを開き、新しく作成したユーザー アカウントを使用して [Azure portal](https://portal.azure.com) にログインします。 パスワードの更新を求められたら、ユーザー用にパスワードを変更します。
 
     >**注**:ユーザー名を入力するのではなく、クリップボードの内容を貼り付けることができます。
 
@@ -157,19 +159,19 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 
 1. Azure portal の **[InPrivate]** ブラウザー ウィンドウで、**[ヘルプとサポート]** を検索して選択し、**[サポート要求の作成]** をクリックします。 
 
-1. In the <bpt id="p1">**</bpt>InPrivate<ept id="p1">**</ept> browser window, on the <bpt id="p2">**</bpt>Problem Desription/Summary<ept id="p2">**</ept> tab of the <bpt id="p3">**</bpt>Help + support - New support request<ept id="p3">**</ept> blade, type <bpt id="p4">**</bpt>Service and subscription limits<ept id="p4">**</ept> in the Summary field and select the <bpt id="p5">**</bpt>Service and subscription limits (quotas)<ept id="p5">**</ept> issue type. Note that the subscription you are using in this lab is listed in the <bpt id="p1">**</bpt>Subscription<ept id="p1">**</ept> drop-down list.
+1. **[InPrivate]** ブラウザー ウィンドウの **[ヘルプ + サポート - 新しいサポート リクエスト]** ブレードの **[問題の説明/概要]** タブの "概要" フィールドに、「**サービスとサブスクリプションの制限**」と入力し、**[サービスとサブスクリプションの制限 (クォータ)]** という問題の種類を選択します。 このラボで使用しているサブスクリプションは、**[サブスクリプション]** ドロップダウン リストに表示されていることに注意してください。
 
     >**注**: このラボで使用しているサブスクリプションが **[サブスクリプション]** ドロップダウン リストに表示されている場合、使用しているアカウントに、サブスクリプション固有のサポート要求を作成するために必要なアクセス許可があることを示しています。
 
     >**注**: **[サービスとサブスクリプションの制限 (クォータ)]** オプションが表示されない場合は、Azure portal からサインアウトしてログインし直します。
 
-1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
+1. サポート要求の作成を続行しないでください。 代わりに、Azure portal から az104-02-aaduser1 ユーザーとしてサインアウトし、[InPrivate] ブラウザー ウィンドウを閉じてください。
 
 #### <a name="task-4-clean-up-resources"></a>タスク 4: リソースをクリーンアップする
 
-   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
+   >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 この課題で作成したリソースで余分なコストは発生しませんが、未使用のリソースを削除すると予期しない料金は発生しなくなります。
 
-   ><bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going.
+   >**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。
 
 1. Azure portal で **[Azure Active Directory]** を検索して選択し、[Azure Active Directory] ブレードで、**[ユーザー]** をクリックします。
 
@@ -205,7 +207,7 @@ Contoso の Azure リソースの管理を強化するために、次の機能�
 1. **[更新]** を選択して、サブスクリプションが **[テナント ルート管理グループ]** に正常に移動したことを確認します。
 
 1. **[管理グループ]** ブレードに戻り、 **[az104-02-mg1]** 管理グループの右側にある**省略記号**アイコンをクリックし、 **[削除]** をクリックします。
-  >管理グループ内のすべてのサブスクリプションに対するサポート要求を、指定された Azure Active Directory ユーザーに提出するアクセス許可を付与する。
+  >                **注**: **テナント ルート管理グループ**を削除できない場合は、**Azure サブスクリプション**が管理グループ下にある場合があります。 **テナント ルート管理グループ**から **Azure サブスクリプション**を移動し、グループを削除する必要があります。
 
 #### <a name="review"></a>確認
 
