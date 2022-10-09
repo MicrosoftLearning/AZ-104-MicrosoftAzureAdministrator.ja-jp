@@ -53,7 +53,8 @@ lab:
 
 1. [Cloud Shell] ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します ('[Azure_region]' プレースホルダーを Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。
 
-    >**注**:Azure リージョンの名前を一覧表示するには、`(Get-AzLocation).Location` を実行します。**メモ**:以下の各コマンドを個別に入力してください。
+    >**注**:Azure リージョンの名前を一覧表示するには、`(Get-AzLocation).Location` を実行します。
+    >**メモ**:以下の各コマンドを個別に入力してください。
 
     ```powershell
     $location = '[Azure_region]'
