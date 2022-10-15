@@ -27,6 +27,10 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
 ## <a name="estimated-timing-50-minutes"></a>推定時間:50 分
 
+## <a name="architecture-diagram"></a>アーキテクチャの図
+
+![image](../media/lab10.png)
+
 ## <a name="instructions"></a>Instructions
 
 ### <a name="exercise-1"></a>演習 1
