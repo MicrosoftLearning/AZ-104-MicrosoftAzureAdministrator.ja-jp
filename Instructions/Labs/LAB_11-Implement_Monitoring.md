@@ -27,6 +27,10 @@ Azure リソースのパフォーマンスと構成に関する分析情報を�
 
 ## <a name="estimated-timing-45-minutes"></a>推定時間:45 分
 
+## <a name="architecture-diagram"></a>アーキテクチャの図
+
+![image](../media/lab11.png)
+
 ## <a name="instructions"></a>Instructions
 
 ### <a name="exercise-1"></a>演習 1
