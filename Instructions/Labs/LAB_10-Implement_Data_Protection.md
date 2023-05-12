@@ -4,16 +4,16 @@ lab:
   module: Administer Data Protection
 ---
 
-# <a name="lab-10---backup-virtual-machines"></a>ラボ 10 - 仮想マシンのバックアップ
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 10 - 仮想マシンのバックアップ
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 
 Azure 仮想マシンとオンプレミス コンピューターでホストされているファイルのバックアップと復元に Azure Recovery Services の使用を検討します。 また、Recovery Services コンテナーに格納されているデータを、不慮または悪意のあるデータ損失から保護する方法を確認したいと思っています。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
@@ -25,17 +25,17 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 + タスク 6:Azure 仮想マシンのスナップショット (オプション) を使用してファイルの回復を実行する
 + タスク 7:Azure Recovery Services の論理的な削除機能 (オプション) を確認する
 
-## <a name="estimated-timing-50-minutes"></a>推定時間:50 分
+## 推定時間:50 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab10.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1"></a>演習 1
+### 演習 1
 
-#### <a name="task-1-provision-the-lab-environment"></a>タスク 1:ラボ環境をプロビジョニングする
+#### タスク 1:ラボ環境をプロビジョニングする
 
 このタスクでは、異なるバックアップ シナリオをテストするために使用する 2 つの仮想マシンをデプロイします。
 
@@ -48,8 +48,6 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
     >**注**: **Cloud Shell** の初回起動時に "**ストレージがマウントされていません**" というメッセージが表示された場合は、このラボで使用しているサブスクリプションを選択し、**[ストレージの作成]** を選択します。
 
 1. Cloud Shell ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンをクリックし、ドロップダウン メニューで **[アップロード]** をクリックして、ファイル **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** と **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** を Cloud Shell ホーム ディレクトリにアップロードします。
-
-1. アップロードしたばかりのパラメーター ファイルを編集し、パスワードを変更します。 シェルでのファイルの編集に関してヘルプが必要な場合は、インストラクターに相談してください。 ベスト プラクティスとして、パスワードなどのシークレットは、キー コンテナーに安全に保存する必要があります。 
 
 1. Cloud Shell ウィンドウから次のコマンドを実行して、仮想マシンをホストするリソース グループを作成します (`[Azure_region]` プレースホルダーを、Azure 仮想マシンをデプロイする Azure リージョンの名前に置き換えます)。 各コマンド ラインを個別に入力し、個別に実行します。
 
@@ -66,7 +64,8 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
    ```
 
 1. [Cloud Shell] ウィンドウで、次のコマンドを実行して 1 番目の仮想ネットワークを作成し、アップロードしたテンプレートとパラメーター ファイルを使用して仮想マシンをデプロイします。
-
+    >**注**: 管理者パスワードを入力するように求められます。
+    
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -79,7 +78,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
     >**注**: デプロイが完了するのを待たずに、次のタスクに進んでください。 デプロイには約 5 分かかります。
 
-#### <a name="task-2-create-a-recovery-services-vault"></a>タスク 2:Recovery Services コンテナーを作成する
+#### タスク 2:Recovery Services コンテナーを作成する
 
 このタスクでは、Recovery Services コンテナーを作成します。
 
@@ -116,7 +115,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
 1. **[セキュリティの設定]** ウィンドウを閉じ、**az104-10-rsv1** の Recovery Services コンテナー ウィンドウに戻り、**[概要]** をクリックします。
 
-#### <a name="task-3-implement-azure-virtual-machine-level-backup"></a>タスク 3:Azure 仮想マシン レベルのバックアップを実装する
+#### タスク 3:Azure 仮想マシン レベルのバックアップを実装する
 
 このタスクでは、Azure 仮想マシン レベルのバックアップを実装します。
 
@@ -159,7 +158,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
     >**注**:バックアップが完了するのを待たずに、次のタスクに進みます。
 
-#### <a name="task-4-implement-file-and-folder-backup"></a>タスク 4:ファイルとフォルダーのバックアップを実装する
+#### タスク 4:ファイルとフォルダーのバックアップを実装する
 
 このタスクでは、Azure Recovery Services を使用してファイルとフォルダーのバックアップを実装します。
 
@@ -258,7 +257,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
 1. **[バックアップ アイテム (Azure Backup エージェント)]** ブレードで **az104-10-vm1** の **C:\\** ドライブを参照するエントリがあることを確認します。
 
-#### <a name="task-5-perform-file-recovery-by-using-azure-recovery-services-agent-optional"></a>タスク 5:Azure Recovery Services エージェント (オプション) を使用してファイルの回復を実行する
+#### タスク 5:Azure Recovery Services エージェント (オプション) を使用してファイルの回復を実行する
 
 このタスクでは、Azure Recovery Services エージェントを使用してファイルの復元を実行します。
 
@@ -288,7 +287,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
 1. リモート デスクトップ セッションを終了します。
 
-#### <a name="task-6-perform-file-recovery-by-using-azure-virtual-machine-snapshots-optional"></a>タスク 6:Azure 仮想マシンのスナップショット (オプション) を使用してファイルの回復を実行する
+#### タスク 6:Azure 仮想マシンのスナップショット (オプション) を使用してファイルの回復を実行する
 
 このタスクでは、Azure 仮想マシン レベルのスナップショット ベースのバックアップからファイルを復元します。
 
@@ -360,7 +359,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
 1. リモート デスクトップ セッションを終了します。
 
-#### <a name="task-7-review-the-azure-recovery-services-soft-delete-functionality"></a>タスク 7:Azure Recovery Services の論理的な削除機能を確認する
+#### タスク 7:Azure Recovery Services の論理的な削除機能を確認する
 
 1. ラボ コンピューターの Azure portal で、「**Recovery Services コンテナー**」を検索して選択し、**[Recovery Services コンテナー]** ウィンドウで、**az104-10-rsv1** を選択します。
 
@@ -442,7 +441,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
 1. このタスクの最初の手順を繰り返して、**az104-10-vm1** のバックアップ項目を削除します。
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+#### リソースをクリーンアップする
 
 >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
@@ -466,7 +465,7 @@ Azure 仮想マシンとオンプレミス コンピューターでホストさ�
 
     >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### <a name="review"></a>確認
+#### 確認
 
 このラボでは、次のことを行いました。
 

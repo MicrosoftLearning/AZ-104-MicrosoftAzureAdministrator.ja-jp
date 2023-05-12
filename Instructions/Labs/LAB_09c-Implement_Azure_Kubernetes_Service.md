@@ -4,16 +4,16 @@ lab:
   module: Administer Serverless Computing
 ---
 
-# <a name="lab-09c---implement-azure-kubernetes-service"></a>ラボ 09c - Azure Kubernetes Service を実装する
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 09c - Azure Kubernetes Service を実装する
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 
 Contoso には、Azure Container Instances を使用して実行するのに適していない多層アプリケーションが多数あります。 コンテナー化されたワークロードとして実行できるかどうかを判断するには、Kubernetes をコンテナー オーケストレーターとして使用して評価します。 管理オーバーヘッドをさらに最小限に抑えるには、簡単なデプロイ エクスペリエンスやスケーリング機能などを含めた Azure Kubernetes Service をテストします。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2015)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
@@ -22,17 +22,17 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 + タスク 3:Azure Kubernetes Service クラスターにポッドをデプロイする
 + タスク 4:Azure Kubernetes Service クラスターでコンテナー化されたワークロードをスケーリングする
 
-## <a name="estimated-timing-40-minutes"></a>推定時間:40 分
+## 推定時間:40 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab09c.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1"></a>演習 1
+### 演習 1
 
-#### <a name="task-1-register-the-microsoftkubernetes-and-microsoftkubernetesconfiguration-resource-providers"></a>タスク 1:Microsoft.Kubernetes および Microsoft.KubernetesConfiguration リソース プロバイダーを登録します。
+#### タスク 1:Microsoft.Kubernetes および Microsoft.KubernetesConfiguration リソース プロバイダーを登録します。
 
 このタスクでは、Azure Kubernetes Service クラスターをデプロイするために必要なリソース プロバイダーを登録します。
 
@@ -54,7 +54,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
 1. [Cloud Shell] ペインを閉じます。
 
-#### <a name="task-2-deploy-an-azure-kubernetes-service-cluster"></a>タスク 2:Azure Kubernetes Service クラスターをデプロイする
+#### タスク 2:Azure Kubernetes Service クラスターをデプロイする
 
 このタスクでは、Azure portal を使用して Azure Kubernetes Service クラスターをデプロイします。
 
@@ -94,15 +94,22 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
     | 設定 | 値 |
     | ---- | ---- |
     | ネットワーク構成 | **kubenet** |
-    | DNS 名プレフィックス | 有効な、グローバルに一意の DNS プレフィックス|
+    | DNS 名プレフィックス | **有効な、グローバルに一意の DNS プレフィックス** |
 
-1. **[次へ: 統合 >]** をクリックし、 **[Kubernetes クラスターの作成]** ブレードの **[統合]** タブで、 **[コンテナーの監視]** を **[無効]** に設定し、 **[確認および作成]** をクリックし、検証が成功したことを確認して、 **[作成]** をクリックします。
+1. **[次へ: 統合 >]** をクリックし、 **[Kubernetes クラスターの作成]** ブレード上の **[統合]** タブで、次の設定を指定します (他の設定は既定値のままにします)。
+
+    | 設定 | 値 |
+    | ---- | ---- |
+    | コンテナー監視 | **無効化** |
+    | 推奨されるアラート ルールを有効化 | **オフ** |
+    
+1.  **[確認および作成]** をクリックし、検証が成功したことを確認して、 **[作成]** をクリックします。
 
     >**注**:運用シナリオでは、監視を有効にします。 この場合、監視はラボでカバーされていないので無効になります。
 
     >**注**: デプロイが完了するまで待ちます。 これにはおよそ 10 分かかります。
 
-#### <a name="task-3-deploy-pods-into-the-azure-kubernetes-service-cluster"></a>タスク 3:Azure Kubernetes Service クラスターにポッドをデプロイする
+#### タスク 3:Azure Kubernetes Service クラスターにポッドをデプロイする
 
 このタスクでは、ポッドを Azure Kubernetes Service クラスターにデプロイします。
 
@@ -170,7 +177,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
 1. ブラウザーの画面を開き、前の手順で特定した IP アドレスに移動します。 ブラウザーのページに "**nginx へようこそ!** " のメッセージが表示されていることを確認します。 メッセージで応答します。
 
-#### <a name="task-4-scale-containerized-workloads-in-the-azure-kubernetes-service-cluster"></a>タスク 4:Azure Kubernetes Service クラスターでコンテナー化されたワークロードをスケーリングする
+#### タスク 4:Azure Kubernetes Service クラスターでコンテナー化されたワークロードをスケーリングする
 
 このタスクでは、ポッドの数とクラスター ノードの数を水平方向にスケーリングします。
 
@@ -238,7 +245,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
 1. **[Cloud Shell]** ペインを閉じます。
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+#### リソースをクリーンアップする
 
 >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
@@ -260,7 +267,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
     >**注**:コマンドは非同期に実行されるので (--nowait パラメーターで決定される)、同じ Bash セッション内ですぐに別の Azure CLI コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### <a name="review"></a>確認
+#### 確認
 
 このラボでは、次のことを行いました。
 

@@ -4,33 +4,33 @@ lab:
   module: Administer Serverless Computing
 ---
 
-# <a name="lab-09b---implement-azure-container-instances"></a>ラボ 09b - Azure Container Instances を実装する
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 09b - Azure Container Instances を実装する
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 
 Contoso は、仮想化されたワークロード用の新しいプラットフォームを見つけることを目的としています。 この目的を達成するために使用できるコンテナー イメージの数を特定しました。 コンテナー管理を最小限に抑えるため、Docker イメージのデプロイに Azure Container Instances の使用を評価する予定です。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
 - タスク 1:Azure Container Instance を使用して Docker イメージをデプロイする
 - タスク 2:Azure Container Instances の機能を確認する
 
-## <a name="estimated-timing-20-minutes"></a>推定時間:20 分
+## 推定時間:20 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab09b.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1"></a>演習 1
+### 演習 1
 
-#### <a name="task-1-deploy-a-docker-image-by-using-the-azure-container-instance"></a>タスク 1:Azure Container Instance を使用して Docker イメージをデプロイする
+#### タスク 1:Azure Container Instance を使用して Docker イメージをデプロイする
 
 このタスクでは、Web アプリケーションの新しいコンテナー インスタンスを作成します。
 
@@ -63,7 +63,7 @@ Contoso は、仮想化されたワークロード用の新しいプラットフ
 
     >**注**:待っているあいだに、この[サンプル アプリケーションに隠れたコード](https://github.com/Azure-Samples/aci-helloworld)を見ることに興味を持つかもしれません。 それを参照するには、\\app フォルダーを開きます。
 
-#### <a name="task-2-review-the-functionality-of-the-azure-container-instance"></a>タスク 2:Azure Container Instances の機能を確認する
+#### タスク 2:Azure Container Instances の機能を確認する
 
 このタスクでは、コンテナー インスタンスのデプロイを確認します。
 
@@ -79,13 +79,15 @@ Contoso は、仮想化されたワークロード用の新しいプラットフ
 
 1. ブラウザーでアプリケーションを表示すると生成される HTTP GET 要求のログを確認します。
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+#### リソースをクリーンアップする
 
 >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
 >**注**:ラボのリソースをすぐに削除できなくても心配する必要はありません。 リソースに依存関係が存在し、削除に時間がかかる場合があります。 リソースの使用状況を監視することは管理者の一般的なタスクであるため、ポータルでリソースを定期的にチェックして、クリーンアップの進捗を確認するようにしてください。 
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+
+    >**注**: これらのコマンドを機能させるには、Cloud Shell ストレージを作成する必要があります。 
 
 1. 次のコマンドを実行して、このモジュールのラボ全体で作成したすべてのリソース グループのリストを表示します。
 
@@ -101,7 +103,7 @@ Contoso は、仮想化されたワークロード用の新しいプラットフ
 
     >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### <a name="review"></a>確認
+#### 確認
 
 このラボでは、次のことを行いました。
 
