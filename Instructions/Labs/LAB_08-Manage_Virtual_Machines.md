@@ -4,16 +4,16 @@ lab:
   module: Administer Virtual Machines
 ---
 
-# <a name="lab-08---manage-virtual-machines"></a>ラボ 08 - 仮想マシンを管理する
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 08 - 仮想マシンを管理する
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 
 Azure 仮想マシンをデプロイおよび構成するためのさまざまなオプションを特定する作業を担当していました。 まず、Azure 仮想マシンを使用する場合に実装できるコンピューティングとストレージの復元性とスケーラビリティのオプションを決定する必要があります。 次に、Azure 仮想マシン スケール セットを使用する場合に利用可能なコンピューティングとストレージの復元性とスケーラビリティ オプションを調査する必要があります。 また、Azure 仮想マシンのカスタム スクリプト拡張機能を使用して、仮想マシンと仮想マシン スケール セットを自動的に構成する機能についても説明します。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2012)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
@@ -25,18 +25,18 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 + タスク 6:仮想マシン拡張機能を使用して、Azure 仮想マシン スケール セットを構成する
 + タスク 7:Azure 仮想マシン スケール セット (オプション) のコンピューティングとストレージをスケーリングする
 
-## <a name="estimated-timing-50-minutes"></a>推定時間:50 分
+## 推定時間:50 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab08.png)
 
 
-## <a name="instructions"></a>Instructions
+### Instructions
 
-### <a name="exercise-1"></a>演習 1
+## 演習 1
 
-#### <a name="task-1-deploy-zone-resilient-azure-virtual-machines-by-using-the-azure-portal-and-an-azure-resource-manager-template"></a>タスク 1:Azure portal と Azure Resource Manager テンプレートを使用して、ゾーン復元可能な Azure 仮想マシンをデプロイする
+## タスク 1:Azure portal と Azure Resource Manager テンプレートを使用して、ゾーン復元可能な Azure 仮想マシンをデプロイする
 
 このタスクでは、Azure portal と Azure Resource Manager テンプレートを使用して、Azure 仮想マシンをさまざまな可用性ゾーンにデプロイします。
 
@@ -136,7 +136,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 
     >**注**:次のタスクを進める前に、デプロイが完了するのを待ちます。 これには 5 分ほどかかる場合があります。
 
-#### <a name="task-2-configure-azure-virtual-machines-by-using-virtual-machine-extensions"></a>タスク 2:仮想マシンの拡張機能を使用して、Azure Virtual Machines を構成する
+## タスク 2:仮想マシンの拡張機能を使用して、Azure Virtual Machines を構成する
 
 このタスクでは、カスタム スクリプト仮想マシン拡張機能を使用して、前のタスクでデプロイした 2 つのAzure 仮想マシンに Windows Server Web サーバー ロールをインストールします。
 
@@ -223,7 +223,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 
     >**注**:また、**az104-08-vm0** に接続し、`Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` を実行して、**az104-08-vm1** でホストされている Web サイトにアクセスすることもできます。
 
-#### <a name="task-3-scale-compute-and-storage-for-azure-virtual-machines"></a>タスク 3:Azure Virtual Machines のコンピューティングとストレージをスケーリングする
+## タスク 3:Azure Virtual Machines のコンピューティングとストレージをスケーリングする
 
 このタスクでは、サイズを変更して Azure 仮想マシンのコンピューティングをスケーリングし、データ ディスクを接続して構成することでストレージをスケーリングします。
 
@@ -262,7 +262,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
    ```powershell
    New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true)
 
-   New-VirtualDisk -StoragePoolFriendlyName storagepool1 -FriendlyName virtualdisk1 -Size 2046GB -ResiliencySettingName Simple -ProvisioningType Fixed
+   New-VirtualDisk -StoragePoolFriendlyName storagepool1 -FriendlyName virtualdisk1 -Size 64GB -ResiliencySettingName Simple -ProvisioningType Fixed
 
    Initialize-Disk -VirtualDisk (Get-VirtualDisk -FriendlyName virtualdisk1)
 
@@ -336,7 +336,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 
     > **注**:コマンドが正常に完了したことの確認を待ちます。
 
-#### <a name="task-4-register-the-microsoftinsights-and-microsoftalertsmanagement-resource-providers"></a>タスク 4:Microsoft.Insights および Microsoft.AlertsManagement リソース プロバイダーを登録する
+## タスク 4:Microsoft.Insights および Microsoft.AlertsManagement リソース プロバイダーを登録する
 
 1. Azure portal の右上にあるアイコンをクリックして **Azure Cloud Shell** を開きます。
 
@@ -352,7 +352,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
-#### <a name="task-5-deploy-zone-resilient-azure-virtual-machine-scale-sets-by-using-the-azure-portal"></a>タスク 5:Azure portal を使用してゾーン復元可能な Azure 仮想マシン スケール セットをデプロイする
+## タスク 5:Azure portal を使用してゾーン復元可能な Azure 仮想マシン スケール セットをデプロイする
 
 このタスクでは、Azure portal を使用して、可用性ゾーン間で Azure 仮想マシン スケール セットをデプロイします。
 
@@ -456,7 +456,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 
     >**注**:仮想マシン スケール セットのデプロイが完了するのを待ちます。 これには 5 分ほどかかります。
 
-#### <a name="task-6-configure-azure-virtual-machine-scale-sets-by-using-virtual-machine-extensions"></a>タスク 6:仮想マシン拡張機能を使用して、Azure 仮想マシン スケール セットを構成する
+## タスク 6:仮想マシン拡張機能を使用して、Azure 仮想マシン スケール セットを構成する
 
 このタスクでは、カスタム スクリプト仮想マシン拡張機能を使用して、前のタスクでデプロイした Azure 仮想マシン スケール セットのインスタンスに Windows Server Web サーバー ロールをインストールします。
 
@@ -497,7 +497,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 
     >**注**: ブラウザー ページに、Azure 仮想マシン スケール セット **[az10408vmss0]** のいずれかのインスタンスの名前が表示されることを確認します。
 
-#### <a name="task-7-scale-compute-and-storage-for-azure-virtual-machine-scale-sets"></a>タスク 7:Azure 仮想マシン スケール セットのコンピューティングとストレージをスケーリングする
+## タスク 7:Azure 仮想マシン スケール セットのコンピューティングとストレージをスケーリングする
 
 このタスクでは、仮想マシン スケール セット インスタンスのサイズを変更し、それらの自動スケーリング設定を構成して、ディスクを接続します。
 
@@ -619,7 +619,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 
 1. **[az10408vmss0]** ブレードの **[設定]** セクションで、**[インスタンス]** をクリックし、仮想マシン スケール セットのインスタンスの横にあるチェックボックスをオンにして、**[アップグレード]** をクリックして、確認を求められたら、**[はい]** をクリックします。
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+## リソースをクリーンアップする
 
 >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
@@ -646,7 +646,7 @@ Azure 仮想マシンをデプロイおよび構成するためのさまざま�
 
     >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### <a name="review"></a>確認
+## 確認
 
 このラボでは、次のことを行いました。
 
