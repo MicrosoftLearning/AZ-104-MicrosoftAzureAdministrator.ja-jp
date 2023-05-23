@@ -4,16 +4,16 @@ lab:
   module: Administer Azure Resources
 ---
 
-# <a name="lab-03d---manage-azure-resources-by-using-azure-cli"></a>ラボ 03d - Azure CLI を使用して Azure リソースを管理する
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 03d - Azure CLI を使用して Azure リソースを管理する
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 
 プロビジョニング リソースに関連する基本的な Azure 管理機能を確認し、Azure portal、Azure Resouce Manager テンプレート、および Azure PowerShell を使用して、リソース グループに基づいてリソースを整理しました。次は、Azure CLI を使用して同等のタスクを実行します。 Azure CLI のインストールを回避するには、Azure Cloud Shell で使用できる Bash 環境を活用します。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%207)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
@@ -21,17 +21,17 @@ lab:
 + タスク 2:Azure CLI を使用して、リソース グループと Azure マネージド ディスクを作成する
 + タスク 3:Azure CLI を使用してマネージド ディスクを構成する
 
-## <a name="estimated-timing-20-minutes"></a>推定時間:20 分
+## 推定時間:20 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab03d.png)
 
-## <a name="instructions"></a>Instructions
+### Instructions
 
-### <a name="exercise-1"></a>演習 1
+## 演習 1
 
-#### <a name="task-1-start-a-bash-session-in-azure-cloud-shell"></a>タスク 1:Azure Cloud Shell で Bash セッションを開始する
+## タスク 1:Azure Cloud Shell で Bash セッションを開始する
 
 このタスクでは、Cloud Shell で Bash セッションを開きます。 
 
@@ -45,7 +45,7 @@ lab:
 
 1. [Cloud Shell] ウィンドウの左上隅にあるドロップダウン メニューに、 **[Bash]** が表示されていることを確認します。
 
-#### <a name="task-2-create-a-resource-group-and-an-azure-managed-disk-by-using-azure-cli"></a>タスク 2:Azure CLI を使用して、リソース グループと Azure マネージド ディスクを作成する
+## タスク 2:Azure CLI を使用して、リソース グループと Azure マネージド ディスクを作成する
 
 このタスクでは、Cloud Shell 内で Azure CLI セッションを使用して、リソース グループと Azure マネージド ディスクを作成します。
 
@@ -82,7 +82,7 @@ lab:
    az disk show --resource-group $RGNAME --name $DISKNAME
    ```
 
-#### <a name="task-3-configure-the-managed-disk-by-using-azure-cli"></a>タスク 3:Azure CLI を使用してマネージド ディスクを構成する
+## タスク 3:Azure CLI を使用してマネージド ディスクを構成する
 
 このタスクでは、Cloud Shell 内で Azure CLI セッションを使用して、Azure マネージド ディスクの構成を管理します。 
 
@@ -110,7 +110,7 @@ lab:
    az disk show --resource-group $RGNAME --name $DISKNAME --query sku
    ```
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+## リソースをクリーンアップする
 
  > **注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
@@ -132,7 +132,7 @@ lab:
 
     >**注**:コマンドは非同期に実行されるので (--nowait パラメーターで決定される)、同じ Bash セッション内ですぐに別の Azure CLI コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### <a name="review"></a>確認
+## 確認
 
 このラボでは、次のことを行いました。
 
