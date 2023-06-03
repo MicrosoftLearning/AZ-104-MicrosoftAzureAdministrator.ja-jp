@@ -4,16 +4,16 @@ lab:
   module: Administer Serverless Computing
 ---
 
-# <a name="lab-09a---implement-web-apps"></a>ラボ 09a - Web Apps を実装する
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 09a - Web Apps を実装する
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 
 自社のオンプレミスのデータ センターで現在ホストされている Contoso の Web サイトをホストするための Azure Web アプリの使用を評価する必要があります。 この Web サイトは、PHP ランタイム スタックを使用して Windows サーバー上で実行されています。 また、Azure Web アプリのデプロイ スロットを活用して DevOps プラクティスを実装する方法を決定する必要もあります。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
@@ -24,17 +24,17 @@ lab:
 + タスク 5:ステージング スロットをスワップする
 + タスク 6:Azure Web アプリの自動スケールを構成およびテストする
 
-## <a name="estimated-timing-30-minutes"></a>推定時間:30 分
+## 推定時間:30 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab09a.png)
 
-## <a name="instructions"></a>Instructions
+### Instructions
 
-### <a name="exercise-1"></a>演習 1
+## 演習 1
 
-#### <a name="task-1-create-an-azure-web-app"></a>タスク 1:Azure Web アプリを作成する
+## タスク 1:Azure Web アプリを作成する
 
 このタスクでは、Azure Web アプリを作成します。
 
@@ -61,7 +61,7 @@ lab:
 
 1. デプロイ ブレードで **[リソースに移動]** をクリックします。
 
-#### <a name="task-2-create-a-staging-deployment-slot"></a>タスク 2:ステージング デプロイ スロットを作成する
+## タスク 2:ステージング デプロイ スロットを作成する
 
 このタスクでは、ステージング デプロイ スロットを作成します。
 
@@ -84,7 +84,7 @@ lab:
 
 1. ステージング スロット ブレードを確認し、URL が運用スロットに割り当てられているものと異なることを確認します。
 
-#### <a name="task-3-configure-web-app-deployment-settings"></a>タスク 3:Web アプリのデプロイ設定を構成する
+## タスク 3:Web アプリのデプロイ設定を構成する
 
 このタスクでは、Web アプリのデプロイ設定を構成します。
 
@@ -107,7 +107,7 @@ lab:
 
     >**注:**  ラボの次のタスクでは、以下の資格情報が必要です。
 
-#### <a name="task-4-deploy-code-to-the-staging-deployment-slot"></a>タスク 4:ステージング デプロイ スロットにコードをデプロイする
+## タスク 4:ステージング デプロイ スロットにコードをデプロイする
 
 このタスクでは、ステージング デプロイ スロットにコードをデプロイします。
 
@@ -151,7 +151,7 @@ lab:
 
 1. ブラウザー ページに「**Hello World!**」というメッセージが表示されていることを確認し、 新しいタブを閉じます。
 
-#### <a name="task-5-swap-the-staging-slots"></a>タスク 5:ステージング スロットをスワップする
+## タスク 5:ステージング スロットをスワップする
 
 このタスクでは、ステージング スロットを運用スロットにスワップします。
 
@@ -165,7 +165,7 @@ lab:
 
 1. 既定の Web ページが「**Hello World!**」というページに置き換えられていることを確認します。 のページを参照してください。
 
-#### <a name="task-6-configure-and-test-autoscaling-of-the-azure-web-app"></a>タスク 6:Azure Web アプリの自動スケールを構成およびテストする
+## タスク 6:Azure Web アプリの自動スケールを構成およびテストする
 
 このタスクでは、Azure Web アプリの自動スケールの構成とテストを行います。
 
@@ -237,7 +237,7 @@ lab:
 
 1. [Cloud Shell] ペインを閉じます。
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+## リソースをクリーンアップする
 
 >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
@@ -259,7 +259,7 @@ lab:
 
     >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### <a name="review"></a>確認
+## 確認
 
 このラボでは、次のことを行いました。
 
