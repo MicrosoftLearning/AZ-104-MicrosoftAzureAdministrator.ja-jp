@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 09b - Azure Container Instances の実装
+  title: 'ラボ 09b: Azure Container Instances を実装する'
   module: Administer Serverless Computing
 ---
 
@@ -17,7 +17,7 @@ Contoso は、仮想化されたワークロード用の新しいプラットフ
 
 このラボでは、次のことを行います。
 
-- タスク 1:Azure Container Instance を使用して Docker イメージをデプロイする
+- タスク 1: Docker イメージを使用して Azure Container Instances をデプロイする
 - タスク 2:Azure Container Instances の機能を確認する
 
 ## 推定時間:20 分
@@ -30,7 +30,7 @@ Contoso は、仮想化されたワークロード用の新しいプラットフ
 
 ## 演習 1
 
-## タスク 1:Azure Container Instance を使用して Docker イメージをデプロイする
+## タスク 1: Docker イメージを使用して Azure Container Instances をデプロイする
 
 このタスクでは、Web アプリケーションの新しいコンテナー インスタンスを作成します。
 
