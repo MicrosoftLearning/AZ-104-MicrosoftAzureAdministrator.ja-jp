@@ -1,18 +1,18 @@
 ---
 lab:
-  title: 03b - ARM テンプレートを使用して Azure リソースを管理する
+  title: 'ラボ 03b: ARM テンプレートを使用して Azure リソースを管理する'
   module: Administer Azure Resources
 ---
 
-# <a name="lab-03b---manage-azure-resources-by-using-arm-templates"></a>ラボ 03b - ARM テンプレートを使用して Azure リソースを管理する
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 03b - ARM テンプレートを使用して Azure リソースを管理する
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 Azure portal を使用して、リソースのプロビジョニングとリソース グループに基づく構成に関連する基本的な Azure 管理機能を確認しました。次は、Azure Resource Manager テンプレートを使用して同等のタスクを実行します。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
@@ -20,17 +20,17 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 + タスク 2:ARM テンプレートを使用して、Azure マネージド ディスクを作成する
 + タスク 3:マネージド ディスクの ARM テンプレートベースのデプロイを確認する
 
-## <a name="estimated-timing-20-minutes"></a>推定時間:20 分
+## 推定時間:20 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab03b.png)
 
-## <a name="instructions"></a>Instructions
+### Instructions
 
-### <a name="exercise-1"></a>演習 1
+## 演習 1
 
-#### <a name="task-1-review-an-arm-template-for-deployment-of-an-azure-managed-disk"></a>タスク 1:Azure マネージド ディスクのデプロイのために ARM テンプレートを確認する
+## タスク 1:Azure マネージド ディスクのデプロイのために ARM テンプレートを確認する
 
 1. [**Azure Portal**](http://portal.azure.com) にサインインします。
 
@@ -58,7 +58,7 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
     
 1. すべての**ファイル エクスプローラー**ウィンドウを閉じます。
 
-#### <a name="task-2-create-an-azure-managed-disk-by-using-an-arm-template"></a>タスク 2:ARM テンプレートを使用して、Azure マネージド ディスクを作成する
+## タスク 2:ARM テンプレートを使用して、Azure マネージド ディスクを作成する
 
 1. Azure portal で、**[カスタム テンプレートのデプロイ]** を見つけて選びます。
 
@@ -102,13 +102,15 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
     | ディスク サイズ GB | **32** |
     | オプションを作成する | **empty** |
     | ディスク暗号化セットのタイプ | **EncryptionAtRestWithPlatformKey** |
+    | データ アクセス認証モード | None |
     | ネットワーク アクセス ポリシー | **AllowAll** |
+    | パブリック ネットワーク アクセス | 無効 |
 
 1. **[確認および作成]** を選択し、次に **[作成]** を選択します。
 
 1. デプロイが正常に完了したことを確認します。
 
-#### <a name="task-3-review-the-arm-template-based-deployment-of-the-managed-disk"></a>タスク 3:マネージド ディスクの ARM テンプレートベースのデプロイを確認する
+## タスク 3:マネージド ディスクの ARM テンプレートベースのデプロイを確認する
 
 1. Azure portal で、「**リソース グループ**」を検索して選択します。 
 
@@ -118,11 +120,11 @@ Azure portal を使用して、リソースのプロビジョニングとリソ�
 
 1. **[az104-03b-rg1 - デプロイ]** ブレードから、デプロイのリストの最初のエントリをクリックし、**[入力]** ブレードと **[テンプレート]** ブレードの内容を確認します。
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+## リソースをクリーンアップする
 
    >**注**:このラボでデプロイしたリソースは削除しないでください。 このモジュールの次のラボで、それらを参照します。
 
-#### <a name="review"></a>確認
+## 確認
 
 このラボでは、次のことを行いました。
 
