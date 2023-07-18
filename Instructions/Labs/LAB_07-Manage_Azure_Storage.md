@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 07 - Azure Storage を管理する
+  title: 'ラボ 07: Azure Storage を管理する'
   module: Administer Azure Storage
 ---
 

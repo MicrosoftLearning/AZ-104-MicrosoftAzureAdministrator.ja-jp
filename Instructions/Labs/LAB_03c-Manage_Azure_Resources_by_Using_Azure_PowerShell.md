@@ -1,19 +1,19 @@
 ---
 lab:
-  title: 03c - Azure PowerShell を使用して Azure リソースを管理する
+  title: 'ラボ 03c: Azure PowerShell を使用して Azure リソースを管理する'
   module: Administer Azure Resources
 ---
 
-# <a name="lab-03c---manage-azure-resources-by-using-azure-powershell"></a>ラボ 03c - Azure PowerShell を使用して Azure リソースを管理する
-# <a name="student-lab-manual"></a>受講生用ラボ マニュアル
+# ラボ 03c - Azure PowerShell を使用して Azure リソースを管理する
+# 受講生用ラボ マニュアル
 
-## <a name="lab-scenario"></a>ラボのシナリオ
+## ラボのシナリオ
 
 既にリソースのプロビジョニング、リソース グループに基づく構成に関連する Azure の基本的な管理機能を、Azure portal と Azure Resource Manager テンプレートを使用して確認しました。次は Azure PowerShell を使って同等のタスクを実行します。 Azure PowerShell モジュールのインストールを避けるため、Azure Cloud Shell で使用できる PowerShell 環境を活用します。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボでは、次のことを行います。
 
@@ -21,19 +21,19 @@ lab:
 + タスク 2:Azure PowerShell を使用して、リソース グループと Azure マネージド ディスクを作成する
 + タスク 3:Azure PowerShell を使用してマネージド ディスクを構成する
 
-## <a name="estimated-timing-20-minutes"></a>推定時間:20 分
+## 推定時間:20 分
 
-## <a name="architecture-diagram"></a>アーキテクチャの図
+## アーキテクチャの図
 
 ![image](../media/lab03c.png)
 
-## <a name="instructions"></a>Instructions
+### Instructions
 
 > **注**:作成する仮想マシンまたはユーザー アカウントに対して、必ず独自のセキュリティで保護されたパスワードを作成してください。 ユーザーの代わりに仮想マシンが作成された場合は、ポータルの **[パスワードのリセット]** を使用して、パスワードを更新してください。 
 
-### <a name="exercise-1"></a>演習 1
+## 演習 1
 
-#### <a name="task-1-start-a-powershell-session-in-azure-cloud-shell"></a>タスク 1:Azure Cloud Shell で PowerShell セッションを開始する
+## タスク 1:Azure Cloud Shell で PowerShell セッションを開始する
 
 このタスクでは、Cloud Shell で PowerShell セッションを開きます。 
 
@@ -47,7 +47,7 @@ lab:
 
 1. [Cloud Shell] ウィンドウの左上隅にあるドロップダウン メニューに **PowerShell** が表示されていることを確認します。
 
-#### <a name="task-2-create-a-resource-group-and-an-azure-managed-disk-by-using-azure-powershell"></a>タスク 2:Azure PowerShell を使用して、リソース グループと Azure マネージド ディスクを作成する
+## タスク 2:Azure PowerShell を使用して、リソース グループと Azure マネージド ディスクを作成する
 
 このタスクでは、Cloud Shell 内で Azure PowerShell セッションを使用して、リソース グループと Azure マネージド ディスクを作成します。
 
@@ -88,7 +88,7 @@ lab:
    Get-AzDisk -ResourceGroupName $rgName -Name $diskName
    ```
 
-#### <a name="task-3-configure-the-managed-disk-by-using-azure-powershell"></a>タスク 3:Azure PowerShell を使用してマネージド ディスクを構成する
+## タスク 3:Azure PowerShell を使用してマネージド ディスクを構成する
 
 このタスクでは、Cloud Shell 内で Azure PowerShell セッションを使用して、Azure マネージド ディスクの構成を管理します。 
 
@@ -122,11 +122,11 @@ lab:
    (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
    ```
 
-#### <a name="clean-up-resources"></a>リソースをクリーンアップする
+## リソースをクリーンアップする
 
    >**注**:このラボでデプロイしたリソースは削除しないでください。 このモジュールの次のラボで、それらを参照します。
 
-#### <a name="review"></a>確認
+## 確認
 
 このラボでは、次のことを行いました。
 

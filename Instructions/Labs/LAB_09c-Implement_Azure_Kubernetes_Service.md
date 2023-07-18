@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 09c - Azure Kubernetes Service を実装する
+  title: 'ラボ 09c: Azure Kubernetes Service を実装する'
   module: Administer Serverless Computing
 ---
 
@@ -28,11 +28,11 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
 ![image](../media/lab09c.png)
 
-## Instructions
+### Instructions
 
-### 演習 1
+## 演習 1
 
-#### タスク 1:Microsoft.Kubernetes および Microsoft.KubernetesConfiguration リソース プロバイダーを登録します。
+## タスク 1:Microsoft.Kubernetes および Microsoft.KubernetesConfiguration リソース プロバイダーを登録します。
 
 このタスクでは、Azure Kubernetes Service クラスターをデプロイするために必要なリソース プロバイダーを登録します。
 
@@ -54,7 +54,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
 1. [Cloud Shell] ペインを閉じます。
 
-#### タスク 2:Azure Kubernetes Service クラスターをデプロイする
+## タスク 2:Azure Kubernetes Service クラスターをデプロイする
 
 このタスクでは、Azure portal を使用して Azure Kubernetes Service クラスターをデプロイします。
 
@@ -109,7 +109,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
     >**注**: デプロイが完了するまで待ちます。 これにはおよそ 10 分かかります。
 
-#### タスク 3:Azure Kubernetes Service クラスターにポッドをデプロイする
+## タスク 3:Azure Kubernetes Service クラスターにポッドをデプロイする
 
 このタスクでは、ポッドを Azure Kubernetes Service クラスターにデプロイします。
 
@@ -177,7 +177,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
 1. ブラウザーの画面を開き、前の手順で特定した IP アドレスに移動します。 ブラウザーのページに "**nginx へようこそ!** " のメッセージが表示されていることを確認します。 メッセージで応答します。
 
-#### タスク 4:Azure Kubernetes Service クラスターでコンテナー化されたワークロードをスケーリングする
+## タスク 4:Azure Kubernetes Service クラスターでコンテナー化されたワークロードをスケーリングする
 
 このタスクでは、ポッドの数とクラスター ノードの数を水平方向にスケーリングします。
 
@@ -245,7 +245,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
 1. **[Cloud Shell]** ペインを閉じます。
 
-#### リソースをクリーンアップする
+## リソースをクリーンアップする
 
 >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
@@ -267,7 +267,7 @@ Contoso には、Azure Container Instances を使用して実行するのに適�
 
     >**注**:コマンドは非同期に実行されるので (--nowait パラメーターで決定される)、同じ Bash セッション内ですぐに別の Azure CLI コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
 
-#### 確認
+## 確認
 
 このラボでは、次のことを行いました。
 

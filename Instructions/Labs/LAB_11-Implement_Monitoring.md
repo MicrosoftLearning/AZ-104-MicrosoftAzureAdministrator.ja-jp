@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 11 - 監視の実装
+  title: 'ラボ 11: 監視を実装する'
   module: Administer Monitoring
 ---
 
