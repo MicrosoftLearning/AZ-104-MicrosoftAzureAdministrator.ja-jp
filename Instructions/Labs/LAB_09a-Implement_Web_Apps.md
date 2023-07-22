@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'ラボ 09a: Web Apps を実装する'
-  module: Administer Serverless Computing
+  module: Administer PaaS Compute Options
 ---
 
 # ラボ 09a - Web Apps を実装する

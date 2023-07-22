@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'ラボ 09c: Azure Kubernetes Service を実装する'
-  module: Administer Serverless Computing
+  module: Administer PaaS Compute Options
 ---
 
 # ラボ 09c - Azure Kubernetes Service を実装する
