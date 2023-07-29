@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 03a - Azure portal を使用して Azure リソースを管理する
+  title: 'ラボ 03a: Azure portal を使用して Azure リソースを管理する'
   module: Administer Azure Resources
 ---
 
