@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'ラボ 09b: Azure Container Instances を実装する'
-  module: Administer Serverless Computing
+  module: Administer PaaS Compute Options
 ---
 
 # ラボ 09b - Azure Container Instances を実装する
