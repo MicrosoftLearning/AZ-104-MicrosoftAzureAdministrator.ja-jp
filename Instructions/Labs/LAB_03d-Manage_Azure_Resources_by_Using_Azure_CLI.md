@@ -13,6 +13,8 @@ lab:
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%207)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
+>**注:** このラボでは、ラボ 03b を完了する必要があります。
+
 ## 目標
 
 このラボでは、次のことを行います。
@@ -95,7 +97,7 @@ lab:
 1. 変更が有効になっていることを確認するには、次のコマンドを実行します。
 
    ```sh
-   az disk show --resource-group $RGNAME --name $DISKNAME --query diskSizeGb
+   az disk show --resource-group $RGNAME --name $DISKNAME --query diskSizeGB
    ```
 
 1. ディスク パフォーマンス SKU を **Premium_LRS** に変更するには、Cloud Shell 内の Bash セッションから次のコマンドを実行します。
