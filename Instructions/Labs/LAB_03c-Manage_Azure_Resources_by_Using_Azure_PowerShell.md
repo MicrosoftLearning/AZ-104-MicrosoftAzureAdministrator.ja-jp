@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 'ラボ 03c: Azure PowerShell を使用して Azure リソースを管理する'
+  title: 'ラボ 03c: Azure PowerShell を使用して Azure リソースを管理する (オプション)'
   module: Administer Azure Resources
 ---
 
