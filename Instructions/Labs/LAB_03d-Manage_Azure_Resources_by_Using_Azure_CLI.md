@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 'ラボ 03d: Azure CLI を使用して Azure リソースを管理する (オプション)'
+  title: 'ラボ 03d: Azure CLI を使って Azure リソースを管理する (省略可能)'
   module: Administer Azure Resources
 ---
 
@@ -12,8 +12,6 @@ lab:
 プロビジョニング リソースに関連する基本的な Azure 管理機能を確認し、Azure portal、Azure Resouce Manager テンプレート、および Azure PowerShell を使用して、リソース グループに基づいてリソースを整理しました。次は、Azure CLI を使用して同等のタスクを実行します。 Azure CLI のインストールを回避するには、Azure Cloud Shell で使用できる Bash 環境を活用します。
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%207)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
-
->**注:** このラボでは、ラボ 03b を完了する必要があります。
 
 ## 目標
 
