@@ -139,7 +139,7 @@ lab:
 
     >**注**:`git remote add` の後の値は、**デプロイ資格情報**のユーザー名と一致する必要はありませんが、一意である必要があります
 
-1. Cloud Shell ウィンドウから次のコマンドを実行して、サンプル Web アプリのコードをローカル リポジトリから Azure Web アプリのステージング デプロイ スロットにプッシュします (`[deployment_user_name]` のプレースホルダーを、前のタスクで指定した**デプロイ資格情報**のユーザー名の値に置き換えます)。
+1. Cloud Shell ウィンドウから次のコマンドを実行して、サンプル Web アプリのコードをローカル リポジトリから Azure Web アプリのステージング デプロイ スロットにプッシュします (プレースホルダーの値を、前のタスクで指定した**デプロイ資格情報**のユーザー名、パスワード、アプリ名の値に置き換えます)。
 
    ```powershell
     git push https://<deployment-username>:<deployment-password>@<app-name>.scm.azurewebsites.net/<app-name>.git master
