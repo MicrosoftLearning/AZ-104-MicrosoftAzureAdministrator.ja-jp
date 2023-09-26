@@ -6,7 +6,7 @@ demo:
 
 # 01 - 管理者 ID
 
-## Azure Active Directory を構成する
+## Entra ID を構成する
 
 このレッスンには、正式なデモは含まれていません。 学生ラボ 01 用の対話型ラボ シミュレーションに取り組むことを検討してください。 
 
@@ -14,23 +14,23 @@ demo:
 
 または、以下のクイック スタートのいずれかを使用することもできます。 
 
-**リファレンス**: [クイック スタート - Azure AD にアクセスして新しいテナントを作成する - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+**リファレンス**: [クイック スタート - Microsoft Entra ID にアクセスして新しいテナントを作成する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)する
 
-**リファレンス**: [クイック スタート - グループとメンバーを表示する - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
+**リファレンス**: [クイックスタート - メンバーを含むグループを作成し、すべてのグループとメンバーを表示する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
 ## ユーザーとグループのアカウントを構成する
 
-このデモでは、Azure Active Directory について説明します。
+このデモでは、Entra ID について説明します。
 
-**リファレンス**: [ユーザーの追加または削除 - Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+**リファレンス**: [ユーザーを追加または削除する](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
-**リファレンス**: [Azure Active Directory を使用して基本グループを作成してメンバーを追加する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+**リファレンス**: [基本グループを作成してメンバーを追加する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
-**注:**   サブスクリプションによっては、利用できる Azure Active Directory ブレードの領域が制限されていることがあります。 
+**注**: サブスクリプションによっては、[Microsoft Entra ID] ブレードの一部の領域を利用できない場合があります。 
 
 **ライセンスおよびドメイン情報を確認する**
 
-1.  Azure portal にアクセスし、 **[Azure Active Directory]**   ブレードに移動します。
+1.  Azure portal にアクセスし、 **[Microsoft Entra ID]**  ブレードに移動します。
 
 2.  [概要] ブレードで、ライセンスおよびプライマリ ドメインを含む  **[テナント情報]**   を確認します。
 
@@ -48,7 +48,7 @@ demo:
 
 **グループ アカウントを詳しく見る**
 
-1.   **[Azure Active Directory]**   ページに戻り、 **[グループ]**   ブレードを選択します。
+1.   **[Microsoft Entra ID]**  ページに戻り、 **[グループ]**  ブレードを選択します。
 
 2.   **[新しいグループ]**   を作成するか、確認する既存のグループを選択します。
 
