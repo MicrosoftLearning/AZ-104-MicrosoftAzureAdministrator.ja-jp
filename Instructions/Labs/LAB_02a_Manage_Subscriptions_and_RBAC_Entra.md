@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 'ラボ 02a: サブスクリプションと RBAC を管理する (ブランド変更テスト)'
+  title: 'ラボ 02a: サブスクリプションと RBAC を管理する'
   module: Administer Governance and Compliance
 ---
 
