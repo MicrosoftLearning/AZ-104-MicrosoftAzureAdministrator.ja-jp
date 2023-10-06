@@ -1,10 +1,10 @@
 ---
 lab:
-  title: 'ラボ 01: Microsoft Entra ID を管理する (ブランド変更テスト)'
+  title: 'ラボ 01: Microsoft Entra ID を管理する'
   module: Administer Identity
 ---
 
-# ラボ 01 - Microsoft Entra ID を管理する (ブランド変更テスト)
+# ラボ 01 - Microsoft Entra ID を管理する
 
 # 受講生用ラボ マニュアル
 
