@@ -11,7 +11,7 @@ lab:
 
 既にリソースのプロビジョニング、リソース グループに基づく構成に関連する Azure の基本的な管理機能を、Azure portal と Azure Resource Manager テンプレートを使用して確認しました。次は Azure PowerShell を使って同等のタスクを実行します。 Azure PowerShell モジュールのインストールを避けるため、Azure Cloud Shell で使用できる PowerShell 環境を活用します。
 
-                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
+**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。 
 
 ## 目標
 

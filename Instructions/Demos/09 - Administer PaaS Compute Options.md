@@ -30,7 +30,7 @@ demo:
 
 ## Azure App Service を構成する
 
-このデモでは、Docker コンテナーを実行する新しい Web アプリを作成します。  コンテナーにウェルカム メッセージが表示されます。
+このデモでは、Docker コンテナーを実行する新しい Web アプリを作成します。 コンテナーにウェルカム メッセージが表示されます。
 
 **参照**: [Web アプリを作成する](https://learn.microsoft.com/training/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=csharp)
 
@@ -80,7 +80,7 @@ demo:
 
 1. リソースがデプロイされるまで待ちます。
 
-1. リソースの **[概要]** ページで、 **[状態]** が **[実行中]** であることを確認します。
+1. リソースの [**概要**] ページで、[**状態**] が [**実行中**] であることを確認します。
 
 1. コンテナー インスタンスの **[FQDN]** に移動し、ウェルカム ページが表示されていることを確かめます。 
 
