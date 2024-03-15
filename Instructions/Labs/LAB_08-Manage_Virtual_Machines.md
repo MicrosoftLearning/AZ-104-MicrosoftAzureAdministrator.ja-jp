@@ -354,8 +354,8 @@ lab:
     -Location 'East US' `
     -Image 'Win2019Datacenter' `
     -Zone '1' `
-    -Size 'Standard_D2s_v3' 
-    -Credential '(Get-Credential)' 
+    -Size 'Standard_D2s_v3' ` 
+    -Credential (Get-Credential)
     ```
 
 1. コマンドが完了したら、**Get-AzVM** を使用してリソース グループ内の仮想マシンを一覧表示してください。
@@ -373,7 +373,7 @@ lab:
     ```powershell
     Stop-AzVM `
     -ResourceGroupName 'az104-rg8' `
-    -Name 'myPSVM' `
+    -Name 'myPSVM' 
     ```
 
 1. **Get-AzVM** を **-Status** パラメーターとともに使用して、マシンの**割り当てが解除されている**ことを確認してください。
