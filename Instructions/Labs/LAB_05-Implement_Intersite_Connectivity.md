@@ -194,7 +194,8 @@ lab:
 
 1. 設定を確認し、**[追加]** を選択します。
 
-    ![ピアリング ページのスクリーンショット。](../media/az104-lab05-peering.png)
+![ピアリング ページのスクリーンショット。](../media/az104-lab05-peering.png)
+
  
 1. [CoreServicesVnet | ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。 ページを更新して、**[ピアリング状態]** が **[接続済み]** であることを確認します。
 
