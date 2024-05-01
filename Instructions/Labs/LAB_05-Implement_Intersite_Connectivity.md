@@ -77,7 +77,7 @@ lab:
 
     | 設定 | 値 | 
     | --- | --- |
-    | 名前 | `CoreServicesVNet` ([新規作成]) |
+    | 名前 | `CoreServicesVnet` ([新規作成]) |
     | アドレス範囲 | `10.0.0.0/16`  |
     | サブネット名 | `Core` | 
     | サブネットのアドレス範囲 | `10.0.0.0/24` |
@@ -122,7 +122,7 @@ lab:
 
     | 設定 | 値 | 
     | --- | --- |
-    | 名前 | `ManufacturingVNet` |
+    | 名前 | `ManufacturingVnet` |
     | アドレス範囲 | `172.16.0.0/16`  |
     | サブネット名 | `Manufacturing` |
     | サブネットのアドレス範囲 | `172.16.0.0/24` |
@@ -177,20 +177,20 @@ lab:
 | --------------------------------------------- | ------------------------------------- |
 | **この仮想ネットワーク**                                       |                                       |
 | [Peering link name](ピアリング リンク名)                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| ’CoreServicesVNet’ に ’ManufacturingVnet’ へのアクセスを許可する            | 選択済み (既定値)                       |
-| ’ManufacturingVnet’ からのトラフィック転送の受信を ’CoreServicesVNet’ に許可する | 選択済み                       |
-| ’CoreServicesVNet’ 内のゲートウェイに ’ManufacturingVnet’ へのトラフィックの転送を許可する | 未選択 (既定値) |
-| ’ManufacturingVnet’ のリモート ゲートウェイを使用するために ’CoreServicesVNet’ を有効にする       | 未選択 (既定値)                        |
+| ピアリングされた仮想ネットワークに対するアクセスを CoreServicesVnet に許可する            | 選択済み (既定値)                       |
+| ピアリングされた仮想ネットワークから転送されたトラフィックを受信することを CoreServicesVnet に許可する | 選択済み                       |
+| ピアリングされた仮想ネットワークにトラフィックを転送することを CoreServicesVnet 内のゲートウェイに許可する | 未選択 (既定値) |
+| ピアリングされた仮想ネットワークのリモート ゲートウェイを CoreServicesVnet で使用できるようにする       | 未選択 (既定値)                        |
 | **リモート仮想ネットワーク**                                   |                                       |
 | [Peering link name](ピアリング リンク名)                             | `ManufacturingVnet-to-CoreServicesVnet` |
 | 仮想ネットワークのデプロイ モデル              | **リソース マネージャー**                      |
 | リソース ID を知っている                         | オフ                          |
 | サブスクリプション                                  | *該当するサブスクリプション*    |
 | 仮想ネットワーク                               | **ManufacturingVnet**                     |
-| ’ManufacturingVnet’ に ’CoreServicesVNet’ へのアクセスを許可する  | 選択済み (既定値)                       |
-| ’CoreServicesVNet’ からのトラフィック転送の受信を ’ManufacturingVnet’ に許可する | 選択済み                        |
-| ’CoreServicesVNet’ 内のゲートウェイに ’ManufacturingVnet’ へのトラフィックの転送を許可する | 未選択 (既定値) |
-| ’CoreServicesVNet’ のリモート ゲートウェイを使用するために ’ManufacturingVnet’ を有効にする       | 未選択 (既定値)                        |
+| CoreServicesVnet に対するアクセスを ManufacturingVnet に許可する  | 選択済み (既定値)                       |
+| CoreServicesVnet から転送されたトラフィックを ManufacturingVnet が受信することを許可する | 選択済み                        |
+| ピアリングされた仮想ネットワークにトラフィックを転送することを CoreServicesVnet 内のゲートウェイに許可する | 未選択 (既定値) |
+| ManufacturingVnet で CoreServicesVnet のリモート ゲートウェイを使用できるようにする       | 未選択 (既定値)                        |
 
 1. 設定を確認し、**[追加]** を選択します。
 
