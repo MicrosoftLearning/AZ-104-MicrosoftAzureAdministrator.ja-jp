@@ -284,6 +284,18 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+## Copilot を使用して学習の幅を広げる
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 また、Copilot は、ラボでカバーされていない領域や、詳細情報が必要な場合にも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 これらのプロンプトを試すには数分かかります。
+
++ Azure Backup ではどのような製品がサポートされていますか?
++ Azure Backup を使用して Azure 仮想マシンをバックアップおよび復元する手順をまとめます。
++ Azure PowerShell または CLI を使用して、Azure Backup ジョブの状態を確認するにはどうすればよいですか。
++ Azure 仮想マシンのバックアップを構成するための少なくとも 5 つのベスト プラクティスを提供します。  
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Backup を使用して仮想マシンを保護する](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/)。 Azure Backup を使用して、オンプレミスのサーバー、仮想マシン、SQL Server、Azure ファイル共有、その他のワークロードを保護します。
++ 「[Azure Site Recovery を使用して Azure インフラストラクチャを保護する](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/)」。 Azure Site Recovery を使用して Azure 仮想マシンのレプリケーション、フェールオーバー、フェールバックをカスタマイズすることで、Azure インフラストラクチャのディザスター リカバリーを実現します。
 
 ## 要点
 
@@ -295,8 +307,3 @@ lab:
 + Azure Site Recovery は、仮想マシンやアプリケーションの保護を提供するディザスター リカバリー ソリューションです。
 + Azure Site Recovery では、ワークロードがセカンダリ サイトにレプリケートされるため、障害または災害が発生した場合でも、セカンダリ サイトにフェールオーバーして最小限のダウンタイムで操作を再開できます。
 + Recovery Services コンテナーはバックアップ データを格納し、管理オーバーヘッドを最小限に抑えます。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure Backup を使用して仮想マシンを保護する](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/)。 Azure Backup を使用して、オンプレミスのサーバー、仮想マシン、SQL Server、Azure ファイル共有、その他のワークロードを保護します。
-+ 「[Azure Site Recovery を使用して Azure インフラストラクチャを保護する](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/)」。 Azure Site Recovery を使用して Azure 仮想マシンのレプリケーション、フェールオーバー、フェールバックをカスタマイズすることで、Azure インフラストラクチャのディザスター リカバリーを実現します。

@@ -343,7 +343,23 @@ lab:
 + Azure portal で、リソース グループを選び、**[リソース グループの削除]**、**[リソース グループ名を入力してください]** の順に選び、**[削除]** をクリックします。
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
- 
+
+## Copilot を使用して学習の幅を広げる
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 また、Copilot は、ラボでカバーされていない領域や、詳細情報が必要な場合にも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 これらのプロンプトを試すには数分かかります。
++ Azure に仮想ネットワークをデプロイして構成する際のベスト プラクティス トップ 10 を共有します。
++ Azure PowerShell と Azure CLI コマンドを使用して、パブリック IP アドレスと 1 つのサブネットを持つ仮想ネットワークを作成するにはどうすればよいですか。 
++ Azure ネットワーク セキュリティ グループの受信および送信規則とその使用方法について説明します。
++ Azure ネットワーク セキュリティ グループと Azure アプリケーション セキュリティ グループの違いは何ですか? これらの各グループを使用する場合の例を共有します。 
++ Azure にネットワークをデプロイするときに直面するネットワークの問題をトラブルシューティングする方法の詳細なガイドを提供します。 また、トラブルシューティングのすべての手順で使用される思考プロセスも共有します。
+
+## 自習トレーニングでさらに学習する
+
++ [Azure 仮想ネットワークの概要](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/)。 仮想ネットワーク、パブリック IP とプライベート IP、DNS、仮想ネットワーク ピアリング、ルーティング、Azure Virtual NAT など、主な Azure ネットワーク リインフラストラクチャを設計して実装します。
++ [IP アドレス指定スキームを設計する](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/)。 Azure およびオンプレミスの仮想ネットワークのプライベートとパブリックの IP アドレス指定機能を明らかにします。
++ [ネットワーク セキュリティ グループとサービス エンドポイントを使うことで Azure リソースへのアクセスをセキュリティで保護し、分離する](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/)。 ネットワーク セキュリティ グループとサービス エンドポイントを使って、自分の仮想マシンと Azure サービスを未承認のネットワーク アクセスからセキュリティで保護することができます。
++ [Azure DNS でドメインをホストする](https://learn.microsoft.com/training/modules/host-domain-azure-dns/)。 ドメイン名の DNS ゾーンを作成します。 DNS レコードを作成し、ドメインを IP アドレスにマップします。 ドメイン名が Web サーバーに解決されることをテストします。
+  
 ## 要点
 
 以上でラボは完了です。 このラボの要点は次のとおりです。 
@@ -354,11 +370,3 @@ lab:
 + ネットワーク セキュリティ グループには、ネットワーク トラフィックを許可または拒否するセキュリティ規則が含まれています。 受信と送信の既定の規則があり、ニーズに合わせてカスタマイズできます。
 + アプリケーション セキュリティ グループは、Web サーバーやデータベース サーバーなど、共通の機能を持つサーバーのグループを保護するために使用されます。
 + Azure DNS は DNS ドメインのホスティング サービスであり、名前解決を提供します。 パブリック ドメイン内のホスト名を解決するように Azure DNS を構成できます。  また、プライベート DNS ゾーンを使用して、Azure 仮想ネットワーク内の仮想マシン (VM) に DNS 名を割り当てることもできます。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure 仮想ネットワークの概要](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/)。 仮想ネットワーク、パブリック IP とプライベート IP、DNS、仮想ネットワーク ピアリング、ルーティング、Azure Virtual NAT など、主な Azure ネットワーク リインフラストラクチャを設計して実装します。
-+ [IP アドレス指定スキームを設計する](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/)。 Azure およびオンプレミスの仮想ネットワークのプライベートとパブリックの IP アドレス指定機能を明らかにします。
-+ [ネットワーク セキュリティ グループとサービス エンドポイントを使うことで Azure リソースへのアクセスをセキュリティで保護し、分離する](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/)。 ネットワーク セキュリティ グループとサービス エンドポイントを使って、自分の仮想マシンと Azure サービスを未承認のネットワーク アクセスからセキュリティで保護することができます。
-+ [Azure DNS でドメインをホストする](https://learn.microsoft.com/training/modules/host-domain-azure-dns/)。 ドメイン名の DNS ゾーンを作成します。 DNS レコードを作成し、ドメインを IP アドレスにマップします。 ドメイン名が Web サーバーに解決されることをテストします。
-  
