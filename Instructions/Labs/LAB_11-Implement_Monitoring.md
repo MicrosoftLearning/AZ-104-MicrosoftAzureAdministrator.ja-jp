@@ -249,6 +249,18 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+## Copilot を使用して学習を拡張する
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
+
++ 仮想マシンがダウンしたときに Azure でアラートを生成する基本的な構成手順は何ですか?
++ Azure アラートがトリガーされたときに通知を受け取る方法は?
++ 仮想マシンの CPU パフォーマンス情報を提供する Azure Monitor クエリを作成してください。
+
+## 自習トレーニングでさらに学習する
+
++ [Azure のアラートを使用したインシデント対応の向上](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/)。 Azure Monitor のアラート機能を使用して、インフラストラクチャ内のインシデントとアクティビティに対応します。
++ [Azure Monitor を使用して Azure 仮想マシンを監視する](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/)。 Azure Monitor を使って Azure VM を監視し、VM ホストとクライアントのメトリックとログを収集して分析します。
+
 ## 要点
 
 以上でラボは完了です。 このラボの要点は次のとおりです。 
@@ -258,8 +270,3 @@ lab:
 + 警告ルールでは、データを監視し、指定されたリソースで何かが起こっていることを示すシグナルをキャプチャします。
 + アラート ルールの条件に一致した場合、アラートがトリガーされます。 複数のアクション (メール、SMS、プッシュ、音声) をトリガーできます。
 + アクション グループには、アラートの通知を受け取る必要がある個人が含まれます。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure のアラートを使用したインシデント対応の向上](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/)。 Azure Monitor のアラート機能を使用して、インフラストラクチャ内のインシデントとアクティビティに対応します。
-+ [Azure Monitor を使用して Azure 仮想マシンを監視する](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/)。 Azure Monitor を使って Azure VM を監視し、VM ホストとクライアントのメトリックとログを収集して分析します。

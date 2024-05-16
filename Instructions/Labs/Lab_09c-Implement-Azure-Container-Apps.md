@@ -75,6 +75,15 @@ Azure Container Apps は、マネージド Kubernetes クラスターの概念�
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+## Copilot を使用して学習を拡張する
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
+
++ Azure コンテナー アプリと環境を作成して構成する手順をまとめてください。
++ Azure Container Apps と Azure Kubernetes Service の類似点と相違点を説明してください。
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Container Apps でコンテナー アプリを構成する](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/)。 Azure Container Apps の特徴と機能を調べた後、Azure Container Apps を使用してコンテナー アプリの作成、構成、スケーリング、管理を行う方法に焦点を当てます。
 
 
 ## 要点
@@ -85,7 +94,4 @@ Azure Container Apps は、マネージド Kubernetes クラスターの概念�
 + Container Apps は、サーバー構成、コンテナー オーケストレーション、デプロイの詳細を提供します。 
 + ACA のワークロードは、通常、Web アプリのような実行時間の長いプロセスです。
 
-## 自習トレーニングでさらに学習する
-
-+ [Azure Container Apps でコンテナー アプリを構成する](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/)。 Azure Container Apps の特徴と機能を調べた後、Azure Container Apps を使用してコンテナー アプリの作成、構成、スケーリング、管理を行う方法に焦点を当てます。
      

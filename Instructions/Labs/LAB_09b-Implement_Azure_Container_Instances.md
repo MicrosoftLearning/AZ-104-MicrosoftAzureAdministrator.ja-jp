@@ -95,6 +95,15 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+## Copilot を使用して学習を拡張する
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
+
++ Azure コンテナー インスタンスと環境を作成して構成する手順をまとめてください。
++ Azure でサーバーレス コンテナーを実行する方法は何?
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Container Instances でコンテナー イメージを実行する](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/)。 Azure Container Instances を使ってコンテナーを迅速にデプロイする方法、環境変数を設定する方法、コンテナーの再起動ポリシーを指定する方法について説明します。
 
 ## 要点
 
@@ -104,9 +113,5 @@ lab:
 + ACI では、基になるインフラストラクチャをプロビジョニングまたは管理する必要はありません。
 + ACI は、Linux コンテナーと Windows コンテナーの両方をサポートします。
 + ACI 上のワークロードは、通常、何らかのプロセスまたはトリガーによって開始および停止され、通常、有効期間は短期です。 
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure Container Instances でコンテナー イメージを実行する](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/)。 Azure Container Instances を使ってコンテナーを迅速にデプロイする方法、環境変数を設定する方法、コンテナーの再起動ポリシーを指定する方法について説明します。
 
     

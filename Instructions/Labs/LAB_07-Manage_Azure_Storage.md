@@ -10,7 +10,7 @@ lab:
 
 このラボでは、Azure BLOB と Azure ファイル用のストレージ アカウントを作成する方法について学習します。 BLOB コンテナーを構成してセキュリティで保護する方法について学習します。 ストレージ ブラウザーを使って、Azure ファイル共有を構成してセキュリティで保護する方法についても学習します。 
 
-このラボでは Azure サブスクリプションが必要です。 お使いのサブスクリプションの種類によっては、このラボの機能が使用可能かどうかに影響がある場合があります。 リージョンを変更できますが、手順は**米国東部**を使って作成されています。
+このラボでは Azure サブスクリプションが必要です。 お使いのサブスクリプションの種類により、このラボの機能が使用できるかどうかに影響する可能性があります。 リージョンを変更できますが、手順は**米国東部**を使って作成されています。
 
 ## 推定時間:50 分
 
@@ -20,7 +20,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役に立つ可能性がある対話型ラボ シミュレーションがあります。 シミュレーションを使うと、類似のシナリオを自分のペースでクリックして進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。 
+このトピックで役に立つ対話型ラボ シミュレーションがあります。 シミュレーションを使うと、同様のシナリオを自分のペースでクリックして進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。 
 
 + [BLOB ストレージを作成します](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%205)。 ストレージ アカウントを作成し、BLOB ストレージを管理し、ストレージ アクティビティを監視します。 
   
@@ -241,9 +241,21 @@ lab:
 
 **自分のサブスクリプション**で作業している場合は、お手数ですが、ラボ リソースを削除してください。 これにより、リソースが確実に解放されるため、コストが最小限に抑えられます。 ラボ リソースを削除する最も簡単な方法は、ラボ リソース グループを削除することです。 
 
-+ Azure portal で、リソース グループを選び、**[リソース グループを削除します]**、**[リソース グループ名を入力してください]** の順に選び、**[削除]** をクリックします。
++ Azure portal で、リソース グループを選び、**[リソース グループの削除]**、**[リソース グループ名を入力してください]** の順に選び、**[削除]** をクリックします。
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
+
+## Copilot を使用して学習の幅を広げる
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 また、Copilot は、ラボでカバーされていない領域や、詳細情報が必要な場合にも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
+
++ BLOB コンテナーを使用してストレージ アカウントを作成する Azure PowerShell スクリプトを提供します。 
++ Azure ストレージ アカウントが安全であることを確認するために使用できるチェックリストを提供します。
++ Azure ストレージの冗長モデルを比較するテーブルを作成します。
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Blob Storage を使用してコストを最適化する](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/)。 Azure Blob Storage を使用してコストを最適化する方法について学習します。
++ [Shared Access Signature を使用して Azure Storage へのアクセスを制御する](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/)。 Shared Access Signature を使用して、Azure Storage アカウントに格納されているデータへのアクセスを安全に許可します。
 
 ## 要点
 
@@ -254,8 +266,3 @@ lab:
 + Azure Blob ストレージを使用すると、Microsoft のデータ ストレージ プラットフォームに大量の非構造化データを格納できます。 BLOB とは Binary Large Object の略であり、画像やマルチメディア ファイルなどのオブジェクトが含まれます。
 + Azure File ストレージは、構造化データ用の共有ストレージを提供します。 データはフォルダーに整理できます。
 + 不変ストレージは、データを Write Once Read Many (WORM) 状態で格納する機能を提供します。 不変ストレージ ポリシーは、時間ベースまたは訴訟ホールドにできます。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure Blob Storage を使用してコストを最適化する](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/)。 Azure Blob Storage を使用してコストを最適化する方法について学習します。
-+ [Shared Access Signature を使用して Azure Storage へのアクセスを制御する](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/)。 Shared Access Signature を使用して、Azure Storage アカウントに格納されているデータへのアクセスを安全に許可します。

@@ -418,6 +418,18 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+## Copilot を使用して学習を拡張する
+Copilot は、Azure のスクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動してください。 これらのプロンプトを試すには数分かかります。
+
++ Linux 仮想マシンを作成するための手順と Azure CLI コマンドを教えてください。 
++ 仮想マシンをスケーリングしてパフォーマンスを向上できる方法を概説してください。
++ Azure Storage のライフサイクル管理ポリシーと、それらによってコストを最適化できる方法について説明してください。
+
+## 自習トレーニングでさらに学習する
+
++ [Azure で Windows 仮想マシンを作成する](https://learn.microsoft.com/training/modules/create-windows-virtual-machine-in-azure/)。 Azure portal を使用して Windows 仮想マシンを作成します。 リモート デスクトップを使用して実行中の Windows 仮想マシンに接続する
++ [Virtual Machine Scale Sets を使用してスケーラブルなアプリケーションを構築する](https://learn.microsoft.com/training/modules/build-app-with-scale-sets/)。 Virtual Machine Scale Sets のコストを最小限に抑えながら、負荷の変化に合わせてアプリケーションを自動的に調整できるようにします。
++ [Azure Bastion を使用して Azure portal から仮想マシンに接続する](https://learn.microsoft.com/en-us/training/modules/connect-vm-with-azure-bastion/)。 Azure Bastion をデプロイして Azure portal 内で直接 Azure 仮想マシンに安全に接続して既存のジャンプボックス ソリューションを効果的に置き換え、診断ログを使用してリモート セッションを監視し、ユーザー セッションを切断してリモート セッションを管理します。
 
 ## 要点
 
@@ -429,10 +441,3 @@ lab:
 + Azure Virtual Machine Scale Sets では、負荷分散が行われる VM のグループを作成して管理することができます。
 + 仮想マシン スケール セット内の仮想マシンは、同じイメージと構成から作成されます。
 + 仮想マシン スケール セットでは、VM インスタンスの数は、需要または定義されたスケジュールに応じて自動的に増減できます。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure で Windows 仮想マシンを作成する](https://learn.microsoft.com/training/modules/create-windows-virtual-machine-in-azure/)。 Azure portal を使用して Windows 仮想マシンを作成します。 リモート デスクトップを使用して実行中の Windows 仮想マシンに接続する
-+ [Virtual Machine Scale Sets を使用してスケーラブルなアプリケーションを構築する](https://learn.microsoft.com/training/modules/build-app-with-scale-sets/)。 Virtual Machine Scale Sets のコストを最小限に抑えながら、負荷の変化に合わせてアプリケーションを自動的に調整できるようにします。
-+ [Azure Bastion を使用して Azure portal から仮想マシンに接続する](https://learn.microsoft.com/en-us/training/modules/connect-vm-with-azure-bastion/)。 Azure Bastion をデプロイして Azure portal 内で直接 Azure 仮想マシンに安全に接続して既存のジャンプボックス ソリューションを効果的に置き換え、診断ログを使用してリモート セッションを監視し、ユーザー セッションを切断してリモート セッションを管理します。
-  

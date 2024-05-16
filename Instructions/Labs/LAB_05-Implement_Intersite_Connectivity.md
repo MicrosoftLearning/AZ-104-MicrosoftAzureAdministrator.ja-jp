@@ -287,6 +287,18 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+## Copilot を使用して学習を拡張する
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
+
++ Azure PowerShell または Azure CLI コマンドを使用し、vnet1 と vnet2 の間に仮想ネットワーク ピアリングを追加するにはどうすればよいですか?
++ Azure でサポートされているさまざまな Azure およびサード パーティの監視ツールを強調表示したテーブルを作成してください。 各ツールを使用するタイミングを強調表示してください。 
++ Azure でカスタム ネットワーク ルートを作成するタイミングは?
+
+## 自習トレーニングでさらに学習する
+
++ [Azure 仮想ネットワーク全体にサービスを分散させ、仮想ネットワーク ピアリングを使用して統合する](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/)。 仮想ネットワーク ピアリングを使用し、セキュリティで保護され、複雑さを最小限に抑えた方法により、仮想ネットワーク間で通信できるようにします。
++ [ルートを使用して Azure デプロイでのトラフィック フローを管理および制御する](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/)。 カスタム ルートを実装して Azure 仮想ネットワークのトラフィックを制御する方法について学習します。
+
 
 ## 要点
 
@@ -298,8 +310,3 @@ lab:
 + ピアリングされた仮想ネットワーク内の仮想マシン間のトラフィックには、Microsoft のバックボーンインフラストラクチャが使用されます。
 + システム定義ルートは、仮想ネットワーク内のサブネットごとに自動的に作成されます。 ユーザー定義ルートは、既定のシステム ルートをオーバーライドする、または追加されます。 
 + Azure Network Watcher には、Azure IaaS リソースのメトリックとログを監視、診断、表示する一連のツールが用意されています。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure 仮想ネットワーク全体にサービスを分散させ、仮想ネットワーク ピアリングを使用して統合する](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/)。 仮想ネットワーク ピアリングを使用し、セキュリティで保護され、複雑さを最小限に抑えた方法により、仮想ネットワーク間で通信できるようにします。
-+ [ルートを使用して Azure デプロイでのトラフィック フローを管理および制御する](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/)。 カスタム ルートを実装して Azure 仮想ネットワークのトラフィックを制御する方法について学習します。

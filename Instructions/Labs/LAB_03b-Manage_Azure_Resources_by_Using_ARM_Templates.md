@@ -252,18 +252,15 @@ lab:
 + Azure portal で、リソース グループを選び、**[リソース グループの削除]**、**[リソース グループ名を入力してください]** の順に選び、**[削除]** をクリックします。
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
-  
-## 要点
 
-以上でラボは完了です。 このラボの要点は次のとおりです。 
+## Copilot を使用して学習を拡張する
 
-+ Azure Resource Manager テンプレートではソリューションのすべてのリソースをグループとしてデプロイ、管理、監視でき、リソースを個別に扱う必要がありません。
-+ Azure Resource Manager テンプレートは JavaScript Object Notation (JSON) ファイルであり、スクリプトではなく宣言によってインフラストラクチャを管理できます。
-+ テンプレート内のインライン値としてパラメータを渡すのではなく、パラメータ値を含む別の JSON ファイルを使用することができます。
-+ Azure Resource Manager テンプレートは、Azure portal、Azure PowerShell、および CLI などのさまざまな方法でデプロイすることができます。
-+ Bicep は、Azure Resource Manager テンプレートの代替手段です。 Bicep は宣言型の構文を使用して Azure リソースをデプロイします。 
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
 
-Bicep では、簡潔な構文、信頼性の高いタイプ セーフ、およびコードの再利用のサポートが提供されます。 Bicep により、Azure のコードとしてのインフラストラクチャ ソリューションに最適な作成エクスペリエンスをオファーします。
++ Azure Resource Manager テンプレート ファイルの形式は何ですか? 各コンポーネントについて例を使用して説明してください。 
++ 既存の Azure Resource Manager テンプレートを使用する方法は?
++ Azure Resource Manager テンプレートと Bicep テンプレートの類似点と相違点を説明してください。 
+
 
 ## 自習トレーニングでさらに学習する
 
@@ -272,5 +269,16 @@ Bicep では、簡潔な構文、信頼性の高いタイプ セーフ、およ�
 + [Windows PowerShell を使用して Azure リソースを管理する](https://learn.microsoft.com/training/modules/manage-azure-resources-windows-powershell/)。 このモジュールでは、クラウド サービス管理に必要なモジュールをインストールし、PowerShell コマンドを使用して、Azure 仮想マシン、Azure サブスクリプション、Azure ストレージ アカウントなどのクラウド リソースに対して簡単な管理タスクを実行する方法について説明します。
 + [Bash の概要](https://learn.microsoft.com/training/modules/bash-introduction/)。 Bash を使って IT インフラストラクチャを管理します。
 + [初めての Bicep テンプレートを作成する](https://learn.microsoft.com/training/modules/build-first-bicep-template/)。 Bicep テンプレート内で Azure リソースを定義します。 デプロイの一貫性と信頼性を向上させ、必要な手作業の労力を減らし、環境間でデプロイを拡張します。 テンプレートは柔軟性があり、パラメーター、変数、式、モジュールを使用して再利用できます。
+
+## 要点
+
+以上でラボは完了です。 このラボの要点は次のとおりです。 
+
++ Azure Resource Manager テンプレートではソリューションのすべてのリソースをグループとしてデプロイ、管理、監視でき、リソースを個別に扱う必要がありません。
++ Azure Resource Manager テンプレートは JavaScript Object Notation (JSON) ファイルであり、スクリプトではなく宣言によってインフラストラクチャを管理できます。
++ テンプレート内のインライン値としてパラメータを渡すのではなく、パラメータ値を含む別の JSON ファイルを使用することができます。
++ Azure Resource Manager テンプレートは、Azure portal、Azure PowerShell、および CLI などのさまざまな方法でデプロイすることができます。
++ Bicep は、Azure Resource Manager テンプレートの代替手段です。 Bicep は宣言型の構文を使用して Azure リソースをデプロイします。
++ Bicep では、簡潔な構文、信頼性の高いタイプ セーフ、およびコードの再利用のサポートが提供されます。 Bicep により、Azure のコードとしてのインフラストラクチャ ソリューションに最適な作成エクスペリエンスをオファーします。
 
 

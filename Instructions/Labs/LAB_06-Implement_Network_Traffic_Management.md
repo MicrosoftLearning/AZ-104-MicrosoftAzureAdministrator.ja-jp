@@ -322,7 +322,21 @@ lab:
 + Azure portal で、リソース グループを選び、**[リソース グループの削除]**、**[リソース グループ名を入力してください]** の順に選び、**[削除]** をクリックします。
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
-  
+
+## Copilot を使用して学習を拡張する
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
+
++ Azure Load Balancer と Azure Application Gateway の類似点と相違点を説明してください。
++ Azure Load Balancer の受信接続の問題を解決する方法は?
++ Azure Application Gateway を構成するための基本的な手順は何ですか?
++ Azure 負荷分散ソリューションを強調表示するテーブルを作成してください。 次の列を含めてください。サポートされているプロトコル、プライベート負荷分散、グローバル負荷分散、ルーティング ポリシー、サポートされている環境、接続ドレイン、セッション アフィニティ、ホストとパスベースの負荷分散、TLS オフロード、サイト アクセラレーション、セキュリティ、キャッシュ、圧縮。
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Load Balancer を使用してアプリケーションのスケーラビリティと回復性を向上させる](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/)。 Azure のさまざまなロード バランサーと、ご自身の要件を満たすために適切な Azure Load Balancer ソリューションを選択する方法について説明します。
++ [Application Gateway で Web サービスのトラフィックを負荷分散する](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/)。 複数のサーバーに負荷を分散し、パスベースのルーティングを使って Web トラフィックを転送することにより、アプリケーションの回復性を向上させます。
+
 ## 要点
 
 以上でラボは完了です。 このラボの要点は次のとおりです。
@@ -333,8 +347,3 @@ lab:
 + Azure Application Gateway は、Web アプリケーションに対するトラフィックを管理できる Web トラフィック (OSI レイヤー 7) ロード バランサーです。
 + Application Gateway の Standard レベルでは、負荷分散を含むすべての L7 機能が提供されます。WAF 層では、悪意のあるトラフィックを調べるためのファイアウォールが追加されます。
 + Application Gateway は、URI パスやホスト ヘッダーなど、HTTP 要求の追加属性に基づいて、ルーティングの決定を行うことができます。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure Load Balancer を使用してアプリケーションのスケーラビリティと回復性を向上させる](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/)。 Azure のさまざまなロード バランサーと、ご自身の要件を満たすために適切な Azure Load Balancer ソリューションを選択する方法について説明します。
-+ [Application Gateway で Web サービスのトラフィックを負荷分散する](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/)。 複数のサーバーに負荷を分散し、パスベースのルーティングを使って Web トラフィックを転送することにより、アプリケーションの回復性を向上させます。
