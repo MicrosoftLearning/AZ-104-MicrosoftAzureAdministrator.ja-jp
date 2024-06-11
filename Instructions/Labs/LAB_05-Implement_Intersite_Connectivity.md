@@ -77,7 +77,7 @@ lab:
 
     | 設定 | 値 | 
     | --- | --- |
-    | 名前 | `CoreServicesVNet` ([新規作成]) |
+    | 名前 | `CoreServicesVnet` ([新規作成]) |
     | アドレス範囲 | `10.0.0.0/16`  |
     | サブネット名 | `Core` | 
     | サブネットのアドレス範囲 | `10.0.0.0/24` |
@@ -122,7 +122,7 @@ lab:
 
     | 設定 | 値 | 
     | --- | --- |
-    | 名前 | `ManufacturingVNet` |
+    | 名前 | `ManufacturingVnet` |
     | アドレス範囲 | `172.16.0.0/16`  |
     | サブネット名 | `Manufacturing` |
     | サブネットのアドレス範囲 | `172.16.0.0/24` |
@@ -177,20 +177,20 @@ lab:
 | --------------------------------------------- | ------------------------------------- |
 | **この仮想ネットワーク**                                       |                                       |
 | [Peering link name](ピアリング リンク名)                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| ’CoreServicesVNet’ に ’ManufacturingVnet’ へのアクセスを許可する            | 選択済み (既定値)                       |
-| ’ManufacturingVnet’ からのトラフィック転送の受信を ’CoreServicesVNet’ に許可する | 選択済み                       |
-| ’CoreServicesVNet’ 内のゲートウェイに ’ManufacturingVnet’ へのトラフィックの転送を許可する | 未選択 (既定値) |
-| ’ManufacturingVnet’ のリモート ゲートウェイを使用するために ’CoreServicesVNet’ を有効にする       | 未選択 (既定値)                        |
+| ピアリングされた仮想ネットワークに対するアクセスを CoreServicesVnet に許可する            | 選択済み (既定値)                       |
+| ピアリングされた仮想ネットワークから転送されたトラフィックを受信することを CoreServicesVnet に許可する | 選択済み                       |
+| ピアリングされた仮想ネットワークにトラフィックを転送することを CoreServicesVnet 内のゲートウェイに許可する | 未選択 (既定値) |
+| ピアリングされた仮想ネットワークのリモート ゲートウェイを CoreServicesVnet で使用できるようにする       | 未選択 (既定値)                        |
 | **リモート仮想ネットワーク**                                   |                                       |
 | [Peering link name](ピアリング リンク名)                             | `ManufacturingVnet-to-CoreServicesVnet` |
 | 仮想ネットワークのデプロイ モデル              | **リソース マネージャー**                      |
 | リソース ID を知っている                         | オフ                          |
 | サブスクリプション                                  | *該当するサブスクリプション*    |
 | 仮想ネットワーク                               | **ManufacturingVnet**                     |
-| ’ManufacturingVnet’ に ’CoreServicesVNet’ へのアクセスを許可する  | 選択済み (既定値)                       |
-| ’CoreServicesVNet’ からのトラフィック転送の受信を ’ManufacturingVnet’ に許可する | 選択済み                        |
-| ’CoreServicesVNet’ 内のゲートウェイに ’ManufacturingVnet’ へのトラフィックの転送を許可する | 未選択 (既定値) |
-| ’CoreServicesVNet’ のリモート ゲートウェイを使用するために ’ManufacturingVnet’ を有効にする       | 未選択 (既定値)                        |
+| CoreServicesVnet に対するアクセスを ManufacturingVnet に許可する  | 選択済み (既定値)                       |
+| CoreServicesVnet から転送されたトラフィックを ManufacturingVnet が受信することを許可する | 選択済み                        |
+| ピアリングされた仮想ネットワークにトラフィックを転送することを CoreServicesVnet 内のゲートウェイに許可する | 未選択 (既定値) |
+| ManufacturingVnet で CoreServicesVnet のリモート ゲートウェイを使用できるようにする       | 未選択 (既定値)                        |
 
 1. 設定を確認し、**[追加]** を選択します。
 
@@ -287,6 +287,18 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+## Copilot を使用して学習を拡張する
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
+
++ Azure PowerShell または Azure CLI コマンドを使用し、vnet1 と vnet2 の間に仮想ネットワーク ピアリングを追加するにはどうすればよいですか?
++ Azure でサポートされているさまざまな Azure およびサード パーティの監視ツールを強調表示したテーブルを作成してください。 各ツールを使用するタイミングを強調表示してください。 
++ Azure でカスタム ネットワーク ルートを作成するタイミングは?
+
+## 自習トレーニングでさらに学習する
+
++ [Azure 仮想ネットワーク全体にサービスを分散させ、仮想ネットワーク ピアリングを使用して統合する](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/)。 仮想ネットワーク ピアリングを使用し、セキュリティで保護され、複雑さを最小限に抑えた方法により、仮想ネットワーク間で通信できるようにします。
++ [ルートを使用して Azure デプロイでのトラフィック フローを管理および制御する](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/)。 カスタム ルートを実装して Azure 仮想ネットワークのトラフィックを制御する方法について学習します。
+
 
 ## 要点
 
@@ -298,8 +310,3 @@ lab:
 + ピアリングされた仮想ネットワーク内の仮想マシン間のトラフィックには、Microsoft のバックボーンインフラストラクチャが使用されます。
 + システム定義ルートは、仮想ネットワーク内のサブネットごとに自動的に作成されます。 ユーザー定義ルートは、既定のシステム ルートをオーバーライドする、または追加されます。 
 + Azure Network Watcher には、Azure IaaS リソースのメトリックとログを監視、診断、表示する一連のツールが用意されています。
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure 仮想ネットワーク全体にサービスを分散させ、仮想ネットワーク ピアリングを使用して統合する](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/)。 仮想ネットワーク ピアリングを使用し、セキュリティで保護され、複雑さを最小限に抑えた方法により、仮想ネットワーク間で通信できるようにします。
-+ [ルートを使用して Azure デプロイでのトラフィック フローを管理および制御する](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/)。 カスタム ルートを実装して Azure 仮想ネットワークのトラフィックを制御する方法について学習します。

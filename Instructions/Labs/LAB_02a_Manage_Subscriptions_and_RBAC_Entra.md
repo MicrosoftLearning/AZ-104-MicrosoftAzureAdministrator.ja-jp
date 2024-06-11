@@ -157,6 +157,19 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
   
+## Copilot を使用して学習を拡張する
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
++ Azure で組織のサブスクリプションに関する情報を取得するための重要な PowerShell コマンドと CLI コマンドを強調表示している 2 つのテーブルを作成し、列 "説明" で各コマンドについて説明してください。 
++ Azure RBAC JSON ファイルの形式は何ですか?
++ カスタム Azure RBAC ロールを作成するための基本的な手順は何ですか?
++ Azure RBAC ロールと Microsoft Entra ロールの違いは何ですか?
+
+## 自習トレーニングでさらに学習する
+
++ [Azure ロールベースのアクセス制御 (Azure RBAC) で Azure リソースをセキュリティ保護する](https://learn.microsoft.com/training/modules/secure-azure-resources-with-rbac/)。 Azure RBAC を使用して、Azure のリソースへのアクセスを管理します。
++ [ロールベースのアクセス制御 (RBAC) を使用して Azure リソースのカスタム ロールを作成する](https://learn.microsoft.com/training/modules/create-custom-azure-roles-with-rbac/)。 アクセス制御のロール定義の構造を理解します。 カスタム ロールのアクセス許可を定義するために使用するロールのプロパティを特定します。 Azure カスタム ロールを作成し、ユーザーに割り当てます。
+
 ## 要点
 
 以上でラボは完了です。 このラボの要点は次のとおりです。 
@@ -166,13 +179,7 @@ lab:
 + Azure には多数の組み込みロールがあります。 これらのロールを割り当てて、リソースへのアクセスを制御できます。
 + 新しいロールを作成することも、既存のロールをカスタマイズすることもできます。
 + ロールは JSON 形式のファイルで定義され、*Actions*、*NotActions*、*AssignableScopes* が含まれます。
-+ アクティビティ ログを使用して、ロールの割り当てを監視できます。 
-
-## 自習トレーニングでさらに学習する
-
-+ [Azure ロールベースのアクセス制御 (Azure RBAC) で Azure リソースをセキュリティ保護する](https://learn.microsoft.com/training/modules/secure-azure-resources-with-rbac/)。 Azure RBAC を使用して、Azure のリソースへのアクセスを管理します。
-+ [ロールベースのアクセス制御 (RBAC) を使用して Azure リソースのカスタム ロールを作成する](https://learn.microsoft.com/training/modules/create-custom-azure-roles-with-rbac/)。 アクセス制御のロール定義の構造を理解します。 カスタム ロールのアクセス許可を定義するために使用するロールのプロパティを特定します。 Azure カスタム ロールを作成し、ユーザーに割り当てます。
-
++ アクティビティ ログを使用して、ロールの割り当てを監視できます。
 
 
 
