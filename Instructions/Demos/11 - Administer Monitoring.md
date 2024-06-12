@@ -1,52 +1,52 @@
 ---
 demo:
-  title: 'デモ 11: 監視を管理する'
-  module: Administer Monitoring
+    title: 'Demonstration 11: Administer Monitoring'
+    module: 'Administer Monitoring'
 ---
 
-# 11 - 監視を管理する
+# 11 - Administer Monitoring
 
-## Azure アラートを構成する
+## Configure Azure Alerts
 
-このデモでは、アラート ルールを作成します。
+In this demonstration, we will create an alert rule.
 
-**リファレンス**: [Azure Monitor を使用してメトリック アラートを作成、表示、および管理する](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-metric)
+**Reference**: [Create, view, and manage Metric Alerts Using Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-metric)
 
-**アラート ルールを作成する**
+**Create an alert rule**
 
-1. Azure portal を使用します。
+1. Use the Azure portal.
 
-1. **Monitor** を検索して選択したら、 **[アラート]** を選択します。
+1. Search for and select **Monitor** and then **Alerts**.
 
-1. アラート ルールのスコープを選択します。 サブスクリプション、リソースの種類、リソースの場所でフィルター処理する方法について説明します。
+1. Select a scope for the alert rule. Discuss how You can filter by subscription, resource type, or resource location.
 
-1. アラート ルールの条件を設定します。 シグナルによって測定対象がどのように定義されるかについて説明します。 
+1. Set the conditions for the alert rule. Discuss how signals define what you want to measure. 
 
-1. アラート ルールのアクションを設定します。 アクション グループ、および使用可能な通知の種類を確認します。 
+1. Set the actions for the alert rule. Review action groups and the type of notifications that are available. 
 
-1. 警告ルールの詳細を設定します。 重大度などの一般的な詳細を確認します。 
+1. Set the details for the alert rule. Review common details like severity. 
 
-1. アラートの構成を完了し、発生したアラートを確認します。 
+1. Finish configuring your alert and review any alerts which have fired. 
 
-## Log Analytics の構成
+## Configure Log Analytics
 
-このデモでは、ログ分析クエリ言語を使用します。
+In this demonstration, you will work with the Log Analytics query language.
 
-1. Azure portal を使用します。
+1. Use the Azure portal.
 
-1. **Monitor** を検索して選択したら、 **[ログ]** を選択します。
+1. Search for and select **Monitor** and then **Logs**.
 
-1. 表示されている場合は、スプラッシュ スクリーンを閉じます。
+1. If shown, close the splash screen.
 
-1. スコープを選択し、変更を **[適用]** します。 
+1. Select a scope and **apply** your changes. 
 
-1. ログ情報をテーブルに整理する方法を確認します。 いくつかのテーブルを参照します。
+1. Review how log information is organized in tables. Browse several of the tables.
 
-1. **[クエリ]** タブに移動します。クエリを選択して、 **[エディターに読み込む]** を選択します。 既に作成されている一般的なクエリの数について説明します。
+1. Move to the **queries** tab. Select a query and **load to editor**. Discuss how many common queries have already been created.
 
-1. KQL 構文を簡単に確認します。 
+1. Briefly review the KQL syntax. 
 
-1. 時間があれば、 **[お気に入り]**   と  **[保存済みのクエリ]** で試してみてください。
+1. As you have time, experiment with **Favorites** and **Saved Queries**.
 
 
 

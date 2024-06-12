@@ -1,62 +1,62 @@
 ---
 demo:
-  title: 'デモ 10: データ保護を管理する'
-  module: Administer Data Protection
+    title: 'Demonstration 10: Administer Data Protection'
+    module: 'Administer Data Protection'
 ---
 
-# 10 - データ保護を管理する
+# 10 - Administer Data Protection
 
-## Azure ファイル共有をバックアップする
+## Backup Azure File Shares
 
-このデモでは、Azure Portal でのファイル共有のバックアップについて詳しく見ていきます。
+In this demonstration, we will explore backing up a file share in the Azure portal.
 
-> **注:** このデモでは、ファイル共有を含むストレージ アカウントが必要です。 
+> **Note:** This demonstration requires a storage account with a file share. 
 
-**参照**: [Azure portal 内での Azure ファイル共有をバックアップする](https://docs.microsoft.com/azure/backup/backup-afs)
+**Reference**: [Back up Azure file shares in the Azure portal](https://docs.microsoft.com/azure/backup/backup-afs)
 
-**Recovery Services コンテナーの作成**
+**Create a Recovery Services vault**
 
-1. Azure portal を使用します。
+1. Use the Azure portal.
 
-1. **[Recovery Services コンテナー]** を検索して選択します。
+1. Search for an select **Recovery Services vaults**.
 
-1. **Recovery Services コンテナー**を作成します。 コンテナーがファイル共有と同じリージョンにあるという要件を確認します。 
+1. Create a **Recovery Services Vault**. Review the requirement that the vault be in the same region as the file share. 
 
-1. コンテナーが作成されるまで待ちます。 
+1. Wait for the vault to be created. 
 
-**Azure ファイルのバックアップを構成する**
+**Configure the Azure files backup**
 
-1. **[バックアップ センター]** に移動し、新しい**バックアップ** インスタンスを作成します。
+1. Go to **Backup center** and create a new **Backup** instance.
 
-1. **[データソースの種類]** ドロップダウンで選択内容を確認して説明します。 **[Azure Files (Azure Storage)]** を選択します。 
+1. Review and discuss the choices in the **Datasource type** drop-down. Select **Azure files (Azure storage)**. 
 
-1. **コンテナー**を選択します。
+1. Select your **vault**.
 
-1. バックアップの構成を**続行**します。 バックアップする特定のストレージ アカウントとファイル共有を選択します。  
+1. **Continue** configuring the backup. Select the specific storage account and file share that you want to backup.  
 
-1. **[ポリシーの詳細]** で、 **[このポリシーの編集]** をクリックします。 バックアップ ポリシーの目的について説明します。 **バックアップ スケジュール**と**保有期間の範囲**を確認します。  
+1. In the **Policy details** click **Edit this policy**. Discuss the purpose of backup policies. Review the **backup schedule** and **retention range**.  
 
-1. **バックアップを有効**にして変更内容を保存します。 
+1. **Enable backup** to save your changes. 
 
-1. 時間があれば、**バックアップ インスタンス**を**復元**する方法を確認してください。 **バックアップ ジョブ**を監視する方法も確認します。 
+1. As you have time, review how to **Restore** a **Backup instance**. Also, how to monitor your **Backup jobs**. 
 
-## Azure Virtual Machines のバックアップ
+## Backup Azure Virtual Machines
 
-このデモでは、Recovery Services コンテナーに仮想マシンの毎日のバックアップをスケジュール設定します。
+In this demonstration, we will schedule a daily backup of a virtual machine to a Recovery Services vault.
 
-> **注:** このデモでは、仮想マシンと Recovery Services コンテナーが必要です。
+> **Note:** This demonstration requires a virtual machine and a recovery service vault.
 
-**参照**: [チュートリアル - 複数の Azure 仮想マシンをバックアップする](https://docs.microsoft.com/azure/backup/tutorial-backup-vm-at-scale)
+**Reference**: [Tutorial - Back up multiple Azure virtual machines](https://docs.microsoft.com/azure/backup/tutorial-backup-vm-at-scale)
 
-1. Azure portal を使用します。
+1. Use the Azure portal.
 
-1. **[バックアップ センター]** に移動し、新しい**バックアップ** インスタンスを作成します。
+1. Go to **Backup center** and create a new **Backup** instance.
 
-1. **[データソースの種類]** として **[Azure 仮想マシン]** を選択し、コンテナーを選びます。
+1. Select **Azure Virtual machines** as the **Datasource type** and select the vault.
 
-1. **DefaultPolicy** を確認します。 既定のポリシーでは、1 日に 1 回、仮想マシンがバックアップされます。 毎日のバックアップは 30 日間保持されます。 インスタント回復スナップショットは 2 日間保持されます。
+1. Review the **DefaultPolicy**. The default policy backs up the virtual machine once a day. The daily backups are retained for 30 days. Instant recovery snapshots are retained for two days.
 
-1. **[バックアップを有効にする]** を使用して構成を保存します。
+1. Use **Enable backup** to save your configuration.
 
-1. 時間があれば、**今すぐバックアップ**する方法を確認してください。 **バックアップ ジョブ**を確認する方法も確認します。  
+1. As you have time, review how to **Backup now**. Also, how to review your **Backup jobs**.  
 

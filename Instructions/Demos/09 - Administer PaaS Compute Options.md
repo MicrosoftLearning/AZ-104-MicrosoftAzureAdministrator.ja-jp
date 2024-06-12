@@ -1,106 +1,106 @@
 ---
 demo:
-  title: 'デモ 09: PaaS Compute オプションを管理する'
-  module: Administer PaaS Compute Options
+    title: 'Demonstration 09: Administer PaaS Compute Options'
+    module: 'Administer PaaS Compute Options'
 ---
 
-# 09 - PaaS Compute オプションを管理する
+# 09 - Administer PaaS Compute Options
 
-## Azure App Service プランを構成する
+## Configure Azure App Service Plans
 
-このデモでは、Azure App Service プランを作成して操作します。
+In this demonstration, we will create and work with Azure App Service plans.
 
-**参照**: [App Service プランを管理する - Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-plan-manage)
+**Reference**: [Manage App Service plan - Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-plan-manage)
 
-**参照**: [Azure App Service でアプリをスケールアップする](https://learn.microsoft.com/azure/app-service/manage-scale-up)
+**Reference**: [Scale up an app in Azure App Service](https://learn.microsoft.com/azure/app-service/manage-scale-up)
 
-**参照**: [Azure App Service での自動スケーリング](https://learn.microsoft.com/azure/app-service/manage-automatic-scaling?tabs=azure-portal)
+**Reference**: [Automatic scaling in Azure App Service](https://learn.microsoft.com/azure/app-service/manage-automatic-scaling?tabs=azure-portal)
 
-1. Azure portal を使用します。 
+1. Use the Azure portal. 
 
-1.  **App Service プラン**を検索して選択します。
+1. Search for and select **App Service plans**.
 
-1. シンプルな App Service プランを作成します。 Windows または Linux を選択する必要性について説明します。 ここでまたは次の手順で価格プランについて説明します。 
+1. Create a simple App Service plan. Discuss the need to select Windows or Linux. Discuss pricing plans now or in the next steps. 
 
-1. 新しい App Service プランをデプロイします。 
+1. Deploy your new app service plan. 
 
-1. **[スケールアップ (App Service プラン)]** ブレードを確認します。 **Dev/Test** と**運用**プランの違いについて説明します。 機能の一覧を確認します。 
+1. Review the **Scale up (App Service Plan)** blade. Discuss the difference between **Dev/Test** and **Production** plans. Review the feature list. 
 
-1. **[スケールアウト (App Service プラン)]** ブレードを確認します。 **手動**と**ルールベース**の違いを確認します。 
+1. Review the **Scale out (App Service Plan)** blade. Review the difference between **Manual** and **Rule-based**. 
 
-## Azure App Service を構成する
+## Configure Azure App Services
 
-このデモでは、Docker コンテナーを実行する新しい Web アプリを作成します。 コンテナーにウェルカム メッセージが表示されます。
+In this demonstration, we will create a new web app that runs a Docker container. The container displays a Welcome message.
 
-**参照**: [Web アプリを作成する](https://learn.microsoft.com/training/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=csharp)
+**Reference**: [Create a Web App](https://learn.microsoft.com/training/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=csharp)
 
-このタスクでは、Azure App Service Web アプリを作成します。
+In this task, we will create an Azure App Service Web App.
 
-1. Azure portal を使用します。 
+1. Use the Azure portal. 
 
-1. [App Services] を **検索**して選択します。
+1. Search for and select **App Services**.
 
-1. **Web アプリ**を**作成**します。
+1. **Create** a **Web App**.
 
-    - 公開: **コード**。 その他の選択肢を確認します。
-    - ランタイム スタック: **.Net**。 その他の選択肢を確認します。
-    - オペレーティング システム: **Linux**
+    - Publish: **Code**. Review other choices.
+    - Runtime stack: **.Net**. Review other choices.
+    - Operating system: **Linux**
 
-1. **Free F1** サービス プランを選択します。
+1. Select the **Free F1** service plan.
 
-1. Web アプリを**確認して作成**します。 リソースがデプロイされるまで待ちます。
+1. **Review + create** the web app. Wait for the resource to deploy.
 
-1. **[概要]** ページで、 **[状態]** が **[実行中]** になっていることを確かめます。
+1. On the **Overview** page, ensure the **Status** is **Running**.
 
-1. **[URL]** を選択し、既定のプレースホルダー ページが読み込まれることを確かめます。
+1. Select the **URL** and ensure the default placeholder page loads.
 
-1. 時間があれば、 **[デプロイ スロット]** オプションを調べます。
+1. As you have time, explore the **Deployment slots** options.
    
-## Azure Container Instances を構成する
+## Configure Azure Container Instances
 
-このデモでは、Azure portal で Azure Container Instances (ACI) を使用してコンテナーを作成、構成、デプロイします。 ACI アプリケーションには、パブリック Microsoft Hello World イメージを含む静的 HTML ページが表示されます。 
+In this demonstration we create, configure, and deploy a container by using Azure Container Instances (ACI) from the Azure Portal. The ACI application displays a static HTML page with the public Microsoft Hello World image. 
 
-**参照**: [クイックスタート - コンテナー インスタンスに Docker コンテナーをデプロイする](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
+**Reference**: [Quickstart - Deploy Docker container to container instance](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
 
-1. Azure portal を使用します。
+1. Use the Azure portal.
 
-1.  **コンテナー インスタンス**を検索して選択します。
+1. Search for and select **Container instances**.
 
-1. 新しいコンテナー インスタンスを**作成**します。 
+1. **Create** a new container instance. 
 
-1. **[リソース グループ]** と **[コンテナー名]** を入力します。 
+1. Fill in the **Resource group** and **Container name**. 
 
-1. **[イメージのソース]** オプションについて説明します。 **クイックスタート イメージ**を使用します。
+1. Discuss the **Image source** options. Use **Quickstart images**.
 
-1. **コンテナー イメージ**の場合は、**mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** を使用します。 このサンプル Linux イメージには、静的な HTML ページを返す、Node.js で作成された小さな Web アプリがパッケージ化されています。
+1. For **Container image** use **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)**. This sample Linux image packages a small web app written in Node.js that serves a static HTML page.
 
-1. **[Networking](ネットワーク)** ページで、コンテナーの **DNS 名ラベル**を指定します。 
+1. On the **Networking** page, specify a **DNS name label** for your container. 
 
-1. その他の設定はすべて既定値のままにして、**[確認と作成]** を選択します。
+1. Leave all other settings as their defaults, then select **Review + create**.
 
-1. リソースがデプロイされるまで待ちます。
+1. Wait for the resource to deploy.
 
-1. リソースの [**概要**] ページで、[**状態**] が [**実行中**] であることを確認します。
+1. On the **Overview** page for the resource, ensure the **Status** is **Running**.
 
-1. コンテナー インスタンスの **[FQDN]** に移動し、ウェルカム ページが表示されていることを確かめます。 
+1. Navigate to the **FQDN** for the container instance and ensure the welcome page displays. 
 
-**注**: 追加コストを回避するには、リソースを削除します。 
+**Note**: To avoid additional costs, delete the resource. 
 
-## Azure Container Apps を構成する
+## Configure Azure Container Apps
 
-このデモでは、Azure Container Apps を作成して操作します。 
+In this demonstration, we will create and work with Azure Container Apps. 
 
-**参照**: [クイックスタート: Azure portal を使用して最初のコンテナー アプリをデプロイする](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
+**Reference**: [Quickstart: Deploy your first container app using the Azure portal](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
 
-1. **[コンテナー アプリ**] を検索して選択します。
+1. Search for and select **Container Apps**.
 
-1. **[プロジェクトの詳細]** を完了し、コンテナー アプリ**環境**を作成します。
+1. Complete the **Project details** and create the container apps **environment**.
 
-1. コンテナー アプリを**確認して作成**します。
+1. **Review and create** the container app.
 
-1. **アプリケーションの URL** のリンクを使用して、アプリケーションを表示します。
+1. Use the **Application URL** link to view your application.
 
-1. ブラウザーに **[Azure Container Apps へようこそ]** メッセージが表示されていることを確認します。 
+1. Verify the browser displays the **Welcome to Azure Container Apps** message. 
 
 
 

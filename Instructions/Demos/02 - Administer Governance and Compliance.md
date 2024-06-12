@@ -1,111 +1,112 @@
 ---
+
 demo:
-  title: 'デモ 02: ガバナンスとコンプライアンスを管理する'
-  module: Administer Governance and Compliance
+    title: 'Demonstration 02: Administer Governance and Compliance'
+    module: 'Administer Governance and Compliance'
 ---
 
-# 02 - ガバナンスとコンプライアンスを管理する
+# 02 - Administer Governance and Compliance
 
-## サブスクリプションを構成する
+## Configure Subscriptions
 
-このレッスンには、正式なデモは含まれていません。 
+This area does not have a formal demonstration. 
 
-**リファレンス**: [追加の Azure サブスクリプションを作成する](https://docs.microsoft.com/azure/cost-management-billing/manage/create-subscription)
+**Reference**: [Create an additional Azure subscription](https://docs.microsoft.com/azure/cost-management-billing/manage/create-subscription)
 
-## Azure ポリシーを構成する
+## Configure Azure Policy
 
-このデモでは、Azure Policy を操作します。
+In this demonstration, we will work with Azure policies.
 
-**リファレンス**: [チュートリアル: ポリシーを作成してコンプライアンスを適用する - Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage)
+**Reference**: [Tutorial: Build policies to enforce compliance - Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage)
 
-**ポリシーを割り当てる**
+**Assign a policy**
 
-1.  Azure ポータルにアクセスします。
+1.  Access the Azure portal.
 
-2.   **[ポリシー]** を検索して選択します。
+2.  Search for and select **Policy**.
 
-3.   **[割り当て]**   を選択して、 **[ポリシーの割り当て]** を選択します。
+3.  Select **Assignments** and then **Assign Policy**.
 
-5.  ポリシーの割り当てが適用されるリソースまたはリソースのグループを決定する  **[スコープ]**   について説明してください。
+5.  Discuss the **Scope** which determines what resources or grouping of resources the policy assignment is enforced on.
 
-6.   **[ポリシー定義]** の省略記号を選択して、使用可能な定義の一覧を開きます。 組み込みのポリシー定義を確認するには、しばらく時間がかかります。
+6.  Select the **Policy definition** ellipsis to open the list of available definitions. Take some time to review the built-in policy definitions.
 
-7.   **[許可されている場所]** ポリシーを検索して選択します。 このポリシーでは、リソースをデプロイするときに組織が指定できる場所を制限できます。
+7.  Search for and select the **Allowed locations** policy. This policy enables you to restrict the locations your organization can specify when deploying resources.
 
-8.   **[パラメーター]**   タブに移動し、ドロップダウンを使用して、許可されている場所を 1 つまたは複数選択します。
+8.  Move the **Parameters** tab and using the drop-down select one or more allowed locations.
 
-9.   **[確認と作成]**   をクリックしてから、 **[作成]**   をクリックしてポリシーを作成します。
+9.  Click **Review + create** and then **Create** to create the policy.
 
-**イニシアチブ定義を作成して割り当てる**
+**Create and assign an initiative definition**
 
-1.  [Azure Policy] ページに戻り、[作成] の下の  **[定義]**   を選択します。
+1.  Return to the Azure Policy page and select **Definitions** under Authoring.
 
-2.  ページの上部にある  **[イニシアティブ定義]**   を選択します。
+2.  Select **Initiative Definition** at the top of the page.
 
-3.   **[名前]**   と  **[説明]** を指定します。
+3.  Provide a **Name** and **Description**.
 
-4.  **新しいカテゴリを作成します** 。
+4.  **Create new** Category.
 
-5.  右側のパネルで、 **[許可されている場所]**   ポリシーを **追加** します。
+5.  From the right panel **Add** the **Allowed locations** policy.
 
-6.  選択したポリシーを 1 つ追加します。
+6.  Add one additional policy of your choosing.
 
-7.  変更内容を**保存** して、イニシアティブ定義をサブスクリプションに **割り当て** ます。
+7.  **Save** your changes and then **Assign** your initiative definition to your subscription.
 
-**コンプライアンスを確認する**
+**Check for compliance**
 
-1.  [Azure Policy サービス] ページに戻ります。
+1.  Return to the Azure Policy service page.
 
-2.   **[コンプライアンス]** を選択します。
+2.  Select **Compliance**.
 
-3.  ポリシーのステータスと定義を確認します。
+3.  Review the status of your policy and your definition.
 
-**修復タスクを確認する**
+**Check for remediation tasks**
 
-1.  [Azure Policy サービス] ページに戻ります。
+1.  Return to the Azure Policy service page.
 
-2.   **[修復]** を選択します。
+2.  Select **Remediation**.
 
-3.  一覧に表示されている修復タスクを確認します。
+3.  Review any remediation tasks that are listed.
 
-4. 時間があるときに、ポリシーとイニシアチブを削除します。 
+4. As you have time, remove the policy and the initiative. 
 
-## ロールベースのアクセス制御を構成する
+## Configure Role-Based Access Control
 
-このデモでは、ロールの割り当てについて学習します。
+In this demonstration, we will learn about role assignments.
 
-**リファレンス**: [チュートリアル: Azure portal を使用して Azure リソースへのアクセス権をユーザーに付与する - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal)
+**Reference**: [Tutorial: Grant a user access to Azure resources using the Azure portal - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal)
 
-**リファレンス**: [クイック スタート - Azure リソースに対するユーザーのアクセス権を確認する - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/check-access)
+**Reference**: [Quickstart - Check access for a user to Azure resources - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/check-access)
 
-**アクセス制御ブレードを探す**
+**Locate Access Control blade**
 
-1.  Azure portal にアクセスし、[リソース グループ] を選択します。 使用するリソースグループをメモしておきます。
+1.  Access the Azure portal and select a resource group. Make a note of what resource group you use.
 
-2.   **[アクセス制御 (IAM)]**   ブレードを選択します。
+2.  Select the **Access Control (IAM)** blade.
 
-3.  このブレードはさまざまなリソースに対して使用できるため、アクセス許可の制御が可能になります。
+3.  This blade will be available for many different resources so you can control permissions.
 
-**ロールのアクセス許可を確認する**
+**Review role permissions**
 
-1.   **[ロール]**   タブ (上部) を選択します。
+1.  Select the **Roles** tab (top).
 
-1.  使用できる多数の組み込みロールを確認します。
+1.  Review the large number of built-in roles that are available.
 
-1.  ロールをダブルクリックしてから、 **[アクセス許可]**   (上部) を選択します。
+1.  Double-click a role, and then select **Permissions** (top).
 
-1.  そのロールの **読み取り、書き込み、削除** の各アクションを表示できるまで、ロールの詳細表示を続行します。
+1.  Continue drilling into the role until you can view the **Read, Write, and Delete** actions for that role.
 
-1.   **[アクセス制御 (IAM)]**   ブレードに戻ります。
+1.  Return to the **Access Control (IAM)** blade.
 
-**ロールの割り当てを追加する**
+**Add a role assignment**
 
-1.  ユーザーを作成するか、既存のユーザーを選択します。
+1.  Create a user or select an existing user.
 
-1.   **[ロールの割り当ての追加]** を選択し、ロールを選択します。 たとえば、*所有者* です。
+1.  Select **Add role assignment** and select a role. For example, *owner*.
 
-1.   **[アクセスの確認]** を選択します。
+1.  Select **Check access**.
 
-1.  このユーザー アクセス許可を確認します。
+1.  Review the user permissions.
 
-1.   **割り当てを拒否**できることに注意してください。
+1.  Note that you can **Deny assignments**.

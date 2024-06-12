@@ -1,65 +1,65 @@
 ---
 demo:
-  title: 'デモ 06:ネットワーク トラフィック管理を管理する'
-  module: Administer Network Traffic Management
+    title: 'Demonstration 06: Administer Network Traffic Management'
+    module: 'Administer Network Traffic Management'
 ---
 
 
-# 06 - ネットワーク トラフィック管理を管理する
+# 06 - Administer Network Traffic Management
 
-## Azure Load Balancer を構成する
+## Configure Azure Load Balancer
 
-このデモでは、パブリック ロード バランサーを作成する方法について学習します。 
+In this demonstration, we will learn how to create a public load balancer. 
 
-**注:**  このデモでは、少なくとも 1 つのサブネットを持つ仮想ネットワークが必要です。 
+**Note:** This demonstration requires a virtual network with at least one subnet. 
 
-**リファレンス**: [クイック スタート: Azure portal を使用して、VM の負荷分散を行うパブリック ロード バランサーを作成する](https://learn.microsoft.com/azure/load-balancer/quickstart-load-balancer-standard-public-portal)
+**Reference**: [Quickstart: Create a public load balancer to load balance VMs using the Azure portal](https://learn.microsoft.com/azure/load-balancer/quickstart-load-balancer-standard-public-portal)
 
-**ポータルで選択ヘルプ機能を表示する**
+**Show the portal's help me choose feature**
 
-1. Azure ポータルにアクセスします。
+1. Access the Azure portal.
 
-1. **[負荷分散 - 選択に関するヘルプ]** を検索して選択します。
+1. Search for and select **Load balancing - help me choose**.
 
-1. ウィザードを使用して、さまざまなシナリオについて確認します。
+1. Use the wizard to walk-through different scenarios.
    
-**ロード バランサーを作成する**
+**Create a load balancer**
 
-1. Azure portal で続行します。
+1. Continue in the Azure portal.
 
-1. **[ロード バランサー]** を検索して選択します。 ロード バランサーを**作成**します。 
+1. Search for and select **Load balancer**. **Create** a load balancer. 
 
-1. **[基本]** タブで、 **[SKU]** 、 **[種類]** 、 **[レベル]** について検討します。
+1. On the **Basics** tab, discuss **SKU**, **Type**, and **Tier**.
 
-1. **[フロントエンド IP 構成]** タブで、パブリック IP アドレスの使い方について検討します。
+1. On the **Frontend IP configuration** tab, discuss using a public IP address.
 
-1. **[バックエンド プール]** タブで、IP アドレス範囲を持つ仮想ネットワークを選択します。
+1. On the **Backend pools** tab, select the virtual network with IP address range.
 
-1. **[受信規則]** タブで、負荷分散規則を作成します。 **[プロトコル]** 、 **[ポート]** 、 **[正常性プローブ]** 、 **[セッション永続化]** などのパラメーターについて検討します。 
+1. On the **Inbound rules** tab, create a load balancing rule. Discuss parameters like **Protocol**, **Ports**, **Health probes**, and **Session persistence**. 
 
 
-## Azure Application Gateway を構成する
+## Configure Azure Application Gateway
 
-このデモでは、Azure Application Gateway を作成する方法について学習します。 
+In this demonstration, we will learn how to create an Azure Application Gateway. 
 
-**注**: 作業をシンプルにするために、構成を進める際に新しい仮想ネットワークとサブネットを作成します。 
+**Note**: To keep things simple, create new virtual networks and subnets as you go through the configuration. 
 
-**リファレンス**: [クイック スタート - Azure Application Gateway による Web トラフィックのルーティング - Azure portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
+**Reference**: [Quickstart: Direct web traffic with Azure Application Gateway - Azure portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
 
-**Azure Application Gateway を作成する**
+**Create the Azure Application Gateway**
 
-1. Azure ポータルにアクセスします。
+1. Access the Azure portal.
 
-1. **Azure Application Gateway** を検索して選択します。
+1. Search for and select **Azure Application Gateway**.
 
-1. 新しいゲートウェイを**作成**します。
+1. **Create** a new gateway.
 
-1. **[基本]** タブで、 **[階層]** 、 **[自動スケーリング]** 、 **[インスタンス数]** について検討します。
+1. On the **Basics** tab, discuss **Tiers**, **Autoscaling**, and **Instance counts**.
 
-1. **[フロントエンド]** タブで、IP アドレスの種類について検討します。
+1. On the **Frontends** tab, discuss the IP address types.
 
-1. **[バックエンド]** タブで、空のバックエンド プールを使用するタイミングについて検討します。
+1. On the **Backends** tab, discuss when to use an empty backend pool.
 
-1. **[構成]** タブで、ルーティング規則について検討します。 ロード バランサーの規則と比較します。
+1. On the **Configuration** tab, discuss routing rules. Compare to the load balancer rules.
 
-1. ゲートウェイが作成された後で、バックエンド ターゲットを追加してテストする場合について説明します。 
+1. Explain that after gateway is created, you would then add backend targets and test. 

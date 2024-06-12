@@ -1,100 +1,95 @@
 ---
 demo:
-  title: 'デモ 07: Azure Storage を管理する'
-  module: Administer Azure Storage
+    title: 'Demonstration 07: Administer Azure Storage'
+    module: 'Administer Azure Storage'
 ---
 
 
-# 07 - Azure Storage を管理する
+# 07 - Administer Azure Storage
 
-## ストレージ アカウントを構成する
+## Configure Storage Accounts
 
-このデモでは、ストレージ アカウントを作成します。
+In this demonstration, we will create a storage account.
 
-**参照**: [ストレージ アカウントを作成する](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal)
+**Reference**: [Create a storage account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal)
 
-1. Azure portal を使用します。
+1. Use the Azure portal.
 
-1. ストレージ アカウントの目的を確認します。 
+1. Review the purpose of storage accounts. 
    
-1. **ストレージ アカウント**を検索して選択します。 
+1. Search for and select **Storage Accounts**. 
  
-1. 基本的なストレージ アカウントを作成します。 
+1. Create a basic storage account. 
 
-    - ストレージ アカウントの名前付けに関する要件と、名前が Azure で一意であることの必要性について説明します。 
+	- Discuss the requirements around naming a storage account and the need for the name to be unique in Azure. 
 
-    - さまざまなストレージの種類を確認します。 たとえば、汎用 v2 です。 
+	- Review the different storage kinds. For example, general-purpose v2. 
 
-    - アクセス層の選択肢を確認します。 たとえば、クールおよびホット層です。 
+	- Review the access tier selections. For example, the cool and hot tiers. 
 
-    - その他のタブと設定については、他のデモで説明します。 
+	- Other tabs and settings will be covered in other demonstrations. 
 
-1. ストレージ アカウントを作成し、リソースがデプロイされるまで待ちます。 
-
-
-## Blob Storage を構成する
-
-このデモでは、Blob Storage について説明します。
-
-**注:**  これらの手順では、ストレージ アカウントが必要です。
-
-**参照**: [クイック スタート: BLOB をアップロード、ダウンロード、および一覧表示する](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)
-
-1. Azure portal で、ストレージ アカウントに移動します。
-
-1. Blob Storage の目的を確認します。 
-
-1. BLOB コンテナーを作成します。 コンテナーのアクセス レベルを確認します。 たとえば、プライベート (匿名アクセスなし) です。 
-
-1. BLOB をコンテナーにアップロードします。 時間があれば、詳細設定を確認してください。 たとえば、BLOB の種類や BLOB サイズです。 
-
-## ストレージ セキュリティを構成する
-
-このデモでは、Shared Access Signature を作成します。
-
-**注:**  このデモでは、BLOB コンテナーとアップロードされたファイルを含むストレージ アカウントが必要です。
-
-**参照**: [ストレージ コンテナーの SAS トークンを作成する](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/create-sas-tokens?source=recommendations&view=form-recog-3.0.0)
-
-1. セキュリティで保護する BLOB またはファイルを選択します。 
-
-1. Shared Access Signature (SAS) トークンを生成します。 アクセス許可、開始時刻と有効期限、許可されているプロトコルを確認します。
-
-1. SAS URL を使用して、リソースが確実に表示されるようにします。 
+1. Create the storage account and wait for the resource to deploy. 
 
 
-## Azure Files を構成する 
+## Configure Blob Storage
 
-このデモでは、ファイル共有とスナップショットを操作します。
+In this demonstration, we will explore blob storage.
 
-**注:**  これらの手順では、ストレージ アカウントが必要です。
+**Note:** These steps require a storage account.
 
-**参照**: [Azure ファイル共有を管理するためのクイックスタート](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-portal?tabs=azure-portal)
+**Reference**: [Quickstart: Upload, download, and list blobs](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)
 
-1. ファイル共有の目的を確認します。 
+1. Navigate to a storage account in the Azure portal.
 
-1. ストレージ アカウントにアクセスし、 **[ファイル]** をクリックします。
+1. Review the purpose of blob storage. 
 
-1. ファイル共有を作成します。 クォータを確認し、ファイルをアップロードし、ディレクトリを追加して情報を整理します。 
+1. Create a blob container. Review the level of access for the container. For example, private (no anonymous access). 
 
-1. ファイル共有スナップショットを作成します。 スナップショットを使用するタイミングと、スナップショットとバックアップの違いを確認します。 時間があれば、ファイルのアップロード、スナップショットの取得、ファイルの削除、スナップショットの復元を行います。
+1. Upload a blob to the container. As you have time review the advanced settings. For example, blob type and blob size. 
+
+## Configure Storage Security
+
+In this demonstration, we will create a shared access signature.
+
+**Note:** This demonstration requires a storage account, with a blob container, and an uploaded file.
+
+**Reference**: [Create SAS tokens for storage containers](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/create-sas-tokens?source=recommendations&view=form-recog-3.0.0)
+
+1. Select a blob or file that you want to secure. 
+
+1. Generate a shared access signature (SAS). Review the permissions, start and expiry times, and allowed protocols.
+
+1. Use the SAS URL to ensure the resource displays. 
 
 
-## Storage ツール (省略可能)
+## Configure Azure Files 
 
-このデモでは、いくつかの一般的な Azure Storage ツールについて確認します。 
+In this demonstration, we will work with files shares and snapshots.
 
-**参照:** [Storage Explorer の概要](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
+**Note:** These steps require a storage account.
 
-1. Storage Explorer をインストールするか、Storage Browser を使用します。
+**Reference**: [Quickstart for managing Azure file shares](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-portal?tabs=azure-portal)
 
-1. ストレージ リソースを参照して作成する方法を確認します。 たとえば、BLOB コンテナーを追加します。 
+1. Review the purpose of file shares. 
 
-**参照**: [AzCopy v10 を使用して Azure Storage にデータをコピーまたは移動する](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/files/toc.json)
+1. Access a storage account and click **Files**.
 
-1. AzCopy を使用するタイミングについて説明します。 ヘルプを表示します (**azcopy /?** )。
+1. Create a file share. Review quotas, uploading files, and adding directories to organize the information. 
 
-1.  **[サンプル]**  セクションを下へスクロールします。 時間があれば、いずれかの例を試してみてください。 
+1. Create a file share snapshot. Review when to use snapshots and how they are different from backups. As you have time, upload a file, take a snapshot, delete the file, and restore the snapshot.
+
+**Reference**: [Get started with Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
+
+1. Install the Storage Explorer or use the Storage Browser.
+
+1. Review how to browse and create storage resources. For example, add a blob container. 
+
+**Reference**: [Copy or move data to Azure Storage by using AzCopy v10](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/files/toc.json)
+
+1. Discuss when to use AzCopy. View  the help, **azcopy /?**.
+
+1. Scroll down the **Samples** section. As you have time, try any of the examples. 
     
 
 
