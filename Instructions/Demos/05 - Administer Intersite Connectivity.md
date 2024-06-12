@@ -1,70 +1,71 @@
 ---
 demo:
-  title: 'デモ 05: サイト間接続を管理する'
-  module: Administer Intersite Connectivity
+    title: 'Demonstration 05: Administer Intersite Connectivity'
+    module: 'Administer Intersite Connectivity'
 ---
 
-# 05 - サイト間接続を管理する
+# 05 - Administer Intersite Connectivity
 
-## VNet ピアリングを構成する
+## Configure VNet Peering
 
-**注:**  このデモには、2 つの仮想ネットワークが必要です。
+**Note:** For this demonstration you will need two virtual networks.
 
-**参照**: [VNet ピアリングを使用して仮想ネットワークを接続する - チュートリアル](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
+**Reference**: [Connect virtual networks with VNet peering - tutorial](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
 
-**1 番目の仮想ネットワークの VNet ピアリングを構成する**
+**Configure VNet peering on the first virtual network**
 
-1.  **Azure portal** で、1 番目の仮想ネットワークを選択します。 ピアリングの値を確認します。 
+1. In the **Azure portal**, select the first virtual network. Review the value of peering. 
 
-1.  **[設定]** で、 **[ピアリング]** 、 **[+ 追加]** の順に選択し、新しいピアリングを追加します。
+1. Under **Settings**, select **Peerings** and **+ Add** a new peering.
 
-1. 2 番目の仮想ネットワークのピアリングを構成します。 情報アイコンを使用して、さまざまな設定を確認します。 
+1. Configure the peering the second virtual network. Use the information icons to review the different settings. 
 
-1. ピアリングが完了したら、 **[ピアリング状態]** を確認します。 
+1. When the peering is complete, review the **Peering status**. 
 
-**2 番目の仮想ネットワークの VNET ピアリングを確認する**
+**Confirm VNet peering on the second virtual network**
 
-1.  **Azure portal** で、2 番目の仮想ネットワークを選択します
+1. In the **Azure portal**, select the second virtual network
 
-1.  **[設定]** で、 **[ピアリング]** を選択します。
+1. Under **Settings**, select **Peerings**.
 
-1. ピアリングが自動的に作成されていることがわかります。  **[ピアリング状態]**  が **[接続済み]** であることに注目してください。
+1. Notice that a peering has automatically been created. Notice that the **Peering Status** is **Connected**.
 
-1. ラボでは、受講者がピアリングを作成し、仮想マシン間の接続をテストします。 
+1. In the lab, students will create peering and test the connection between virtual machines. 
 
-## ネットワーク ルーティングおよびエンドポイントを構成する
+## Configure Network Routing and Endpoints
 
-このデモでは、ルート テーブルの作成、カスタム ルートの定義、およびルートをサブネットに関連付ける方法について説明します。
+In this demonstration, we will learn how to create a route table, define
+a custom route, and associate the route with a subnet.
 
-**注:**  このデモでは、少なくとも 1 つのサブネットを持つ仮想ネットワークが必要です。
+**Note:** This demonstration requires a virtual network with at least one subnet.
 
-**参照**: [ネットワーク トラフィックをルーティングする - チュートリアル - Azure portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
+**Reference**: [Route network traffic - tutorial - Azure portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
 
-**ルーティング テーブルを作成する**
+**Create a routing table**
 
-1. 時間があれば、チュートリアルの図を確認してください。 ユーザー定義ルートを作成する必要がある理由を説明します。 
+1. As you have time review the tutorial diagram. Explain why you need to create a user-defined route. 
 
-1. Azure ポータルにアクセスします。
+1. Access the Azure portal.
 
-1. **ルート テーブル**を検索して選択します。 **ゲートウェイ ルートの伝達**を使用する必要がある場合について説明します。 
+1. Search for and select **Route tables**. Discuss when **propagate gateway routes** should be used. 
 
-1. ルーティング テーブルを作成し、一般的でない設定について説明します。 
+1. Create a routing table, explain any uncommon settings. 
 
-1. 新しいルーティング テーブルがデプロイされるのを待ちます。
+1. Wait for the new routing table to be deployed.
 
-**ルートを追加する**
+**Add a route**
 
-1.  新しいルーティング テーブルを選んでから、 **[ルート]** を選択します。
+1.  Select your new routing table, and then select **Routes**.
 
-1.  新しい**ルート**を作成します。 使用できるさまざまな**ホップの種類**について説明します。 
+1.  Create a new **route**. Discuss the different **hop types** that are available. 
 
-1.  新しいルートを作成し、リソースがデプロイされるまで待ちます。
+1.  Create the new route and wait for the resource to be deployed.
  
-**サブネットへのルート テーブルの関連付け**
+**Associate a route table to a subnet**
 
-1.  ルーティング テーブルに関連付けるサブネットに移動します。
+1.  Navigate to the subnet you want to associate with the routing table.
 
-1.   **[ルート テーブル]** を選択し、新しいルーティング テーブルを選びます。 
+1.  Select **Route table** and choose your new routing table. 
 
-1.  変更内容を**保存**します。 
+1.  **Save** your changes.
 

@@ -1,77 +1,78 @@
 ---
+
 demo:
-  title: 'デモ 04: 仮想ネットワークを管理する'
-  module: Administer Virtual Networking
+    title: 'Demonstration 04: Administer Virtual Networking'
+    module: 'Administer Virtual Networking'
 ---
 
-# 04 - 仮想ネットワークを管理する
+# 04 - Administer Virtual Networking
 
-## 仮想ネットワークの構成
+## Configure Virtual Networks
 
-このデモには、仮想ネットワークを作成します。
+In this demonstration, you will create virtual networks.
 
-**参照**: [クイックスタート: 仮想ネットワークを作成する - Azure portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
+**Reference**: [Quickstart: Create a virtual network - Azure portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
 
-## Portal で仮想ネットワークを作成する
+## Create a virtual network in the portal
 
-1.  Azure portal にサインインし、 **仮想ネットワーク**を検索します。
+1.  Sign in the to the Azure portal and search for **Virtual Networks**.
 
-1.  仮想ネットワークを作成し、基本的な設定を説明します。 少なくとも 1 つのサブネットが作成されていることを確かめます。 
+1.  Create a virtual network, explaining the basic settings as you go. Ensure at least one subnet is created. 
 
-1.  仮想ネットワークが作成されたことを確認します。
+1.  Verify your virtual network was created.
 
-## ネットワーク セキュリティ グループを構成する
+## Configure Network Security Groups
 
-このデモでは、NSG およびサービス エンドポイントについて説明します。
+In this demonstration, you will explore NSGs and service endpoints.
 
-**参照**: [PaaS リソースへのアクセスを制限する - チュートリアル - Azure portal](https://docs.microsoft.com/azure/virtual-network/tutorial-restrict-network-access-to-resources)
+**Reference**: [Restrict access to PaaS resources - tutorial - Azure portal](https://docs.microsoft.com/azure/virtual-network/tutorial-restrict-network-access-to-resources)
 
-**ネットワーク セキュリティ グループの作成**
+**Create a network security group**
 
-1. Azure portal にアクセスします。
+1. Access the Azure Portal.
 
-1.  **ネットワーク セキュリティ グループ**を検索して選択します。
+1. Search for and select the **Network Security Groups**.
 
-1. NSG を作成し、設定を説明します。 
+1. Create a NSG explaining the settings as you go. 
  
-1. 新しい NSG がデプロイされるのを待ちます。
+1. Wait for the new NSG to deploy.
 
-**受信規則と送信規則を詳しく見る**
+**Explore inbound and outbound rules**
 
-1. 新しい NSG を選択します。
+1. Select your new NSG.
 
-1. NSG をサブネットまたはネットワーク インターフェイスにどのように関連付けることができるかを説明します。
+1. Discuss how the NSG can be associated with subnets or network interfaces.
 
-1. インバウンドおよびアウトバウンド規則の目的について説明します。  
+1. Discuss the purpose inbound and outbound rules.  
 
-1. 既定のインバウンドおよびアウトバウンド規則を確認します。 
+1. Review the default inbound and outbound rules. 
 
-1. 新しい規則を作成し、設定を説明します。 具体的には、サービスの選択 (HTTPS など) と優先順位の設定について説明します。 
+1. Create a new rule, explaining the settings as you go. Specifically discuss the service selection (like HTTPS) and the priority settings. 
 
-## Azure DNS を構成する
+## Configure Azure DNS
 
-このデモでは、Azure DNS について説明します。
+In this demonstration, you will explore Azure DNS.
 
-**参照**: [チュートリアル: ドメインとサブドメインをホストする - Azure DNS](https://docs.microsoft.com/azure/dns/dns-delegate-domain-azure-dns)
+**Reference**: [Tutorial: Host your domain and subdomain - Azure DNS](https://docs.microsoft.com/azure/dns/dns-delegate-domain-azure-dns)
 
 
-**DNS ゾーンの作成**
+**Create a DNS zone**
 
-1. Azure portal にアクセスします。
+1. Access the Azure Portal.
 
-1.  **DNS ゾーン** サービスを検索します。
+1. Search for the **DNS zones** service.
 
-1. **DNS ゾーン**を作成し、そのゾーンの目的を説明します。 名前には、contoso.internal.com を使用できます。
+1. Create a **DNS zone** and explain the purpose of the zone. For a name you can use contoso.internal.com.
 
-1.  DNS ゾーンが作成されるのを待ちます。 ページを **更新**する必要がある場合があります。 
+1.  Wait for the DNS zone to be created. You may need to **Refresh** the page.
 
-**DNS レコード セットを追加する**
+**Add a DNS record set**
 
-**参照**: [チュートリアル: ゾーン内のリソース レコードを参照するエイリアス レコードを作成する](https://learn.microsoft.com/azure/dns/tutorial-alias-rr)
+**Reference**: [Tutorial: Create an alias record to refer to a zone resource record](https://learn.microsoft.com/azure/dns/tutorial-alias-rr)
 
-1. ゾーンが作成されたら、 **[+ レコード セット]** を選択します。
+1. Once your zone is created, select **+Record Set**.
 
-1.  **[種類]**   ドロップダウンを使用して、さまざまな種類のレコードを表示します。 さまざまなレコードの種類の使用方法を確認します。 選択するレコードの種類によって、レコードの情報がどのように変わるかに注目してください。
+1. Use the **Type** drop-down to view the different types of records. Review how the different record types are used. Notice how the record information changes as you select different record types.
 
-1. 例として **A** レコードを作成します。 
+1. Create an **A** record as an example. 
 

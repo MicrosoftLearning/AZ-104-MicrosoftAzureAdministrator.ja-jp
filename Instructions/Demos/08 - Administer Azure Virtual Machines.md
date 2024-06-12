@@ -1,67 +1,67 @@
 ---
 demo:
-  title: 'デモ 08: Azure Virtual Machines を管理する'
-  module: Administer Azure Virtual Machines
+    title: 'Demonstration 08: Administer Azure Virtual Machines'
+    module: 'Administer Azure Virtual Machines'
 ---
 
 
-# 08 - Azure Virtual Machines を管理する
+# 08 - Administer Azure Virtual Machines
 
-## デモ -- ポータルで仮想マシンを作成する
+## Demonstration -- Create Virtual Machines in the portal
 
-このデモでは、ポータルで Azure 仮想マシンを作成し、それにアクセスします。
+In this demonstration, we will create and access an Azure virtual machine in the portal.
 
-**参照**
+**References**
 
-[クイック スタート - Azure Portal で Windows VM を作成する](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal)
+[Quickstart - Create a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal)
 
-[クイック スタート - Azure portal で Linux VM を作成する](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-portal)
+[Quickstart - Create a Linux VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-portal)
 
-[Bastion を使用して仮想マシンに接続する](https://learn.microsoft.com/azure/bastion/tutorial-create-host-portal#connect)
+[Connect to a virtual machine with Bastion](https://learn.microsoft.com/azure/bastion/tutorial-create-host-portal#connect)
 
-**仮想マシンを作成する**
+**Create the virtual machine**
 
-**注:** これらの手順では、数個の仮想マシン パラメーターのみを説明します。 他の領域についても説明してください。 対象ユーザーに応じて、Windows または Linux の仮想マシンを作成できます。
+**Note:** These steps only cover a few virtual machine parameters. Feel free to explore and cover other areas. You can create either Windows or Linux virtual machine, depending on your audience.
 
-1. Azure portal を使用します。
+1. Use the Azure portal.
 
-1. **仮想マシン**を検索します。 
+1. Search for **Virtual machines**. 
 
-1. 基本的な仮想マシンを作成します。 可用性オプション、イメージ、インバウンド規則を確認します。
+1. Create a basic virtual machine. Review the availability options, images, and inbound rules.
 
-1. セキュリティで保護された管理者アカウントを作成することの重要性について説明します。
+1. Discuss the importance of creating a secure administrator account.
 
-1. 仮想マシンを作成し、リソースがデプロイされるまで待ちます。  
+1. Create the virtual machine and wait for the resource to deploy.  
 
-**仮想マシンへの接続**
+**Connect to the virtual machine**
 
-1. 仮想マシンに**接続**する方法がいくつかあります。 
+1. There are several ways to **Connect** to the virtual machine. 
 
-1. Windows サーバーの場合、クイックスタートに示すように **RDP** を使用できます。 
+1. For a Windows server you can use **RDP**, as shown in the QuickStart. 
 
-1. Linux サーバーの場合は、クイックスタートに示すように **SSH** を使用できます。 
+1. For a Linux server you can **SSH**, as shown in the QuickStart. 
 
-1. どちらのサーバーでも、**Bastion** サービスに接続できます (クイックスタート)。 Bastion が RDP や SSH より優先される理由を確認します。 
+1. For either server you can connect with the **Bastion** service (QuickStart). Review why Bastion is preferred to RDP or SSH. 
 
-## 仮想マシンの可用性を構成する
+## Configure Virtual Machine Availability
 
-このデモでは、仮想マシンのスケーリング オプションについて説明します。
+In this demonstration, we will explore virtual machine scaling options.
 
-**参照**
+**References**
 
-[Azure portal を使用してスケール セットに仮想マシンを作成する](https://learn.microsoft.com/azure/virtual-machine-scale-sets/flexible-virtual-machine-scale-sets-portal)
+[Create virtual machines in a scale set using Azure portal](https://learn.microsoft.com/azure/virtual-machine-scale-sets/flexible-virtual-machine-scale-sets-portal)
 
-1. Azure portal を使用します。
+1. Use the Azure Portal.
 
-1. **Virtual Machine Scale Sets** を検索して選択します。 
+1. Search for and select **Virtual Machine Scale Sets**. 
 
-1. **Virtual Machine Scale Sets** を作成します。 仮想マシン スケール セットの目的を確認します。 **均一**と**フレキシブル** オーケストレーション モードの API の違いについて説明します。 選択内容がスケーリング オプションに影響を与える可能性があることを説明します。 
+1. Create a **Virtual Machine Scale Sets**. Review the purpose of virtual machine scale sets. Review the difference between the **Uniform** and **Flexible** orchestration modes. Explain your selection can affect your scaling options. 
 
-1.  **[スケーリング]** タブに移動します。 
+1. Move to **Scaling** tab. 
 
-1.  **[手動スケール]**  と **[スケールイン ポリシー]** の使用方法を確認します。 
+1. Review how **Manual scale** and **Scale-in policy** is used. 
 
-1. **カスタム** スケーリング ポリシーに変更します。 
+1. Change to a **Custom** scaling policy. 
 
-1. 仮想マシン インスタンスのスケールアウトとスケールインに **[CPU しきい値 (%)]** を使用する方法を確認します。 
+1. Review how **CPU threshold (%)** is used to scale out and scale in the virtual machine instances. 
 

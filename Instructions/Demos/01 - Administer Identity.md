@@ -1,55 +1,58 @@
 ---
 demo:
-  title: 'デモ 01: ID を管理する'
-  module: Administer Identity
+    title: 'Demonstration 01: Administer Identity'
+    module: 'Administer Identity'
 ---
 
-# 01 - 管理者 ID
+# 01 - Administer Identity
 
-## Entra ID を構成する
+## Configure Entra ID Identities
 
-このレッスンには、正式なデモは含まれていません。 学生向けラボ 01 の対話型ラボ シミュレーションを実行していみることをお勧めします。 
+This area does not have a formal demonstration. Consider walking through the interactive lab simulation for student Lab 01. 
 
-[対話型ラボ シミュレーション ラボ 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
+[Interactive Lab Simulation Lab 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
 
-または、以下のクイック スタートのいずれかを使用することもできます。 
+Alternatively, you could use one of these QuickStarts. 
 
-**リファレンス**: [クイック スタート - Microsoft Entra ID にアクセスして新しいテナントを作成する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)する
+**Reference**: [Quickstart - Create a group with members and view all groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
-**リファレンス**: [クイックスタート - メンバーを含むグループを作成し、すべてのグループとメンバーを表示する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
+## Configure User and Group Accounts
 
-## ユーザーとグループのアカウントを構成する
+In this demonstration, we will explore Entra ID identities.
 
-このデモでは、Entra ID について説明します。
+**Reference**: [Add or delete users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
-**リファレンス**: [ユーザーを追加または削除する](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+**Reference**: [Create a basic group and add members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
-**リファレンス**: [基本グループを作成してメンバーを追加する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+**Note:** Depending on your subscription not all areas of the Microsoft Entra ID blade will be available. 
 
-**注**: サブスクリプションによっては、[Microsoft Entra ID] ブレードの一部の領域を利用できない場合があります。 
+**Review license and domain information**
 
-**ライセンスおよびドメイン情報を確認する**
+1.  Access the Azure portal and navigate to the **Microsoft Entra ID** blade.
 
-1.  Azure portal にアクセスし、 **[Microsoft Entra ID]**  ブレードに移動します。
+2.  On the Overview blade, review the **Tenant information** including license and primary domain.
 
-2.  [概要] ブレードで、ライセンスおよびプライマリ ドメインを含む  **[テナント情報]**   を確認します。
+**Explore user accounts**
 
-**ユーザー アカウントを詳しく見る**
+1.  Select the **Users** blade.
 
-1.   **[ユーザー]**   ブレードを選択します。
+2.  Explain the choices for **New user** and **New guest user**.
 
-2.   **[新しいユーザー]**   と  **[新しいゲスト ユーザー]** の選択肢について説明します。
+3.  Select **New user** and discuss the differences between **Create
+    user** and **Invite user**.
 
-3.   **[新しいユーザー]**   を選択し、 **[ユーザーの作成]**   と  **[ユーザーの招待]** の違いについて説明します。
+4.  Create a **New user** reviewing the **Identity**, **Groups and
+    roles**, **Settings**, and **Job Info** parameters.
 
-4.   **ID**、 **グループとロール**、 **設定**、 **ジョブ情報** の各パラメーターを確認して **新規ユーザー** を作成します。
+5.  After the user is created, review **Reset password**, **Delete
+    user**, and **Sign-ins**.
 
-5.  ユーザーを作成したら、 **[パスワードのリセット]** 、 **[ユーザーの削除]** 、 **[サインイン]** について確認します。
+**Explore group accounts**
 
-**グループ アカウントを詳しく見る**
+1.  Return to the **Microsoft Entra ID** page and select
+    the **Groups** blade.
 
-1.   **[Microsoft Entra ID]**  ページに戻り、 **[グループ]**  ブレードを選択します。
+2.  Create a **New group** or select an existing group to review.
 
-2.   **[新しいグループ]**   を作成するか、確認する既存のグループを選択します。
-
-3.   **[メンバーシップの種類]**   および  **[種類]** を含む、グループに関する情報を確認します。
+3.  Review information about a group including **Membership
+    type** and **Type**.

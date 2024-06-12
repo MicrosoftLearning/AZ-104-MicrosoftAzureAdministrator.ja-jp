@@ -1,27 +1,27 @@
 ---
 demo:
-  title: デモの手順
-  module: All
+    title: 'Demonstration Instructions'
+    module: 'All'
 ---
 
-# 目的
+# Purpose
 
-このディレクトリでは、講師に AZ-104 Azure 管理者コースのデモを提供します。 **すべてのデモを行うためのものではありません。対象ユーザーに最も適したものを選択します。**
+This directory provides instructor demonstrations for the AZ-104 Azure Administrator course. **It is not intended for you to do every demonstration. Pick the ones most applicable to your audience.**
 
-# 考慮すべき事項
+# Things to think about
 
-- ほとんどのレッスンにはデモがあります。 時間をかけて各デモを検討し、どれを使用するかを決定します。 デモの一部は、シンプルな Azure portal の表示と説明ですが、スクリプトの作成スキルが必要なものもあります。
+- Most areas have a demonstration. Take the time to work through each one and decide which to use. Some of the demonstrations are simple show and tell walk-throughs of the Azure portal; others require scripting skills.
 
-- あなたがデモを行って受講者に理解させるか、または受講者の 1 人にデモを ''実施させて''、手順を通して教えるかを検討してください。
+- Consider having the students follow along as you do the demonstration or have one of the students' "drive" and coach them through the steps.
 
-- 最初にデモを行い、次に質問に回答するスライドを使い、すべてが網羅されていることをご確認ください。
+- Consider doing the demonstration first and then using the slides to answer questions and ensure everything is covered.
 
-- 正式なラボとの重複を考慮して、時間を最大限に活用してください。
+- Consider the overlap with the formal labs and make the best use of your time.
 
-- これらのデモは、Azure 管理経験のある講師を対象としています。 手順は受講者が実施するコース ラボよりもレベルが高くなっています。
+- These demonstrations are provided for an instructor with Azure administration experience. The steps are at a higher level than the course labs that students will perform.
 
-- これらのデモは、受講者に提示する最小の機能を提供しています。 時間があれば、その他の内容を追加、提示、説明してください。
+- These demonstrations provide a minimal set of features to show your students. As time permits feel free to add, show, and discuss more things.
 
-- *[まとめとリソース]* ページでは、Learn サンドボックスを使用できる場所が示されます。 サンドボックスを使用して、受講者に手順を説明することを検討してください。
+- The *Summary and Resources* page identifies where Learn sandboxes are available. Consider using a sandbox to walk students through the steps.
 
-- デモ環境がない場合は、提供されているチュートリアルとクイック スタート ページを使用することを検討してください。 
+- If you don't have a demonstration environment consider using the Tutorial and QuickStart pages that are provided. 
