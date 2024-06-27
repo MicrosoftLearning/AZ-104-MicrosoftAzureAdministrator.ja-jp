@@ -113,11 +113,9 @@ lab:
     
     >**ご存知でしたか?** リージョンをまたがる復元オプションを使用すると、データをセカンダリ リージョン ([Azure のペアになっているリージョン](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore)) に復元できます。 
 
-1. [Recovery Services コンテナー] ブレードに戻り、**[セキュリティ設定] > [論理的な削除とセキュリティ設定]** ラベルの下の **[更新]** リンクをクリックします。
+1. **[セキュリティ設定] > [論理的な削除とセキュリティの設定]** ラベルの下にある **[更新]** リンクを選択します。
 
 1. **[セキュリティ設定]** ブレードで、 **[論理的な削除] (Azure 仮想マシンの場合)** が **[有効]** であることを確認します。 **[論理的な削除の保持期間]** が **14** 日であることに注意してください。 
-
-1. [Recovery Services コンテナー] ブレードに戻り、**[概要]** ブレードを選択します。
 
 >**ご存知でしたか?** Azure には、次の 2 種類のコンテナーがあります。Recovery Services コンテナーと Backup ボールト。 主な違いは、バックアップできるデータソースにあります。 [それらの違い](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault)に関する詳細を確認してください。
 
@@ -284,8 +282,8 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
-## Copilot を使用して学習の幅を広げる
-Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 また、Copilot は、ラボでカバーされていない領域や、詳細情報が必要な場合にも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 これらのプロンプトを試すには数分かかります。
+## Copilot を使用して学習を拡張する
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 これらのプロンプトを試すには数分かかります。
 
 + Azure Backup ではどのような製品がサポートされていますか?
 + Azure Backup を使用して Azure 仮想マシンをバックアップおよび復元する手順をまとめます。
