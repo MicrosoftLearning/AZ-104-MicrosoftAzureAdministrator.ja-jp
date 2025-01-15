@@ -3,6 +3,9 @@ title: オンラインでホスティングされている手順
 permalink: index.html
 layout: home
 ---
+#Notes for logging issues
+
+[README](Instructions/README-Notes.md)
 
 # コンテンツ ディレクトリ
 
