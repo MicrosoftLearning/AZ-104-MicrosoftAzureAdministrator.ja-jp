@@ -4,7 +4,6 @@ permalink: index.html
 layout: home
 ---
 
-
 # コンテンツ ディレクトリ
 
 必要なラボ ファイルは、[こちらからダウンロード](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/archive/master.zip)できます
