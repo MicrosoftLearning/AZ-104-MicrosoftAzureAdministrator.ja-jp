@@ -227,7 +227,7 @@ lab:
    
 1. 次の変更を行います。
 
-    + **managedDiskName** 値の 4 行目を Disk4 に変更します。
+    + **managedDiskName** 値の 2 行目を Disk4 に変更します。
     + **sku name** 値の 26 行目を StandardSSD_LRS に変更します。
     + **diskSizeinGiB** 値の 7 行目を 32 に変更します。
 
