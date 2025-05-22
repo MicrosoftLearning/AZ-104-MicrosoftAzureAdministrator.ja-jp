@@ -73,7 +73,7 @@ lab:
 
 1. **[ネットワーク]** タブ上の [仮想ネットワーク] で、**[新規作成]** を選択します。
 
-1. 次の情報を使用して仮想ネットワークを構成し、**[OK]** を選択します。 必要に応じて、既存の情報を削除または置換します。
+1. 次の情報を使用して仮想ネットワークを構成したあと、**[OK]** を選択します。 必要に応じて、既存の情報を削除または置換します。
 
     | 設定 | 値 | 
     | --- | --- |
@@ -118,7 +118,7 @@ lab:
 
 1. [ネットワーク] タブ上の [仮想ネットワーク] で、**[新規作成]** を選択します。
 
-1. 次の情報を使用して仮想ネットワークを構成し、**[OK]** を選択します。  必要に応じて、既存のアドレス範囲を削除または置換します。
+1. 次の情報を使用して仮想ネットワークを構成したあと、**[OK]** を選択します。  必要に応じて、既存のアドレス範囲を削除または置換します。
 
     | 設定 | 値 | 
     | --- | --- |
@@ -169,23 +169,23 @@ lab:
 
 1. CoreServicesVnet の **[設定]** で、**[ピアリング]** を選択します。
 
-1. [CoreServicesVnet |ピアリング] で、**[+ 追加]** を選択します。 指定しない場合は、デフォルトを使用します。 
+1. CoreServicesVnet の [ピアリング] で、**[+ 追加]** を選択します。 指定しない場合は、デフォルトを使用します。 
 
-| **パラメーター**                                    | **Value**                             |
-| --------------------------------------------- | ------------------------------------- |                                
-| [Peering link name](ピアリング リンク名)                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| 仮想ネットワーク    | **ManufacturingVM-net (az104-rg5)**  |
-| CoreServicesVnet に対するアクセスを ManufacturingVnet に許可する  | 選択済み (既定値)                       |
-| CoreServicesVnet から転送されたトラフィックを ManufacturingVnet が受信することを許可する | 選択済み                        |
-| [Peering link name](ピアリング リンク名)                             | `ManufacturingVnet-to-CoreServicesVnet` |
-| ピアリングされた仮想ネットワークに対するアクセスを CoreServicesVnet に許可する            | 選択済み (既定値)                       |
-| ピアリングされた仮想ネットワークから転送されたトラフィックを受信することを CoreServicesVnet に許可する | 選択済み                       |
+    | **パラメーター**                                    | **Value**                             |
+    | --------------------------------------------- | ------------------------------------- |                                
+    | [Peering link name](ピアリング リンク名)                             | `CoreServicesVnet-to-ManufacturingVnet` |
+    | 仮想ネットワーク    | **ManufacturingVM-net (az104-rg5)**  |
+    | CoreServicesVnet に対するアクセスを ManufacturingVnet に許可する  | 選択済み (既定値) |
+    | CoreServicesVnet から転送されたトラフィックを ManufacturingVnet が受信することを許可する | 選択済み  |
+    | [Peering link name](ピアリング リンク名)                             | `ManufacturingVnet-to-CoreServicesVnet` |
+    | ピアリングされた仮想ネットワークに対するアクセスを CoreServicesVnet に許可する            | 選択済み (既定値) |
+    | ピアリングされた仮想ネットワークから転送されたトラフィックを受信することを CoreServicesVnet に許可する | 選択済み |
 
-1. **追加**をクリックします。
+4. **追加**をクリックします。
 
-1. [CoreServicesVnet | ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。 ページを更新して、**[ピアリング状態]** が **[接続済み]** であることを確認します。
+5. CoreServicesVnet の [ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。 ページを更新して、**[ピアリング状態]** が **[接続済み]** であることを確認します。
 
-1. **[ManufacturingVnet]** に切り替えて、**[ManufacturingVnet-to-CoreServicesVnet]** のピアリングが一覧に表示されることを確認します。 **[ピアリング状態]** が **[接続済み]** であることを確認します。 ページを**更新**する必要がある場合があります。 
+6. **[ManufacturingVnet]** に切り替えて、**[ManufacturingVnet-to-CoreServicesVnet]** のピアリングが一覧に表示されることを確認します。 **[ピアリング状態]** が **[接続済み]** であることを確認します。 ページを**更新**する必要がある場合があります。 
 
 ## タスク 5:Azure PowerShell を使用して仮想マシン間の接続をテストする
 
@@ -231,7 +231,7 @@ lab:
     | サブネットのアドレス範囲 | `10.0.1.0/24`  |
 
    
-1. Azure portal 内で、「`Route tables`」を検索して選択し、**[作成]** を選択します。 
+1. Azure portal で `Route tables` を検索して選択し、**[確認および作成]**、**[作成]** の順に選択します。 
 
     | 設定 | 値 | 
     | --- | --- |
