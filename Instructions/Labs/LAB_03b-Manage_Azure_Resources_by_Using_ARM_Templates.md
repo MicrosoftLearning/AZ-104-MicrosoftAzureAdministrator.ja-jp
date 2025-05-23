@@ -227,11 +227,9 @@ lab:
    
 1. 次の変更を行います。
 
-    + **managedDiskName** 値の 2 行目を Disk4 に変更します。
-    + **sku name** 値の 26 行目を StandardSSD_LRS に変更します。
-    + **diskSizeinGiB** 値の 7 行目を 32 に変更します。
-
-    >**注:** 完成した Bicep テンプレートは、ラボ ファイルで使用できます。
+    + **managedDiskName** 値の 2 行目を **az104-disk5** に変更します。
+    + **sku name** 値の 26 行目を **StandardSSD_LRS** に変更します。
+    + **diskSizeinGiB** 値の 7 行目を **32** に変更します。
     
 1. **Ctrl + S** キーを押して、変更内容を保存します。
 
