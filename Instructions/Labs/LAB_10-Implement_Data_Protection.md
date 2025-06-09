@@ -204,7 +204,6 @@ lab:
     - **アドオン Azure Backup アラート データ**
     - **Azure Site Recovery ジョブ**
     - **Azure Site Recovery イベント**
-    - **正常性**
 
 1. [宛先の詳細] で、**[ストレージ アカウントへのアーカイブ]** の横にチェックマークを付けます。
 
