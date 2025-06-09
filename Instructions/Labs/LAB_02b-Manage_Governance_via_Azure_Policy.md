@@ -166,7 +166,7 @@ lab:
     | 説明 | `Inherit the Cost Center tag and its value 000 from the resource group if missing` |
     | ポリシーの適用 | Enabled |
 
-1. **[次へ]** を 2 度クリックして、 **[パラメーター]** に次の値を設定します。
+1. **[次へ]** をクリックして、**[パラメーター]** に次の値を設定します。
 
     | 設定 | [値] |
     | --- | --- |
