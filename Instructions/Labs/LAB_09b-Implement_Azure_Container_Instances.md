@@ -17,13 +17,10 @@ lab:
 ## ラボのシナリオ
 
 あなたの組織には、オンプレミスのデータ センターの仮想マシン上で実行されている Web アプリケーションがあります。 組織は、すべてのアプリケーションをクラウドに移行したいと考えていますが、多数のサーバーを管理したくありません。 あなたは、Azure Container Instances と Docker を評価することにしました。 
+
 ## 対話型ラボ シミュレーション
 
-このトピックで役に立つ対話型ラボ シミュレーションがあります。 シミュレーションを使うと、同様のシナリオを自分のペースでクリックして進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。
-
-+ 「[Azure Container Instances をデプロイする](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203)」。 Azure Container Instances を使って Docker コンテナーを作成、構成、デプロイします。
-  
-+ 「[Azure Container Instances を実装する](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)」。  Azure Container Instances を使って Docker イメージをデプロイします。 
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## アーキテクチャの図
 

@@ -21,11 +21,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役に立つ対話型ラボ シミュレーションがあります。 シミュレーションを使うと、同様のシナリオを自分のペースでクリックして進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。
-
-+ [Web アプリを作成する](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%202)。 Docker コンテナーを実行する Web アプリを作成します。
-    
-+ [Azure Web アプリを実装する](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)。 Azure Web アプリを作成し、デプロイを管理し、アプリをスケーリングします。 
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## アーキテクチャの図
 
