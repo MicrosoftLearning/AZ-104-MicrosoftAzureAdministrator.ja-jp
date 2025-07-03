@@ -28,13 +28,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役立つ可能性のある対話型ラボ シミュレーションがいくつか存在します。 このシミュレーションを使用すると、同様のシナリオを自分のペースでクリックしながら進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。 
-
-+ [リソース ロックを管理する](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2015)。 リソース ロックを追加し、テストして確認します。
-  
-+ [Azure ポリシーを作成する](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2017)。 リソースを配置できる場所を制限する Azure ポリシーを作成します。 新しいリソースを作成し、ポリシーが適用されることを確認します。 
-
-+ [Azure ポリシーを介してガバナンスを管理する](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)。 Azure ポータルを介してタグを作成し、割り当てる。 タグ付けを求める Azure ポリシーを作成します。 準拠していないリソースを修復します。
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## アーキテクチャの図
 

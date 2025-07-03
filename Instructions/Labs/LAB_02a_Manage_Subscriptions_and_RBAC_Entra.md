@@ -28,13 +28,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役に立つ対話型のラボ シミュレーションがいくつかあります。 このシミュレーションでは、同様のシナリオを自分のペースでクリックしながら進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。 
-
-+ [RBAC を使用したアクセスの管理](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2014)。 組み込みロールをユーザーに割り当て、アクティビティ ログを監視します。 
-
-+ [サブスクリプションと RBAC の管理](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)。 管理グループを実装し、カスタム RBAC ロールを作成して割り当てます。
-
-+ [サポート リクエストを開く](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022)。 サポート プランのオプションを確認し、サポート リクエスト、技術、または課金を作成して監視します。
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## アーキテクチャの図
 

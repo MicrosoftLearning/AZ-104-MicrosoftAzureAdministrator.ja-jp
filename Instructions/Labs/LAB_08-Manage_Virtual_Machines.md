@@ -20,15 +20,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役に立つ対話型ラボ シミュレーションがあります。 シミュレーションを使うと、同様のシナリオを自分のペースでクリックして進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。
-
-+ [ポータルで仮想マシンを作成してください](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%201)。 仮想マシンを作成し、Web サーバーロールを接続してインストールしてください。
-
-+ [テンプレートを使用して仮想マシンをデプロイしてください](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209)。 クイック スタート ギャラリーを調べて、仮想マシン テンプレートを見つけてください。 テンプレートをデプロイし、そのデプロイを確認します。
-
-+ [PowerShell で仮想マシンを作成してください](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2010)。 Azure PowerShell を使用して仮想マシンをデプロイしてください。 Azure Advisor の推奨事項を確認してください。
-
-+ [CLI を使用して仮想マシンを作成してください](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2011)。 CLI を使用して仮想マシンをデプロイしてください。 Azure Advisor の推奨事項を確認してください。
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## 職務スキル
 

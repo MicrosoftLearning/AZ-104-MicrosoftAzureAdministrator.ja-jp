@@ -20,11 +20,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役に立つ対話型ラボ シミュレーションがあります。 シミュレーションを使うと、同様のシナリオを自分のペースでクリックして進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。
-
-+ [Azure ロード バランサーを作成して構成します](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)。 仮想ネットワーク、バックエンド サーバー、ロード バランサーを作成してから、ロード バランサーをテストします。
-+ [Azure Application Gateway をデプロイします](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)。 アプリケーション ゲートウェイを作成し、仮想マシンを作成し、バックエンド プールを作成して、ゲートウェイをテストします。
-+ [トラフィック管理を実装します](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)。 仮想マシン、仮想ネットワーク、ピアリング、ロード バランサー、アプリケーション ゲートウェイを含む、完全なハブ アンド スポーク ネットワークを実装します。
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## 職務スキル
 

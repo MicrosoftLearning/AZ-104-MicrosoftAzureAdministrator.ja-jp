@@ -24,15 +24,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役立つ可能性のある対話型ラボ シミュレーションがいくつか存在します。 このシミュレーションを使用すると、同様のシナリオを自分のペースでクリックしながら進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。 
-
-+ [ネットワーク トラフィックをセキュリティで保護する](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2013)。 仮想マシン、仮想ネットワーク、ネットワーク セキュリティ グループを作成します。 トラフィックを許可および禁止するネットワーク セキュリティ グループ規則を追加します。
-  
-+ [簡単な仮想ネットワークを作成する](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204)。 2 つの仮想マシンを含む仮想ネットワークを作成します。 仮想マシンどうしが通信できることを示します。 
-
-+ [Azure で仮想ネットワークを設計および実装する](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)。 リソース グループを作成し、サブネットを含む仮想ネットワークを作成します。  
-
-+ [仮想ネットワークを実装する](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)。 仮想ネットワークの作成と構成、仮想マシンのデプロイ、ネットワーク セキュリティ グループの構成、Azure DNS の構成を行います。
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## アーキテクチャの図
 

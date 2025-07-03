@@ -20,13 +20,7 @@ lab:
 
 ## 対話型ラボ シミュレーション
 
-このトピックで役立つ可能性のある対話型ラボ シミュレーションがいくつか存在します。 このシミュレーションを使用すると、同様のシナリオを自分のペースでクリックしながら進めることができます。 対話型シミュレーションとこのラボには違いがありますが、主要な概念の多くは同じです。 Azure サブスクリプションは必要ありません。 
-
-+ [グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)。 別の仮想ネットワーク内の 2 つの仮想マシン間で接続をテストします。 仮想ネットワーク ピアリングを作成し、再テストします。
-
-+ [仮想ネットワークの監視を構成する](https://learn.microsoft.com/training/modules/configure-monitoring-virtual-networks/)。 Azure Network Watcher 接続モニター、フロー ログ、NSG 診断、パケット キャプチャを使って、Azure IaaS ネットワーク リソース全体の接続を監視する方法を理解する。
-
-+ [サイト間の接続性を実装する](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%209)。 テンプレートを実行して、いくつかの仮想マシンを含む仮想ネットワーク インフラストラクチャを作成します。 仮想ネットワーク ピアリングを構成し、その接続をテストします。 
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ## アーキテクチャの図
 
