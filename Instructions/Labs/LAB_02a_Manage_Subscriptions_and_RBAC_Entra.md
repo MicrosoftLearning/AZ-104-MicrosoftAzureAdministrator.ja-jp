@@ -37,8 +37,8 @@ lab:
 ## 職務スキル
 
 + タスク 1:管理グループを実装する。
-+ タスク 2:組み込みの Azure ロールを確認して割り当てる。
-+ タスク 3:カスタム RBAC ロールを作成する。
++ タスク 2: 組み込みの Azure ロールを確認して割り当てる。
++ タスク 3: カスタム RBAC ロールを作成する。
 + タスク 4:アクティビティ ログを使用してロールの割り当てを監視する。
 
 ## タスク 1:管理グループを実装する
@@ -162,7 +162,6 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 ## 自習トレーニングでさらに学習する
 
 + [Azure ロールベースのアクセス制御 (Azure RBAC) で Azure リソースをセキュリティ保護する](https://learn.microsoft.com/training/modules/secure-azure-resources-with-rbac/)。 Azure RBAC を使用して、Azure のリソースへのアクセスを管理します。
-+ [ロールベースのアクセス制御 (RBAC) を使用して Azure リソースのカスタム ロールを作成する](https://learn.microsoft.com/training/modules/create-custom-azure-roles-with-rbac/)。 アクセス制御のロール定義の構造を理解します。 カスタム ロールのアクセス許可を定義するために使用するロールのプロパティを特定します。 Azure カスタム ロールを作成し、ユーザーに割り当てます。
 
 ## 要点
 
@@ -174,6 +173,7 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 + 新しいロールを作成することも、既存のロールをカスタマイズすることもできます。
 + ロールは JSON 形式のファイルで定義され、*Actions*、*NotActions*、*AssignableScopes* が含まれます。
 + アクティビティ ログを使用して、ロールの割り当てを監視できます。
+
 
 
 

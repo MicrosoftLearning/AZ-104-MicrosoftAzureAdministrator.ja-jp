@@ -36,9 +36,9 @@ lab:
 
 ## 職務スキル
 
-+ タスク 1: Azure portal を介してタグを作成し、割り当てる。
-+ タスク 2:Azure Policy を使用してタグ付けを強制する。
-+ タスク 3:Azure Policy を使用してタグ付けを適用する。
++ タスク 1: Azure portal を介してタグを作成し割り当てる。
++ タスク 2: Azure Policy を通じてタグ付けを強制する。
++ タスク 3: Azure Policy を通じてタグ付けを適用する。
 + タスク 4:リソース ロックを構成してテストする。 
 
 ## タスク 1:Azure portal を使用してタグを割り当てる
@@ -240,10 +240,6 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 + Azure ポリシーと Azure RBAC の違いを、例を含めて表にしてください。
 + Azure ポリシーを適用して、準拠していないリソースを修復する手順は何ですか?
 + 特定のタグを持つ Azure リソースのレポートを取得するにはどうすればよいですか?
-
-## 自習トレーニングでさらに学習する
-
-+ [エンタープライズ ガバナンス戦略を設計する](https://learn.microsoft.com/training/modules/enterprise-governance/)。 RBAC と Azure Policy を使用して Azure ソリューションへのアクセスを制限し、セキュリティ目標に適した方法を判断します。
 
 ## 要点
 
