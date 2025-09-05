@@ -257,6 +257,7 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 
 + [Azure Storage アカウントを作成します](https://learn.microsoft.com/training/modules/create-azure-storage-account/)。 ビジネス要件に適したオプションで Azure Storage アカウントを作成します。
 + [Azure Blob Storage のライフサイクルの管理](https://learn.microsoft.com/training/modules/manage-azure-blob-storage-lifecycle) Azure BLOB Storage のライフサイクル全体を通じてデータの可用性を管理する方法について学びます。
++ [Azure Blob Storage を使用してコストを最適化する](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/)。 Azure Blob Storage を使用してコストを最適化する方法について学習します。
 
 ## 要点
 
