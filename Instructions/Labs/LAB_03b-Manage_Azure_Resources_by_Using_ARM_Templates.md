@@ -172,7 +172,7 @@ lab:
 1. ディスクが作成されたことを確認します。
 
    ```powershell
-   Get-AzDisk
+   Get-AzDisk | ft
    ```
    
 ## タスク 4:CLI を使用してテンプレートをデプロイする 
