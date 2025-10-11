@@ -18,10 +18,6 @@ lab:
 
 組織は現在、オンプレミスのデータ ストアにデータを格納しています。 これらのファイルのほとんどは頻繁にはアクセスされません。 アクセス頻度の低いファイルを低価格のストレージ層に配置することで、ストレージのコストを最小限に抑えることが考えられます。 ネットワーク アクセス、認証、認可、レプリケーションなど、Azure Storage が提供するさまざまな保護メカニズムについても検討する予定です。 最後に、Azure Files サービスがオンプレミスのファイル共有をホストするのにどの程度適しているかを判断する必要があります。
 
-## 対話型ラボ シミュレーション
-
->**注**: 以前提供されていたラボ シミュレーションは廃止されました。
-
 ## アーキテクチャの図
 
 ![タスクの図。](../media/az104-lab07-architecture.png)
@@ -257,7 +253,6 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 
 + [Azure Storage アカウントを作成します](https://learn.microsoft.com/training/modules/create-azure-storage-account/)。 ビジネス要件に適したオプションで Azure Storage アカウントを作成します。
 + [Azure Blob Storage のライフサイクルの管理](https://learn.microsoft.com/training/modules/manage-azure-blob-storage-lifecycle) Azure BLOB Storage のライフサイクル全体を通じてデータの可用性を管理する方法について学びます。
-+ [Azure Blob Storage を使用してコストを最適化する](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/)。 Azure Blob Storage を使用してコストを最適化する方法について学習します。
 
 ## 要点
 
