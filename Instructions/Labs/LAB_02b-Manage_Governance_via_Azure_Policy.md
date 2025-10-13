@@ -91,7 +91,7 @@ lab:
 
     | 設定 | 値 |
     | --- | --- |
-    | 割り当て名 | `コスト センター タグとその値がリソースに必要 |
+    | 割り当て名 | `Require Cost Center tag and its value on resources` |
     | 説明 | `Require Cost Center tag and its value on all resources in the resource group`|
     | ポリシーの適用 | Enabled |
 
