@@ -1,11 +1,3 @@
-#README
-
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
 # AZ-104: Microsoft Azure Administrator
 
 ## ようこそ
@@ -18,7 +10,7 @@ Or, if you are a trainer with a microsoft.com email address, please create a tic
 
 ## セキュリティの問題 - 2023 年 4 月
 
-直ちに有効になり、管理者パスワードが JSON テンプレート パラメーター ファイルから削除されます。 つまり、テンプレートのデプロイ時に学生はパスワードを入力することが必要になります。 このことは、ラボ 4、5、6、7、10、11 に影響します。  この変更を反映して、ラボの手順が変更されます。 
+直ちに有効になり、管理者パスワードが JSON テンプレート パラメーター ファイルから削除されます。 つまり、テンプレートのデプロイ時に学生はパスワードを入力することが必要になります。 これは、ラボ 4、5、6、7、10、11 に影響します。  この変更を反映して、ラボの手順が変更されます。 
 
 ## ここでの内容
 
@@ -34,11 +26,11 @@ Or, if you are a trainer with a microsoft.com email address, please create a tic
 
 - 講師は、ラボを行うたびに、最新の Azure サービスに合わせて修正された個所がないか GitHub を確認し、最新のラボ用ファイルを取得してください。
 
-## 貢献するには?
+## リクエストやフィードバックについて
 
-- すべての MCT は、GitHub repro のコードまたはコンテンツに pull request を送信できます。Microsoft とコース作成者は、必要に応じてコンテンツとラボ コードの変更をトリアージして追加します。
+- どの MCT も GitHub repro のコードまたはコンテンツにプル要求を送信でき、Microsoft とコースの作成者は、必要に応じてコンテンツとラボ コードの変更をトリアージして含めます。
 
-- バグ、変更、改善、アイデアを送信できます。  新しい Azure 機能を先に見つけたら、  新しいデモを提出しましょう。
+- バグ、変更、改善、アイデアを提出できます。  新しい Azure 機能を先に見つけたら、  新しいデモを提出しましょう。
 
 ## 受講者ハンドブックの変更については?
 
