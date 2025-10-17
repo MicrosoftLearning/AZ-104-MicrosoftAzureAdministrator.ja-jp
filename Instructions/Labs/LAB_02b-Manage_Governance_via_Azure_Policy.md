@@ -26,10 +26,6 @@ lab:
 
 - リソース ロックを使用して構成済みのリソースを保護する
 
-## 対話型ラボ シミュレーション
-
->**注**: 以前提供されていたラボ シミュレーションは廃止されました。
-
 ## アーキテクチャの図
 
 ![タスク アーキテクチャの図。](../media/az104-lab02b-architecture.png)
@@ -95,7 +91,7 @@ lab:
 
     | 設定 | 値 |
     | --- | --- |
-    | 割り当て名 | `コスト センター タグとその値がリソースに必要 |
+    | 割り当て名 | `Require Cost Center tag and its value on resources` |
     | 説明 | `Require Cost Center tag and its value on all resources in the resource group`|
     | ポリシーの適用 | Enabled |
 
