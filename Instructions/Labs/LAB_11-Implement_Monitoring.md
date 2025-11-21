@@ -207,7 +207,7 @@ lab:
 
 このタスクでは、Azure Monitor を使って、仮想マシンからキャプチャされたデータのクエリを実行します。
 
-    >**Note:** It can take 15-30 minutes for data to appear. Concentrate on the method and types of queries, rather than the results. 
+   >**注:**  データが表示されなくても問題ありません。 事前構成済みのログ クエリやカスタムのログ クエリなどの監視情報を確認する手順に重点を置きます。 
 
 1. Azure portal で `Monitor` を検索して選択し、**[ログ]** をクリックします。
 
