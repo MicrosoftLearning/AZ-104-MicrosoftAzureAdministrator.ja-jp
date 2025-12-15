@@ -142,9 +142,9 @@ lab:
 
 **自分のサブスクリプション**で作業している場合は、お手数ですが、ラボ リソースを削除してください。 これにより、リソースが確実に解放されるため、コストが最小限に抑えられます。 ラボ リソースを削除する最も簡単な方法は、ラボ リソース グループを削除することです。 
 
-+ Azure portal で、リソース グループを選び、**[リソース グループの削除]**、**[リソース グループ名を入力してください]** の順に選び、**[削除]** をクリックします。
-+ Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
-+ CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
++ Azure portal で管理グループを選択し、**[削除する]** を選択し、**[はい]** をクリックして削除を確定します。
++ Azure PowerShell を使用する場合は、「`Remove-AzManagementGroup -GroupName az104-mg1`」と入力します。
++ CLI を使用する場合は、「`az account management-group delete --name az104-mg1`」と入力します。
   
 ## Copilot を使用して学習を拡張する
 
@@ -168,6 +168,7 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 + 新しいロールを作成することも、既存のロールをカスタマイズすることもできます。
 + ロールは JSON 形式のファイルで定義され、*Actions*、*NotActions*、*AssignableScopes* が含まれます。
 + アクティビティ ログを使用して、ロールの割り当てを監視できます。
+
 
 
 
