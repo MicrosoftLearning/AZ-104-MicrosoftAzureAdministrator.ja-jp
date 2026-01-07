@@ -54,7 +54,7 @@ lab:
     | 可用性のオプション | **可用性ゾーン** |
     | 可用性ゾーン | **ゾーン 1、2** (仮想マシン スケール セットの使用に関する注意事項をお読みください) |
     | セキュリティの種類 | **Standard** |
-    | 画像 (すべての画像を表示) | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | 画像 (すべての画像を表示) | **Windows Server 2025 Datacenter - x64 Gen2** (これが利用できない場合は以下を選択してください:|
     | Azure Spot インスタンス | **unchecked** |
     | サイズ | **Standard D2s v3** |
     | Username (ユーザー名) | `localadmin` |
@@ -168,7 +168,7 @@ lab:
     | オーケストレーション モード | **Uniform** |
     | セキュリティの種類 | **Standard** |
     | スケーリング オプション | **既定値を確認して使用します**。 次のタスクでは、これを変更します。 |
-    | 画像 (すべての画像を表示) | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | 画像 (すべての画像を表示) | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Azure Spot 割引で実行する | **Unchecked** |
     | サイズ | **Standard D2s_v3** |
     | Username (ユーザー名) | `localadmin` |

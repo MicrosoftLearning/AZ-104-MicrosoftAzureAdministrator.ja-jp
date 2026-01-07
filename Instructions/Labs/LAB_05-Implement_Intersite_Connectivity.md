@@ -51,7 +51,7 @@ lab:
     | リージョン | **(米国) 米国東部** |
     | 可用性のオプション | インフラストラクチャの冗長性は必要ありません |
     | セキュリティの種類 | **Standard** |
-    | 画像 (すべての画像を表示) | **Windows Server 2019 Datacenter - x64 Gen2** (他の選択肢もあります) |
+    | 画像 (すべての画像を表示) | **Windows Server 2025 Datacenter - x64 Gen2** (他の選択肢もあります) |
     | サイズ | **Standard_DS2_v3** |
     | Username (ユーザー名) | `localadmin` | 
     | Password (パスワード) | **複雑なパスワードを指定してください** |
@@ -98,7 +98,7 @@ lab:
     | リージョン | **(米国) 米国東部** |
     | セキュリティの種類 | **Standard** |
     | 可用性のオプション | インフラストラクチャの冗長性は必要ありません |
-    | 画像 (すべての画像を表示) | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | 画像 (すべての画像を表示) | **Windows Server 2025 Datacenter - x64 Gen2** |
     | サイズ | **Standard_DS2_v3** | 
     | Username (ユーザー名) | `localadmin` | 
     | Password (パスワード) | **複雑なパスワードを指定してください** |
