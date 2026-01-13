@@ -266,6 +266,8 @@ lab:
 + Azure PowerShell を使用する場合は、「`Remove-AzResourceGroup -Name resourceGroupName`」と入力します。
 + CLI を使用する場合は、「`az group delete --name resourceGroupName`」と入力します。
 
+   >**注:**  Azure Recovery Services コンテナーを削除するには、まず、保護された項目、バックアップ サーバー、ストレージ アカウントなどのすべての依存関係を削除し、論理的な削除などのセキュリティ機能を無効にしてから、コンテナー自体を削除する必要があります。 [PowerShell スクリプト](https://learn.microsoft.com/azure/backup/scripts/delete-recovery-services-vault)の例を使用できます。 
+
 ## Copilot を使用して学習を拡張する
 Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 これらのプロンプトを試すには数分かかります。
 
