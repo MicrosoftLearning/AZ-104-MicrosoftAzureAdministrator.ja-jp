@@ -2,6 +2,13 @@
 lab:
   title: 'ラボ 09b: Azure Container Instances を実装する'
   module: Administer PaaS Compute Options
+  description: Azure Container Instances を実装してデプロイします。
+  duration: 15 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Container Instances
 ---
 
 # ラボ 09b - Azure Container Instances を実装する

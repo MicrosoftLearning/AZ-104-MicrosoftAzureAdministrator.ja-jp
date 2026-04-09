@@ -4,7 +4,7 @@
 
 このリポジトリは、Microsoft コースを教える講師向けです。 クラスに参加している場合は、講師に支援を依頼してください。 
 
-- **[ラボへのリンク (HTML 形式)](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)**
+- **[デモとラボへのリンク (HTML 形式)](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)**
 - **あなたは MCT ですか?** - [MCT 向けの GitHub ユーザー ガイド](https://microsoftlearning.github.io/MCT-User-Guide/)をご覧ください
 - ご自分のペースでこのコースをプレビューするには、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator)** を参照してください。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
