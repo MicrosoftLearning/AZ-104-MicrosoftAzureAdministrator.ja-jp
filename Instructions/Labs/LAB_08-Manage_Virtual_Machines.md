@@ -375,7 +375,7 @@ lab:
 1. 次のコマンドを入力して、仮想ネットワークを作成してください。 待機中に、仮想マシンの作成に関連付けられているすべてのパラメーターについて、[az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) コマンド リファレンスをチェックアウトしてください。
 
     ```sh
-    az vm create --name myCLIVM --resource-group az104-rg8 --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys
+    az vm create --name myCLIVM --resource-group az104-rg8 --image Canonical:0001-com-ubuntu-server-jammy:22_04-lts:latest --admin-username localadmin --generate-ssh-keys
     ```
 
 1. コマンドが完了したら、**az vm show** を使用してマシンが作成されたことを確認してください。
