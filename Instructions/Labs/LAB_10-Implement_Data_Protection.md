@@ -69,7 +69,7 @@ lab:
     | 設定       | 値         | 
     | ---           | ---           |
     | サブスクリプション  | お使いの Azure サブスクリプション |
-    | Resource group| `az104-rg-region1` (必要に応じて、**[新規作成]** を選択します)
+    | Resource group| `az104-rg-region1` (必要に応じて、**[新規作成]** を選択します) |
     | リージョン        | **East US**   |
     | ユーザー名      | **localadmin**   |
     | Password      | 複雑なパスワードを指定します |
