@@ -177,11 +177,12 @@ lab:
     | --------------------------------------------- | ------------------------------------- |
     | [Peering link name](ピアリング リンク名)                             | `ManufacturingVnet-to-CoreServicesVnet` |
     | 仮想ネットワーク    | **ManufacturingVnet (az104-rg5)**  |
-    | 'ManufacturingVnet' へのアクセスを 'CoreServicesVnet' に許可する            | 選択済み (既定値) |
-    | 'CoreServicesVnet' が 'ManufacturingVnet' からのトラフィック転送を受信することを許可する | 選択済み |
-    | [Peering link name](ピアリング リンク名)                             | `CoreServicesVnet-to-ManufacturingVnet` |
     | 'CoreServicesVnet' に対するアクセスを 'ManufacturingVnet' に許可する  | 選択済み (既定値) |
     | 'CoreServicesVnet' から転送されたトラフィックを 'ManufacturingVnet' が受信することを許可する | 選択済み  |
+    | [Peering link name](ピアリング リンク名)                             | `CoreServicesVnet-to-ManufacturingVnet` |
+    | 'ManufacturingVnet' へのアクセスを 'CoreServicesVnet' に許可する            | 選択済み (既定値) |
+    | 'CoreServicesVnet' が 'ManufacturingVnet' からのトラフィック転送を受信することを許可する | 選択済み |
+
 
 4. **[追加]** をクリックします。
 
