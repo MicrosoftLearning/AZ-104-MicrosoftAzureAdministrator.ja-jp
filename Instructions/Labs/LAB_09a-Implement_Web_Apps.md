@@ -154,6 +154,14 @@ lab:
 
 1. **[最大バースト]** フィールドで、**[2]** を選びます。 **[最小インスタンス数]** を 1 に設定します。
 
+1. ステージング スロットがある場合は、**[Azure Cloud Shell]** を開き、次のコマンドを実行して、ステージング スロットの最小エラスティック インスタンス数を 1 に設定してから **[保存]** を選択します。
+
+   ```bash
+   az webapp update --resource-group az104-rg9 --name <your-web-app-name> --slot staging --minimum-elastic-instance-count 1
+   ```
+
+    >**注:** `<your-web-app-name>` は、自分のアプリ名に置き換えてください。 コマンドが成功したら、本番 Web アプリで **[スケール アウト]** に戻り、**[保存]** を選択します。
+
     ![自動スケーリング ページのスクリーンショット。](../media/az104-lab09a-autoscale.png)
 
 1. **[保存]** を選択します。
